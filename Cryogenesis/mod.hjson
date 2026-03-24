@@ -1,8 +1,0 @@
-name: "cryogenesis"
-displayName: "Cryogenesis"
-author: Wigglearms
-description: "tbd"
-version: "1.1"
-minGameVersion: "156"
-dependencies: []
-hidden: false
