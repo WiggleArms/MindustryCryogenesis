@@ -1,0 +1,18 @@
+type: flyingUnit
+name: fluctus
+description: Drops bombs on enemy targets.
+speed: 1
+flying: true
+health: 80
+engineOffset: 4
+range: 100
+autoDropBombs: true
+faceTarget: false
+targetAir: false
+
+weapon: {
+	name: drop-bomb
+	length: 1.5
+	reload: 30
+	bullet: lightning
+}
