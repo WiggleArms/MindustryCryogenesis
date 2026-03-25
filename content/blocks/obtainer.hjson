@@ -1,6 +1,7 @@
 name: Obtainer
 description: "Uses exorbitant amounts of power to spontaneously synthesize unobtainium."
 type: GenericCrafter
+size: 2
 hasPower: true
 craftTime: 100
 updateEffect: smeltsmoke
