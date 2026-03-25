@@ -12,13 +12,13 @@ targetAir: false
 faceTarget: false
 autoDropBombs: true
 circleTarget: true
-circleTargetRadius: 0
+circleTargetRadius: 0.1
 
 weapons: [
 	{
-	x: 6
+	x: 0
 	shootY: 0
-	reload: 60
+	reload: 50
 	shootCone: 180
 	inaccuracy: 15
 	ignoreRotation: true
