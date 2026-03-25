@@ -10,6 +10,8 @@ engineOffset: 6
 targetAir: false
 faceTarget: false
 autoDropBombs: true
+range: 120
+maxRange: 16
 
 weapons: [
 	{
