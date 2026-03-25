@@ -1,4 +1,4 @@
-type: flying
+type: legs
 name: Fluctus
 description: Drops bombs on enemy targets.
 speed: 1
@@ -11,10 +11,7 @@ targetAir: false
 faceTarget: false
 autoDropBombs: true
 range: 120
-circleTarget: true
-circleTargetRadius: 0
 wobble: false
-rotateMoveFirst: true
 
 weapons: [
 	{
