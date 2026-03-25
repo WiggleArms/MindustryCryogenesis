@@ -13,8 +13,8 @@ autoDropBombs: true
 range: 120
 circleTarget: true
 circleTargetRadius: 0
-omniMovement: true
 wobble: false
+rotateMoveFirst: true
 
 weapons: [
 	{
