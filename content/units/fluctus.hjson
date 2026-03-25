@@ -7,7 +7,7 @@ drag: 0.05
 flying: true
 health: 80
 engineOffset: 6
-range: 100
+range: 0
 targetAir: false
 faceTarget: false
 autoDropBombs: true
@@ -19,8 +19,8 @@ weapons: [
 	x: 0
 	shootY: 0
 	reload: 50
-	shootCone: 180
-	inaccuracy: 15
+	shootCone: 360
+	inaccuracy: 360
 	ignoreRotation: true
 	mirror: false
 	useAttackRange: false
