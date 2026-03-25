@@ -8,7 +8,7 @@ updateEffect: smeltsmoke
 consumes: {
 	power: 166.7
 }
-outputItem: unobtainium
+outputItem: unobtainium/1
 requirements: [
 	lead/250
 	thorium/100
