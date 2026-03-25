@@ -1,4 +1,4 @@
-type: tank
+type: flying
 name: Fluctus
 description: Drops bombs on enemy targets.
 speed: 1
@@ -10,7 +10,6 @@ engineOffset: 6
 targetAir: false
 faceTarget: false
 autoDropBombs: true
-range: 120
 wobble: false
 
 weapons: [
