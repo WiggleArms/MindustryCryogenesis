@@ -7,11 +7,9 @@ drag: 0.05
 flying: true
 health: 80
 engineOffset: 6
-range: 160
 targetAir: false
 faceTarget: false
 autoDropBombs: true
-rotateSpeed: 60
 
 weapons: [
 	{
