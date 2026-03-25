@@ -1,8 +1,8 @@
 name: "cryogenesis"
 displayName: "Cryogenesis"
 author: Wigglearms
-description: "tbd"
-version: "1.1"
+description: "A mod for Mindustry adding a third, frozen planet. INPROG"
+version: "1.2"
 minGameVersion: "156"
 dependencies: []
 hidden: false
