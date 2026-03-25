@@ -1,5 +1,5 @@
 type: flying
-name: fluctus
+name: Fluctus
 description: Drops bombs on enemy targets.
 speed: 1
 flying: true
@@ -7,3 +7,12 @@ health: 80
 engineOffset: 4
 range: 100
 targetAir: false
+
+weapons: [
+	{
+		bullet: {
+			type: BombBulletType
+			damage: 10
+		}	
+	}
+]
