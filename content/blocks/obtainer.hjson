@@ -7,6 +7,15 @@ craftTime: 100
 updateEffect: smeltsmoke
 consumes: {
 	power: 166.7
+	items: {
+		items: [
+			phase-fabric/4
+		]
+	}
+	liquid: {
+		liquid: cryofluid
+		amount: 2
+	}
 }
 outputItem: unobtainium/1
 requirements: [
