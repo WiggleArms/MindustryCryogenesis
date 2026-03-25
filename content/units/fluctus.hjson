@@ -11,18 +11,19 @@ targetAir: false
 faceTarget: false
 autoDropBombs: true
 range: 120
-maxRange: 16
+circleTarget: true
+circleTargetRadius: 8
 
 weapons: [
 	{
-	x: 0
-	shootY: 0
-	reload: 50
-	shootCone: 360
-	inaccuracy: 360
-	ignoreRotation: true
-	mirror: false
-	bullet: {
+		x: 0
+		shootY: 0
+		reload: 50
+		shootCone: 360
+		inaccuracy: 360
+		ignoreRotation: true
+		mirror: false
+		bullet: {
 			type: BombBulletType
 			damage: 100
 			splashDamage: 100
