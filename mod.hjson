@@ -5,7 +5,6 @@ description: "A mod for Mindustry adding a third, frozen planet. INPROG"
 version: "1.2"
 minGameVersion: "156"
 dependencies: [
-	font-icon-lib
 ]
 hidden: false
 main: "cryogenesis.Cryogenesis"
