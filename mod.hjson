@@ -6,3 +6,4 @@ version: "1.2"
 minGameVersion: "156"
 dependencies: []
 hidden: false
+main: "cryogenesis.Cryogenesis"

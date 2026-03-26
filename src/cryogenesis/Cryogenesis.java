@@ -4,9 +4,9 @@ import mindustry.mod.Mod;
 import mindustry.game.Team;
 import arc.graphics.Color;
 
-public class DemiseTeam extends Mod {
+public class Cryogenesis extends Mod {
 
-    public DemiseTeam() {
+    public Cryogenesis() {
         // Constructor runs when mod is loaded
         overrideTeam();
     }
