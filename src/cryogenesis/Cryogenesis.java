@@ -6,8 +6,8 @@ import arc.graphics.Color;
 
 public class Cryogenesis extends Mod {
 
-    public Cryogenesis() {
-        // Constructor runs when mod is loaded
+    @Override
+    public void loadContent() {
         overrideTeam();
     }
 
