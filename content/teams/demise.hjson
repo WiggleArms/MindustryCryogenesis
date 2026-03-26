@@ -1,4 +1,6 @@
-type: team
-id: 999
-name: "demise"
-color: aa0000
+{
+	type: Team
+	name: Demise
+	color: aa0000
+	id: 5
+}
