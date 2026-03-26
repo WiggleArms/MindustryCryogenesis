@@ -11,6 +11,7 @@ targetAir: false
 faceTarget: false
 autoDropBombs: true
 wobble: false
+range: 4
 
 weapons: [
 	{
