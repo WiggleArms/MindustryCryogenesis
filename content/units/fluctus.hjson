@@ -21,6 +21,8 @@ weapons: [
 		inaccuracy: 360
 		ignoreRotation: true
 		mirror: false
+		shootSound: shootHorizon
+
 		bullet: {
 			speed: 0
 			type: BombBulletType
@@ -28,6 +30,9 @@ weapons: [
 			splashDamage: 100
 			scaledSplashDamage: true
 			splashDamageRadius: 16
+			hitEffect: flakExplosion
+			shootEffect: none
+			smokeEffect: none
 		}	
 	}
 ]
