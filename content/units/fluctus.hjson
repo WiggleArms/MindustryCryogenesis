@@ -22,8 +22,9 @@ weapons: [
 		ignoreRotation: true
 		mirror: false
 		bullet: {
+			speed: 0
 			type: BombBulletType
-			damage: 100
+			damage: 50
 			splashDamage: 100
 			scaledSplashDamage: true
 			splashDamageRadius: 16
