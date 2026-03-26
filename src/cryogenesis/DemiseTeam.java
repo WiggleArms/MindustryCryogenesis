@@ -1,4 +1,4 @@
-﻿package yourmod;
+﻿/**package yourmod;
 
 import mindustry.mod.Mod;
 import mindustry.game.Team;
@@ -22,4 +22,4 @@ public class YourMod extends Mod {
         team.color.set(color);
         team.setPalette(color);
     }
-}
+}*/
