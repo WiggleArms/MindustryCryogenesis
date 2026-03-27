@@ -1,4 +1,4 @@
-﻿package cryogenesis;
+package cryogenesis;
 
 import mindustry.mod.Mod;
 import mindustry.game.Team;
