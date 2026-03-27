@@ -8,3 +8,4 @@ dependencies: [
 ]
 hidden: false
 main: "cryogenesis.Cryogenesis"
+java: true
