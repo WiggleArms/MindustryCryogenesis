@@ -14,10 +14,9 @@ public class Cryogenesis extends Mod {
     void overrideTeam() {
         Team team = Team.green;
 
-        team.name = "myteam";
-        team.emoji = "⚙";
+        team.name = "Demise";
 
-        Color color = Color.valueOf("ff00ff");
+        Color color = Color.valueOf("f93f88");
 
         team.color.set(color);
         team.setPalette(color);
