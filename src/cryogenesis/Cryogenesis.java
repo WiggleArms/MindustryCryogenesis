@@ -14,9 +14,9 @@ public class Cryogenesis extends Mod {
     void overrideTeam() {
         Team team = Team.green;
 
-        team.name = "Demise";
+        team.name = "demise";
 
-        Color color = Color.valueOf("f93f88");
+        Color color = Color.valueOf("f93faf");
 
         team.color.set(color);
         team.setPalette(color);
