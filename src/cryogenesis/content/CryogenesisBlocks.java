@@ -44,6 +44,9 @@ public class CryogenesisBlocks{
 	public static Block testWall;
 
 	public static void load(){
+
+	int wallHealthMultiplier = 4;
+
 		testWall = new Wall("test-wall"){{
 			requirements(Category.defense, with());
 			health = 80 * wallHealthMultiplier;
