@@ -57,6 +57,7 @@ public class CryogenesisBlocks{
 			requirements(Category.effect, with(/*Items.silicon, 500*/));
 			alwaysUnlocked = true;
 
+			acceptsItems = true;
 			isFirstTier = true;
 			//unitType = UnitTypes.alpha;
 			health = 500;
