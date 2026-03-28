@@ -52,5 +52,18 @@ public class CryogenesisBlocks{
 			requirements(Category.defense, with());
 			health = 80 * wallHealthMultiplier;
 		}};
+
+		coreThread = new CoreBlock("core-thread"){{
+			requirements(Category.effect, with(Items.silicon, 500));
+			alwaysUnlocked = true;
+
+			isFirstTier = true;
+			unitType = UnitTypes.alpha;
+			health = 500;
+			itemCapacity = 1000;
+			size = 2;
+
+			unitCapModifier = 4;
+		}};
 	}
 }
