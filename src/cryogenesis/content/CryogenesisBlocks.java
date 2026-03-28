@@ -42,7 +42,7 @@ import static mindustry.type.ItemStack.*;
 
 public class CryogenesisBlocks{
 
-	public static Block testWall;
+	public static Block testWall, coreThread;
 
 	public static void load(){
 
@@ -54,11 +54,11 @@ public class CryogenesisBlocks{
 		}};
 
 		coreThread = new CoreBlock("core-thread"){{
-			requirements(Category.effect, with(Items.silicon, 500));
+			requirements(Category.effect, with(/*Items.silicon, 500*/));
 			alwaysUnlocked = true;
 
 			isFirstTier = true;
-			unitType = UnitTypes.alpha;
+			//unitType = UnitTypes.alpha;
 			health = 500;
 			itemCapacity = 1000;
 			size = 2;
