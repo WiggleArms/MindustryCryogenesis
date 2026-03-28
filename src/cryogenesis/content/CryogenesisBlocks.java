@@ -41,11 +41,12 @@ import static mindustry.Vars.*;
 import static mindustry.type.ItemStack.*;
 
 public class CryogenesisBlocks{
+
 	public static Block testWall;
 
 	public static void load(){
 
-	int wallHealthMultiplier = 4;
+		int wallHealthMultiplier = 4;
 
 		testWall = new Wall("test-wall"){{
 			requirements(Category.defense, with());
