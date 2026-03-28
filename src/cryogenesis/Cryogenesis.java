@@ -8,6 +8,9 @@ public class Cryogenesis extends Mod {
 
     @Override
     public void loadContent() {
+        
+        CryogenesisBlocks.load();
+
         overrideTeam();
     }
 
