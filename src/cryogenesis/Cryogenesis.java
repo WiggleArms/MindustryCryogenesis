@@ -4,6 +4,8 @@ import mindustry.mod.Mod;
 import mindustry.game.Team;
 import arc.graphics.Color;
 
+import cryogenesis.content.*;
+
 public class Cryogenesis extends Mod {
 
     @Override
