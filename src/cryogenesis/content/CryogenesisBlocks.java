@@ -4,6 +4,7 @@ import arc.graphics.*;
 import arc.math.*;
 import arc.struct.*;
 import mindustry.*;
+import mindustry.content.*;
 import mindustry.entities.*;
 import mindustry.entities.abilities.*;
 import mindustry.entities.bullet.*;
@@ -54,11 +55,11 @@ public class CryogenesisBlocks{
 		}};
 
 		coreThread = new CoreBlock("core-thread"){{
-			requirements(Category.effect, with(/*Items.silicon, 500*/));
+			requirements(Category.effect, with(Items.silicon, 500));
 			alwaysUnlocked = true;
 
 			isFirstTier = true;
-			//unitType = UnitTypes.alpha;
+			unitType = UnitTypes.alpha;
 			health = 500;
 			itemCapacity = 1000;
 			size = 2;
