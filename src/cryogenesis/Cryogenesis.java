@@ -11,8 +11,8 @@ public class Cryogenesis extends Mod {
     @Override
     public void loadContent() {
         
-        CryogenesisBlocks.load();
         CryogenesisUnitTypes.load();
+        CryogenesisBlocks.load();
 
         overrideTeam();
     }
