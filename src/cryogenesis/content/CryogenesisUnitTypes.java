@@ -32,11 +32,11 @@ import static mindustry.Vars.*;
 public class CryogenesisUnitTypes{
 
 	//core
-	public static /*@EntityDef(value = {Unitc.class}, legacy = true)*/ UnitType meso;
+	public static UnitType meso;
 
 	public static void load(){
 
-		meso = new UnitType("meso"){{
+		meso = new UnitType("cryogenesis-meso"){{
             constructor = UnitEntity::create;
 			controller = u -> u.team.isAI() ? new BuilderAI(true, 400f) : new CommandAI();
             isEnemy = false;
