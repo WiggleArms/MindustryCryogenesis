@@ -37,6 +37,7 @@ public class CryogenesisUnitTypes{
 	public static void load(){
 
 		meso = new UnitType("meso"){{
+            constructor = UnitEntity::create
 			controller = u -> u.team.isAI() ? new BuilderAI(true, 400f) : new CommandAI();
             isEnemy = false;
 
