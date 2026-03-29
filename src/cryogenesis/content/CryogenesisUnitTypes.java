@@ -62,9 +62,9 @@ public class CryogenesisUnitTypes{
 
             weapons.add(new Weapon("meso-weapon"){{
                 reload = 17f;
-                x = 2.75f;
-                y = 1f;
-                top = false;
+                x = 4.5f;
+                y = -0.375f;
+                rotate = true;
                 shootSound = Sounds.shootAlpha;
 
                 bullet = new LaserBoltBulletType(2.5f, 11){{
