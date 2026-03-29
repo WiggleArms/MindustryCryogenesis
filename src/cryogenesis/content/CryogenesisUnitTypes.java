@@ -62,7 +62,7 @@ public class CryogenesisUnitTypes{
             wreckSoundVolume = 0.8f;
             deathSoundVolume = 0.7f;
 
-            outlineColor = 10121cff;
+            outlineColor = CryogenesisPalette.ironOutline;
 
             weapons.add(new Weapon("meso-weapon"){{
                 reload = 17f;
