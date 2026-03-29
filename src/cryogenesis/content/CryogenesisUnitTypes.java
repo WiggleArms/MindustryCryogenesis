@@ -65,7 +65,7 @@ public class CryogenesisUnitTypes{
             faceTarget = false;
             outlineColor = CryogenesisPalette.ironOutline;
 
-            weapons.add(new Weapon("meso-weapon"){{
+            weapons.add(new Weapon("not-meso-weapon"){{
                 reload = 17f;
                 x = 4.5f;
                 y = -0.375f;
