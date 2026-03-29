@@ -4,7 +4,7 @@ import arc.graphics.*;
 import arc.math.*;
 import arc.struct.*;
 import mindustry.*;
-/*import mindustry.content.*;
+import mindustry.content.*;
 import mindustry.entities.*;
 import mindustry.entities.abilities.*;
 import mindustry.entities.bullet.*;
@@ -36,7 +36,7 @@ import mindustry.world.blocks.storage.*;
 import mindustry.world.blocks.units.*;
 import mindustry.world.consumers.*;
 import mindustry.world.draw.*;
-import mindustry.world.meta.*;*/
+import mindustry.world.meta.*;
 
 import static mindustry.Vars.*;
 import static mindustry.type.ItemStack.*;
