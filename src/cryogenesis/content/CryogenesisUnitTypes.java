@@ -9,7 +9,7 @@ import arc.util.*;
 import mindustry.content.*;
 import mindustry.ai.*;
 import mindustry.ai.types.*;
-import mindustry.annotations.Annotations.*;
+//import mindustry.annotations.Annotations.*;
 import mindustry.entities.*;
 import mindustry.entities.abilities.*;
 import mindustry.entities.bullet.*;
@@ -32,7 +32,7 @@ import static mindustry.Vars.*;
 public class CryogenesisUnitTypes{
 
 	//core
-	public static @EntityDef(value = {Unitc.class}, legacy = true) UnitType meso;
+	public static /*@EntityDef(value = {Unitc.class}, legacy = true)*/ UnitType meso;
 
 	public static void load(){
 
