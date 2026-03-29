@@ -69,7 +69,7 @@ public class CryogenesisUnitTypes{
                 x = 4.5f;
                 y = -0.375f;
                 rotate = true;
-                shootSound = Sounds.shootMissile;
+                shootSound = Sounds.shootMissilePlasmaShort;
 
                 outlineColor = CryogenesisPalette.ironOutline;
 
