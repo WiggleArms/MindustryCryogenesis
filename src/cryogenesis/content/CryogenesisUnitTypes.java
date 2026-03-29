@@ -65,8 +65,6 @@ public class CryogenesisUnitTypes{
             faceTarget = false;
             outlineColor = CryogenesisPalette.ironOutline;
 
-            Log.info("Unit region: " + region);
-
             weapons.add(new Weapon("meso-weapon"){{
                 reload = 17f;
                 x = 4.5f;
@@ -74,8 +72,6 @@ public class CryogenesisUnitTypes{
                 rotate = true;
                 shootSound = Sounds.shootMissilePlasmaShort;
                 outlineColor = CryogenesisPalette.ironOutline;
-
-                Log.info("Weapon region: " + region);
 
                 bullet = new LaserBoltBulletType(2.5f, 11){{
                     keepVelocity = false;
