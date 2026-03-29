@@ -1,5 +1,7 @@
 package cryogenesis.content;
 
+import cryogenesis.content.CryogenesisUnitTypes;
+
 import arc.graphics.*;
 import arc.math.*;
 import arc.struct.*;
@@ -59,7 +61,7 @@ public class CryogenesisBlocks{
 			alwaysUnlocked = true;
 
 			isFirstTier = true;
-			unitType = UnitTypes.alpha;
+			unitType = CryogenesisUnitTypes.meso;
 			health = 500;
 			itemCapacity = 1000;
 			size = 2;
