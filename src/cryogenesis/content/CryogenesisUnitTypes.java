@@ -65,6 +65,11 @@ public class CryogenesisUnitTypes{
             faceTarget = false;
             outlineColor = CryogenesisPalette.ironOutline;
 
+            // Might be annoying
+            //loopSound = loopThoriumReactor;
+            //loopSoundVolume = 0.1;
+            //loopSoundPitch = 2;
+
             weapons.add(new Weapon("meso-weapon"){{
                 reload = 17f;
                 x = 4.5f;
@@ -72,6 +77,18 @@ public class CryogenesisUnitTypes{
                 rotate = true;
                 shootSound = Sounds.shootMissilePlasmaShort;
                 outlineColor = CryogenesisPalette.ironOutline;
+
+                Core.app.post(() -> {
+                    Log.info("Weapon name: " + name);
+                    Log.info("Looking for region: " + name);
+                    Log.info("Found region: " + Core.atlas.find(name));
+                    Log.info("=== Atlas dump (filtered) ===");
+                    for(var region : Core.atlas.getRegions()){
+                        if(region.name.contains("meso")){
+                            Log.info("Atlas region: " + region.name);
+                    }
+                    }
+                });
 
                 bullet = new LaserBoltBulletType(2.5f, 11){{
                     keepVelocity = false;
