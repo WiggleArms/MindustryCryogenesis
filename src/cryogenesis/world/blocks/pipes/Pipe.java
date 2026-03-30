@@ -8,7 +8,7 @@ import arc.struct.*;
 import arc.util.*;
 import mindustry.world.blocks.liquid.*;
 
-public class Pipe extends Conduit{
+public class Pipe extends Conveyor{
 
     public Pipe(String name){
         super(name);

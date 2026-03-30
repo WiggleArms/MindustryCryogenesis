@@ -78,7 +78,7 @@ public class CryogenesisUnitTypes{
                 x = 4.5f;
                 y = -0.375f;
                 rotate = true;
-                shootSound = Sounds.shootMissilePlasmaShort;
+                shootSound = Sounds.shootAlpha;
                 outlineColor = CryogenesisPalette.ironOutline;
 
                 bullet = new LaserBoltBulletType(2.5f, 11){{
