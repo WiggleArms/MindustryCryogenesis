@@ -75,13 +75,13 @@ public class CryogenesisBlocks{
 			health = 75;
 			speed = 30f;
 			//itemCapacity = 3;
-			//bridgeReplacement = CryogenesisBlocks.tunnelPipe;
+			/ridgeReplacement = CryogenesisBlocks.tunnelPipe;
 
 			//hasLiquids = true;
 			//outputsLiquid = true;
 			//liquidCapacity = 10f;
 
-			squareSprite = false;
+			//squareSprite = false;
 		}};
 
 		tunnelPipe = new TunnelPipe("tunnel-pipe"){{
