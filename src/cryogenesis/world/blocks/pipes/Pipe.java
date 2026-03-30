@@ -15,7 +15,13 @@ public class Pipe extends Duct{
 
     public Pipe(String name){
         super(name);
+    }
+
+    @Override
+    public void init(){
+        super.init();
 
         bridgeReplacement = CryogenesisBlocks.tunnelPipe;
+        //if(junctionReplacement == null) junctionReplacement = Blocks.ductJunction;
     }
 }
