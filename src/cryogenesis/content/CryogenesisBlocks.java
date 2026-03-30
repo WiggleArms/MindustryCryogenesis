@@ -45,7 +45,7 @@ import static mindustry.type.ItemStack.*;
 
 public class CryogenesisBlocks{
 
-	public static Block testWall, coreThread;
+	public static Block testWall, coreThread, pipe;
 
 	public static void load(){
 
@@ -67,6 +67,12 @@ public class CryogenesisBlocks{
 			size = 2;
 
 			unitCapModifier = 4;
+		}};
+
+		pipe = new Duct("pipe"){{
+			requirements(Category.distribution, with(Items.scrap, 1));
+			health = 75;
+			speed = 0.5f;
 		}};
 	}
 }

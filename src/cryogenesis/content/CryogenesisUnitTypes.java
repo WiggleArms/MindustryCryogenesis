@@ -64,6 +64,7 @@ public class CryogenesisUnitTypes{
 
             faceTarget = false;
             outlineColor = CryogenesisPalette.ironOutline;
+            buildBeamOffset = 5.25f;
 
             /*
             This might be annoying
