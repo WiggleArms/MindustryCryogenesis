@@ -75,13 +75,16 @@ public class CryogenesisBlocks{
 			health = 75;
 			speed = 30f;
 			//itemCapacity = 3;
+			bridgeReplacement = "cryogenesis-tunnel-pipe";
 
 			//hasLiquids = true;
 			//outputsLiquid = true;
 			//liquidCapacity = 10f;
+
+			squareSprite = false;
 		}};
 
-		tunnelPipe = new BufferedItemBridge("tunnel-pipe"){{
+		tunnelPipe = new TunnelPipe("tunnel-pipe"){{
 			requirements(Category.distribution, with(Items.scrap, 1));
 			range = 4;
 			health = 100;
