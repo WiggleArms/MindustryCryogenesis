@@ -46,7 +46,7 @@ import static mindustry.type.ItemStack.*;
 
 public class CryogenesisBlocks{
 
-	public static Block testWall, coreThread, pipe;
+	public static Block testWall, coreThread, pipe, tunnelPipe;
 
 	public static void load(){
 
