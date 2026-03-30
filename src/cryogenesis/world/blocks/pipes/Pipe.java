@@ -25,5 +25,10 @@ import static mindustry.Vars.*;
 import static mindustry.type.Liquid.*;
 
 public class Pipe extends Conduit{
-	//do something?
+
+    public Pipe(String name){
+        super(name);
+
+        // your custom tweaks here
+    }
 }
