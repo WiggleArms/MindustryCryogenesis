@@ -8,6 +8,7 @@ import arc.math.*;
 import arc.math.geom.*;
 import arc.struct.*;
 import arc.util.*;
+import mindustry.content.*;
 //import mindustry.annotations.Annotations.*;
 import mindustry.content.*;
 import mindustry.entities.*;
@@ -23,7 +24,7 @@ import mindustry.world.blocks.distribution.*;
 import static mindustry.Vars.*;
 import static mindustry.type.Liquid.*;
 
-public class Conduit extends LiquidBlock implements Autotiler{
+public class Pipe extends LiquidBlock implements Autotiler{
     static final float rotatePad = 6, hpad = rotatePad / 2f / 4f;
     static final float[][] rotateOffsets = {{hpad, hpad}, {-hpad, hpad}, {-hpad, -hpad}, {hpad, -hpad}};
 
@@ -43,7 +44,7 @@ public class Conduit extends LiquidBlock implements Autotiler{
     public boolean leaks = true;
     public @Nullable Block junctionReplacement, bridgeReplacement, rotBridgeReplacement;
 
-    public Conduit(String name){
+    public Pipe(String name){
         super(name);
         rotate = true;
         solid = false;
@@ -122,11 +123,11 @@ public class Conduit extends LiquidBlock implements Autotiler{
     public Block getReplacement(BuildPlan req, Seq<BuildPlan> plans){
         if(junctionReplacement == null) return this;
 
-        Boolf<Point2> cont = p -> plans.contains(o -> o.x == req.x + p.x && o.y == req.y + p.y && (req.block instanceof Conduit || req.block instanceof LiquidJunction));
+        Boolf<Point2> cont = p -> plans.contains(o -> o.x == req.x + p.x && o.y == req.y + p.y && (req.block instanceof Pipe || req.block instanceof LiquidJunction));
         return cont.get(Geometry.d4(req.rotation)) &&
             cont.get(Geometry.d4(req.rotation - 2)) &&
             req.tile() != null &&
-            req.tile().block() instanceof Conduit &&
+            req.tile().block() instanceof Pipe &&
             Mathf.mod(req.build().rotation - req.rotation, 2) == 1 ? junctionReplacement : this;
     }
 
@@ -140,9 +141,9 @@ public class Conduit extends LiquidBlock implements Autotiler{
         if(bridgeReplacement == null) return;
 
         if(rotBridgeReplacement instanceof DirectionBridge duct){
-            Placement.calculateBridges(plans, duct, true, b -> b instanceof Conduit);
+            Placement.calculateBridges(plans, duct, true, b -> b instanceof Pipe);
         }else{
-            Placement.calculateBridges(plans, (ItemBridge)bridgeReplacement, true, b -> b instanceof Conduit);
+            Placement.calculateBridges(plans, (ItemBridge)bridgeReplacement, true, b -> b instanceof Pipe);
         }
     }
 
@@ -151,7 +152,7 @@ public class Conduit extends LiquidBlock implements Autotiler{
         return new TextureRegion[]{Core.atlas.find("conduit-bottom"), topRegions[0]};
     }
 
-    public class ConduitBuild extends LiquidBuild implements ChainedBuilding{
+    public class PipeBuild extends LiquidBuild implements ChainedBuilding{
         public float smoothLiquid;
         public int blendbits, xscl = 1, yscl = 1, blending;
         public boolean capped, backCapped = false;
@@ -160,7 +161,7 @@ public class Conduit extends LiquidBlock implements Autotiler{
         public void draw(){
             int r = this.rotation;
 
-            //draw extra conduits facing this one for tiling purposes
+            //draw extra pipes facing this one for tiling purposes
             Draw.z(Layer.blockUnder);
             for(int i = 0; i < 4; i++){
                 if((blending & (1 << i)) != 0){
@@ -244,7 +245,7 @@ public class Conduit extends LiquidBlock implements Autotiler{
         @Override
         public Building next(){
             Tile next = tile.nearby(rotation);
-            if(next != null && next.build instanceof ConduitBuild){
+            if(next != null && next.build instanceof PipeBuild){
                 return next.build;
             }
             return null;
