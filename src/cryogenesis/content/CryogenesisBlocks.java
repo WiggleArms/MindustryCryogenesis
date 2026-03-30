@@ -74,11 +74,19 @@ public class CryogenesisBlocks{
 			requirements(Category.distribution, with(Items.scrap, 1));
 			health = 75;
 			speed = 30f;
-			itemCapacity = 3;
+			//itemCapacity = 3;
 
 			//hasLiquids = true;
 			//outputsLiquid = true;
 			//liquidCapacity = 10f;
+		}};
+
+		tunnelPipe = new BufferedItemBridge("tunnel-pipe"){{
+			requirements(Category.distribution, with(Items.scrap, 1));
+			range = 4;
+			health = 100;
+			speed = 13.5f;
+			bufferCapacity = 14;
 		}};
 	}
 }
