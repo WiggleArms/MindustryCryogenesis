@@ -69,13 +69,13 @@ public class CryogenesisBlocks{
 			unitCapModifier = 4;
 		}};
 
-		pipe = new Duct("pipe"){{
+		pipe = new Conduit("pipe"){{
 			requirements(Category.distribution, with(Items.scrap, 1));
 			health = 75;
-			speed = 60f;
+			//speed = 60f;
 
-			hasLiquids = true;
-			outputsLiquid = true;
+			//hasLiquids = true;
+			//outputsLiquid = true;
 			liquidCapacity = 10f;
 		}};
 	}
