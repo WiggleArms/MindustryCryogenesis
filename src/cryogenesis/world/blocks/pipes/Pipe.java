@@ -2,7 +2,7 @@ package cryogenesis.world.blocks.pipes;
 
 import mindustry.world.blocks.liquid.*;
 
-public class Pipe extends LiquidRouter{
+public class Pipe extends Conduit{
 
     public Pipe(String name){
         super(name);
