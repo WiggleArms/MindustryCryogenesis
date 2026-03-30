@@ -74,20 +74,20 @@ public class CryogenesisUnitTypes{
             */
 
             weapons.add(new Weapon("cryogenesis-meso-weapon"){{
-                reload = 17f;
+                reload = 10f;
                 x = 4.5f;
                 y = -0.375f;
                 rotate = true;
                 shootSound = Sounds.shootAlpha;
                 outlineColor = CryogenesisPalette.ironOutline;
 
-                bullet = new LaserBoltBulletType(2.5f, 11){{
+                bullet = new LaserBoltBulletType(2.5f, 10){{
                     keepVelocity = false;
-                    width = 1.5f;
-                    height = 4.5f;
+                    width = 1.0f;
+                    height = 3.0f;
                     hitEffect = despawnEffect = Fx.hitBulletColor;
-                    trailWidth = 1.2f;
-                    trailLength = 3;
+                    trailWidth = 0.8f;
+                    trailLength = 2;
                     shootEffect = Fx.shootSmallColor;
                     smokeEffect = Fx.hitLaserColor;
                     backColor = trailColor = Pal.yellowBoltFront;
