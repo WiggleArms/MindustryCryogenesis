@@ -34,7 +34,7 @@ public class TunnelPipe extends BufferedItemBridge{
 
         @Override
         public void draw(){
-            Draw.z(Layer.blockUnder);
+            Draw.z(Layer.blockUnder + 0.2f);
             super.draw();
         }
     }
