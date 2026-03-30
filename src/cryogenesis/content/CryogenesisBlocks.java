@@ -72,7 +72,7 @@ public class CryogenesisBlocks{
 		pipe = new Duct("pipe"){{
 			requirements(Category.distribution, with(Items.scrap, 1));
 			health = 75;
-			speed = 0.5f;
+			speed = 60f;
 		}};
 	}
 }
