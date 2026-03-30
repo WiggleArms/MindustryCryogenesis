@@ -1,5 +1,7 @@
 package cryogenesis.world.blocks.pipes;
 
+import cryogenesis.content.CryogenesisBlocks;
+
 import arc.graphics.*;
 import arc.graphics.g2d.*;
 import arc.math.*;
@@ -13,5 +15,13 @@ public class Pipe extends Duct{
 
     public Pipe(String name){
         super(name);
+    }
+
+    @Override
+    public void init(){
+        super.init();
+
+        if(junctionReplacement == null) junctionReplacement = Blocks.junction;
+        if(bridgeReplacement == null || !(bridgeReplacement instanceof ItemBridge || bridgeReplacement instanceof DuctBridge)) bridgeReplacement = CryogenesisBlocks.tunnelPipe;
     }
 }

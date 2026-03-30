@@ -1,7 +1,7 @@
 package cryogenesis.content;
 
 import cryogenesis.content.CryogenesisUnitTypes;
-import cryogenesis.world.blocks.pipes.*;
+import cryogenesis.world.blocks.*;
 
 import arc.graphics.*;
 import arc.math.*;
