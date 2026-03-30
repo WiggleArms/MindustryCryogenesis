@@ -72,7 +72,7 @@ public class CryogenesisUnitTypes{
             loopSoundPitch = 2;
             */
 
-            weapons.add(new Weapon("meso-weapon"){{
+            weapons.add(new Weapon("cryogenesis-meso-weapon"){{
                 reload = 17f;
                 x = 4.5f;
                 y = -0.375f;
