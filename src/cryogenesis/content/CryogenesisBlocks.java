@@ -1,6 +1,7 @@
 package cryogenesis.content;
 
 import cryogenesis.content.CryogenesisUnitTypes;
+import cryogenesis.world.blocks.*;
 
 import arc.graphics.*;
 import arc.math.*;
@@ -69,7 +70,7 @@ public class CryogenesisBlocks{
 			unitCapModifier = 4;
 		}};
 
-		pipe = new Conduit("pipe"){{
+		pipe = new Pipe("pipe"){{
 			requirements(Category.distribution, with(Items.scrap, 1));
 			health = 75;
 			//speed = 60f;
