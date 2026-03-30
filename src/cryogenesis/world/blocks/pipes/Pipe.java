@@ -19,6 +19,7 @@ import mindustry.type.*;
 import mindustry.world.*;
 import mindustry.world.blocks.*;
 import mindustry.world.blocks.distribution.*;
+import mindustry.world.blocks.liquid.*;
 
 import static mindustry.Vars.*;
 import static mindustry.type.Liquid.*;
