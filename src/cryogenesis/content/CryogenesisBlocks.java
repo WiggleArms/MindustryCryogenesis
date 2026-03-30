@@ -75,7 +75,7 @@ public class CryogenesisBlocks{
 			health = 75;
 			speed = 30f;
 			//itemCapacity = 3;
-			bridgeReplacement = "cryogenesis-tunnel-pipe";
+			bridgeReplacement = CryogenesisBlock.tunnel-pipe;
 
 			//hasLiquids = true;
 			//outputsLiquid = true;
