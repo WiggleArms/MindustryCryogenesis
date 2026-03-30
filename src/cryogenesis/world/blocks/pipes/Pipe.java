@@ -9,7 +9,7 @@ import arc.util.*;
 import mindustry.world.blocks.liquid.*;
 import mindustry.world.blocks.distribution.*;
 
-public class Pipe extends Conveyor{
+public class Pipe extends Duct{
 
     public Pipe(String name){
         super(name);
