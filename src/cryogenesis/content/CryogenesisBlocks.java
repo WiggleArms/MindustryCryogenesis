@@ -73,6 +73,10 @@ public class CryogenesisBlocks{
 			requirements(Category.distribution, with(Items.scrap, 1));
 			health = 75;
 			speed = 60f;
+
+			hasLiquids = true;
+			outputsLiquids = true;
+			liquidCapacity = 10;
 		}};
 	}
 }
