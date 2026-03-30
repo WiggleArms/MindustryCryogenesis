@@ -75,7 +75,7 @@ public class CryogenesisBlocks{
 			speed = 60f;
 
 			hasLiquids = true;
-			outputsLiquids = true;
+			outputsLiquid = true;
 			liquidCapacity = 10;
 		}};
 	}
