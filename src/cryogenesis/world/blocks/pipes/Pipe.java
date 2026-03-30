@@ -15,5 +15,7 @@ public class Pipe extends Duct{
 
     public Pipe(String name){
         super(name);
+
+        bridgeReplacement = CryogenesisBlocks.tunnelPipe;
     }
 }

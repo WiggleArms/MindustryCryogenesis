@@ -83,8 +83,6 @@ public class CryogenesisBlocks{
 			//squareSprite = false;
 		}};
 
-		((Pipe) pipe).bridgeReplacement = CryogenesisBlocks.tunnelPipe;
-
 		tunnelPipe = new TunnelPipe("tunnel-pipe"){{
 			requirements(Category.distribution, with(Items.scrap, 1));
 			range = 4;
