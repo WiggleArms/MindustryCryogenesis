@@ -7,6 +7,7 @@ import arc.math.geom.*;
 import arc.struct.*;
 import arc.util.*;
 import mindustry.world.blocks.liquid.*;
+import mindustry.world.blocks.distribution.*;
 
 public class Pipe extends Conveyor{
 
