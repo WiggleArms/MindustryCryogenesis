@@ -85,8 +85,9 @@ public class CryogenesisBlocks{
 			requirements(Category.distribution, with(Items.scrap, 1));
 			range = 4;
 			health = 100;
-			speed = 13.5f;
+			speed = 74f;
 			bufferCapacity = 14;
+			solid = false;
 		}};
 	}
 }
