@@ -27,12 +27,17 @@ public class Pipe extends Duct{
     public final int timerFlow = timers++;
     public boolean leaks = true;
 
-    //public TextureRegion[] liquidRegion;
+    public TextureRegion liquidRegion;
 
     public Pipe(String name){
         super(name);
         hasLiquids = true;
         outputsLiquid = true;
+    }
+
+    public void load(){
+        super.load();
+        liquidRegion = Core.atlas.find(name + "-liquid", "conduit-liquid");
     }
 
     @Override
@@ -48,6 +53,16 @@ public class Pipe extends Duct{
         public float smoothLiquid;
         
         @Override
+        public void draw(){
+            super.draw();
+            
+            if(liquids.currentAmount() > 0.001f){
+                Draw.z(Layer.blockUnder + 0.05f);
+                Drawf.liquid(liquidRegion, x, y, liquids.currentAmount() / liquidCapacity, liquids.current().color);
+            }
+        }
+
+        @Override
         public boolean acceptLiquid(Building source, Liquid liquid){
             noSleep();
             return (liquids.current() == liquid || liquids.currentAmount() < 0.2f) && (tile == null || source == this || (source.relativeTo(tile.x, tile.y) + 2) % 4 != rotation);
@@ -61,8 +76,6 @@ public class Pipe extends Duct{
             if(liquids.currentAmount() > 0.0001f && timer(timerFlow, 1)){
                 moveLiquidForward(leaks, liquids.current());
                 noSleep();
-            }else{
-                sleep();
             }
         }
     }
