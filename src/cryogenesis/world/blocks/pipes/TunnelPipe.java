@@ -25,10 +25,17 @@ import static mindustry.Vars.*;
 
 public class TunnelPipe extends BufferedItemBridge{
 
+    public TextureRegion[] liquidRegion
+
     public TunnelPipe(String name){
         super(name);
         hasLiquids = true;
         outputsLiquid = true;
+    }
+
+    public void load(){
+        super.load();
+        liquidRegion = Core.atlas.find(name + "-liquid", "conduit-liquid");
     }
 
     public class TunnelPipeBuild extends BufferedItemBridgeBuild {
@@ -37,6 +44,11 @@ public class TunnelPipe extends BufferedItemBridge{
         public void draw(){
             Draw.z(Layer.blockUnder + 0.2f);
             super.draw();
+            
+            if(liquids.currentAmount() > 0.001f){
+                Draw.z(Layer.blockUnder + 0.3f);
+                Drawf.liquid(liquidRegion, x, y, liquids.currentAmount() / liquidCapacity, liquids.current().color);
+            }
         }
 
         @Override
