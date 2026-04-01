@@ -78,9 +78,9 @@ public class Pipe extends Duct{
             super.updateTile();
 
             if (liquids.current() == Liquids.water && liquids.currentAmount() > 0.0001f) {
-                speed = baseSpeed / (Mathf.lerp(1f, waterBoost, optionalEfficiency) * efficiency);
+                speed = baseSpeed / waterBoost;
             } else if (liquids.current() == Liquids.cryofluid && liquids.currentAmount() > 0.0001f) {
-                speed = baseSpeed / (Mathf.lerp(1f, cryoBoost, optionalEfficiency) * efficiency);
+                speed = baseSpeed / cryoBoost;
             }
 
             smoothLiquid = Mathf.lerpDelta(smoothLiquid, liquids.currentAmount() / liquidCapacity, 0.05f);
