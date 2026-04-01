@@ -2,6 +2,8 @@ package cryogenesis.world.blocks.pipes;
 
 import cryogenesis.content.CryogenesisBlocks;
 
+import arc.*;
+import arc.func.*;
 import arc.graphics.*;
 import arc.graphics.g2d.*;
 import arc.math.*;
@@ -9,9 +11,15 @@ import arc.math.geom.*;
 import arc.struct.*;
 import arc.util.*;
 //import mindustry.annotations.Annotations.*;
+import mindustry.content.*;
+import mindustry.entities.*;
+import mindustry.entities.units.*;
+import mindustry.gen.*;
+import mindustry.graphics.*;
+import mindustry.input.*;
+import mindustry.type.*;
 import mindustry.world.*;
 import mindustry.world.blocks.*;
-import mindustry.world.blocks.liquid.*;
 import mindustry.world.blocks.distribution.*;
 
 public class Pipe extends Duct{
@@ -35,7 +43,7 @@ public class Pipe extends Duct{
         //if(junctionReplacement == null) junctionReplacement = Blocks.ductJunction;
     }
 
-    public class PipeBuild extends DuctBuild implements ChainedBuilding{
+    public class PipeBuild extends DuctBuild{
 
         public float smoothLiquid;
         
