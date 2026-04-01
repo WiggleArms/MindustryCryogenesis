@@ -35,7 +35,7 @@ public class Pipe extends Duct{
         @Override
         public boolean acceptLiquid(Building source, Liquid liquid){
             noSleep();
-            return liquids.current() == liquid || liquids.currentAmount() < 0.2f) && (tile == null || source == this || (source.relativeTo(tile.x, tile.y) + 2) % 4 != rotation);
+            return (liquids.current() == liquid || liquids.currentAmount() < 0.2f) && (tile == null || source == this || (source.relativeTo(tile.x, tile.y) + 2) % 4 != rotation);
         }
 
         @Override
