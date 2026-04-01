@@ -27,7 +27,8 @@ public class TunnelPipe extends BufferedItemBridge{
 
     public TunnelPipe(String name){
         super(name);
-        //buildType = TunnelPipeBuild::new;
+        hasLiquids = true;
+        outputsLiquids = true;
     }
 
     public class TunnelPipeBuild extends BufferedItemBridgeBuild {
@@ -36,6 +37,18 @@ public class TunnelPipe extends BufferedItemBridge{
         public void draw(){
             Draw.z(Layer.blockUnder + 0.2f);
             super.draw();
+        }
+
+        public void updateTransport(Building other){
+            super.updateTransport();
+            if(warmup >= 0.25f){
+                moved |= moveLiquid(other, liquids.current()) > 0.05f;
+            }
+        }
+
+        public void doDump(){
+            super.doDump();
+            dumpLiquid(liquids.current(), 1f);
         }
     }
 }
