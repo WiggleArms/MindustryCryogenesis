@@ -9,7 +9,9 @@ Add full mod description, polish README.md
 	- Pipe variants
 	- Playable map
 		- Planet
-- Tunnel Pipe liquid draw area
+- Tunnel Pipe liquid draw area animated
+- Pipe item capacity = 2
+- Buff Pipe and variants with liquid
 - Environment Blocks
 
 #### Wishlist:

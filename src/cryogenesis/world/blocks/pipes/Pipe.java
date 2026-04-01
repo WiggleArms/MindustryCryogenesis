@@ -29,4 +29,26 @@ public class Pipe extends Duct{
         bridgeReplacement = CryogenesisBlocks.tunnelPipe;
         //if(junctionReplacement == null) junctionReplacement = Blocks.ductJunction;
     }
+
+    public class PipeBuild extends DuctBuild{
+        
+        @Override
+        public boolean acceptLiquid(Building source, Liquid liquid){
+            noSleep();
+            return liquids.current() == liquid || liquids.currentAmount() < 0.2f) && (tile == null || source == this || (source.relativeTo(tile.x, tile.y) + 2) % 4 != rotation);
+        }
+
+        @Override
+        public void updateTile(){
+            super.updateTile();
+            smoothLiquid = Mathf.lerpDelta(smoothLiquid, liquids.currentAmount() / liquidCapacity, 0.05f);
+
+            if(liquids.currentAmount() > 0.0001f && timer(timerFlow, 1)){
+                moveLiquidForward(leaks, liquids.current());
+                noSleep();
+            }else{
+                sleep();
+            }
+        }
+    }
 }
