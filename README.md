@@ -3,27 +3,23 @@ A mod for Mindustry adding a third, frozen planet.
 
 ### TO-DO LIST:
 
-`
 Add full mod description, polish README.md
 
-Pipe functions as conduit too
-|  |
-|  V
-|  Pipe variants
-V
-Playable Map
-|
-V
+Pipe functions as conduit too<br>
+|  |<br>
+|  V<br>
+|  Pipe variants<br>
+V<br>
+Playable Map<br>
+|<br>
+V<br>
 Planet
-`
 
 #### Wishlist:
 
-`
-Tunnel Pipe doesn't need end - push/pull from anything connected
-OR
+Tunnel Pipe doesn't need end - push/pull from anything connected<br>
+OR<br>
 Tunnel Pipe directional sprites, looks similar to Pipe
-`
 
 ## Roadmap
 
