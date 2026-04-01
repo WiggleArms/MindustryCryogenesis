@@ -21,6 +21,8 @@ import mindustry.type.*;
 import mindustry.world.*;
 import mindustry.world.blocks.*;
 import mindustry.world.blocks.distribution.*;
+import mindustry.world.consumers.*;
+import mindustry.world.meta.*;
 
 public class Pipe extends Duct{
 
