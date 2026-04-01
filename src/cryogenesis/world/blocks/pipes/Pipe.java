@@ -56,7 +56,10 @@ public class Pipe extends Duct{
     @Override
     public void setStats(){
         super.setStats();
-        stats.add(Stat.booster, StatValues.speedBoosters("{0}" + StatUnit.timesSpeed.localized(), 0f, waterBoost, false, Liquids.water));
+
+        if(findConsumer(f -> f instanceof ConsumeLiquidBase && f.booster) instanceof ConsumeLiquidBase consBase){
+            stats.add(Stat.booster, StatValues.speedBoosters("{0}" + StatUnit.timesSpeed.localized(), 0f, waterBoost, false, consBase::consumes));
+        }
     }
 
     public class PipeBuild extends DuctBuild{
