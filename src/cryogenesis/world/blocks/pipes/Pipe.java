@@ -8,17 +8,19 @@ import arc.math.*;
 import arc.math.geom.*;
 import arc.struct.*;
 import arc.util.*;
+import mindustry.annotations.Annotations.*;
 import mindustry.world.blocks.liquid.*;
 import mindustry.world.blocks.distribution.*;
 
 public class Pipe extends Duct{
+
     public @Load("@-liquid-") TextureRegion liquidRegion;
 
     public Pipe(String name){
         super(name);
 
         hasLiquids = true;
-        outputsLiquids = true;
+        outputsLiquid = true;
     }
 
     @Override

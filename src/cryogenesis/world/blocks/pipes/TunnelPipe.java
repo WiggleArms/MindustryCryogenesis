@@ -28,7 +28,7 @@ public class TunnelPipe extends BufferedItemBridge{
     public TunnelPipe(String name){
         super(name);
         hasLiquids = true;
-        outputsLiquids = true;
+        outputsLiquid = true;
     }
 
     public class TunnelPipeBuild extends BufferedItemBridgeBuild {
@@ -39,6 +39,7 @@ public class TunnelPipe extends BufferedItemBridge{
             super.draw();
         }
 
+        @Override
         public void updateTransport(Building other){
             super.updateTransport();
             if(warmup >= 0.25f){
@@ -46,6 +47,7 @@ public class TunnelPipe extends BufferedItemBridge{
             }
         }
 
+        @Override
         public void doDump(){
             super.doDump();
             dumpLiquid(liquids.current(), 1f);
