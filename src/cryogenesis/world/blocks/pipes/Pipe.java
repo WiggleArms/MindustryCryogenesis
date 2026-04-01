@@ -77,9 +77,9 @@ public class Pipe extends Duct{
         public void updateTile(){
             super.updateTile();
 
-            if liquids.current() == Liquids.water {
+            if (liquids.current() == Liquids.water) {
                 speed = baseSpeed / (Mathf.lerp(1f, waterBoost, optionalEfficiency) * efficiency);
-            } else if liquids.current() == Liquids.cryofluid {
+            } else if (liquids.current() == Liquids.cryofluid) {
                 speed = baseSpeed / (Mathf.lerp(1f, cryoBoost, optionalEfficiency) * efficiency);
             }
 
