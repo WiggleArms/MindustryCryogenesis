@@ -9,10 +9,15 @@ import arc.math.geom.*;
 import arc.struct.*;
 import arc.util.*;
 //import mindustry.annotations.Annotations.*;
+import mindustry.world.*;
+import mindustry.world.blocks.*;
 import mindustry.world.blocks.liquid.*;
 import mindustry.world.blocks.distribution.*;
 
 public class Pipe extends Duct{
+
+    public final int timerFlow = timers++;
+    public boolean leaks = true;
 
     //public TextureRegion[] liquidRegion;
 
@@ -31,6 +36,8 @@ public class Pipe extends Duct{
     }
 
     public class PipeBuild extends DuctBuild{
+
+        public float smoothLiquid;
         
         @Override
         public boolean acceptLiquid(Building source, Liquid liquid){
