@@ -27,7 +27,6 @@ public class Pipe extends Duct{
     public final int timerFlow = timers++;
     public boolean leaks = true;
 
-    public float baseSpeed = 30f;
     public float waterBoost =  5.0f;
     public float cryoBoost = 3.0f;
 
@@ -37,7 +36,6 @@ public class Pipe extends Duct{
         super(name);
         hasLiquids = true;
         outputsLiquid = true;
-        speed = baseSpeed;
     }
 
     public void load(){
@@ -75,12 +73,29 @@ public class Pipe extends Duct{
 
         @Override
         public void updateTile(){
-            super.updateTile();
-
+            
+            float actualSpeed = speed;
+            
             if (liquids.current() == Liquids.water && liquids.currentAmount() > 0.0001f) {
-                speed = baseSpeed / waterBoost;
+                actualSpeed = speed / waterBoost;
             } else if (liquids.current() == Liquids.cryofluid && liquids.currentAmount() > 0.0001f) {
-                speed = baseSpeed / cryoBoost;
+                actualSpeed = speed / cryoBoost;
+            }
+            
+            progress += edelta() / actualSpeed * 2f;
+
+            if(current != null && next != null){
+                if(progress >= (1f - 1f/speed) && moveForward(current)){
+                    items.remove(current, 1);
+                    current = null;
+                    progress %= (1f - 1f/actualSpeed);
+                }
+            }else{
+                progress = 0;
+            }
+
+            if(current == null && items.total() > 0){
+                current = items.first();
             }
 
             smoothLiquid = Mathf.lerpDelta(smoothLiquid, liquids.currentAmount() / liquidCapacity, 0.05f);
