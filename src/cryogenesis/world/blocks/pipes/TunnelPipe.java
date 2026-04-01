@@ -41,7 +41,7 @@ public class TunnelPipe extends BufferedItemBridge{
 
         @Override
         public void updateTransport(Building other){
-            super.updateTransport();
+            super.updateTransport(other);
             if(warmup >= 0.25f){
                 moved |= moveLiquid(other, liquids.current()) > 0.05f;
             }

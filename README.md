@@ -15,4 +15,6 @@ Planet
 
 #### Wishlist:
 
-Pipe Tunnel doesn't need end, push/pull from anything connected
+Tunnel Pipe doesn't need end, push/pull from anything connected
+OR
+Tunnel Pipe directional sprites, looks similar to Pipe
