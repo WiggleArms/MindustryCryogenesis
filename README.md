@@ -5,13 +5,15 @@ A mod for Mindustry adding a third, frozen planet.
 
 Add full mod description, polish README.md
 
-- Pipe functions as a conduit too 
+- ~~Pipe functions as a conduit too~~ 
 	- Pipe variants
 	- Playable map
 		- Planet
-- Tunnel Pipe liquid draw area animated
+- Animate Pipe liquid draw area
+- Pipe connects to liquid outputs
 - Pipe item capacity = 2
 - Buff Pipe and variants with liquid
+	- Pipe booster tooltip
 - Environment Blocks
 
 #### Wishlist:

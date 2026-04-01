@@ -51,6 +51,12 @@ public class Pipe extends Duct{
         //if(junctionReplacement == null) junctionReplacement = Blocks.ductJunction;
     }
 
+    @Override
+    public void setStats(){
+        super.setStats();
+        stats.add(Stat.booster, StatValues.speedBoosters("{0}" + StatUnit.timesSpeed.localized(), 0f, waterBoost, false, consBase::consumes)
+    }
+
     public class PipeBuild extends DuctBuild{
 
         public float smoothLiquid;
