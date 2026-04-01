@@ -10,6 +10,7 @@ Add full mod description, polish README.md
 	- Playable map
 		- Planet
 - Tunnel Pipe liquid draw area
+- Environment Blocks
 
 #### Wishlist:
 
