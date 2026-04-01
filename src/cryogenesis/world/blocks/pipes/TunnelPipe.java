@@ -25,7 +25,7 @@ import static mindustry.Vars.*;
 
 public class TunnelPipe extends BufferedItemBridge{
 
-    public TextureRegion[] liquidRegion
+    public TextureRegion[] liquidRegion;
 
     public TunnelPipe(String name){
         super(name);
