@@ -81,7 +81,7 @@ public class CryogenesisBlocks{
 			//liquidCapacity = 10f;
 
 			//squareSprite = false;
-			consumeLiquid(Liquids.water, 0.1f/60f).boost();
+			//consumeLiquid(Liquids.water, 0.1f/60f).boost();
 		}};
 
 		tunnelPipe = new TunnelPipe("tunnel-pipe"){{

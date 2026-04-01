@@ -77,9 +77,9 @@ public class Pipe extends Duct{
         public void updateTile(){
             super.updateTile();
 
-            if (liquids.current() == Liquids.water) {
+            if (liquids.current() == Liquids.water && liquids.currentAmount() > 0.0001f) {
                 speed = baseSpeed / (Mathf.lerp(1f, waterBoost, optionalEfficiency) * efficiency);
-            } else if (liquids.current() == Liquids.cryofluid) {
+            } else if (liquids.current() == Liquids.cryofluid && liquids.currentAmount() > 0.0001f) {
                 speed = baseSpeed / (Mathf.lerp(1f, cryoBoost, optionalEfficiency) * efficiency);
             }
 
@@ -89,6 +89,13 @@ public class Pipe extends Duct{
                 moveLiquidForward(leaks, liquids.current());
                 noSleep();
             }
+        }
+
+        @Override
+        public void onProximityUpdate(){
+            super.onProximityUpdate();
+
+            nextc = next instanceof PipeBuild d ? d : null;
         }
     }
 }
