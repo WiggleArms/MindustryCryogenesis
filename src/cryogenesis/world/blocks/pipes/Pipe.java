@@ -27,12 +27,17 @@ public class Pipe extends Duct{
     public final int timerFlow = timers++;
     public boolean leaks = true;
 
+    public float baseSpeed = 30f;
+    public float waterBoost =  5.0f;
+    public float cryoBoost = 3.0f;
+
     public TextureRegion liquidRegion;
 
     public Pipe(String name){
         super(name);
         hasLiquids = true;
         outputsLiquid = true;
+        speed = baseSpeed;
     }
 
     public void load(){
@@ -71,6 +76,13 @@ public class Pipe extends Duct{
         @Override
         public void updateTile(){
             super.updateTile();
+
+            if liquids.current() == Liquids.water {
+                speed = baseSpeed / (Mathf.lerp(1f, waterBoost, optionalEfficiency) * efficiency);
+            } else if liquids.current() == Liquids.cryofluid {
+                speed = baseSpeed / (Mathf.lerp(1f, cryoBoost, optionalEfficiency) * efficiency);
+            }
+
             smoothLiquid = Mathf.lerpDelta(smoothLiquid, liquids.currentAmount() / liquidCapacity, 0.05f);
 
             if(liquids.currentAmount() > 0.0001f && timer(timerFlow, 1)){

@@ -73,7 +73,7 @@ public class CryogenesisBlocks{
 		pipe = new Pipe("pipe"){{
 			requirements(Category.distribution, with(Items.scrap, 1));
 			health = 75;
-			speed = 30f;
+			baseSpeed = 30f;
 			//itemCapacity = 3;
 
 			//hasLiquids = true;
@@ -81,6 +81,7 @@ public class CryogenesisBlocks{
 			//liquidCapacity = 10f;
 
 			//squareSprite = false;
+			consumeLiquid(Liquids.water, 0.1f/60f).boost();
 		}};
 
 		tunnelPipe = new TunnelPipe("tunnel-pipe"){{
