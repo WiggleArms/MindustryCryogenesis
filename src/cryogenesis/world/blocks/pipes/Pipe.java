@@ -35,7 +35,7 @@ public class Pipe extends Duct{
         //if(junctionReplacement == null) junctionReplacement = Blocks.ductJunction;
     }
 
-    public class PipeBuild extends DuctBuild{
+    public class PipeBuild extends DuctBuild implements ChainedBuilding{
 
         public float smoothLiquid;
         
