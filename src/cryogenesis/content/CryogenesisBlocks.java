@@ -106,6 +106,8 @@ public class CryogenesisBlocks{
 		pipeUnloader = new Unloader("pipe-unloader"){{
 			requirements(Category.distribution, with(Items.scrap, 3));
 			health = 100;
+			speed = 60f / 10f; //Second value should always be equal to max liquid-boosted Pipe throughput
+			group = BlockGroup.transportation;
 		}};
 	}
 }

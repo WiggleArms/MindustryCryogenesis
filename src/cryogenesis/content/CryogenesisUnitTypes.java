@@ -33,8 +33,15 @@ import static mindustry.Vars.*;
 
 public class CryogenesisUnitTypes{
 
-	//core
-	public static UnitType meso;
+	public static UnitType 
+    
+    //core
+    meso;
+
+    public static TankUnitType
+
+    //roller
+    schizi;
 
 	public static void load(){
 
@@ -101,5 +108,41 @@ public class CryogenesisUnitTypes{
                 }};
             }});
 		}};
+
+        schizi = new TankUnitType("schizi"){{
+            constructor = TankUnit::create;
+            hitSize = 12f;
+            treadPullOffset = 3;
+            speed = 1f;
+            rotateSpeed = 7f;
+            health = 500;
+            armor = 1f;
+            itemCapacity = 0;
+            floorMultiplier = 0.95f;
+            treadRects = new Rect[]{new Rect(-24, -8, 24, 8)};
+            researchCostMultiplier = 0f;
+
+            tankMoveVolume *= 0.32f;
+            tankMoveSound = Sounds.tankMoveSmall;
+
+            weapons.add(new Weapon("cryogenesis-schizi-weapon"){{
+                ejectEffect = Fx.casing1;
+                layerOffset = 0.0001f;
+                reload = 50f;
+                shootY = 4.5f;
+                recoil = 1f;
+                mirror = true;
+                x = 5.5f;
+                y = -0.75f;
+                //heatColor = Color.valueOf("f9350f");
+                //cooldownTime = 30f;
+
+                bullet = new BasicBulletType(4f, 40){{
+                    width = 7f;
+                    height = 9f;
+                    lifetime = 60f;
+                }};
+            }});
+        }};
 	}
 }

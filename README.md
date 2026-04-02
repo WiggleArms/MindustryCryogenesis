@@ -48,13 +48,16 @@ A: Yep.
 ### To-Do List
 
 - ~~Pipe functions as a conduit too~~
+	- Replace Pipe and variant costs with Iron instead of scrap [FUTURE]
 	- Fix Pipe liquid randomness
 	- Pipe variants
 		- Armored Pipe accent color
-	- Pipe Unloader
-		- Pipe Unloader speed to highest boosted Pipe speed
-		- Playable map
-			- Planet
+	- ~~Pipe Unloader~~
+		- ~~Pipe Unloader speed to highest boosted Pipe speed~~
+		- Resprite Pipe Unloader [FUTURE]
+		- Ground unit
+			- Playable map
+				- Planet
 - ~~Buff Pipe with certain liquid~~
 	- Same for variants
 	- Other liquid boost values (for mixtech)
@@ -63,6 +66,8 @@ A: Yep.
 - Better mod icon and description
 	- Polish README
 - Handle team icon internally
+- Devastate turret [FAR FUTURE]
+- Fix UI icons
 
 ### Wishlist:
 
