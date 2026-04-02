@@ -33,6 +33,8 @@ public class Pipe extends Duct{
 
     public float waterBoost =  5.0f;
     public float cryoBoost = 3.0f;
+    
+    public float liquidPadding = 0f;
 
     public TextureRegion liquidRegion;
 
