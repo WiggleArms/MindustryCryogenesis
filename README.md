@@ -16,6 +16,7 @@ Add full mod description, polish README.md
 	- Same for variants
 - Pipe booster tooltip
 - Environment Blocks
+- Better mod icon and description
 
 #### Wishlist:
 
