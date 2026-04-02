@@ -53,12 +53,24 @@ public class Pipe extends Duct{
         //if(junctionReplacement == null) junctionReplacement = Blocks.ductJunction;
     }
 
+    /*
     @Override
     public void setStats(){
         super.setStats();
 
         if(findConsumer(f -> f instanceof ConsumeLiquidBase && f.booster) instanceof ConsumeLiquidBase consBase){
             stats.add(Stat.booster, StatValues.speedBoosters("{0}" + StatUnit.timesSpeed.localized(), 0f, waterBoost, false, consBase::consumes));
+        }
+    }
+    */
+
+    @Override
+    public boolean blends(Tile tile, int rotation, int otherx, int othery, int otherrot, Block otherblock){
+        if(!armored){
+            return (otherblock.outputsItems() || otherblock.outputsLiquid() || (lookingAt(tile, rotation, otherx, othery, otherblock) && (otherblock.hasItems || otherblock.hasLiquids)))
+            && lookingAtEither(tile, rotation, otherx, othery, otherrot, otherblock);
+        }else{
+            return ((otherblock.outputsItems() || otherblock.outputsLiquid) && blendsArmored(tile, rotation, otherx, othery, otherrot, otherblock)) || (lookingAt(tile, rotation, otherx, othery, otherblock) && (otherblock.hasItems || otherblock.hasLiquids));
         }
     }
 
