@@ -74,9 +74,50 @@ public class Pipe extends Duct{
         }
     }
 
+    public static void drawTiledFrames(int size, float x, float y, float padding, Liquid liquid, float alpha){
+        drawTiledFrames(size, x, y, padding, padding, padding, padding, liquid, alpha);
+    }
+
+    public static void drawTiledFrames(int size, float x, float y, float padLeft, float padRight, float padTop, float padBottom, Liquid liquid, float alpha){
+        TextureRegion region = renderer.fluidFrames[liquid.gas ? 1 : 0][liquid.getAnimationFrame()];
+        TextureRegion toDraw = Tmp.tr1;
+
+        float leftBounds = size/2f * tilesize - padRight;
+        float bottomBounds = size/2f * tilesize - padTop;
+        Color color = Tmp.c1.set(liquid.color).a(1f);
+
+        for(int sx = 0; sx < size; sx++){
+            for(int sy = 0; sy < size; sy++){
+                float relx = sx - (size-1)/2f, rely = sy - (size-1)/2f;
+
+                toDraw.set(region);
+
+                //truncate region if at border
+                float rightBorder = relx*tilesize + padLeft, topBorder = rely*tilesize + padBottom;
+                float squishX = rightBorder + tilesize/2f - leftBounds, squishY = topBorder + tilesize/2f - bottomBounds;
+                float ox = 0f, oy = 0f;
+
+                if(squishX >= 8 || squishY >= 8) continue;
+
+                //cut out the parts that don't fit inside the padding
+                if(squishX > 0){
+                    toDraw.setWidth(toDraw.width - squishX * 4f);
+                    ox = -squishX/2f;
+                }
+
+                if(squishY > 0){
+                    toDraw.setY(toDraw.getY() + squishY * 4f);
+                    oy = -squishY/2f;
+                }
+
+                Drawf.liquid(toDraw, x + rightBorder + ox, y + topBorder + oy, alpha, color);
+            }
+        }
+    }
+
     public class PipeBuild extends DuctBuild{
 
-        public float smoothLiquid;
+        //public float smoothLiquid;
         
         @Override
         public void draw(){
@@ -84,7 +125,7 @@ public class Pipe extends Duct{
             
             if(liquids.currentAmount() > 0.001f){
                 Draw.z(Layer.blockUnder + 0.05f);
-                Drawf.liquid(liquidRegion, x, y, liquids.currentAmount() / liquidCapacity, liquids.current().color);
+                drawTiledFrames(size, x, y, liquidPadding, liquids.current(), liquids.currentAmount() / liquidCapacity);
             }
         }
 
@@ -121,7 +162,7 @@ public class Pipe extends Duct{
                 current = items.first();
             }
 
-            smoothLiquid = Mathf.lerpDelta(smoothLiquid, liquids.currentAmount() / liquidCapacity, 0.05f);
+            //smoothLiquid = Mathf.lerpDelta(smoothLiquid, liquids.currentAmount() / liquidCapacity, 0.05f);
 
             if(liquids.currentAmount() > 0.0001f && timer(timerFlow, 1)){
                 moveLiquidForward(leaks, liquids.current());

@@ -10,10 +10,11 @@ Add full mod description, polish README.md
 	- Playable map
 		- Planet
 - Animate Pipe liquid draw area
-- Pipe connects to liquid outputs
+- ~~Pipe connects to liquid outputs~~
 - Pipe item capacity = 2
-- Buff Pipe and variants with liquid
-	- Pipe booster tooltip
+- ~~Buff Pipe with liquid~~
+	- Same for variants
+- Pipe booster tooltip
 - Environment Blocks
 
 #### Wishlist:
