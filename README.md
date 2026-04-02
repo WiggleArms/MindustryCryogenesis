@@ -5,9 +5,9 @@ A mod for Mindustry adding a third, frozen planet.
 
 Cryogenesis v[MAJOR].[MINOR].[PATCH] - [PHASE]
 
-Major version is updated for major overall gameplay additions or changes.
-Minor version is upated for large content additions or changes.
-Patch is updated for small additions or changes to specific content.
+Major version is updated for major overall gameplay additions or changes.<br>
+Minor version is upated for large content additions or changes.<br>
+Patch is updated for small additions or changes to specific content.<br>
 Phase denotes the phase of development the version is in:
 
 - Alpha versions are versions created prior to the v1.0.0 release.
@@ -32,7 +32,7 @@ FUTURE - Further content revamps and additions
 ## FAQ
 
 #### Q: More additions after T5? Does this mean we get T6?
-A: Not until vanilla gets them first! Those revamps and additions are to polish the mod and bring it up to the other two campaigns in terms of quality.
+A: Not unless vanilla gets them first! Those revamps and additions are to polish the mod and bring it up to the other two campaigns in terms of quality.
 <sub><sup>Or maybe for if I come up with a really cool idea that I *have* to add<sup><sub>
 
 #### Q: Did you make this FAQ just so you could answer the previous question?
@@ -40,7 +40,7 @@ A: Yep.
 
 ## Upcoming Features
 
-### Formatting
+### Legend
 
 - Uncompleted item
 - ~~Completed item~~
@@ -50,13 +50,14 @@ A: Yep.
 - ~~Pipe functions as a conduit too~~
 	- Fix Pipe liquid randomness
 	- Pipe variants
-	- Playable map
-		- Planet
-- Pipe item capacity = 2
+		- Armored Pipe accent color
+	- Pipe unloader
+		- Playable map
+			- Planet
 - ~~Buff Pipe with certain liquid~~
 	- Same for variants
 	- Other liquid boost values (for mixtech)
-- Pipe booster tooltip
+	- Liquid booster tooltips
 - Environment Blocks
 - Better mod icon and description
 	- Polish README
@@ -69,6 +70,7 @@ OR<br>
 Tunnel Pipe directional sprites, looks similar to Pipe
 
 - Slag-filled Pipes and variants incinerate items
+- Buff Pipe item capacity
 
 ### Wiggle's Accomplishments List
 

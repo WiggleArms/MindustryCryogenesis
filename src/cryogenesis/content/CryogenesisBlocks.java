@@ -46,7 +46,16 @@ import static mindustry.type.ItemStack.*;
 
 public class CryogenesisBlocks{
 
-	public static Block testWall, coreThread, pipe, tunnelPipe;
+	public static Block 
+	
+	//test
+	testWall, 	
+	
+	//distribution
+	pipe, /*armored-pipe,*/ tunnelPipe, pipeUnloader,
+	
+	//storage
+	core-thread;
 
 	public static void load(){
 
@@ -74,15 +83,16 @@ public class CryogenesisBlocks{
 			requirements(Category.distribution, with(Items.scrap, 1));
 			health = 75;
 			speed = 30f;
-			//itemCapacity = 3;
-
-			//hasLiquids = true;
-			//outputsLiquid = true;
-			//liquidCapacity = 10f;
-
-			//squareSprite = false;
-			//consumeLiquid(Liquids.water, 0.1f/60f).boost();
 		}};
+
+		/*
+		pipe = new Pipe("armored-pipe"){{
+			requirements(Category.distribution, with(Items.scrap, 1));
+			health = 75;
+			speed = 30f;
+			armored = true;
+		}};
+		*/
 
 		tunnelPipe = new TunnelPipe("tunnel-pipe"){{
 			requirements(Category.distribution, with(Items.scrap, 1));
@@ -92,5 +102,10 @@ public class CryogenesisBlocks{
 			bufferCapacity = 14;
 			solid = false;
 		}};
+
+		pipeUnloader = new Unloader("pipe-unloader"){{
+			requirements(Category.distribution, with(Items.scrap, 3));
+			health = 100;
+		}}
 	}
 }
