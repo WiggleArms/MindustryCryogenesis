@@ -24,6 +24,8 @@ import mindustry.world.blocks.distribution.*;
 import mindustry.world.consumers.*;
 import mindustry.world.meta.*;
 
+import static mindustry.Vars.*;
+
 public class Pipe extends Duct{
 
     public final int timerFlow = timers++;
