@@ -51,7 +51,8 @@ A: Yep.
 	- Fix Pipe liquid randomness
 	- Pipe variants
 		- Armored Pipe accent color
-	- Pipe unloader
+	- Pipe Unloader
+		- Pipe Unloader speed to highest boosted Pipe speed
 		- Playable map
 			- Planet
 - ~~Buff Pipe with certain liquid~~

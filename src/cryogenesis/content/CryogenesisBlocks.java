@@ -55,7 +55,7 @@ public class CryogenesisBlocks{
 	pipe, /*armored-pipe,*/ tunnelPipe, pipeUnloader,
 	
 	//storage
-	core-thread;
+	coreThread;
 
 	public static void load(){
 
@@ -106,6 +106,6 @@ public class CryogenesisBlocks{
 		pipeUnloader = new Unloader("pipe-unloader"){{
 			requirements(Category.distribution, with(Items.scrap, 3));
 			health = 100;
-		}}
+		}};
 	}
 }
