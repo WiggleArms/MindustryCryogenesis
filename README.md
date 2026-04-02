@@ -1,36 +1,6 @@
 # MindustryCryogenesis
 A mod for Mindustry adding a third, frozen planet.
 
-### TO-DO LIST:
-
-- Uncompleted item
-- ~~Completed item~~
-
-- ~~Pipe functions as a conduit too~~
-	- Fix Pipe liquid randomness
-	- Pipe variants
-	- Playable map
-		- Planet
-- ~~Animate Pipe liquid draw area~~
-- ~~Pipe connects to liquid outputs~~
-- Pipe item capacity = 2
-- ~~Buff Pipe with certain liquid~~
-	- Same for variants
-	- Other liquid boost values (for mixtech)
-- Pipe booster tooltip
-- Environment Blocks
-- Better mod icon and description
-	- Polish README
-- Handle team icon internally
-
-#### Wishlist:
-
-Tunnel Pipe doesn't need end - push/pull from anything connected<br>
-OR<br>
-Tunnel Pipe directional sprites, looks similar to Pipe
-
-- Slag-filled Pipes and variants incinerate items
-
 ## Roadmap
 
 Cryogenesis v[MAJOR].[MINOR].[PATCH] - [PHASE]
@@ -67,3 +37,40 @@ A: Not until vanilla gets them first! Those revamps and additions are to polish 
 
 #### Q: Did you make this FAQ just so you could answer the previous question?
 A: Yep.
+
+## Upcoming Features
+
+### Formatting
+
+- Uncompleted item
+- ~~Completed item~~
+
+### To-Do List
+
+- ~~Pipe functions as a conduit too~~
+	- Fix Pipe liquid randomness
+	- Pipe variants
+	- Playable map
+		- Planet
+- Pipe item capacity = 2
+- ~~Buff Pipe with certain liquid~~
+	- Same for variants
+	- Other liquid boost values (for mixtech)
+- Pipe booster tooltip
+- Environment Blocks
+- Better mod icon and description
+	- Polish README
+- Handle team icon internally
+
+### Wishlist:
+
+Tunnel Pipe doesn't need end - push/pull from anything connected<br>
+OR<br>
+Tunnel Pipe directional sprites, looks similar to Pipe
+
+- Slag-filled Pipes and variants incinerate items
+
+### Wiggle's Accomplishments List
+
+- Animate Pipe liquid draw area
+- Pipe connects to liquid outputs
