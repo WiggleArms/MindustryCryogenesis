@@ -67,10 +67,10 @@ public class Pipe extends Duct{
     @Override
     public boolean blends(Tile tile, int rotation, int otherx, int othery, int otherrot, Block otherblock){
         if(!armored){
-            return (otherblock.outputsItems() || otherblock.outputsLiquid() || (lookingAt(tile, rotation, otherx, othery, otherblock) && (otherblock.hasItems || otherblock.hasLiquids)))
+            return ((otherblock.outputsItems() || otherblock.outputsLiquid()) || (lookingAt(tile, rotation, otherx, othery, otherblock) && (otherblock.hasItems || otherblock.hasLiquids)))
             && lookingAtEither(tile, rotation, otherx, othery, otherrot, otherblock);
         }else{
-            return ((otherblock.outputsItems() || otherblock.outputsLiquid) && blendsArmored(tile, rotation, otherx, othery, otherrot, otherblock)) || (lookingAt(tile, rotation, otherx, othery, otherblock) && (otherblock.hasItems || otherblock.hasLiquids));
+            return ((otherblock.outputsItems() || otherblock.outputsLiquid()) && blendsArmored(tile, rotation, otherx, othery, otherrot, otherblock)) || (lookingAt(tile, rotation, otherx, othery, otherblock) && (otherblock.hasItems || otherblock.hasLiquids));
         }
     }
 
