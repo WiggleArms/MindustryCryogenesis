@@ -123,7 +123,7 @@ public class CryogenesisUnitTypes{
             armor = 1f;
             itemCapacity = 0;
             floorMultiplier = 0.95f;
-            treadRects = new Rect[]{new Rect(-8, -48, 8, 24)};
+            treadRects = new Rect[]{new Rect(-8, -24, 8, 48)};
 
             tankMoveVolume *= 0.32f;
             tankMoveSound = Sounds.tankMoveSmall;
