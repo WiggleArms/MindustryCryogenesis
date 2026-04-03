@@ -78,6 +78,7 @@ A: Yep.
 	- Iono unit
 	- Core: Nexus [FAR FUTURE]
 		- Exo unit
+- Resprite Nickel Compactor to look less like camouflage
 
 ### Wishlist:
 

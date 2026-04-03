@@ -83,9 +83,9 @@ public class CryogenesisBlocks{
 		}};
 
 		pipe = new Pipe("pipe"){{
-			requirements(Category.distribution, with(Items.scrap, 1));
+			requirements(Category.distribution, with(CryogenesisItems.nickel, 1));
 			health = 75;
-			speed = 30f;
+			speed = 20f;
 		}};
 
 		/*
@@ -98,7 +98,7 @@ public class CryogenesisBlocks{
 		*/
 
 		tunnelPipe = new TunnelPipe("tunnel-pipe"){{
-			requirements(Category.distribution, with(Items.scrap, 1));
+			requirements(Category.distribution, with(CryogenesisItems.nickel, 8));
 			range = 4;
 			health = 100;
 			speed = 74f;
@@ -107,14 +107,14 @@ public class CryogenesisBlocks{
 		}};
 
 		pipeUnloader = new Unloader("pipe-unloader"){{
-			requirements(Category.distribution, with(Items.scrap, 3));
+			requirements(Category.distribution, with(CryogenesisItems.nickel, 15));
 			health = 100;
-			speed = 60f / 10f; //Second value should always be equal to max liquid-boosted Pipe throughput
+			speed = 60f / 15f; //Second value should always be equal to max liquid-boosted Pipe throughput
 			group = BlockGroup.transportation;
 		}};
 
 		coreThread = new CoreBlock("core-thread"){{
-			requirements(Category.effect, with(Items.silicon, 500));
+			requirements(Category.effect, with(CryogenesisItems.nickel, 1000, Items.silicon, 500));
 			alwaysUnlocked = true;
 
 			isFirstTier = true;
