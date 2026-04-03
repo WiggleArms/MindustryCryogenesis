@@ -54,6 +54,9 @@ public class CryogenesisBlocks{
 
 	//crafting
 	nickelCompactor,
+
+	//walls
+	nickelWall,
 	
 	//distribution
 	pipe, /*armored-pipe,*/ tunnelPipe, pipeUnloader,
@@ -80,6 +83,12 @@ public class CryogenesisBlocks{
 			hasItems = true;
 
 			consumeItem(Items.scrap, 2);
+		}};
+
+		nickelWall = new Wall("nickel-wall"){{
+			requirements(Category.defense, with(CryogenesisItems.nickel, 6));
+
+			health = 80 * wallHealthMultiplier
 		}};
 
 		pipe = new Pipe("pipe"){{
