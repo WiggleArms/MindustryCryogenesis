@@ -71,6 +71,7 @@ A: Yep.
 - Handle team icon internally
 - Devastate turret [FAR FUTURE]
 - Fix UI icons
+- Build turrets on core units, may require resprite [FUTURE]
 
 ### Wishlist:
 
