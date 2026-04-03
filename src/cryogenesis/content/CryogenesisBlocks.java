@@ -88,7 +88,7 @@ public class CryogenesisBlocks{
 		nickelWall = new Wall("nickel-wall"){{
 			requirements(Category.defense, with(CryogenesisItems.nickel, 6));
 
-			health = 80 * wallHealthMultiplier
+			health = 80 * wallHealthMultiplier;
 		}};
 
 		pipe = new Pipe("pipe"){{
