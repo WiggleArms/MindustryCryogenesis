@@ -116,14 +116,14 @@ public class CryogenesisUnitTypes{
         schizi = new TankUnitType("schizi"){{
             constructor = TankUnit::create;
             hitSize = 12f;
-            treadPullOffset = 1;
+            treadPullOffset = 0;
             speed = 1f;
             rotateSpeed = 4f;
             //rotateMoveFirst = true;
-            omniMovement = true;
-            strafePenalty = -1f;
+            //omniMovement = true;
+            //strafePenalty = -1f;
             health = 500;
-            armor = 1f;
+            armor = 3f;
             itemCapacity = 0;
             floorMultiplier = 0.95f;
             treadRects = new Rect[]{new Rect(-8, -24, 8, 48)};
@@ -136,7 +136,6 @@ public class CryogenesisUnitTypes{
                 ejectEffect = Fx.casing1;
                 outlineColor = CryogenesisPalette.ironOutline;
                 top = false;
-                //layerOffset = 0.0001f;
                 reload = 50f;
                 shootY = 4.5f;
                 recoil = 1f;
