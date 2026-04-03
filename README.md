@@ -57,7 +57,7 @@ A: Yep.
 		- Resprite Pipe Unloader [FUTURE]
 		- Ground unit
 			- ~~Possibly upgrade T1 Eluma to T2 Schizi~~ and create new unit for T1
-			- Resprite Schizi to use rotating turrets
+			- Resprite Schizi to use rotating turrets [FUTURE]
 			- ~~Fix Eluma/Schizi treads~~
 			- Playable map
 				- Planet
@@ -72,6 +72,7 @@ A: Yep.
 - Devastate turret [FAR FUTURE]
 - ~~Fix UI icons~~
 	- Fix Core: Thread UI icon
+	- Rego UI icons with 6px stroke
 - Build Turrets on core units, may require resprite [FUTURE]
 - Core: Hub [FAR FUTURE]
 	- Iono unit
