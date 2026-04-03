@@ -116,7 +116,7 @@ public class CryogenesisUnitTypes{
         schizi = new TankUnitType("schizi"){{
             constructor = TankUnit::create;
             hitSize = 12f;
-            treadPullOffset = 3;
+            treadPullOffset = 4;
             speed = 1f;
             rotateSpeed = 7f;
             health = 500;
@@ -133,7 +133,7 @@ public class CryogenesisUnitTypes{
                 ejectEffect = Fx.casing1;
                 outlineColor = CryogenesisPalette.ironOutline;
                 top = false;
-                layerOffset = 0.0001f;
+                //layerOffset = 0.0001f;
                 reload = 50f;
                 shootY = 4.5f;
                 recoil = 1f;
