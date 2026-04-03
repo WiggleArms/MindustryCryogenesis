@@ -67,6 +67,8 @@ public class CryogenesisBlocks{
 		}};
 
 		coreThread = new CoreBlock("core-thread"){{
+            uiIcon = Core.atlas.find(name + "-ui");
+
 			requirements(Category.effect, with(Items.silicon, 500));
 			alwaysUnlocked = true;
 
