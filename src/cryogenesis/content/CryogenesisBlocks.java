@@ -1,6 +1,7 @@
 package cryogenesis.content;
 
 import cryogenesis.content.CryogenesisUnitTypes;
+import cryogenesis.content.CryogenesisItems;
 import cryogenesis.world.blocks.pipes.*;
 
 import arc.*;
@@ -73,7 +74,7 @@ public class CryogenesisBlocks{
 		nickelCompactor = new GenericCrafter("nickel-compactor"){{
 			requirements(Category.crafting, with(Items.scrap, 30));
 
-			craftEffect = fx.pulverizeMedium;
+			craftEffect = Fx.pulverizeMedium;
 			outputItem = new ItemStack(Items.nickel, 1);
 			craftTime = 50f;
 			size = 2;
