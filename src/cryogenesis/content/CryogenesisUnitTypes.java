@@ -47,8 +47,6 @@ public class CryogenesisUnitTypes{
 	public static void load(){
 
 		meso = new UnitType("meso"){{
-            uiIcon = Core.atlas.find(name + "-ui");
-
             constructor = UnitEntity::create;
 			controller = u -> u.team.isAI() ? new BuilderAI(true, 400f) : new CommandAI();
             isEnemy = false;
@@ -117,8 +115,6 @@ public class CryogenesisUnitTypes{
         */
 
         schizi = new TankUnitType("schizi"){{
-            uiIcon = Core.atlas.find(name + "-ui");
-
             constructor = TankUnit::create;
             hitSize = 12f;
             treadPullOffset = 0;
