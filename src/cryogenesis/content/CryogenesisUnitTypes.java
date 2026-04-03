@@ -113,7 +113,7 @@ public class CryogenesisUnitTypes{
         eluma = new TankUnitType("eluma"){{
             constructor = TankUnit::create;
             hitSize = 8f;
-            treadPullOffset = 2;
+            treadPullOffset = 6;
             speed = 1f;
             rotateSpeed = 6f;
             health = 250;
@@ -129,8 +129,8 @@ public class CryogenesisUnitTypes{
             weapons.add(new Weapon("cryogenesis-eluma-weapon"){{
                 ejectEffect = Fx.casing1;
                 outlineColor = CryogenesisPalette.ironOutline;
-                reload = 20f;
-                shootY = 4.5f;
+                reload = 25f;
+                shootY = 4.25f;
                 recoil = 1f;
                 mirror = false;
                 rotate = true;
@@ -139,9 +139,9 @@ public class CryogenesisUnitTypes{
                 //heatColor = Color.valueOf("f9350f");
                 //cooldownTime = 30f;
 
-                bullet = new BasicBulletType(4f, 12){{
-                    width = 4f;
-                    height = 6f;
+                bullet = new BasicBulletType(2.5f, 24){{
+                    width = 7f;
+                    height = 9f;
                     lifetime = 60f;
                 }};
             }});
@@ -151,7 +151,7 @@ public class CryogenesisUnitTypes{
             constructor = TankUnit::create;
             hitSize = 12f;
             treadPullOffset = 0;
-            speed = 1f;
+            speed = 0.8f;
             rotateSpeed = 4f;
             //rotateMoveFirst = true;
             //omniMovement = true;
