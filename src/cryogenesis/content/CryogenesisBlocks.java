@@ -71,7 +71,7 @@ public class CryogenesisBlocks{
 		}};
 
 		nickelCompactor = new GenericCrafter("nickel-compactor"){{
-			requirements(Category.crafting, with(Items.scrap, 30))
+			requirements(Category.crafting, with(Items.scrap, 30));
 
 			craftEffect = fx.pulverizeMedium;
 			outputItem = new ItemStack(Items.nickel, 1);
