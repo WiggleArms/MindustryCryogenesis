@@ -132,6 +132,7 @@ public class CryogenesisUnitTypes{
             weapons.add(new Weapon("cryogenesis-schizi-weapon"){{
                 ejectEffect = Fx.casing1;
                 outlineColor = CryogenesisPalette.ironOutline;
+                top = false;
                 layerOffset = 0.0001f;
                 reload = 50f;
                 shootY = 4.5f;
