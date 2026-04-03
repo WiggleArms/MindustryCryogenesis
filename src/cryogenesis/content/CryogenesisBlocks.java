@@ -51,6 +51,9 @@ public class CryogenesisBlocks{
 	
 	//test
 	testWall, 	
+
+	//crafting
+	nickelCompactor,
 	
 	//distribution
 	pipe, /*armored-pipe,*/ tunnelPipe, pipeUnloader,
@@ -67,17 +70,16 @@ public class CryogenesisBlocks{
 			health = 80 * wallHealthMultiplier;
 		}};
 
-		coreThread = new CoreBlock("core-thread"){{
-			requirements(Category.effect, with(Items.silicon, 500));
-			alwaysUnlocked = true;
+		nickelCompactor = new GenericCrafter("nickel-compactor"){{
+			requirements(Category.crafting, with(Items.scrap, 30))
 
-			isFirstTier = true;
-			unitType = CryogenesisUnitTypes.meso;
-			health = 500;
-			itemCapacity = 1000;
+			craftEffect = fx.pulverizeMedium;
+			outputItem = new ItemStack(Items.nickel, 1);
+			craftTime = 50f;
 			size = 2;
+			hasItems = true;
 
-			unitCapModifier = 4;
+			consumeItem(Items.scrap, 2);
 		}};
 
 		pipe = new Pipe("pipe"){{
@@ -109,6 +111,19 @@ public class CryogenesisBlocks{
 			health = 100;
 			speed = 60f / 10f; //Second value should always be equal to max liquid-boosted Pipe throughput
 			group = BlockGroup.transportation;
+		}};
+
+		coreThread = new CoreBlock("core-thread"){{
+			requirements(Category.effect, with(Items.silicon, 500));
+			alwaysUnlocked = true;
+
+			isFirstTier = true;
+			unitType = CryogenesisUnitTypes.meso;
+			health = 500;
+			itemCapacity = 1000;
+			size = 2;
+
+			unitCapModifier = 4;
 		}};
 	}
 }
