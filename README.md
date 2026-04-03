@@ -56,9 +56,9 @@ A: Yep.
 		- ~~Pipe Unloader speed to highest boosted Pipe speed~~
 		- Resprite Pipe Unloader [FUTURE]
 		- Ground unit
-			- Possibly upgrade T1 Eluma to T2 Schizi and create new unit for T1
-			- Eluma/Schizi firing arc/rotation
-			- Fix Eluma/Schizi treads
+			- ~~Possibly upgrade T1 Eluma to T2 Schizi~~ and create new unit for T1
+			- Resprite Schizi to use rotating turrets
+			- ~~Fix Eluma/Schizi treads~~
 			- Playable map
 				- Planet
 - ~~Buff Pipe with certain liquid~~
@@ -70,8 +70,13 @@ A: Yep.
 	- Polish README
 - Handle team icon internally
 - Devastate turret [FAR FUTURE]
-- Fix UI icons
-- Build turrets on core units, may require resprite [FUTURE]
+- ~~Fix UI icons~~
+	- Fix Core: Thread UI icon
+- Build Turrets on core units, may require resprite [FUTURE]
+- Core: Hub [FAR FUTURE]
+	- Iono unit
+	- Core: Nexus [FAR FUTURE]
+		- Exo unit
 
 ### Wishlist:
 
