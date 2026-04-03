@@ -41,7 +41,7 @@ public class CryogenesisUnitTypes{
     public static TankUnitType
 
     //roller
-    eluma;
+    schizi;
 
 	public static void load(){
 
@@ -109,7 +109,11 @@ public class CryogenesisUnitTypes{
             }});
 		}};
 
-        eluma = new TankUnitType("eluma"){{
+        /*
+        eluma
+        */
+
+        schizi = new TankUnitType("schizi"){{
             constructor = TankUnit::create;
             hitSize = 12f;
             treadPullOffset = 3;
@@ -119,13 +123,13 @@ public class CryogenesisUnitTypes{
             armor = 1f;
             itemCapacity = 0;
             floorMultiplier = 0.95f;
-            treadRects = new Rect[]{new Rect(-8, -12, 8, 24)};
+            treadRects = new Rect[]{new Rect(-8, -48, 8, 24)};
 
             tankMoveVolume *= 0.32f;
             tankMoveSound = Sounds.tankMoveSmall;
             outlineColor = CryogenesisPalette.ironOutline;
 
-            weapons.add(new Weapon("cryogenesis-eluma-weapon"){{
+            weapons.add(new Weapon("cryogenesis-schizi-weapon"){{
                 ejectEffect = Fx.casing1;
                 outlineColor = CryogenesisPalette.ironOutline;
                 layerOffset = 0.0001f;
