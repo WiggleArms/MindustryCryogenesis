@@ -118,7 +118,8 @@ public class CryogenesisUnitTypes{
             hitSize = 12f;
             treadPullOffset = 4;
             speed = 1f;
-            rotateSpeed = 7f;
+            rotateSpeed = 4f;
+            rotateMoveFirst = false;
             health = 500;
             armor = 1f;
             itemCapacity = 0;
