@@ -116,10 +116,11 @@ public class CryogenesisUnitTypes{
         schizi = new TankUnitType("schizi"){{
             constructor = TankUnit::create;
             hitSize = 12f;
-            treadPullOffset = 4;
+            treadPullOffset = 2;
             speed = 1f;
             rotateSpeed = 4f;
             rotateMoveFirst = false;
+            omniMovement = true;
             health = 500;
             armor = 1f;
             itemCapacity = 0;
