@@ -1,7 +1,6 @@
 package cryogenesis.content;
 
-import cryogenesis.content.CryogenesisUnitTypes;
-import cryogenesis.content.CryogenesisItems;
+import cryogenesis.content.*;
 import cryogenesis.world.blocks.pipes.*;
 
 import arc.*;
@@ -75,7 +74,7 @@ public class CryogenesisBlocks{
 			requirements(Category.crafting, with(Items.scrap, 30));
 
 			craftEffect = Fx.pulverizeMedium;
-			outputItem = new ItemStack(Items.nickel, 1);
+			outputItem = new ItemStack(CryogenesisItems.nickel, 1);
 			craftTime = 50f;
 			size = 2;
 			hasItems = true;

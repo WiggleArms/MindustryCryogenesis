@@ -56,8 +56,8 @@ A: Yep.
 		- ~~Pipe Unloader speed to highest boosted Pipe speed~~
 		- Resprite Pipe Unloader [FUTURE]
 		- Ground unit
-			- ~~Possibly upgrade T1 Eluma to T2 Schizi~~ and create new unit for T1
-			- Resprite Schizi to use rotating turrets [FUTURE]
+			- ~~Possibly upgrade T1 Eluma to T2 Schizi and create new unit for T1~~
+			- Replace Schizi with new T2 armed with turrets
 			- ~~Fix Eluma/Schizi treads~~
 			- Playable map
 				- Planet
