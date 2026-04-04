@@ -2,6 +2,7 @@ package cryogenesis.content;
 
 import cryogenesis.content.*;
 import cryogenesis.world.blocks.pipes.*;
+import cryogenesis.world.graphics.*;
 
 import arc.*;
 import arc.graphics.*;
@@ -142,7 +143,7 @@ public class CryogenesisBlocks{
 			requirements(Category.turret, with(CryogenesisItems.nickel, 50));
 			
 			ammo(
-				 CryogenesisItems.nickel,  new BasicBulletType(2.5f, 24){{
+				 CryogenesisItems.nickel,  new BasicBulletType(2.5f, 8){{
 					width = 7f;
                     height = 9f;
                     lifetime = 60f;
@@ -155,21 +156,22 @@ public class CryogenesisBlocks{
 			);
 
 			drawer = new DrawTurret("insulated-");
+			outlineColor = CryogenesisPalette.ironOutline;
+			squareSprite = false;
 			size = 2;
 
             shootSound = Sounds.shootStell;
             recoil = 2f;
             shootY = 7f;
-            reload = 35f;
+            reload = 12f;
             range = 160;
             shootCone = 15f;
             ammoUseEffect = Fx.casing1;
             health = 250;
             inaccuracy = 2f;
             rotateSpeed = 10f;
-            coolant = consumeCoolant(0.1f);
-            coolantMultiplier = 10f;
             researchCostMultiplier = 0.05f;
+            //coolant = consume(new ConsumeLiquid(Liquids.cryofluid, 15f / 60f));
             depositCooldown = 2.0f;
 		}};
 	}

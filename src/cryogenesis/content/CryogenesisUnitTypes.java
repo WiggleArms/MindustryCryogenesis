@@ -139,7 +139,7 @@ public class CryogenesisUnitTypes{
                 //heatColor = Color.valueOf("f9350f");
                 //cooldownTime = 30f;
 
-                bullet = new BasicBulletType(2.5f, 24){{
+                bullet = new BasicBulletType(2.5f, 16){{
                     width = 7f;
                     height = 9f;
                     lifetime = 60f;
