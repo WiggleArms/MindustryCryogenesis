@@ -48,7 +48,7 @@ A: Yep.
 ### To-Do List
 
 - ~~Pipe functions as a conduit too~~
-	- Replace Pipe and variant costs with Iron instead of scrap [FUTURE]
+	- ~~Replace Pipe and variant costs with Iron instead of scrap [FUTURE]~~
 	- Fix Pipe liquid randomness
 	- Pipe variants
 		- Armored Pipe accent color
@@ -59,8 +59,11 @@ A: Yep.
 			- ~~Possibly upgrade T1 Eluma to T2 Schizi and create new unit for T1~~
 			- Replace Schizi with new T2 armed with turrets
 			- ~~Fix Eluma/Schizi treads~~
+		- Large Nickel Wall
+		- Basic turret
 			- Playable map
 				- Planet
+					- Tech Tree
 - ~~Buff Pipe with certain liquid~~
 	- Same for variants
 	- Other liquid boost values (for mixtech)
@@ -72,13 +75,13 @@ A: Yep.
 - Devastate turret [FAR FUTURE]
 - ~~Fix UI icons~~
 	- Fix Core: Thread UI icon
-	- Rego UI icons with 6px stroke
+	- ~~Redo UI icons with 6px stroke~~
 - Build Turrets on core units, may require resprite [FUTURE]
 - Core: Hub [FAR FUTURE]
 	- Iono unit
 	- Core: Nexus [FAR FUTURE]
 		- Exo unit
-- Resprite Nickel Compactor to look less like camouflage
+- Resprite Nickel Compactor to look less like camouflage [FUTURE]
 
 ### Wishlist:
 
@@ -93,3 +96,22 @@ Tunnel Pipe directional sprites, looks similar to Pipe
 
 - Animate Pipe liquid draw area
 - Pipe connects to liquid outputs
+
+### Brainstorming
+
+#### Basic resource progression
+
+Scrap -> Nickel -> Titanium -> Elastanium -> Aluminum -> Cryosteel
+
+Sand + Scrap -> Silicon (Scrap is assumed to be some combination of all Innelis resources, including Al, and 3 SiO2 + 4 Al = 3 Si + Al2O3)
+
+Sand -> Insulation (Aerogel, factory built with Ti/Elastanium?)
+
+#### Other
+
+"Puncture" early anti-air turret
+"Bore" midgame single target laser turret, inflicts melting
+Parallax counterpart, pushes air targets away
+"Pelt" basic turret NAME WIP
+
+Insulation used for water-related blocks and insulated walls

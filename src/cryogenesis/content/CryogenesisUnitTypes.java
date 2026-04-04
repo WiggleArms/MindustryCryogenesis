@@ -116,7 +116,7 @@ public class CryogenesisUnitTypes{
             treadPullOffset = 6;
             speed = 1f;
             rotateSpeed = 6f;
-            health = 250;
+            health = 125;
             armor = 1f;
             itemCapacity = 0;
             floorMultiplier = 0.95f;

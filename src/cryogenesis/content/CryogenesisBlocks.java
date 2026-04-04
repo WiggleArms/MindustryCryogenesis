@@ -58,11 +58,14 @@ public class CryogenesisBlocks{
 	//walls
 	nickelWall,
 	
-	//distribution
+	//transport
 	pipe, /*armored-pipe,*/ tunnelPipe, pipeUnloader,
 	
 	//storage
-	coreThread;
+	coreThread,
+	
+	//turrets
+	pelt;
 
 	public static void load(){
 
@@ -133,6 +136,39 @@ public class CryogenesisBlocks{
 			size = 2;
 
 			unitCapModifier = 4;
+		}};
+
+		pelt = new ItemTurret("pelt"){{
+			requirements(Category.turret, with(CryogenesisItems.nickel, 50);
+			
+			ammo(
+				 CryogenesisItmes.nickel,  new BasicBulletType(2.5f, 9){{
+					width = 7f;
+                    height = 9f;
+                    lifetime = 60f;
+                    ammoMultiplier = 2;
+
+                    hitEffect = despawnEffect = Fx.hitBulletColor;
+                    hitColor = backColor = trailColor = Pal.copperAmmoBack;
+                    frontColor = Pal.copperAmmoFront;
+			);
+
+			drawer = new DrawTurret("insulated-");
+
+            shootSound = Sounds.shootStell;
+            recoil = 2f;
+            shootY = 7f;
+            reload = 35f;
+            range = 160;
+            shootCone = 15f;
+            ammoUseEffect = Fx.casing1;
+            health = 250;
+            inaccuracy = 2f;
+            rotateSpeed = 10f;
+            coolant = consumeCoolant(0.1f);
+            coolantMultiplier = 10f;
+            researchCostMultiplier = 0.05f;
+            depositCooldown = 2.0f;
 		}};
 	}
 }
