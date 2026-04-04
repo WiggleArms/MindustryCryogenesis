@@ -155,7 +155,13 @@ public class CryogenesisBlocks{
 				 }}
 			);
 
-			drawer = new DrawTurret("insulated-");
+			drawer = new DrawTurret("insulated-"){{parts.add(new RegionPart("-mid"){{
+                    progress = PartProgress.recoil;
+                    under = false;
+                    moveY = -1.25f;
+                }});
+            }};
+
 			outlineColor = CryogenesisPalette.ironOutline;
 			squareSprite = false;
 			size = 2;
