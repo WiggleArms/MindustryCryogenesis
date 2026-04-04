@@ -142,11 +142,11 @@ public class CryogenesisBlocks{
 			requirements(Category.turret, with(CryogenesisItems.nickel, 50));
 			
 			ammo(
-				 CryogenesisItems.nickel,  new BasicBulletType(2.5f, 9){{
+				 CryogenesisItems.nickel,  new BasicBulletType(2.5f, 24){{
 					width = 7f;
                     height = 9f;
                     lifetime = 60f;
-                    ammoMultiplier = 2;
+                    ammoMultiplier = 3;
 
                     hitEffect = despawnEffect = Fx.hitBulletColor;
                     hitColor = backColor = trailColor = Pal.copperAmmoBack;
@@ -155,6 +155,7 @@ public class CryogenesisBlocks{
 			);
 
 			drawer = new DrawTurret("insulated-");
+			size = 2;
 
             shootSound = Sounds.shootStell;
             recoil = 2f;
