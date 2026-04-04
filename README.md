@@ -59,7 +59,7 @@ A: Yep.
 			- ~~Possibly upgrade T1 Eluma to T2 Schizi and create new unit for T1~~
 			- Replace Schizi with new T2 armed with turrets
 			- ~~Fix Eluma/Schizi treads~~
-		- Large Nickel Wall
+		- ~~Large Nickel Wall~~
 		- Basic turret
 			- Playable map
 				- Planet
@@ -83,6 +83,7 @@ A: Yep.
 		- Exo unit
 - Resprite Nickel Compactor to look less like camouflage [FUTURE]
 - Giant Nickel Wall [FUTURE]
+- Remove/hide depricated content
 
 ### Wishlist:
 
