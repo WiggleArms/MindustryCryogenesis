@@ -113,5 +113,6 @@ Sand -> Insulation (Aerogel, factory built with Ti/Elastanium?)
 "Bore" midgame single target laser turret, inflicts melting
 Parallax counterpart, pushes air targets away
 "Pelt" basic turret NAME WIP
+"Barrage" upgrade to Pelt (Possibly rename, term is used frequently in description text)
 
 Insulation used for water-related blocks and insulated walls
