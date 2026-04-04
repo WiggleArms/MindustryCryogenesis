@@ -142,7 +142,7 @@ public class CryogenesisBlocks{
 			requirements(Category.turret, with(CryogenesisItems.nickel, 50));
 			
 			ammo(
-				 CryogenesisItmes.nickel,  new BasicBulletType(2.5f, 9){{
+				 CryogenesisItems.nickel,  new BasicBulletType(2.5f, 9){{
 					width = 7f;
                     height = 9f;
                     lifetime = 60f;
