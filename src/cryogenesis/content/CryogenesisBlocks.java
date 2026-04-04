@@ -155,12 +155,13 @@ public class CryogenesisBlocks{
 				 }}
 			);
 
-			drawer = new DrawTurret("insulated-"){{parts.add(new RegionPart("-mid"){{
+			drawer = new DrawTurret("insulated-")/*{{
+				parts.add(new RegionPart("-mid"){{
                     progress = PartProgress.recoil;
                     under = false;
                     moveY = -1.25f;
                 }});
-            }};
+            }}*/;
 
 			outlineColor = CryogenesisPalette.ironOutline;
 			squareSprite = false;
@@ -173,7 +174,7 @@ public class CryogenesisBlocks{
             range = 160;
             shootCone = 15f;
             ammoUseEffect = Fx.casing1;
-            health = 250;
+            health = 1100;
             inaccuracy = 2f;
             rotateSpeed = 10f;
             researchCostMultiplier = 0.05f;
