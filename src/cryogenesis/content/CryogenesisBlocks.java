@@ -182,7 +182,7 @@ public class CryogenesisBlocks{
             shootCone = 15f;
             ammoUseEffect = Fx.casing1;
             health = 1100;
-            inaccuracy = 10f;
+            inaccuracy = 3f;
             rotateSpeed = 10f;
             researchCostMultiplier = 0.05f;
             //coolant = consume(new ConsumeLiquid(Liquids.cryofluid, 15f / 60f));

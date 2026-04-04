@@ -82,6 +82,7 @@ A: Yep.
 	- Core: Nexus [FAR FUTURE]
 		- Exo unit
 - Resprite Nickel Compactor to look less like camouflage [FUTURE]
+- Giant Nickel Wall [FUTURE]
 
 ### Wishlist:
 
