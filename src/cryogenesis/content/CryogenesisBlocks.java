@@ -57,7 +57,7 @@ public class CryogenesisBlocks{
 	nickelCompactor,
 
 	//walls
-	nickelWall,
+	nickelWall, nickelWallLarge,
 	
 	//transport
 	pipe, /*armored-pipe,*/ tunnelPipe, pipeUnloader,
@@ -93,6 +93,13 @@ public class CryogenesisBlocks{
 			requirements(Category.defense, with(CryogenesisItems.nickel, 6));
 
 			health = 80 * wallHealthMultiplier;
+		}};
+
+		nickelWallLarge = new Wall("nickel-wall-large"){{
+			requirements(Category.defense, with(CryogenesisItems.nickel, 24));
+
+			health = 80 * 4 * wallHealthMultiplier;
+			size = 2;
 		}};
 
 		pipe = new Pipe("pipe"){{
@@ -175,7 +182,7 @@ public class CryogenesisBlocks{
             shootCone = 15f;
             ammoUseEffect = Fx.casing1;
             health = 1100;
-            inaccuracy = 2f;
+            inaccuracy = 10f;
             rotateSpeed = 10f;
             researchCostMultiplier = 0.05f;
             //coolant = consume(new ConsumeLiquid(Liquids.cryofluid, 15f / 60f));
