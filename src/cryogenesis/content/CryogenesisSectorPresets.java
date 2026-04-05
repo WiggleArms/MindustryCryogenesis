@@ -3,7 +3,7 @@ package cryogenesis.content;
 import mindustry.maps.*;
 import mindustry.type.*;
 
-import static cryogenesis.content.CryogenesisPlanets;
+import cryogenesis.content.CryogenesisPlanets;
 
 public class CryogenesisSectorPresets{
 	public static SectorPreset zero;
