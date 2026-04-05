@@ -60,8 +60,8 @@ A: Yep.
 			- Replace Schizi with new T2 armed with turrets
 			- ~~Fix Eluma/Schizi treads~~
 		- ~~Large Nickel Wall~~
-		- Basic turret
-			- Playable map
+		- ~~Basic turret~~
+			- ~~Playable map~~ [Make easier]
 				- Planet
 					- Tech Tree
 - ~~Buff Pipe with certain liquid~~
