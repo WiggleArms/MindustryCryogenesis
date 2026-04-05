@@ -87,6 +87,8 @@ public class CryogenesisBlocks{
 			hasItems = true;
 
 			consumeItem(Items.scrap, 2);
+
+			researchCost = with(Items.scrap, 50);
 		}};
 
 		nickelWall = new Wall("nickel-wall"){{
@@ -106,6 +108,8 @@ public class CryogenesisBlocks{
 			requirements(Category.distribution, with(CryogenesisItems.nickel, 1));
 			health = 75;
 			speed = 20f;
+
+			//researchCost = with(Items.nickel, 5);
 		}};
 
 		/*
@@ -127,10 +131,12 @@ public class CryogenesisBlocks{
 		}};
 
 		pipeUnloader = new Unloader("pipe-unloader"){{
-			requirements(Category.distribution, with(CryogenesisItems.nickel, 15));
+			requirements(Category.distribution, with(CryogenesisItems.nickel, 3));
 			health = 100;
 			speed = 60f / 15f; //Second value should always be equal to max liquid-boosted Pipe throughput
 			group = BlockGroup.transportation;
+
+			researchCost = with(CryogenesisItems.nickel, 12);
 		}};
 
 		coreThread = new CoreBlock("core-thread"){{

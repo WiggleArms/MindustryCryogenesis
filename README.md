@@ -58,7 +58,8 @@ A: Yep.
 		- Ground unit
 			- ~~Possibly upgrade T1 Eluma to T2 Schizi and create new unit for T1~~
 			- Replace Schizi with new T2 armed with turrets
-			- ~~Fix Eluma/Schizi treads~~
+			- ~~Fix Schizi treads~~
+			- Fix Emula treads
 		- ~~Large Nickel Wall~~
 		- ~~Basic turret~~
 			- ~~Playable map~~ [Make easier]
