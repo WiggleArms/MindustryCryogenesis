@@ -9,7 +9,7 @@ public class CryogenesisSectorPresets{
 	public static SectorPreset zero;
 
 	public static void load(){
-		zero = new SectorPreset("zero", innelis, 6){{
+		zero = new SectorPreset("zero", CryogenesisPlanets.innelis, 6){{
 			alwaysUnlocked = true;
 			captureWave = 10;
 			difficulty = 1;
