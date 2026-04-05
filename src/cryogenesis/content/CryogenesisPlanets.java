@@ -18,7 +18,7 @@ import mindustry.world.meta.*;
 import cryogenesis.content.CryogenesisBlocks;
 
 public class CryogenesisPlanets{
-	public static Planet innelis
+	public static Planet innelis;
 
 	public static void load(){
 		innelis = new Planet("innelis", sun, 1f, 1){{
@@ -47,7 +47,7 @@ public class CryogenesisPlanets{
 			iconColor = Color.valueOf("ffffff"); //TODO replace with cryofluid color
 			atmosphereColor = Color.valueOf("ffffff"); //TODO same
 			atmosphereRadIn = 0.02f;
-			atmosphereRadOut = 0.3f
+			atmosphereRadOut = 0.3f;
 			startSector = 6;
 			alwaysUnlocked = true;
 			landCloudColor = Color.valueOf("ffffff"); //TODO same
