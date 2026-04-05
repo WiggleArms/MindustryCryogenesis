@@ -24,7 +24,7 @@ public class CryogenesisPlanets{
 	public static void load(){
 		innelis = new Planet("innelis", Planets.sun, 1f, 2){{
 			generator = new ErekirPlanetGenerator();
-			meshLoader = () -> new HexMesh(this, 4);
+			meshLoader = () -> new HexMesh(this, 3);
 			cloudMeshLoader = () -> new MultiMesh(
 				//TODO replace with custom cloud parameters, especially change color to cryofluid-esque
                 new HexSkyMesh(this, 11, 0.15f, 0.13f, 5, new Color().set(Pal.spore).mul(0.9f).a(0.75f), 2, 0.45f, 0.9f, 0.38f),
