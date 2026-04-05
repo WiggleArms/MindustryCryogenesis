@@ -31,7 +31,9 @@ public class CryogenesisInnelisTechTree{
 			node(zero);
 
 			nodeProduce(Items.scrap, () -> {
-				nodeProduce(CryogenesisItems.nickel);
+				nodeProduce(CryogenesisItems.nickel, () -> {
+
+				});
 			});
 		});
 	}
