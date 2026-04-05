@@ -14,6 +14,7 @@ import mindustry.maps.planet.*;
 import mindustry.type.*;
 import mindustry.world.*;
 import mindustry.world.meta.*;
+import mindustry.content.Planets;
 
 import cryogenesis.content.CryogenesisBlocks;
 
@@ -21,7 +22,7 @@ public class CryogenesisPlanets{
 	public static Planet innelis;
 
 	public static void load(){
-		innelis = new Planet("innelis", sun, 1f, 1){{
+		innelis = new Planet("innelis", sun, 1f, 2){{
 			generator = new ErekirPlanetGenerator();
 			meshLoader = () -> new HexMesh(this, 4);
 			cloudMeshLoader = () -> new MultiMesh(
@@ -38,7 +39,7 @@ public class CryogenesisPlanets{
 			enemyCoreSpawnReplace = true;
 			allowLaunchLoadout = true;
 			ruleSetter = r -> {
-				r.waveTeam = Team.demise;
+				r.waveTeam = Team.green;
 				r.placeRangeCheck = false;
 				r.showSpawns = false;
 				r.coreDestroyClear = true;
