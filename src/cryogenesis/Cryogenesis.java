@@ -18,6 +18,7 @@ public class Cryogenesis extends Mod {
         CryogenesisBlocks.load();
         CryogenesisPlanets.load();
         CryogenesisSectorPresets.load();
+        CryogenesisInnelisTechTree.load();
 
     }
 

@@ -22,7 +22,7 @@ public class CryogenesisPlanets{
 	public static Planet innelis;
 
 	public static void load(){
-		innelis = new Planet("innelis", Planets.sun, 1f, 2){{
+		innelis = new Planet("innelis", Planets.sun, 1f, 1){{
 			generator = new ErekirPlanetGenerator();
 			meshLoader = () -> new HexMesh(this, 3);
 			cloudMeshLoader = () -> new MultiMesh(
