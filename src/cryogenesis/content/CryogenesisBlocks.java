@@ -201,7 +201,7 @@ public class CryogenesisBlocks{
             depositCooldown = 2.0f;
 		}};
 
-		scrapper = new PayloadScrapper("scrapper"){{
+		payloadScrapper = new PayloadScrapper("scrapper"){{
 			requirements(Category.units, with(Items.scrap, 30));
 			regionSuffix = "-dark";
 			itemCapacity = 100;
