@@ -2,6 +2,7 @@ package cryogenesis.content;
 
 import cryogenesis.world.graphics.CryogenesisPalette;
 import cryogenesis.content.CryogenesisItems;
+import cryogenesis.types.units.*;
 
 import arc.*;
 import arc.graphics.*;
