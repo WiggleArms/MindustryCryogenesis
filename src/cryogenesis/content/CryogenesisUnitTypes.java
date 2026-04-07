@@ -37,7 +37,10 @@ public class CryogenesisUnitTypes{
 	public static UnitType 
     
     //core
-    meso;
+    meso,
+
+    //scrap units
+    scrapSmall1;
 
     public static TankUnitType
 
@@ -69,10 +72,12 @@ public class CryogenesisUnitTypes{
             alwaysUnlocked = true;
             wreckSoundVolume = 0.8f;
             deathSoundVolume = 0.7f;
+            payloadCapacity = 0.1f;
 
             faceTarget = false;
             outlineColor = CryogenesisPalette.ironOutline;
             buildBeamOffset = 5.25f;
+            mineBeamOffset = 5.25f;
 
             /*
             This might be annoying
@@ -109,6 +114,23 @@ public class CryogenesisUnitTypes{
                 }};
             }});
 		}};
+
+        scrapSmall1 = new UnitType("scrap-small-1"){{
+            constructor = UnitEntity::create;
+            isEnemy = false;
+            speed = 0f;
+            rotateSpeed = 0f;
+            hitSize = 0.1f;
+            fogRadius = 0f;
+            targetable = false;
+            physics = false;
+            canDrown = false;
+            createScorch = false;
+            canAttack = false;
+            //hidden = true; // enable once this unit works properly
+
+            outlineColor = CryogenesisPalette.ironOutline;
+        }};
 
         eluma = new TankUnitType("eluma"){{
             constructor = TankUnit::create;
