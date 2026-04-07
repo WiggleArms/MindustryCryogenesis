@@ -129,8 +129,10 @@ public class CryogenesisUnitTypes{
             canDrown = false;
             createScorch = false;
             canAttack = false;
+            playerControllable = false;
+            logicControllable = false;
             //hidden = true; // enable once this unit works properly
-            totalRequirements = with(Items.scrap, 4, CryogenesisItems.nickel, 1);
+            requirements = with(Items.scrap, 4, CryogenesisItems.nickel, 1);
 
             outlineColor = CryogenesisPalette.ironOutline;
         }};

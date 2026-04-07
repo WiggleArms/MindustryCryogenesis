@@ -72,10 +72,12 @@ public class CryogenesisBlocks{
 
 		int wallHealthMultiplier = 4;
 
+		/*
 		testWall = new Wall("test-wall"){{
 			requirements(Category.defense, with());
 			health = 80 * wallHealthMultiplier;
 		}};
+		*/
 
 		nickelCompactor = new GenericCrafter("nickel-compactor"){{
 			requirements(Category.crafting, with(Items.scrap, 30));
