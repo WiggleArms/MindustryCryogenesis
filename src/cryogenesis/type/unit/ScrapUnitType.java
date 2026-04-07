@@ -7,7 +7,6 @@ import mindustry.type.*;
 import mindustry.world.meta.*;
 
 import static mindustry.type.ItemStack.*;
-import static mindustry.type.*;
 
 public class ScrapUnitType extends UnitType{
 
