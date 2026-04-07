@@ -62,7 +62,7 @@ A: Yep.
 			- Fix Emula treads
 		- ~~Large Nickel Wall~~
 		- ~~Basic turret~~
-			- ~~Playable map~~ [Make easier]
+			- ~~Playable map~~
 				- ~~Planet~~
 					- ~~Tech Tree~~
 - ~~Buff Pipe with certain liquid~~
@@ -70,6 +70,7 @@ A: Yep.
 	- Other liquid boost values (for mixtech)
 	- Liquid booster tooltips
 - Environment Blocks
+	- First campaign map
 - Better mod icon and description
 	- Polish README
 - Handle team icon internally

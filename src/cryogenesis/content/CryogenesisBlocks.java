@@ -109,7 +109,7 @@ public class CryogenesisBlocks{
 			health = 75;
 			speed = 20f;
 
-			researchCost = with(Items.nickel, 5);
+			researchCost = with(CryogenesisItems.nickel, 5);
 		}};
 
 		/*
