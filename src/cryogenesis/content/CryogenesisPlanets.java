@@ -48,7 +48,7 @@ public class CryogenesisPlanets{
 			showRtsAIRule = true;
 			iconColor = CryogenesisPalette.cryoBase; //TODO maybe vary these slightly
 			atmosphereColor = CryogenesisPalette.cryoBase; //TODO same
-			atmosphereRadIn = 0.02f;
+			atmosphereRadIn = -0.01f;
 			atmosphereRadOut = 0.3f;
 			startSector = 6;
 			alwaysUnlocked = true;
