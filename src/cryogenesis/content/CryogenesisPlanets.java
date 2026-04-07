@@ -55,7 +55,7 @@ public class CryogenesisPlanets{
 			landCloudColor = CryogenesisPalette.cryoBase; //TODO same
 			defaultEnv = Env.terrestrial;
 			defaultCore = CryogenesisBlocks.coreThread;
-			allowLaunchToNumbered = false; Re-enable once map is added
+			allowLaunchToNumbered = false; //Re-enable once map is added
 
 			unlockedOnLand.add(CryogenesisBlocks.coreThread);
 		}};
