@@ -18,7 +18,9 @@ public class CryogenesisInnelisTechTree{
 
 			node(pipeUnloader, () -> {
 				node(pipe, () -> {
-					node(tunnelPipe);
+					node(tunnelPipe, () -> {
+
+					});
 				});
 			});
 
@@ -26,11 +28,15 @@ public class CryogenesisInnelisTechTree{
 
 			node(pelt, () ->{
 				node(nickelWall, () -> {
-					node(nickelWallLarge);
+					node(nickelWallLarge, () ->{
+
+					});
 				});
 			});
 
-			node(zero);
+			node(zero, () -> {
+
+			});
 
 			nodeProduce(Items.scrap, () -> {
 				nodeProduce(CryogenesisItems.nickel, () -> {

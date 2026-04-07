@@ -17,6 +17,7 @@ import mindustry.world.meta.*;
 import mindustry.content.Planets;
 
 import cryogenesis.content.CryogenesisBlocks;
+import cryogenesis.world.graphics.CryogenesisPalette;
 
 public class CryogenesisPlanets{
 	public static Planet innelis;
@@ -26,9 +27,9 @@ public class CryogenesisPlanets{
 			generator = new ErekirPlanetGenerator();
 			meshLoader = () -> new HexMesh(this, 4);
 			cloudMeshLoader = () -> new MultiMesh(
-				//TODO replace with custom cloud parameters, especially change color to cryofluid-esque
-                new HexSkyMesh(this, 11, 0.15f, 0.13f, 4, new Color().set(Pal.spore).mul(0.9f).a(0.75f), 2, 0.45f, 0.9f, 0.38f),
-                new HexSkyMesh(this, 1, 0.6f, 0.16f, 4, Color.white.cpy().lerp(Pal.spore, 0.55f).a(0.75f), 2, 0.45f, 1f, 0.41f)
+				//TODO replace with custom cloud parameters, possibly vary colors
+                new HexSkyMesh(this, 11, 0.15f, 0.13f, 4, new Color().set(CryogenesisPalette.cryoBase).mul(0.9f).a(0.75f), 2, 0.45f, 0.9f, 0.38f),
+                new HexSkyMesh(this, 1, 0.6f, 0.16f, 4, Color.white.cpy().lerp(CryogenesisPalette.cryoBase, 0.55f).a(0.75f), 2, 0.45f, 1f, 0.41f)
 			);
 
 			launchCapacityMultiplier = 0.1f;
@@ -45,16 +46,16 @@ public class CryogenesisPlanets{
 				r.coreDestroyClear = true;
 			};
 			showRtsAIRule = true;
-			iconColor = Color.valueOf("ffffff"); //TODO replace with cryofluid color
-			atmosphereColor = Color.valueOf("ffffff"); //TODO same
+			iconColor = CryogenesisPalette.cryoBase; //TODO maybe vary these slightly
+			atmosphereColor = CryogenesisPalette.cryoBase; //TODO same
 			atmosphereRadIn = 0.02f;
 			atmosphereRadOut = 0.3f;
 			startSector = 6;
 			alwaysUnlocked = true;
-			landCloudColor = Color.valueOf("ffffff"); //TODO same
+			landCloudColor = CryogenesisPalette.cryoBase; //TODO same
 			defaultEnv = Env.terrestrial;
 			defaultCore = CryogenesisBlocks.coreThread;
-			//allowLaunchToNumbered = false; Re-enable once map is added
+			allowLaunchToNumbered = false; Re-enable once map is added
 
 			unlockedOnLand.add(CryogenesisBlocks.coreThread);
 		}};

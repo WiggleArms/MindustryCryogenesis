@@ -63,8 +63,8 @@ A: Yep.
 		- ~~Large Nickel Wall~~
 		- ~~Basic turret~~
 			- ~~Playable map~~ [Make easier]
-				- Planet
-					- Tech Tree
+				- ~~Planet~~
+					- ~~Tech Tree~~
 - ~~Buff Pipe with certain liquid~~
 	- Same for variants
 	- Other liquid boost values (for mixtech)
@@ -85,6 +85,9 @@ A: Yep.
 - Resprite Nickel Compactor to look less like camouflage [FUTURE]
 - Giant Nickel Wall [FUTURE]
 - Remove/hide depricated content
+- Recolor Innelis meshes
+- Fix missing in-text icons
+- Auger buildings
 
 ### Wishlist:
 
