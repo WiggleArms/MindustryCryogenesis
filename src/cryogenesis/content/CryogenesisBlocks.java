@@ -99,7 +99,7 @@ public class CryogenesisBlocks{
 		}};
 
 		nickelWallLarge = new Wall("nickel-wall-large"){{
-			requirements(Category.defense, with(CryogenesisItems.nickel, 24));
+			requirements(Category.defense, ItemStack.mult(nickelWall.requirements, 4));
 			health = 80 * 4 * wallHealthMultiplier;
 			size = 2;
 		}};

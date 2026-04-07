@@ -1,6 +1,7 @@
 package cryogenesis.content;
 
 import cryogenesis.world.graphics.CryogenesisPalette;
+import cryogenesis.content.CryogenesisItems;
 
 import arc.*;
 import arc.graphics.*;
@@ -72,7 +73,7 @@ public class CryogenesisUnitTypes{
             alwaysUnlocked = true;
             wreckSoundVolume = 0.8f;
             deathSoundVolume = 0.7f;
-            payloadCapacity = 0.1f;
+            payloadCapacity = 1f;
 
             faceTarget = false;
             outlineColor = CryogenesisPalette.ironOutline;
@@ -120,7 +121,7 @@ public class CryogenesisUnitTypes{
             isEnemy = false;
             speed = 0f;
             rotateSpeed = 0f;
-            hitSize = 0.1f;
+            hitSize = 0.125f;
             fogRadius = 0f;
             targetable = false;
             physics = false;
@@ -128,6 +129,7 @@ public class CryogenesisUnitTypes{
             createScorch = false;
             canAttack = false;
             //hidden = true; // enable once this unit works properly
+            scrapValue = new ItemStack(Items.scrap, 4, CryogenesisItems.nickel, 1);
 
             outlineColor = CryogenesisPalette.ironOutline;
         }};
