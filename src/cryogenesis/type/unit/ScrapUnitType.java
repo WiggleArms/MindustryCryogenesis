@@ -10,7 +10,7 @@ import static mindustry.type.ItemStack.*;
 
 public class ScrapUnitType extends UnitType{
 
-	public @Nullable ItemStack[] scrapItems;
+	public ItemStack[] scrapValue;
 
 	public ScrapUnitType(String name){
 		super(name);

@@ -117,7 +117,7 @@ public class CryogenesisUnitTypes{
             }});
 		}};
 
-        scrapSmall1 = new UnitType("scrap-small-1"){{
+        scrapSmall1 = new ScrapUnitType("scrap-small-1"){{
             constructor = UnitEntity::create;
             isEnemy = false;
             speed = 0f;
@@ -132,7 +132,7 @@ public class CryogenesisUnitTypes{
             playerControllable = false;
             logicControllable = false;
             //hidden = true; // enable once this unit works properly
-            requirements = with(Items.scrap, 4, CryogenesisItems.nickel, 1);
+            scrapValue = with(Items.scrap, 4, CryogenesisItems.nickel, 1);
 
             outlineColor = CryogenesisPalette.ironOutline;
         }};
