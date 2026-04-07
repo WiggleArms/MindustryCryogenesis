@@ -129,7 +129,7 @@ public class CryogenesisUnitTypes{
             createScorch = false;
             canAttack = false;
             //hidden = true; // enable once this unit works properly
-            scrapValue = new ItemStack(Items.scrap, 4, CryogenesisItems.nickel, 1);
+            totalRequirements = with(Items.scrap, 4, CryogenesisItems.nickel, 1);
 
             outlineColor = CryogenesisPalette.ironOutline;
         }};
