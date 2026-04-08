@@ -2,7 +2,7 @@ package cryogenesis.content;
 
 import cryogenesis.content.*;
 import cryogenesis.world.blocks.pipes.*;
-import cryogenesis.world.blocks.payloads.*;
+//import cryogenesis.world.blocks.payloads.*;
 import cryogenesis.world.graphics.*;
 
 import arc.*;

@@ -121,5 +121,6 @@ Sand -> Insulation (Aerogel, factory built with Ti/Elastanium?)
 Parallax counterpart, pushes air targets away
 "Pelt" basic turret NAME WIP
 "Barrage" upgrade to Pelt (Possibly rename, term is used frequently in description text)
+"Avenge" upgrade to Barrage (GAU8-Avenger reference)
 
 Insulation used for water-related blocks and insulated walls
