@@ -1,0 +1,28 @@
+package cryogenesis.ai.types;
+
+import arc.math.*;
+import arc.util.*;
+import mindustry.*;
+import mindustry.entities.*;
+import mindustry.entities.units.*;
+import mindustry.gen.*;
+
+public class ScrapAI extends AIController{
+
+	@Override
+    public void updateUnit() {
+        super.updateUnit();
+
+        // Find nearest valid unit (non-scrap, real team)
+        Unit nearest = Units.closest(
+            null,          // search from current team (derelict initially)
+            unit.x, unit.y,     // position
+            80f,                // range (tweak this)
+            u -> u.team != Team.derelict && u.type != unit.type
+        );
+
+        if(nearest != null){
+            unit.team = nearest.team;
+        }
+    }
+}

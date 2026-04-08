@@ -1,6 +1,7 @@
 package cryogenesis.type.unit;
 
 import cryogenesis.world.graphics.*;
+import cryogenesis.ai.types.*;
 
 import mindustry.ai.types.*;
 import mindustry.gen.*;
@@ -19,6 +20,8 @@ public class ScrapUnitType extends UnitType{
 		super(name);
 
         constructor = UnitEntity::create;
+        controller = u -> new ScrapAI();
+
         isEnemy = false;
         speed = 0f;
         rotateSpeed = 0f;
@@ -34,6 +37,7 @@ public class ScrapUnitType extends UnitType{
         logicControllable = false;
         useUnitCap = false;
         drawMinimap = false;
+        groundLayer = Layer.debris - 1f;
         //hidden = true; // enable once this unit works properly
 
         outlineColor = CryogenesisPalette.ironOutline;
