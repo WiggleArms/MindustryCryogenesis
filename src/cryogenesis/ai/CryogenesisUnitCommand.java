@@ -1,6 +1,7 @@
 package cryogenesis.ai;
 
 import cryogenesis.input.*;
+import cryogenesis.ai.types.*;
 
 import arc.*;
 import arc.func.*;
@@ -19,10 +20,13 @@ public class CryogenesisUnitCommand extends UnitCommand{
 
 	public static UnitCommand scavengeCommand;
 
+    public UnitCommand(String name, String icon, Func<Unit, AIController> controller){
+        super(name);
+    }
+
 	@Override
 	public static void loadAll(){
-		super();
 
-		scavengeCommand = new UnitCommand("scavenge", "refresh", CryogenesisBinding.unitCommandScavenge, u -> new ScrapperAI());
+		scavengeCommand = new UnitCommand("scavenge", "refresh", CryogenesisBinding.unitCommandScavenge, u -> new ScavengeAI());
 	}
 }

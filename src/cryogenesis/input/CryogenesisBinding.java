@@ -9,5 +9,5 @@ public class CryogenesisBinding extends Binding{
 
 	public static final KeyBind
 
-	unitCommandScavenge = Keybind.add("unit_command_scavenge", KeyCode.unset);
+	unitCommandScavenge = KeyBind.add("unit_command_scavenge", KeyCode.unset);
 }
