@@ -161,7 +161,7 @@ public class CryogenesisUnitTypes{
             weapons.add(new Weapon("cryogenesis-spawn-scrap"){{
                 shootOnDeath = true;
                 reload = 60f;
-                shootcone = 180f;
+                shootCone = 180f;
                 mirror = false;
 
                 bullet = new BulletType(){{
