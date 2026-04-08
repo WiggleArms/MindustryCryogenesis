@@ -10,10 +10,11 @@ import arc.util.*;
 import mindustry.ai.*;
 import mindustry.core.*;
 import mindustry.entities.*;
+import mindustry.entities.comp.*;
 import mindustry.entities.units.*;
 import mindustry.gen.*;
 import mindustry.world.*;
-import mindustry.world.blocks.payloads.*;
+import mindustry.world.blocks.payloads.PayloadDeconstructor.*;
 import mindustry.world.meta.*;
 
 import static mindustry.Vars.*;
@@ -23,6 +24,7 @@ public class ScavengeAI extends AIController{
 	
 	public PayloadDeconstructorBuild unloadTarget;
 	public Unit unitTarget;
+    protected float payloadPickupCooldown;
 
 	@Override
 	public void updateMovement(){
@@ -34,10 +36,10 @@ public class ScavengeAI extends AIController{
 			// otherwise check payload
 			if(!unit.hasPayload()){
 
-				// if no target, or target is not valid, or target is already picked up
-				if(unitTarget == null || !unitTarget.isValid() || !unitTarget.isPayload()){
+				// if no target, or target is not valid, or target is already picked up (commented out as units in payloads may not be considered units)
+				if(unitTarget == null || !unitTarget.isValid()/* || !unitTarget.isPayload()*/ ){
 					// find nearest non-payload scrap unit
-					unitTarget = Units.closest(null, unit.x, unit.y, u -> u.type instanceof ScrapUnitType && !u.isPayload());
+					unitTarget = Units.closest(null, unit.x, unit.y, u -> u.type instanceof ScrapUnitType/* && !u.isPayload()*/);
 				}
 
 				// if good target
@@ -82,4 +84,11 @@ public class ScavengeAI extends AIController{
 
 	}
 	*/
+	
+    void tryPickupUnit(Payloadc pay){
+        Unit target = Units.closest(unit.team, unit.x, unit.y, unit.type.hitSize * 2f, u -> u.isAI() && u != unit && u.isGrounded() && pay.canPickup(u) && u.within(unit, u.hitSize + unit.hitSize));
+        if(target != null){
+            Call.pickedUnitPayload(unit, target);
+        }
+    }
 }

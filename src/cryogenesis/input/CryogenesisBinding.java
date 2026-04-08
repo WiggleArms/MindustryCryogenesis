@@ -3,6 +3,7 @@ package cryogenesis.input;
 import arc.input.*;
 import arc.input.KeyBind.*;
 import mindustry.*;
+import mindustry.input.*;
 
 public class CryogenesisBinding extends Binding{
 

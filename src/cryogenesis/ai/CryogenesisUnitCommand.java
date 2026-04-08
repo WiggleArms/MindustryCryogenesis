@@ -1,5 +1,7 @@
 package cryogenesis.ai;
 
+import cryogenesis.input.*;
+
 import arc.*;
 import arc.func.*;
 import arc.input.*;
