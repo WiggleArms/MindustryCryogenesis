@@ -1,0 +1,85 @@
+package cryogenesis.ai.types;
+
+import cryogenesis.world.meta.*;
+import cryogenesis.type.unit.*;
+
+import arc.math.*;
+import arc.math.geom.*;
+import arc.struct.*;
+import arc.util.*;
+import mindustry.ai.*;
+import mindustry.core.*;
+import mindustry.entities.*;
+import mindustry.entities.units.*;
+import mindustry.gen.*;
+import mindustry.world.*;
+import mindustry.world.blocks.payloads.*;
+import mindustry.world.meta.*;
+
+import static mindustry.Vars.*;
+
+public class ScavengeAI extends AIController{
+	static Seq<PayloadDeconstructorBuild> scrappers = new Seq<>();
+	
+	public PayloadDeconstructorBuild unloadTarget;
+	public Unit unitTarget;
+
+	@Override
+	public void updateMovement(){
+
+
+		if(!net.client() && unit instanceof Payloadc pay){
+			// look for nearby enemies
+			// if enemy, flee
+			// otherwise check payload
+			if(!unit.hasPayload()){
+
+				// if no target, or target is not valid, or target is already picked up
+				if(unitTarget == null || !unitTarget.isValid() || !unitTarget.isPayload()){
+					// find nearest non-payload scrap unit
+					unitTarget = Units.closest(null, unit.x, unit.y, u -> u.type instanceof ScrapUnitType && !u.isPayload());
+				}
+
+				// if good target
+				if(unitTarget != null){
+					// move to and pickup target
+					moveTo(unitTarget, 5f);
+
+					if(unit.within(unitTarget, 8f)){
+					
+					int prev = -1;
+						while(prev != pay.payloads().size){
+							prev = pay.payloads().size;
+							tryPickupUnit(pay);
+						}
+
+						//wait to load things before running code below
+						if(!pay.hasPayload()){
+							return;
+						}
+						payloadPickupCooldown = 60f;
+					}
+				}
+				// otherwise, find scrapper
+				// if scrapper, go to it
+				// otherwise, idle I guess?
+			} else {
+				// unit has payload, look for scrapper
+				// if scrapper, go to it
+				// otherwise, idle I guess?
+			}
+		}
+	}
+
+	/*
+	public void findBuilding(Building build){
+		unloadTarget = null
+
+        targets = Seq<PayloadDeconstructorBuild>)(Seq)Vars.indexer.getFlagged(unit.team, CryogenesisBlockFlag.unitScrapper);
+
+		if(baseTargets.isEmpty()) return;
+
+
+	}
+	*/
+}

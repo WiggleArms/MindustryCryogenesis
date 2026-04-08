@@ -3,6 +3,7 @@ package cryogenesis.content;
 import cryogenesis.content.*;
 import cryogenesis.world.blocks.pipes.*;
 import cryogenesis.world.graphics.*;
+import cryogenesis.world.meta.*;
 
 import arc.*;
 import arc.graphics.*;
@@ -198,6 +199,16 @@ public class CryogenesisBlocks{
             researchCostMultiplier = 0.05f;
             //coolant = consume(new ConsumeLiquid(Liquids.cryofluid, 15f / 60f));
             depositCooldown = 2.0f;
+		}};
+
+		payloadScrapper = new PayloadDeconstructor("payload-scrapper"){{
+			requirements(Category.units, with(Items.scrap, 30));
+
+			regionSuffix = "-dark"
+			itemCapacity = 25;
+			size = 3;
+			deconstructSpeed = 1f;
+			flags = EnumSet.of(CryogenesisBlockFlag.unitScrapper);
 		}};
 	}
 }

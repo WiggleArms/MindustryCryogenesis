@@ -89,6 +89,11 @@ A: Yep.
 - Recolor Innelis meshes
 - Fix missing in-text icons
 - Auger buildings
+- Scrapper block
+	- Sprite
+- Scrapper AI
+	- Scavenge command
+- Wind turbine buildings [FUTURE]
 
 ### Wishlist:
 

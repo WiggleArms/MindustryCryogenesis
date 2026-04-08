@@ -53,7 +53,7 @@ public class CryogenesisUnitTypes{
 	public static void load(){
 
 		meso = new UnitType("meso"){{
-            constructor = UnitEntity::create;
+            constructor = PayloadUnit::create;
 			controller = u -> u.team.isAI() ? new BuilderAI(true, 400f) : new CommandAI();
             isEnemy = false;
 
@@ -75,7 +75,7 @@ public class CryogenesisUnitTypes{
             alwaysUnlocked = true;
             wreckSoundVolume = 0.8f;
             deathSoundVolume = 0.7f;
-            payloadCapacity = 0.5f * 0.5f * tilesize * tilesize;
+            payloadCapacity = 1f * 1f * tilesize * tilesize;
 
             faceTarget = false;
             outlineColor = CryogenesisPalette.ironOutline;
