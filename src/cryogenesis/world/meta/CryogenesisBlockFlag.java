@@ -1,3 +1,4 @@
+/*
 package cryogenesis.world.meta;
 
 public enum CryogenesisBlockFlag{
@@ -6,3 +7,4 @@ public enum CryogenesisBlockFlag{
 
 	public final static CryogenesisBlockFlag[] all = values();
 }
+*/
