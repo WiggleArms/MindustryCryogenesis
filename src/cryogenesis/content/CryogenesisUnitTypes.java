@@ -134,6 +134,7 @@ public class CryogenesisUnitTypes{
             logicControllable = false;
             //hidden = true; // enable once this unit works properly
             scrapValue = with(Items.scrap, 4, CryogenesisItems.nickel, 1);
+            scrapTime = 60f;
 
             outlineColor = CryogenesisPalette.ironOutline;
         }};

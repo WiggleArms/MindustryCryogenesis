@@ -11,6 +11,7 @@ import static mindustry.type.ItemStack.*;
 public class ScrapUnitType extends UnitType{
 
 	public ItemStack[] scrapValue;
+	public float scrapTime;
 
 	public ScrapUnitType(String name){
 		super(name);
@@ -18,6 +19,7 @@ public class ScrapUnitType extends UnitType{
 
 	@Override
 	public ItemStack[] getTotalRequirements(){
+		buildTime = scrapTime;
 		return scrapValue;
 	}
 }
