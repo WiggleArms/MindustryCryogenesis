@@ -121,8 +121,6 @@ public class CryogenesisUnitTypes{
         scrapSmall1 = new ScrapUnitType("scrap-small-1"){{
             scrapValue = with(Items.scrap, 4, CryogenesisItems.nickel, 1);
             scrapTime = 60f;
-
-            outlineColor = CryogenesisPalette.ironOutline;
         }};
 
         eluma = new TankUnitType("eluma"){{
@@ -158,6 +156,19 @@ public class CryogenesisUnitTypes{
                     width = 7f;
                     height = 9f;
                     lifetime = 60f;
+                }};
+            }});
+            weapons.add(new Weapon("cryogenesis-spawn-scrap"){{
+                shootOnDeath = true;
+                reload = 60f;
+                shootcone = 180f;
+                mirror = false;
+
+                bullet = new BulletType(){{
+                    spawnUnit = new ScrapUnitType("scrap-small-1"){{
+                        scrapValue = with(Items.scrap, 15, CryogenesisItems.nickel, 1);
+                        scrapTime = 180f;
+                    }};
                 }};
             }});
         }};

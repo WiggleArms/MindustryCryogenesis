@@ -1,5 +1,7 @@
 package cryogenesis.type.unit;
 
+import cryogenesis.world.graphics.*;
+
 import mindustry.ai.types.*;
 import mindustry.gen.*;
 import mindustry.graphics.*;
@@ -32,6 +34,8 @@ public class ScrapUnitType extends UnitType{
         useUnitCap = false;
         drawMinimap = false;
         //hidden = true; // enable once this unit works properly
+
+        outlineColor = CryogenesisPalette.ironOutline;
 	}
 
 	@Override
