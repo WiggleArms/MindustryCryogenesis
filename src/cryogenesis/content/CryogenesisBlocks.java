@@ -2,7 +2,6 @@ package cryogenesis.content;
 
 import cryogenesis.content.*;
 import cryogenesis.world.blocks.pipes.*;
-//import cryogenesis.world.blocks.payloads.*;
 import cryogenesis.world.graphics.*;
 
 import arc.*;
@@ -200,15 +199,5 @@ public class CryogenesisBlocks{
             //coolant = consume(new ConsumeLiquid(Liquids.cryofluid, 15f / 60f));
             depositCooldown = 2.0f;
 		}};
-
-		/*
-		payloadScrapper = new PayloadScrapper("scrapper"){{
-			requirements(Category.units, with(Items.scrap, 30));
-			regionSuffix = "-dark";
-			itemCapacity = 100;
-			size = 3;
-			deconstructSpeed = 3f;
-		}};
-		*/
 	}
 }

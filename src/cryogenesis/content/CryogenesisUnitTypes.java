@@ -75,7 +75,7 @@ public class CryogenesisUnitTypes{
             alwaysUnlocked = true;
             wreckSoundVolume = 0.8f;
             deathSoundVolume = 0.7f;
-            payloadCapacity = 1f;
+            payloadCapacity = 0.1f * 0.1f * tilesize * tilesize;
 
             faceTarget = false;
             outlineColor = CryogenesisPalette.ironOutline;
@@ -119,20 +119,6 @@ public class CryogenesisUnitTypes{
 		}};
 
         scrapSmall1 = new ScrapUnitType("scrap-small-1"){{
-            constructor = UnitEntity::create;
-            isEnemy = false;
-            speed = 0f;
-            rotateSpeed = 0f;
-            hitSize = 0.125f;
-            fogRadius = 0f;
-            targetable = false;
-            physics = false;
-            canDrown = false;
-            createScorch = false;
-            canAttack = false;
-            playerControllable = false;
-            logicControllable = false;
-            //hidden = true; // enable once this unit works properly
             scrapValue = with(Items.scrap, 4, CryogenesisItems.nickel, 1);
             scrapTime = 60f;
 
