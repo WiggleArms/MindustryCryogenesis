@@ -34,7 +34,7 @@ public class ScavengeAI extends AIController{
 			// look for nearby enemies
 			// if enemy, flee
 			// otherwise check payload
-			if(!unit.hasPayload()){
+			if(!pay.hasPayload()){
 
 				// if no target, or target is not valid, or target is already picked up (commented out as units in payloads may not be considered units)
 				if(unitTarget == null || !unitTarget.isValid()/* || !unitTarget.isPayload()*/ ){

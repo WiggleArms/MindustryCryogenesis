@@ -16,11 +16,10 @@ import mindustry.entities.units.*;
 import mindustry.gen.*;
 import mindustry.input.*;
 
-public class CryogenesisUnitCommand {
+public class CryogenesisUnitCommand{
 
 	public static UnitCommand scavengeCommand;
 
-	@Override
 	public static void load(){
 
 		scavengeCommand = new UnitCommand("scavenge", "refresh", CryogenesisBinding.unitCommandScavenge, u -> new ScavengeAI());
