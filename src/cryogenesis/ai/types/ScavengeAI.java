@@ -1,6 +1,6 @@
 package cryogenesis.ai.types;
 
-import cryogenesis.world.meta.*;
+//import cryogenesis.world.meta.*;
 import cryogenesis.type.unit.*;
 
 import arc.math.*;

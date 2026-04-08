@@ -3,7 +3,7 @@ package cryogenesis.content;
 import cryogenesis.content.*;
 import cryogenesis.world.blocks.pipes.*;
 import cryogenesis.world.graphics.*;
-import cryogenesis.world.meta.*;
+//import cryogenesis.world.meta.*;
 
 import arc.*;
 import arc.graphics.*;
@@ -208,7 +208,7 @@ public class CryogenesisBlocks{
 			itemCapacity = 25;
 			size = 3;
 			deconstructSpeed = 1f;
-			flags = EnumSet.of(CryogenesisBlockFlag.unitScrapper);
+			//flags = EnumSet.of(CryogenesisBlockFlag.unitScrapper);
 		}};
 	}
 }
