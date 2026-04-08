@@ -6,6 +6,7 @@ import mindustry.*;
 import mindustry.entities.*;
 import mindustry.entities.units.*;
 import mindustry.gen.*;
+import mindustry.game.*;
 
 public class ScrapAI extends AIController{
 
