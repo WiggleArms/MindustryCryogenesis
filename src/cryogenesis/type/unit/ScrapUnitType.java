@@ -15,4 +15,9 @@ public class ScrapUnitType extends UnitType{
 	public ScrapUnitType(String name){
 		super(name);
 	}
+
+	@Override
+	public ItemStack[] getTotalRequirements(){
+		return scrapValue;
+	}
 }

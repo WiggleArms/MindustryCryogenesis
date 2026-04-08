@@ -1,3 +1,4 @@
+/*
 package cryogenesis.world.blocks.payloads;
 
 import arc.graphics.g2d.*;
@@ -26,12 +27,12 @@ public class PayloadScrapper extends PayloadDeconstructor{
         @Override
         public boolean acceptUnitPayload(Unit unit){
             return payload == null && deconstructing == null && unit.type.allowedInPayloads && !unit.spawnedByCore
-                && unit.type.scrapValue.length > 0 && unit.hitSize / tilesize <= maxPayloadSize;
+                && unit.type.scrapValue().length > 0 && unit.hitSize / tilesize <= maxPayloadSize;
         }
 
         @Override
         public boolean acceptPayload(Building source, Payload payload){
-            return deconstructing == null && this.payload == null && super.acceptPayload(source, payload) && payload.scrapValue.length > 0 && payload.fits(maxPayloadSize);
+            return deconstructing == null && this.payload == null && super.acceptPayload(source, payload) && payload.scrapValue().length > 0 && payload.fits(maxPayloadSize);
         }
         
         @Override
@@ -50,7 +51,7 @@ public class PayloadScrapper extends PayloadDeconstructor{
             payRotation = Angles.moveToward(payRotation, 90f, payloadRotateSpeed * edelta());
 
             if(deconstructing != null){
-                var reqs = deconstructing.scrapValue;
+                var reqs = deconstructing.scrapValue();
                 if(accum == null || reqs.length != accum.length){
                     accum = new float[reqs.length];
                 }
@@ -124,7 +125,7 @@ public class PayloadScrapper extends PayloadDeconstructor{
                     }
                 }
             }else if(moveInPayload(false) && payload != null){
-                accum = new float[payload.scrapValue.length];
+                accum = new float[payload.scrapValue().length];
                 deconstructing = payload;
                 payload = null;
                 progress = 0f;
@@ -132,3 +133,4 @@ public class PayloadScrapper extends PayloadDeconstructor{
         }
     }
 }
+*/
