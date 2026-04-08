@@ -161,7 +161,7 @@ public class CryogenesisUnitTypes{
                 mirror = false;
 
                 bullet = new BulletType(){{
-                    spawnUnit = new ScrapUnitType("scrap-small-1"){{
+                    spawnUnit = new ScrapUnitType("eluma-scrap"){{
                         scrapValue = with(Items.scrap, 15, CryogenesisItems.nickel, 1);
                         scrapTime = 180f;
                     }};
@@ -215,7 +215,7 @@ public class CryogenesisUnitTypes{
                 mirror = false;
 
                 bullet = new BulletType(){{
-                    spawnUnit = new ScrapUnitType("scrap-small-1"){{
+                    spawnUnit = new ScrapUnitType("schizi-scrap"){{
                         scrapValue = with(Items.scrap, 15, CryogenesisItems.nickel, 1);
                         scrapTime = 180f;
                     }};
