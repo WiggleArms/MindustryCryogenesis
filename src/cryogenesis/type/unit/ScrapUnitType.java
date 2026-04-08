@@ -24,6 +24,7 @@ public class ScrapUnitType extends UnitType{
         rotateSpeed = 0f;
         hitSize = 1f;
         fogRadius = 0f;
+        hittable = false;
         targetable = false;
         physics = false;
         canDrown = false;

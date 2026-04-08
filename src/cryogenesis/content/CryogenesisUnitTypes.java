@@ -75,7 +75,7 @@ public class CryogenesisUnitTypes{
             alwaysUnlocked = true;
             wreckSoundVolume = 0.8f;
             deathSoundVolume = 0.7f;
-            payloadCapacity = 0.1f * 0.1f * tilesize * tilesize;
+            payloadCapacity = 0.5f * 0.5f * tilesize * tilesize;
 
             faceTarget = false;
             outlineColor = CryogenesisPalette.ironOutline;
@@ -159,7 +159,8 @@ public class CryogenesisUnitTypes{
                 reload = 60f;
                 shootCone = 180f;
                 mirror = false;
-                noAttack = true;
+                controllable = false;
+                aiControllable = false;
 
                 bullet = new BulletType(){{
                     spawnUnit = new ScrapUnitType("eluma-scrap"){{
@@ -214,7 +215,8 @@ public class CryogenesisUnitTypes{
                 reload = 60f;
                 shootCone = 180f;
                 mirror = false;
-                noAttack = true;
+                controllable = false;
+                aiControllable = false;
 
                 bullet = new BulletType(){{
                     spawnUnit = new ScrapUnitType("schizi-scrap"){{
