@@ -20,16 +20,16 @@ public class ScrapUnitType extends UnitType{
 		super(name);
 
         constructor = UnitEntity::create;
-        controller = u -> new ScrapAI();
+        //controller = u -> new ScrapAI();
 
-        flying = false;
+        //flying = false;
         //isEnemy = false;
         //speed = 0f;
         //rotateSpeed = 0f;
         //fogRadius = 0f;
         //hittable = false;
         //targetable = false;
-        physics = true;
+        //physics = true;
         //canDrown = false;
         //createScorch = false;
         //canAttack = false;
