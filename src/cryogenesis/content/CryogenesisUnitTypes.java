@@ -3,6 +3,7 @@ package cryogenesis.content;
 import cryogenesis.world.graphics.CryogenesisPalette;
 import cryogenesis.content.CryogenesisItems;
 import cryogenesis.type.unit.*;
+import cryogenesis.ai.*;
 
 import arc.*;
 import arc.graphics.*;
@@ -55,6 +56,7 @@ public class CryogenesisUnitTypes{
 		meso = new UnitType("meso"){{
             constructor = PayloadUnit::create;
 			controller = u -> u.team.isAI() ? new BuilderAI(true, 400f) : new CommandAI();
+            commands.add(CryogenesisUnitCommand.scavengeCommand);
             isEnemy = false;
 
             targetBuildingsMobile = false;
