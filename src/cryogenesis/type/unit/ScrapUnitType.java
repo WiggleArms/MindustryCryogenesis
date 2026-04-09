@@ -22,21 +22,21 @@ public class ScrapUnitType extends UnitType{
         constructor = UnitEntity::create;
         controller = u -> new ScrapAI();
 
-        isEnemy = false;
-        speed = 0f;
-        rotateSpeed = 0f;
-        fogRadius = 0f;
+        //isEnemy = false;
+        //speed = 0f;
+        //rotateSpeed = 0f;
+        //fogRadius = 0f;
         //hittable = false;
         //targetable = false;
         //physics = false;
         //canDrown = false;
-        createScorch = false;
+        //createScorch = false;
         //canAttack = false;
-        playerControllable = false;
-        logicControllable = false;
-        useUnitCap = false;
-        drawMinimap = false;
-        groundLayer = Layer.debris - 1f;
+        //playerControllable = false;
+        //logicControllable = false;
+        //useUnitCap = false;
+        //drawMinimap = false;
+        //groundLayer = Layer.debris - 1f;
         //hidden = true; // enable once this unit works properly
 
         outlineColor = CryogenesisPalette.ironOutline;
