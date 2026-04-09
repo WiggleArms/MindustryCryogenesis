@@ -19,7 +19,7 @@ public class ScrapAI extends AIController{
             null,          // search from current team (derelict initially)
             unit.x, unit.y,     // position
             80f,                // range (tweak this)
-            u -> u.team != unit.team && u.type != unit.type
+            u -> u.team != unit.team && !(u.type instanceof ScrapUnitType)
         );
 
         if(nearest != null){
