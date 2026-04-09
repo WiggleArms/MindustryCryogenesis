@@ -129,10 +129,8 @@ public class CryogenesisUnitTypes{
             }});
 		}};
 
-        scrapTest = new ScrapUnitType("scrap-test"){{
-            scrapValue = with(Items.scrap, 1);
-            scrapTime = 60f;
-            hitSize = 8f;
+        scrapTest = new UnitType("scrap-test"){{
+            constructor = UnitEntity::create;
         }};
 
         eluma = new TankUnitType("eluma"){{
