@@ -21,7 +21,6 @@ public class CryogenesisUnitCommand{
 	public static UnitCommand scavengeCommand;
 
 	public static void load(){
-
 		scavengeCommand = new UnitCommand("scavenge", "refresh", CryogenesisBinding.unitCommandScavenge, u -> new ScavengeAI());
 	}
 }
