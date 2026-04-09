@@ -56,10 +56,10 @@ public class CryogenesisUnitTypes{
 		meso = new UnitType("meso"){{
             constructor = PayloadUnit::create;
 			controller = u -> u.team.isAI() ? new BuilderAI(true, 400f) : new CommandAI();
-            commands = new UnitCommand[]{
-                UnitCommand.moveCommand
+            commands = new Seq<UnitCommand>(
+                UnitCommand.moveCommand,
                 CryogenesisUnitCommand.scavengeCommand
-            };
+            );
             defaultCommand = CryogenesisUnitCommand.scavengeCommand;
             isEnemy = false;
 
