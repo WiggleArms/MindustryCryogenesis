@@ -129,10 +129,6 @@ public class CryogenesisUnitTypes{
             }});
 		}};
 
-        scrapTest = new UnitType("scrap-test"){{
-            constructor = MechUnit::create;
-        }};
-
         eluma = new TankUnitType("eluma"){{
             constructor = TankUnit::create;
             hitSize = 8f;
