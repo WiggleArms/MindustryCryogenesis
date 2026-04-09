@@ -36,7 +36,7 @@ public class ScrapUnitType extends UnitType{
         logicControllable = false;
         useUnitCap = false;
         drawMinimap = false;
-        groundLayer = Layer.debris - 1f;
+        //groundLayer = Layer.debris - 1f;
         //hidden = true; // enable once this unit works properly
 
         outlineColor = CryogenesisPalette.ironOutline;
