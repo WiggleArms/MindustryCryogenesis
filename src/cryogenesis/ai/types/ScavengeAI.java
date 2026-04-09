@@ -17,6 +17,7 @@ import mindustry.gen.*;
 import mindustry.world.*;
 import mindustry.world.blocks.payloads.PayloadDeconstructor.*;
 import mindustry.world.meta.*;
+import mindustry.content.Blocks;
 
 import static mindustry.Vars.*;
 
@@ -70,7 +71,7 @@ public class ScavengeAI extends AIController{
 					// if current base does not exist
 					if(unloadTarget == null || !unloadTarget.isValid()){
 						// find new base
-						unloadTarget = closestBuilding(unit.team, unit.x, unit.y, 160f, b -> b.block instanceof PayloadDeconstructor);
+						unloadTarget = Units.closestBuilding(unit.team, unit.x, unit.y, 160f, b -> b.block instanceof PayloadDeconstructor);
 					}
 
 					// if good base
@@ -85,7 +86,7 @@ public class ScavengeAI extends AIController{
 				// if current base does not exist
 				if(unloadTarget == null || !unloadTarget.isValid()){
 					// find new base
-					unloadTarget = closestBuilding(unit.team, unit.x, unit.y, 160f, b -> b.block instanceof PayloadDeconstructor);
+					unloadTarget = Units.closestBuilding(unit.team, unit.x, unit.y, 160f, b -> b.block instanceof PayloadDeconstructor);
 				}
 
 				// if good base
