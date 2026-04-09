@@ -17,6 +17,7 @@ import mindustry.gen.*;
 import mindustry.world.*;
 import mindustry.world.blocks.payloads.PayloadDeconstructor.*;
 import mindustry.world.meta.*;
+import mindustry.game.Teams.*;
 //import mindustry.content.Blocks;
 
 import static mindustry.Vars.*;
