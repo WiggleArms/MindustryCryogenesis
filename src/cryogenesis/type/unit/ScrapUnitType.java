@@ -29,9 +29,9 @@ public class ScrapUnitType extends UnitType{
         //hittable = false;
         //targetable = false;
         //physics = false;
-        canDrown = false;
+        //canDrown = false;
         createScorch = false;
-        canAttack = false;
+        //canAttack = false;
         playerControllable = false;
         logicControllable = false;
         useUnitCap = false;
