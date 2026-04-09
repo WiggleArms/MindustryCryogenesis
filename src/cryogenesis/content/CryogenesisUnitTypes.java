@@ -179,7 +179,6 @@ public class CryogenesisUnitTypes{
                         scrapValue = with(Items.scrap, 15, CryogenesisItems.nickel, 1);
                         scrapTime = 180f;
                         hitSize = 1f;
-                        hittable = true;
                     }};
                 }};
             }});
@@ -238,7 +237,6 @@ public class CryogenesisUnitTypes{
                         scrapValue = with(Items.scrap, 15, CryogenesisItems.nickel, 1);
                         scrapTime = 180f;
                         hitSize = 8f;
-                        hittable = true;
                     }};
                 }};
             }});
