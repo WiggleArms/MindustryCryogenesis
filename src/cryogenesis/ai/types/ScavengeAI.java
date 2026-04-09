@@ -40,7 +40,7 @@ public class ScavengeAI extends AIController{
 				// if no target, or target is not valid, or target is already picked up (commented out as units in payloads may not be considered units)
 				if(unitTarget == null || !unitTarget.isValid()/* || !unitTarget.isPayload()*/ ){
 					// find nearest non-payload scrap unit
-					unitTarget = Units.closest(null, unit.x, unit.y, 160f, u -> u.type, instanceof ScrapUnitType/* && !u.isPayload()*/); // remove range if possible
+					unitTarget = Units.closest(null, unit.x, unit.y, 160f, u -> u.type instanceof ScrapUnitType/* && !u.isPayload()*/); // remove range if possible
 					Log.info("Found target: @", unitTarget);
 				}
 
