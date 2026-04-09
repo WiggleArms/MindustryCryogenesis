@@ -71,7 +71,7 @@ public class ScavengeAI extends AIController{
 					// if current base does not exist
 					if(unloadTarget == null || !unloadTarget.isValid()){
 						// find new base
-						unloadTarget = Units.closestBuilding(unit.team, unit.x, unit.y, 160f, b -> b instanceof PayloadDeconstructor);
+						unloadTarget = Units.closestBuilding(unit.team, unit.x, unit.y, 160f, b -> b instanceof PayloadDeconstructorBuild);
 					}
 
 					// if good base
@@ -86,7 +86,7 @@ public class ScavengeAI extends AIController{
 				// if current base does not exist
 				if(unloadTarget == null || !unloadTarget.isValid()){
 					// find new base
-					unloadTarget = Units.closestBuilding(unit.team, unit.x, unit.y, 160f, b -> b instanceof PayloadDeconstructor);
+					unloadTarget = Units.closestBuilding(unit.team, unit.x, unit.y, 160f, b -> b instanceof PayloadDeconstructorBuild);
 				}
 
 				// if good base
