@@ -22,6 +22,7 @@ public class ScrapUnitType extends UnitType{
         constructor = UnitEntity::create;
         controller = u -> new ScrapAI();
 
+        flying = false;
         //isEnemy = false;
         //speed = 0f;
         //rotateSpeed = 0f;
