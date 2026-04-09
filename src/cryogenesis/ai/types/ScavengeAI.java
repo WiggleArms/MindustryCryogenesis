@@ -28,6 +28,9 @@ public class ScavengeAI extends AIController{
 	public Unit unitTarget;
     protected float payloadPickupCooldown;
 
+	private static Unit result;
+	private static float cdist;
+
 	@Override
 	public void updateMovement(){
 		
