@@ -41,7 +41,7 @@ public class ScavengeAI extends AIController{
 				// if no unit, or unit is not valid, or unit is already picked up (commented out as units in payloads may not be considered units)
 				if(unitTarget == null || !unitTarget.isValid()/* || !unitTarget.isPayload()*/ ){
 					// find nearest non-payload scrap unit
-					unitTarget = Units.closest(null, unit.x, unit.y, 160f, u -> u.type instanceof ScrapUnitType/* && !u.isPayload()*/); // remove range if possible
+					unitTarget = closestUnit(null, unit.x, unit.y, u -> u.type instanceof ScrapUnitType/* && !u.isPayload()*/); // remove range if possible
 					Log.info("Found unit: @", unitTarget);
 				}
 
@@ -127,7 +127,23 @@ public class ScavengeAI extends AIController{
 		if(baseTargets.isEmpty()) return;
 	}
 	*/
-	
+
+	public static Unit closestUnit(Team team, float x, float y, Boolf<Unit> predicate){
+        result = null;
+        cdist = 0f;
+
+        for(Unit e : Groups.unit){
+            if(!predicate.get(e) || (e.team() != team && team != null)) continue;
+
+            float dist = e.dst2(x, y);
+            if(result == null || dist < cdist){
+                result = e;
+                cdist = dist;
+            }
+        }
+
+        return result;
+    }
 	
     void tryPickupUnit(Payloadc pay){
         Unit target = Units.closest(unit.team, unit.x, unit.y, unit.type.hitSize * 2f, u -> u.isAI() && u != unit && u.isGrounded() && pay.canPickup(u) && u.within(unit, u.hitSize + unit.hitSize));
