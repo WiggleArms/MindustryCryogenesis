@@ -37,22 +37,22 @@ public class ScavengeAI extends AIController{
 			// otherwise check payload
 			if(!pay.hasPayload()){
 
-				// if no target, or target is not valid, or target is already picked up (commented out as units in payloads may not be considered units)
+				// if no unit, or unit is not valid, or unit is already picked up (commented out as units in payloads may not be considered units)
 				if(unitTarget == null || !unitTarget.isValid()/* || !unitTarget.isPayload()*/ ){
 					// find nearest non-payload scrap unit
 					unitTarget = Units.closest(null, unit.x, unit.y, 160f, u -> u.type instanceof ScrapUnitType/* && !u.isPayload()*/); // remove range if possible
-					Log.info("Found target: @", unitTarget);
+					Log.info("Found unit: @", unitTarget);
 				}
 
-				// if good target
+				// if good unit
 				if(unitTarget != null){
-					// move to and pickup target
+					// move to and pickup unit
 					moveTo(unitTarget, 5f);
-					Log.info("Moving");
+					Log.info("Moving to unit");
 
 					if(unit.within(unitTarget, 8f)){
 					
-					int prev = -1;
+						int prev = -1;
 						while(prev != pay.payloads().size){
 							prev = pay.payloads().size;
 							tryPickupUnit(pay);
@@ -64,14 +64,53 @@ public class ScavengeAI extends AIController{
 						}
 						payloadPickupCooldown = 60f;
 					}
+				} else {
+					// no units, so go back to base to wait
+
+					// if current base does not exist
+					if(unloadTarget == null || !unloadTarget.isValid(){
+						// find new base
+						unloadTarget = closestBuilding(unit.team, unit.x, unit.y, 160f, b -> b.instanceof PayloadDeconstructor)
+					}
+
+					// if good base
+					if(unloadTarget != null){
+						moveTo(unloadTarget, 5f);
+						Log.info("No units, moving to base");
+					} else {
+						Log.info("No units or bases found, idling");
+					}
 				}
-				// otherwise, find scrapper
-				// if scrapper, go to it
-				// otherwise, idle I guess?
 			} else {
-				// unit has payload, look for scrapper
-				// if scrapper, go to it
-				// otherwise, idle I guess?
+				// if current base does not exist
+				if(unloadTarget == null || !unloadTarget.isValid(){
+					// find new base
+					unloadTarget = closestBuilding(unit.team, unit.x, unit.y, 160f, b -> b.instanceof PayloadDeconstructor)
+				}
+
+				// if good base
+				if(unloadTarget != null){
+					// move to base and unload unit
+					moveTo(unloadTarget, 5f);
+					Log.info("Transporting unit to base");
+					
+					if(unit.within(unloadTarget, 8f)){
+
+						int prev = -1;
+						while(pay.hasPayload() && prev != pay.payloads().size){
+							prev = pay.payloads().size;
+							Call.payloadDropped(unit, unit.x, unit.y);
+						}
+
+						//wait for everything to unload before running code below
+						if(pay.hasPayload()){
+							return;
+						}
+						payloadPickupCooldown = 60f;
+					}
+				} else {
+					Log.info("No bases found, idling");
+				}
 			}
 		}
 	}
@@ -80,13 +119,14 @@ public class ScavengeAI extends AIController{
 	public void findBuilding(Building build){
 		unloadTarget = null
 
-        targets = Seq<PayloadDeconstructorBuild>)(Seq)Vars.indexer.getFlagged(unit.team, CryogenesisBlockFlag.unitScrapper);
+        targets = Seq<PayloadDeconstructorBuild>)(Seq)Vars.indexer.allBuildings(unit.x, unit.y, 160f, <PayloadDeconstructor>);
 
 		if(baseTargets.isEmpty()) return;
 
 
 	}
 	*/
+	
 	
     void tryPickupUnit(Payloadc pay){
         Unit target = Units.closest(unit.team, unit.x, unit.y, unit.type.hitSize * 2f, u -> u.isAI() && u != unit && u.isGrounded() && pay.canPickup(u) && u.within(unit, u.hitSize + unit.hitSize));
