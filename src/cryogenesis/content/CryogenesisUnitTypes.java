@@ -53,18 +53,20 @@ public class CryogenesisUnitTypes{
 
 	public static void load(){
 
-		meso = new UnitType("meso"){{
-            constructor = PayloadUnit::create;
-			controller = u -> u.team.isAI() ? new BuilderAI(true, 400f) : new CommandAI();
-            defaultCommand = CryogenesisUnitCommand.scavengeCommand;
-            isEnemy = false;
-
+		meso = new UnitType("meso"){
+        
             @Override
             public void init(){
                 super.init();
 
                 commands.add(CryogenesisUnitCommand.scavengeCommand);
-            };
+            }
+
+            {
+            constructor = PayloadUnit::create;
+			controller = u -> u.team.isAI() ? new BuilderAI(true, 400f) : new CommandAI();
+            defaultCommand = CryogenesisUnitCommand.scavengeCommand;
+            isEnemy = false;
 
             targetBuildingsMobile = false;
             lowAltitude = true;
