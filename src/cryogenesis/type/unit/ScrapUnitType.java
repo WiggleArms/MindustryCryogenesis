@@ -28,7 +28,7 @@ public class ScrapUnitType extends UnitType{
         //fogRadius = 0f;
         //hittable = false;
         //targetable = false;
-        //physics = false;
+        physics = true;
         //canDrown = false;
         //createScorch = false;
         //canAttack = false;
