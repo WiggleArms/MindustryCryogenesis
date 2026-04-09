@@ -25,11 +25,10 @@ public class ScrapUnitType extends UnitType{
         isEnemy = false;
         speed = 0f;
         rotateSpeed = 0f;
-        hitSize = 1f;
         fogRadius = 0f;
         hittable = false;
         targetable = false;
-        physics = false;
+        //physics = false;
         canDrown = false;
         createScorch = false;
         canAttack = false;

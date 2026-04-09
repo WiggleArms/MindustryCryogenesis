@@ -93,6 +93,7 @@ A: Yep.
 	- Sprite
 - Scrapper AI
 	- Scavenge command
+- Fix ScrapAI team swap logic
 - Wind turbine buildings [FUTURE]
 
 ### Wishlist:

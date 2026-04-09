@@ -75,7 +75,7 @@ public class CryogenesisUnitTypes{
             alwaysUnlocked = true;
             wreckSoundVolume = 0.8f;
             deathSoundVolume = 0.7f;
-            payloadCapacity = 1f * 1f * tilesize * tilesize;
+            payloadCapacity = 0.25f * 0.25f * tilesize * tilesize;
 
             faceTarget = false;
             outlineColor = CryogenesisPalette.ironOutline;
@@ -167,6 +167,7 @@ public class CryogenesisUnitTypes{
                     spawnUnit = new ScrapUnitType("eluma-scrap"){{
                         scrapValue = with(Items.scrap, 15, CryogenesisItems.nickel, 1);
                         scrapTime = 180f;
+                        hitSize = 0.1f;
                     }};
                 }};
             }});
@@ -224,6 +225,7 @@ public class CryogenesisUnitTypes{
                     spawnUnit = new ScrapUnitType("schizi-scrap"){{
                         scrapValue = with(Items.scrap, 15, CryogenesisItems.nickel, 1);
                         scrapTime = 180f;
+                        hitSize = 0.2f;
                     }};
                 }};
             }});
