@@ -3,6 +3,7 @@ package cryogenesis.ai.types;
 //import cryogenesis.world.meta.*;
 import cryogenesis.type.unit.*;
 
+import arc.util.Log;
 import arc.math.*;
 import arc.math.geom.*;
 import arc.struct.*;
@@ -28,8 +29,8 @@ public class ScavengeAI extends AIController{
 
 	@Override
 	public void updateMovement(){
-
-
+		
+		Log.info("Running scavengeAI from @", unit.id);
 		if(!net.client() && unit instanceof Payloadc pay){
 			// look for nearby enemies
 			// if enemy, flee
@@ -40,12 +41,14 @@ public class ScavengeAI extends AIController{
 				if(unitTarget == null || !unitTarget.isValid()/* || !unitTarget.isPayload()*/ ){
 					// find nearest non-payload scrap unit
 					unitTarget = Units.closest(null, unit.x, unit.y, u -> u.type instanceof ScrapUnitType/* && !u.isPayload()*/);
+					Log.info("Found target: @", unitTarget);
 				}
 
 				// if good target
 				if(unitTarget != null){
 					// move to and pickup target
 					moveTo(unitTarget, 5f);
+					Log.info("Moving");
 
 					if(unit.within(unitTarget, 8f)){
 					
