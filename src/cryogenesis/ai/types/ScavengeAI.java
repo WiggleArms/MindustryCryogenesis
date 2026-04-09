@@ -71,7 +71,7 @@ public class ScavengeAI extends AIController{
 					// if current base does not exist
 					if(unloadTarget == null || !unloadTarget.isValid()){
 						// find new base
-						unloadTarget = Units.closestBuilding(unit.team, unit.x, unit.y, 160f, b -> b.type instanceof PayloadDeconstructorBuild);
+						unloadTarget = Units.closestBuilding(unit.team, unit.x, unit.y, 160f, b -> b instanceof PayloadDeconstructor);
 					}
 
 					// if good base
@@ -86,7 +86,7 @@ public class ScavengeAI extends AIController{
 				// if current base does not exist
 				if(unloadTarget == null || !unloadTarget.isValid()){
 					// find new base
-					unloadTarget = Units.closestBuilding(unit.team, unit.x, unit.y, 160f, b -> b.type instanceof PayloadDeconstructorBuild);
+					unloadTarget = Units.closestBuilding(unit.team, unit.x, unit.y, 160f, b -> b instanceof PayloadDeconstructor);
 				}
 
 				// if good base
@@ -120,11 +120,9 @@ public class ScavengeAI extends AIController{
 	public void findBuilding(Building build){
 		unloadTarget = null
 
-        targets = Seq<PayloadDeconstructorBuild>)(Seq)Vars.indexer.allBuildings(unit.x, unit.y, 160f, <PayloadDeconstructor>);
+        scrappers = indexer.getBuildings(unit.team, b -> b instanceof PayloadDeconstructorBuild);
 
 		if(baseTargets.isEmpty()) return;
-
-
 	}
 	*/
 	
