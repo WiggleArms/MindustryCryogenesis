@@ -64,7 +64,7 @@ public class CryogenesisUnitTypes{
                 super.init();
 
                 commands.add(CryogenesisUnitCommand.scavengeCommand);
-            }
+            };
 
             targetBuildingsMobile = false;
             lowAltitude = true;
