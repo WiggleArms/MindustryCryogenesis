@@ -19,7 +19,7 @@ public class ScrapUnitType extends UnitType{
 	public ScrapUnitType(String name){
 		super(name);
 
-        constructor = MechUnit::create;
+        constructor = ElevationMoveUnit::create;
         controller = u -> new ScrapAI();
 
         isEnemy = false;
