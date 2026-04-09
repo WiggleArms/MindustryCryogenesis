@@ -130,7 +130,7 @@ public class CryogenesisUnitTypes{
 		}};
 
         scrapTest = new UnitType("scrap-test"){{
-            constructor = UnitEntity::create;
+            constructor = MechUnit::create;
         }};
 
         eluma = new TankUnitType("eluma"){{
