@@ -3,11 +3,13 @@ package cryogenesis.ai.types;
 //import cryogenesis.world.meta.*;
 import cryogenesis.type.unit.*;
 
-import arc.util.Log;
+import arc.*;
+import arc.func.*;
 import arc.math.*;
 import arc.math.geom.*;
 import arc.struct.*;
 import arc.util.*;
+//import arc.util.Log;
 import mindustry.ai.*;
 import mindustry.content.*;
 import mindustry.core.*;
