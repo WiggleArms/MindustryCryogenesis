@@ -44,7 +44,7 @@ public class CryogenesisUnitTypes{
     meso,
 
     //scrap units
-    scrapSmall1;
+    scrapTest;
 
     public static TankUnitType
 
@@ -128,6 +128,12 @@ public class CryogenesisUnitTypes{
                 }};
             }});
 		}};
+
+        scrapTest = new ScrapUnitType("scrap-test"){{
+            scrapValue = with(Items.scrap, 1);
+            scrapTime = 60f;
+            hitSize = 8f;
+        }};
 
         eluma = new TankUnitType("eluma"){{
             constructor = TankUnit::create;
