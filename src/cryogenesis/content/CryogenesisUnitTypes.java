@@ -178,7 +178,7 @@ public class CryogenesisUnitTypes{
                     spawnUnit = new ScrapUnitType("eluma-scrap"){{
                         scrapValue = with(Items.scrap, 15, CryogenesisItems.nickel, 1);
                         scrapTime = 180f;
-                        hitSize = 0.1f;
+                        hitSize = 1f;
                     }};
                 }};
             }});
@@ -236,7 +236,7 @@ public class CryogenesisUnitTypes{
                     spawnUnit = new ScrapUnitType("schizi-scrap"){{
                         scrapValue = with(Items.scrap, 15, CryogenesisItems.nickel, 1);
                         scrapTime = 180f;
-                        hitSize = 0.2f;
+                        hitSize = 2f;
                     }};
                 }};
             }});
