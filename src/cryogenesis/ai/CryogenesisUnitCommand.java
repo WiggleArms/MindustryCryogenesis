@@ -16,7 +16,7 @@ import mindustry.entities.units.*;
 import mindustry.gen.*;
 import mindustry.input.*;
 
-public class CryogenesisUnitCommand extends MappableContent{
+public class CryogenesisUnitCommand{
 
 	public static UnitCommand scavengeCommand;
 
