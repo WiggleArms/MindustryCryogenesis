@@ -21,7 +21,7 @@ import mindustry.game.Teams.*;
 import mindustry.gen.*;
 import mindustry.type.*;
 import mindustry.world.*;
-import mindustry.world.blocks.payloads.PayloadDeconstructor.*;
+import mindustry.world.blocks.payloads.*;
 import mindustry.world.meta.*;
 //import mindustry.content.Blocks;
 
@@ -53,10 +53,10 @@ public class ScavengeAI extends AIController{
 					// calculate remaining payload capacity
 					remainingCapacity = unit.type.payloadCapacity;
 					for(Payload p: pay.payloads()){
-						remainingCapacity -= p.unit.type.hitSize ^ 2;
+						remainingCapacity -= p.unit.type.hitSize * p.unit.type.hitSize;
 					}
 					// find nearest non-payload scrap unit that fits in remaining payload capacity
-					unitTarget = closestUnit(null, unit.x, unit.y, u -> u.type instanceof ScrapUnitType && u.hitSize ^ 2 <= remainingCapacity);
+					unitTarget = closestUnit(null, unit.x, unit.y, u -> u.type instanceof ScrapUnitType && u.hitSize * u.hitSize <= remainingCapacity);
 					Log.info("Found unit: @", unitTarget);
 				}
 

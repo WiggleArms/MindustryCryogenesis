@@ -1,5 +1,7 @@
 package cryogenesis.ai.types;
 
+import cryogenesis.type.unit.*;
+
 import arc.math.*;
 import arc.util.*;
 import mindustry.*;
@@ -7,8 +9,6 @@ import mindustry.entities.*;
 import mindustry.entities.units.*;
 import mindustry.gen.*;
 import mindustry.game.*;
-
-import cryogenesis.type.unit.*;
 
 public class ScrapAI extends AIController{
 
