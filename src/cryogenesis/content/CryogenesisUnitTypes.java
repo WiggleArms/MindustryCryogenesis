@@ -173,6 +173,7 @@ public class CryogenesisUnitTypes{
                 controllable = false;
                 aiControllable = false;
                 useAttackRange = false;
+                display = false;
 
                 bullet = new BulletType(){{
                     spawnUnit = new ScrapUnitType("eluma-scrap"){{
@@ -231,6 +232,7 @@ public class CryogenesisUnitTypes{
                 controllable = false;
                 aiControllable = false;
                 useAttackRange = false;
+                display = false;
 
                 bullet = new BulletType(){{
                     spawnUnit = new ScrapUnitType("schizi-scrap"){{

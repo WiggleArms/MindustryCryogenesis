@@ -97,6 +97,8 @@ A: Yep.
 	- ~~Scavenge command~~
 - ~~Fix ScrapAI team swap logic~~
 - Wind turbine buildings [FUTURE]
+- Scrap spawner weapon position
+	- Slight location randomization
 
 ### Wishlist:
 

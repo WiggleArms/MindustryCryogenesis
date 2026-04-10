@@ -35,9 +35,12 @@ public class ScavengeAI extends AIController{
 	public Unit unitTarget;
     protected float payloadPickupCooldown;
 	protected boolean full = false;
-
+	
+    public static float retreatDst = 160f, fleeRange = 310f, retreatDelay = Time.toSeconds * 3f;
 	private static Unit result;
 	private static float cdist;
+    Teamc avoid;
+    float retreatTimer;
 
 	@Override
 	public void updateMovement(){
@@ -45,6 +48,27 @@ public class ScavengeAI extends AIController{
 		//Log.info("Running scavengeAI from @", unit.id);
 		if(!net.client() && unit instanceof Payloadc pay){
 
+			// occasional enemy check
+			if(timer.get(timerTarget4, 40)){
+				avoid = target(unit.x, unit.y, fleeRange, true, true);
+			}
+
+			// if hasn't retreated recently, check retreat
+			if((retreatTimer += Time.delta) >= retreatDelay){
+				//fly away if enemy
+				if(avoid != null){
+					var core = unit.closestCore();
+					if(core != null && !unit.within(core, retreatDst)){
+						moveTo(core, retreatDst);
+						retreatTimer = 0f; // reset retreat timer
+					}
+
+				}
+			}
+
+			if(avoid != null) return; // if enemy nearby, don't do anything else
+
+			// recalculate target after a second to catch any initial miscalculations
 			Log.info("Cooldown: @", payloadPickupCooldown);
 			if(payloadPickupCooldown < 0f || payloadPickupCooldown == 60f || (unitTarget == null || !unitTarget.isValid()) && !full){
 				findScrap(pay);
