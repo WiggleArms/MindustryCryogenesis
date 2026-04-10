@@ -45,9 +45,12 @@ public class ScavengeAI extends AIController{
 		
 		//Log.info("Running scavengeAI from @", unit.id);
 		if(!net.client() && unit instanceof Payloadc pay){
-			if(payloadPickupCooldown != 0f) payloadPickupCooldown -= Time.delta;
-			if(payloadPickupCooldown < 0f){
-				payloadPickupCooldown = 0f;
+
+			// recalculate payload capacity and target after 1s to give the game time to catch up
+			// not running?
+			payloadPickupCooldown -= Time.delta;
+			if(payloadPickupCooldown = 0f){
+				payloadPickupCooldown = -1f;
 				findScrap(pay);
 			}
 			// look for nearby enemies
@@ -70,7 +73,7 @@ public class ScavengeAI extends AIController{
 				if(unitTarget != null){
 					// move to and pickup unit
 					moveTo(unitTarget, 5f);
-					Log.info("Moving to unit");
+					//Log.info("Moving to unit");
 
 					if(unit.within(unitTarget, 8f)){
 					
@@ -99,9 +102,9 @@ public class ScavengeAI extends AIController{
 					// if good base
 					if(unloadTarget != null){
 						moveTo(unloadTarget, 5f);
-						Log.info("No units, moving to base");
+						//Log.info("No units, moving to base");
 					} else {
-						Log.info("No units or bases found, idling");
+						//Log.info("No units or bases found, idling");
 					}
 				}
 			} else {
@@ -116,7 +119,7 @@ public class ScavengeAI extends AIController{
 				if(unloadTarget != null){
 					// move to base and unload unit
 					moveTo(unloadTarget, 5f);
-					Log.info("Transporting unit to base");
+					//Log.info("Transporting unit to base");
 					
 					if(unit.within(unloadTarget, 8f)){
 
@@ -133,7 +136,7 @@ public class ScavengeAI extends AIController{
 						payloadPickupCooldown = 60f;
 					}
 				} else {
-					Log.info("No bases found, idling");
+					//Log.info("No bases found, idling");
 				}
 			}
 		}
@@ -167,18 +170,10 @@ public class ScavengeAI extends AIController{
     }
 
 	public void findScrap(Payloadc pay){
-		// calculate remaining payload capacity
-		remainingCapacity = unit.type.payloadCapacity - pay.payloadUsed();
-		/*
-		for(Payload p: pay.payloads()){
-			remainingCapacity -= p.size();
-		}
-		*/
-		Log.info("Remaining payload capacity: @", remainingCapacity);
 		// find nearest scrap unit that fits in remaining payload capacity
-		unitTarget = closestUnit(null, unit.x, unit.y, u -> u.type instanceof ScrapUnitType && u.hitSize * u.hitSize <= remainingCapacity);
+		unitTarget = closestUnit(null, unit.x, unit.y, u -> u.type instanceof ScrapUnitType && pay.payloadUsed() + u.hitSize * u.hitSize <= unit.type.payloadCapacity);
 		if(unitTarget == null) full = true;
-		Log.info("Found unit: @", unitTarget);
+		//Log.info("Found unit: @", unitTarget);
 	}
 	
     void tryPickupUnit(Payloadc pay){
