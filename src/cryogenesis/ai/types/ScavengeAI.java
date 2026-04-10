@@ -55,10 +55,9 @@ public class ScavengeAI extends AIController{
 
 			//fly away if enemy
 			if(avoid != null){
-				var core = unit.closestCore();
-				if(core != null && !unit.within(core, retreatDst)){
-					moveTo(core, retreatDst);
-				}
+				unitTarget = null; // invalidate current target		
+				Vec2 flee = Tmp.v1.set(unit).sub(threat).nor().scl(retreatDst);
+				moveTo(unit.x + flee.x, unit.y + flee.y, 5f);
 
 				// don't let anything else run
 				return;
@@ -191,7 +190,7 @@ public class ScavengeAI extends AIController{
 
 	public void findScrap(Payloadc pay){
 		// find nearest scrap unit that fits in remaining payload capacity
-		unitTarget = closestUnit(null, unit.x, unit.y, u -> u.type instanceof ScrapUnitType && pay.payloadUsed() + u.hitSize * u.hitSize <= unit.type.payloadCapacity + 0.001f);
+		unitTarget = closestUnit(null, unit.x, unit.y, u -> u.type instanceof ScrapUnitType && pay.payloadUsed() + u.hitSize * u.hitSize <= unit.type.payloadCapacity + 0.001f &&  target(u.x, u.y, fleeRange, true, true) == null);
 		//Log.info("Recalculated payload capacity: @", unit.type.payloadCapacity + 0.001f - pay.payloadUsed());
 		if(unitTarget == null) full = true;
 		//Log.info("Found unit: @", unitTarget);
