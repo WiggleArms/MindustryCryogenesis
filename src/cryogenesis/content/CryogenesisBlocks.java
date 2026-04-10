@@ -206,7 +206,7 @@ public class CryogenesisBlocks{
 
 			regionSuffix = "-dark";
 			itemCapacity = 25;
-			size = 2;
+			size = 3;
 			deconstructSpeed = 1f;
 			//flags = EnumSet.of(CryogenesisBlockFlag.unitScrapper);
 		}};
