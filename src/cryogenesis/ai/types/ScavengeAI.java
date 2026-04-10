@@ -166,7 +166,7 @@ public class ScavengeAI extends AIController{
         return result;
     }
 
-	public void findScrap(PayloadC pay){
+	public void findScrap(Payloadc pay){
 		// calculate remaining payload capacity
 		remainingCapacity = unit.type.payloadCapacity - pay.payloadUsed();
 		/*
