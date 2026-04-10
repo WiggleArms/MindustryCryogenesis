@@ -54,7 +54,7 @@ public class ScavengeAI extends AIController{
 					// calculate remaining payload capacity
 					remainingCapacity = unit.type.payloadCapacity;
 					for(Payload p: pay.payloads()){
-						remainingCapacity -= p.hitSize * p.hitSize;
+						remainingCapacity -= p.size;
 					}
 					Log.info("Remaining payload capacity: @", remainingCapacity);
 					// find nearest non-payload scrap unit that fits in remaining payload capacity
