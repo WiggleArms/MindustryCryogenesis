@@ -35,6 +35,7 @@ public class ScavengeAI extends AIController{
 	public Unit unitTarget;
     protected float payloadPickupCooldown;
 	protected float remainingCapacity;
+	protected boolean full = false;
 
 	private static Unit result;
 	private static float cdist;
@@ -42,12 +43,18 @@ public class ScavengeAI extends AIController{
 	@Override
 	public void updateMovement(){
 		
-		Log.info("Running scavengeAI from @", unit.id);
+		//Log.info("Running scavengeAI from @", unit.id);
 		if(!net.client() && unit instanceof Payloadc pay){
 			// look for nearby enemies
 			// if enemy, flee
 			// otherwise check payload
-			if(!pay.hasPayload()){
+
+			// if unloaded, reset hasPayload
+			if(!pay.hasPayload()) full = false;
+
+			// if not full, look for units to pickup and grab them
+			// otherwise, deliver payload(s) to base
+			if(!full){
 
 				// if no unit, or unit is not valid
 				if(unitTarget == null || !unitTarget.isValid()){
@@ -59,6 +66,7 @@ public class ScavengeAI extends AIController{
 					Log.info("Remaining payload capacity: @", remainingCapacity);
 					// find nearest non-payload scrap unit that fits in remaining payload capacity
 					unitTarget = closestUnit(null, unit.x, unit.y, u -> u.type instanceof ScrapUnitType && u.hitSize * u.hitSize <= remainingCapacity);
+					if(unitTarget = null) full = true;
 					Log.info("Found unit: @", unitTarget);
 				}
 
