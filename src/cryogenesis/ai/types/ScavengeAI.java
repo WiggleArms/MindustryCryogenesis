@@ -48,7 +48,7 @@ public class ScavengeAI extends AIController{
 			if(payloadPickupCooldown != 0f) payloadPickupCooldown -= Time.delta;
 			if(payloadPickupCooldown < 0f){
 				payloadPickupCooldown = 0f;
-				findScrap();
+				findScrap(pay);
 			}
 			// look for nearby enemies
 			// if enemy, flee
@@ -63,7 +63,7 @@ public class ScavengeAI extends AIController{
 
 				// if no unit, or unit is not valid
 				if(unitTarget == null || !unitTarget.isValid()){
-					findScrap();
+					findScrap(pay);
 				}
 
 				// if good unit
@@ -166,7 +166,7 @@ public class ScavengeAI extends AIController{
         return result;
     }
 
-	public void findScrap(){
+	public void findScrap(PayloadC pay){
 		// calculate remaining payload capacity
 		remainingCapacity = unit.type.payloadCapacity - pay.payloadUsed();
 		/*
