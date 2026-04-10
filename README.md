@@ -89,11 +89,12 @@ A: Yep.
 - Recolor Innelis meshes
 - Fix missing in-text icons
 - Auger buildings
-- Scrapper block
+- ~~Scrapper block~~
 	- Sprite
 - Scrapper AI
-	- Scavenge command
-- Fix ScrapAI team swap logic
+	- 
+	- ~~Scavenge command~~
+- ~~Fix ScrapAI team swap logic~~
 - Wind turbine buildings [FUTURE]
 
 ### Wishlist:
