@@ -92,7 +92,8 @@ A: Yep.
 - ~~Scrapper block~~
 	- Sprite
 - Scrapper AI
-	- 
+	- Don't target same unit
+	- Filter and select best scrapper
 	- ~~Scavenge command~~
 - ~~Fix ScrapAI team swap logic~~
 - Wind turbine buildings [FUTURE]

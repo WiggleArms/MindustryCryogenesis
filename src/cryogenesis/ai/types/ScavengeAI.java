@@ -59,7 +59,7 @@ public class ScavengeAI extends AIController{
 				// if no unit, or unit is not valid
 				if(unitTarget == null || !unitTarget.isValid()){
 					// calculate remaining payload capacity
-					remainingCapacity = unit.type.payloadCapacity - unit.payloadUsed();
+					remainingCapacity = unit.type.payloadCapacity - pay.payloadUsed();
 					/*
 					for(Payload p: pay.payloads()){
 						remainingCapacity -= p.size();
