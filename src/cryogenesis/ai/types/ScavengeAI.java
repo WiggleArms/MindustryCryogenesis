@@ -46,13 +46,9 @@ public class ScavengeAI extends AIController{
 		//Log.info("Running scavengeAI from @", unit.id);
 		if(!net.client() && unit instanceof Payloadc pay){
 
-			// recalculate payload capacity and target after 1s to give the game time to catch up
-			// not running?
-			payloadPickupCooldown -= Time.delta;
-			if(payloadPickupCooldown == 0f){
-				payloadPickupCooldown = -1f;
-				findScrap(pay);
-			}
+			// im tired of this, enable if stupidity continues
+			// findScrap(pay);
+
 			// look for nearby enemies
 			// if enemy, flee
 			// otherwise check payload
@@ -171,7 +167,7 @@ public class ScavengeAI extends AIController{
 
 	public void findScrap(Payloadc pay){
 		// find nearest scrap unit that fits in remaining payload capacity
-		unitTarget = closestUnit(null, unit.x, unit.y, u -> u.type instanceof ScrapUnitType && pay.payloadUsed() + u.hitSize * u.hitSize <= unit.type.payloadCapacity);
+		unitTarget = closestUnit(null, unit.x, unit.y, u -> u.type instanceof ScrapUnitType && pay.payloadUsed() + u.hitSize * u.hitSize <= unit.type.payloadCapacity + 0.001f);
 		if(unitTarget == null) full = true;
 		//Log.info("Found unit: @", unitTarget);
 	}
