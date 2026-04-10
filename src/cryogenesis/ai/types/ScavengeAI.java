@@ -49,7 +49,7 @@ public class ScavengeAI extends AIController{
 			// recalculate payload capacity and target after 1s to give the game time to catch up
 			// not running?
 			payloadPickupCooldown -= Time.delta;
-			if(payloadPickupCooldown = 0f){
+			if(payloadPickupCooldown == 0f){
 				payloadPickupCooldown = -1f;
 				findScrap(pay);
 			}
