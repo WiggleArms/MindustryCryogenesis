@@ -45,6 +45,11 @@ public class ScavengeAI extends AIController{
 		
 		//Log.info("Running scavengeAI from @", unit.id);
 		if(!net.client() && unit instanceof Payloadc pay){
+			if(payloadPickupCooldown != 0f) payloadPickupCooldown -= Time.delta;
+			if(payloadPickupCooldown < 0f){
+				payloadPickupCooldown = 0f;
+				findScrap();
+			}
 			// look for nearby enemies
 			// if enemy, flee
 			// otherwise check payload
@@ -58,18 +63,7 @@ public class ScavengeAI extends AIController{
 
 				// if no unit, or unit is not valid
 				if(unitTarget == null || !unitTarget.isValid()){
-					// calculate remaining payload capacity
-					remainingCapacity = unit.type.payloadCapacity - pay.payloadUsed();
-					/*
-					for(Payload p: pay.payloads()){
-						remainingCapacity -= p.size();
-					}
-					*/
-					Log.info("Remaining payload capacity: @", remainingCapacity);
-					// find nearest non-payload scrap unit that fits in remaining payload capacity
-					unitTarget = closestUnit(null, unit.x, unit.y, u -> u.type instanceof ScrapUnitType && u.hitSize * u.hitSize <= remainingCapacity);
-					if(unitTarget == null) full = true;
-					Log.info("Found unit: @", unitTarget);
+					findScrap();
 				}
 
 				// if good unit
@@ -171,6 +165,21 @@ public class ScavengeAI extends AIController{
 
         return result;
     }
+
+	public void findScrap(){
+		// calculate remaining payload capacity
+		remainingCapacity = unit.type.payloadCapacity - pay.payloadUsed();
+		/*
+		for(Payload p: pay.payloads()){
+			remainingCapacity -= p.size();
+		}
+		*/
+		Log.info("Remaining payload capacity: @", remainingCapacity);
+		// find nearest scrap unit that fits in remaining payload capacity
+		unitTarget = closestUnit(null, unit.x, unit.y, u -> u.type instanceof ScrapUnitType && u.hitSize * u.hitSize <= remainingCapacity);
+		if(unitTarget == null) full = true;
+		Log.info("Found unit: @", unitTarget);
+	}
 	
     void tryPickupUnit(Payloadc pay){
         Unit target = Units.closest(unit.team, unit.x, unit.y, unit.type.hitSize * 2f, u -> u.isAI() && u != unit && u.isGrounded() && pay.canPickup(u) && u.within(unit, u.hitSize + unit.hitSize));
