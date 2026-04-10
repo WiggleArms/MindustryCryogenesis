@@ -48,7 +48,6 @@ public class ScavengeAI extends AIController{
 			Log.info("Cooldown: @", payloadPickupCooldown);
 			if(payloadPickupCooldown <= 0f || payloadPickupCooldown == 60f){
 				findScrap(pay);
-				Log.info("Recalculated payload capacity: @", pay.payloadUsed() + u.hitSize * u.hitSize <= unit.type.payloadCapacity + 0.001f);
 			}
 
 			payloadPickupCooldown -= Time.delta;
@@ -172,6 +171,7 @@ public class ScavengeAI extends AIController{
 	public void findScrap(Payloadc pay){
 		// find nearest scrap unit that fits in remaining payload capacity
 		unitTarget = closestUnit(null, unit.x, unit.y, u -> u.type instanceof ScrapUnitType && pay.payloadUsed() + u.hitSize * u.hitSize <= unit.type.payloadCapacity + 0.001f);
+		Log.info("Recalculated payload capacity: @", unit.type.payloadCapacity + 0.001f - pay.payloadUsed());
 		if(unitTarget == null) full = true;
 		//Log.info("Found unit: @", unitTarget);
 	}
