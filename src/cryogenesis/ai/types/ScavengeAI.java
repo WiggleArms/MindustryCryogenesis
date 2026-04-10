@@ -50,6 +50,7 @@ public class ScavengeAI extends AIController{
 			// occasional enemy check
 			if(timer.get(timerTarget4, 40)){
 				avoid = target(unit.x, unit.y, fleeRange, true, true);
+				Log.info("Enemy check: @", avoid);
 			}
 
 			//fly away if enemy
@@ -62,8 +63,6 @@ public class ScavengeAI extends AIController{
 				// don't let anything else run
 				return;
 			}
-
-			if(avoid != null)  // if enemy nearby, don't do anything else
 
 			// recalculate target after a second to catch any initial miscalculations
 			//Log.info("Cooldown: @", payloadPickupCooldown);
