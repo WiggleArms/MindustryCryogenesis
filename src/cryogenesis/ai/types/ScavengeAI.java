@@ -66,7 +66,7 @@ public class ScavengeAI extends AIController{
 					Log.info("Remaining payload capacity: @", remainingCapacity);
 					// find nearest non-payload scrap unit that fits in remaining payload capacity
 					unitTarget = closestUnit(null, unit.x, unit.y, u -> u.type instanceof ScrapUnitType && u.hitSize * u.hitSize <= remainingCapacity);
-					if(unitTarget = null) full = true;
+					if(unitTarget == null) full = true;
 					Log.info("Found unit: @", unitTarget);
 				}
 
