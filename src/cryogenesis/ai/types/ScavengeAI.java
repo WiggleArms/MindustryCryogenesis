@@ -57,7 +57,7 @@ public class ScavengeAI extends AIController{
 			if(avoid != null){
 				unitTarget = null; // invalidate current target		
 				Vec2 flee = Tmp.v1.set(unit).sub(avoid).nor();
-				moveAt(flee.scl(unit.speed()));
+				unit.moveAt(flee.scl(unit.speed()));
 
 				// don't let anything else run
 				return;
