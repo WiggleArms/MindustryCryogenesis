@@ -46,8 +46,13 @@ public class ScavengeAI extends AIController{
 		//Log.info("Running scavengeAI from @", unit.id);
 		if(!net.client() && unit instanceof Payloadc pay){
 
-			// im tired of this, enable if stupidity continues
-			findScrap(pay);
+			Log.info("Cooldown: @", payloadPickupCooldown);
+			if(payloadPickupCooldown <= 0f || payloadPickupCooldown == 60f){
+				findScrap(pay);
+				Log.info("Recalculated payload capacity: @", payloadCapacity);
+			}
+
+			payloadPickupCooldown -= Time.delta;
 
 			// look for nearby enemies
 			// if enemy, flee
