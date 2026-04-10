@@ -46,11 +46,12 @@ public class ScavengeAI extends AIController{
 		if(!net.client() && unit instanceof Payloadc pay){
 
 			Log.info("Cooldown: @", payloadPickupCooldown);
-			if(payloadPickupCooldown <= 0f || payloadPickupCooldown == 60f){
+			if(payloadPickupCooldown < 0f || payloadPickupCooldown == 60f){
 				findScrap(pay);
+				payloadPickupCooldown = 0f;
 			}
 
-			payloadPickupCooldown -= Time.delta;
+			if(payloadPickupCooldown != 0f) payloadPickupCooldown -= Time.delta;
 
 			// look for nearby enemies
 			// if enemy, flee
