@@ -34,7 +34,6 @@ public class ScavengeAI extends AIController{
 	public PayloadDeconstructorBuild unloadTarget;
 	public Unit unitTarget;
     protected float payloadPickupCooldown;
-	protected float remainingCapacity;
 	protected boolean full = false;
 
 	private static Unit result;
@@ -49,7 +48,7 @@ public class ScavengeAI extends AIController{
 			Log.info("Cooldown: @", payloadPickupCooldown);
 			if(payloadPickupCooldown <= 0f || payloadPickupCooldown == 60f){
 				findScrap(pay);
-				Log.info("Recalculated payload capacity: @", payloadCapacity);
+				Log.info("Recalculated payload capacity: @", pay.payloadUsed() + u.hitSize * u.hitSize <= unit.type.payloadCapacity + 0.001f);
 			}
 
 			payloadPickupCooldown -= Time.delta;
