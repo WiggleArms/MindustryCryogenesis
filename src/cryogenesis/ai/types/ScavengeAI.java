@@ -47,7 +47,7 @@ public class ScavengeAI extends AIController{
 		if(!net.client() && unit instanceof Payloadc pay){
 
 			// im tired of this, enable if stupidity continues
-			// findScrap(pay);
+			findScrap(pay);
 
 			// look for nearby enemies
 			// if enemy, flee
@@ -61,9 +61,9 @@ public class ScavengeAI extends AIController{
 			if(!full){
 
 				// if no unit, or unit is not valid
-				if(unitTarget == null || !unitTarget.isValid()){
-					findScrap(pay);
-				}
+				//if(unitTarget == null || !unitTarget.isValid()){
+				//	findScrap(pay);
+				//}
 
 				// if good unit
 				if(unitTarget != null){
