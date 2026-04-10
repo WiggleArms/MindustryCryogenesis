@@ -33,6 +33,7 @@ public class ScavengeAI extends AIController{
 	public PayloadDeconstructorBuild unloadTarget;
 	public Unit unitTarget;
     protected float payloadPickupCooldown;
+	protected float remainingCapacity;
 
 	private static Unit result;
 	private static float cdist;
@@ -47,10 +48,15 @@ public class ScavengeAI extends AIController{
 			// otherwise check payload
 			if(!pay.hasPayload()){
 
-				// if no unit, or unit is not valid, or unit is already picked up (commented out as units in payloads may not be considered units)
-				if(unitTarget == null || !unitTarget.isValid()/* || !unitTarget.isPayload()*/ ){
-					// find nearest non-payload scrap unit
-					unitTarget = closestUnit(null, unit.x, unit.y, u -> u.type instanceof ScrapUnitType/* && !u.isPayload()*/); // remove range if possible
+				// if no unit, or unit is not valid
+				if(unitTarget == null || !unitTarget.isValid()){
+					// calculate remaining payload capacity
+					remainingCapacity = unit.type.payloadCapacity;
+					for(Payload p: pay.payloads()){
+						remainingCapacity -= p.unit.type.hitSize ^ 2;
+					})
+					// find nearest non-payload scrap unit that fits in remaining payload capacity
+					unitTarget = closestUnit(null, unit.x, unit.y, u -> u.type instanceof ScrapUnitType && u.hitSize ^ 2 <= remainingCapacity);
 					Log.info("Found unit: @", unitTarget);
 				}
 
