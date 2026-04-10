@@ -40,7 +40,6 @@ public class ScavengeAI extends AIController{
 	private static Unit result;
 	private static float cdist;
     Teamc avoid;
-    float retreatTimer;
 
 	@Override
 	public void updateMovement(){
@@ -53,23 +52,21 @@ public class ScavengeAI extends AIController{
 				avoid = target(unit.x, unit.y, fleeRange, true, true);
 			}
 
-			// if hasn't retreated recently, check retreat
-			if((retreatTimer += Time.delta) >= retreatDelay){
-				//fly away if enemy
-				if(avoid != null){
-					var core = unit.closestCore();
-					if(core != null && !unit.within(core, retreatDst)){
-						moveTo(core, retreatDst);
-						retreatTimer = 0f; // reset retreat timer
-					}
-
+			//fly away if enemy
+			if(avoid != null){
+				var core = unit.closestCore();
+				if(core != null && !unit.within(core, retreatDst)){
+					moveTo(core, retreatDst);
 				}
+
+				// don't let anything else run
+				return;
 			}
 
-			if(avoid != null) return; // if enemy nearby, don't do anything else
+			if(avoid != null)  // if enemy nearby, don't do anything else
 
 			// recalculate target after a second to catch any initial miscalculations
-			Log.info("Cooldown: @", payloadPickupCooldown);
+			//Log.info("Cooldown: @", payloadPickupCooldown);
 			if(payloadPickupCooldown < 0f || payloadPickupCooldown == 60f || (unitTarget == null || !unitTarget.isValid()) && !full){
 				findScrap(pay);
 				if(payloadPickupCooldown < 0f) payloadPickupCooldown = 0f;
@@ -196,7 +193,7 @@ public class ScavengeAI extends AIController{
 	public void findScrap(Payloadc pay){
 		// find nearest scrap unit that fits in remaining payload capacity
 		unitTarget = closestUnit(null, unit.x, unit.y, u -> u.type instanceof ScrapUnitType && pay.payloadUsed() + u.hitSize * u.hitSize <= unit.type.payloadCapacity + 0.001f);
-		Log.info("Recalculated payload capacity: @", unit.type.payloadCapacity + 0.001f - pay.payloadUsed());
+		//Log.info("Recalculated payload capacity: @", unit.type.payloadCapacity + 0.001f - pay.payloadUsed());
 		if(unitTarget == null) full = true;
 		//Log.info("Found unit: @", unitTarget);
 	}
