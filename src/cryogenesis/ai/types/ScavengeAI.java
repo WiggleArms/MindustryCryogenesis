@@ -194,8 +194,8 @@ public class ScavengeAI extends AIController{
 
 		for(Building b : Groups.build){
 			if(b.team != unit.team || !(b instanceof PayloadDeconstructorBuild)) continue;
-			float dist = ;
-			float expectedTime = max(/* Time to reach*/ (b.dst2(unit) / unit.speed), /* Time until empty*/ (b.deconstructSpeed / b.deconstructing.buildTime())));
+
+			float expectedTime = max(/* Time to reach*/ (b.dst2(unit) / unit.speed), /* Time until empty*/ (b.deconstructSpeed / b.deconstructing.buildTime()));
 			if(result == null || bestTime < expectedTime){
 				result = b;
 				bestTime = dist;
