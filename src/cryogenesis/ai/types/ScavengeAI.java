@@ -117,7 +117,7 @@ public class ScavengeAI extends AIController{
 					if(unloadTarget == null || !unloadTarget.isValid()){
 						// find new base
 						//Building build = Units.closestBuilding(unit.team, unit.x, unit.y, 160f, b -> b instanceof PayloadDeconstructorBuild);
-						unloadTarget = bestScrapper(unit.team, unit.x, unit.y, unit.speed); //(PayloadDeconstructorBuild)build;
+						unloadTarget = bestScrapper(unit.team, unit.x, unit.y, pay.speed); //(PayloadDeconstructorBuild)build;
 					}
 
 					// if good base
@@ -197,7 +197,7 @@ public class ScavengeAI extends AIController{
 		for(Building b : Groups.build){
 			if(b.team != team || !(b instanceof PayloadDeconstructorBuild build)) continue;
 
-			float expectedTime = max(/* Time to reach*/ Mathf.dst(x, y, build.x, build.y) / speed, /* Time until empty*/ (1f - build.progress) * (build.deconstructing.buildTime() / build.deconstructSpeed()));
+			float expectedTime = max(/* Time to reach*/ Mathf.dst(x, y, build.x, build.y) / speed, /* Time until empty*/ (1f - build.progress) * (build.deconstructing.buildTime() / build.deconstructSpeed));
 			if(result == null || bestTime < expectedTime){
 				resultScrapper = build;
 				bestTime = expectedTime;
