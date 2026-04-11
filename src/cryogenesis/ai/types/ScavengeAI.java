@@ -50,7 +50,7 @@ public class ScavengeAI extends AIController{
 		if(!net.client() && unit instanceof Payloadc pay){
 
 			// occasional enemy check
-			if(timer.get(timerTarget, 40)){
+			if(timer.get(timerTarget4, 40)){
 				avoid = target(unit.x, unit.y, fleeRange, true, true);
 				Log.info("Enemy check: @", avoid);
 			}
@@ -130,10 +130,8 @@ public class ScavengeAI extends AIController{
 				}
 			} else {
 
-				// occasional best scrapper recalculation
-				if(timer.get(timerTarget2, 40)){
-						unloadTarget = bestScrapper(unit.team, unit.x, unit.y, unit.speed());
-				}
+				// TODO dont run every tick
+				unloadTarget = bestScrapper(unit.team, unit.x, unit.y, unit.speed());
 
 				// if good base
 				if(unloadTarget != null){
