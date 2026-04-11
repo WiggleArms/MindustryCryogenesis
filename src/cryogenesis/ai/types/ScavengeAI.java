@@ -39,6 +39,8 @@ public class ScavengeAI extends AIController{
     public static float retreatDst = 160f, fleeRange = 310f, retreatDelay = Time.toSeconds * 3f;
 	private static Unit result;
 	private static float cdist;
+	private static PayloadDeconstructorBuild resultScrapper;
+	private static float bestTime;
     Teamc avoid;
 
 	@Override
@@ -188,16 +190,16 @@ public class ScavengeAI extends AIController{
         return result;
     }
 
-	public static Building bestScrapper(Team team, float x, float y, Boolf<Building> predicate){
-		result = null;
+	public static PayloadDeconstructorBuild bestScrapper(Team team, float x, float y, float speed){
+		resultScrapper = null;
 		bestTime = 0f;
 
-		for(Building b : Groups.build){
-			if(b.team != unit.team || !(b instanceof PayloadDeconstructorBuild)) continue;
+		for(PayloadDeconstructorBuild b : Groups.build){
+			if(b.team != team || !(b instanceof PayloadDeconstructorBuild)) continue;
 
-			float expectedTime = max(/* Time to reach*/ (b.dst2(unit) / unit.speed), /* Time until empty*/ (b.deconstructSpeed / b.deconstructing.buildTime()));
+			float expectedTime = max(/* Time to reach*/ (b.dst2(x, y) / speed), /* Time until empty*/ (b.deconstructSpeed / b.deconstructing.buildTime()));
 			if(result == null || bestTime < expectedTime){
-				result = b;
+				resultScrapper = b;
 				bestTime = dist;
 			}
 		}
