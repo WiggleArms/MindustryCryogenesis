@@ -117,7 +117,7 @@ public class ScavengeAI extends AIController{
 					if(unloadTarget == null || !unloadTarget.isValid()){
 						// find new base
 						//Building build = Units.closestBuilding(unit.team, unit.x, unit.y, 160f, b -> b instanceof PayloadDeconstructorBuild);
-						unloadTarget = bestScrapper(unit.team, unit.x, unit.y); //(PayloadDeconstructorBuild)build;
+						unloadTarget = bestScrapper(unit.team, unit.x, unit.y, unit.speed); //(PayloadDeconstructorBuild)build;
 					}
 
 					// if good base
@@ -133,7 +133,7 @@ public class ScavengeAI extends AIController{
 				if(unloadTarget == null || !unloadTarget.isValid()){
 					// find new base
 					//Building build = Units.closestBuilding(unit.team, unit.x, unit.y, 160f, b -> b instanceof PayloadDeconstructorBuild);
-					unloadTarget = bestScrapper(unit.team, unit.x, unit.y); //(PayloadDeconstructorBuild)build;
+					unloadTarget = bestScrapper(unit.team, unit.x, unit.y, unit.speed); //(PayloadDeconstructorBuild)build;
 				}
 
 				// if good base
@@ -194,17 +194,17 @@ public class ScavengeAI extends AIController{
 		resultScrapper = null;
 		bestTime = 0f;
 
-		for(PayloadDeconstructorBuild b : Groups.build){
-			if(b.team != team || !(b instanceof PayloadDeconstructorBuild)) continue;
+		for(Building b : Groups.build){
+			if(b.team != team || !(b instanceof PayloadDeconstructorBuild build)) continue;
 
-			float expectedTime = max(/* Time to reach*/ (b.dst2(x, y) / speed), /* Time until empty*/ (b.deconstructSpeed / b.deconstructing.buildTime()));
+			float expectedTime = max(/* Time to reach*/ Mathf.dst(x, y, build.x, build.y) / speed, /* Time until empty*/ (1f - build.progress) * (build.deconstructing.buildTime() / build.deconstructSpeed()));
 			if(result == null || bestTime < expectedTime){
-				resultScrapper = b;
-				bestTime = dist;
+				resultScrapper = build;
+				bestTime = expectedTime;
 			}
 		}
 
-		return result;
+		return resultScrapper;
 	}
 
 	public void findScrap(Payloadc pay){
