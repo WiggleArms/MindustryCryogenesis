@@ -202,7 +202,7 @@ public class ScavengeAI extends AIController{
 				expectedTime = Mathf.dst(x, y, build.x, build.y) / speed;
 			}
 			
-			if(result == null || bestTime > expectedTime){
+			if(resultScrapper == null || bestTime > expectedTime){
 				resultScrapper = build;
 				bestTime = expectedTime;
 			}
