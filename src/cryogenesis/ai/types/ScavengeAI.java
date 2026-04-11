@@ -36,7 +36,7 @@ public class ScavengeAI extends AIController{
     protected float payloadPickupCooldown;
 	protected boolean full = false;
 	
-    public static float retreatDst = 160f, fleeRange = 310f, retreatDelay = Time.toSeconds * 3f;
+    public static float retreatDst = 160f, fleeRange = 310f, retreatDelay = Time.toSeconds * 3f, moveRange = 6f, moveSmoothing = 20f;
 	private static Unit result;
 	private static float cdist;
 	private static PayloadDeconstructorBuild resultScrapper;
@@ -93,7 +93,7 @@ public class ScavengeAI extends AIController{
 				// if good unit
 				if(unitTarget != null){
 					// move to and pickup unit
-					moveTo(unitTarget, 5f);
+					moveTo(unitTarget, moveRange, moveSmoothing);
 					//Log.info("Moving to unit");
 
 					if(unit.within(unitTarget, 8f)){
@@ -117,12 +117,12 @@ public class ScavengeAI extends AIController{
 					if(unloadTarget == null || !unloadTarget.isValid()){
 						// find new base
 						//Building build = Units.closestBuilding(unit.team, unit.x, unit.y, 160f, b -> b instanceof PayloadDeconstructorBuild);
-						unloadTarget = bestScrapper(unit.team, unit.x, unit.y, pay.speed); //(PayloadDeconstructorBuild)build;
+						unloadTarget = bestScrapper(unit.team, unit.x, unit.y, unit.speed()); //(PayloadDeconstructorBuild)build;
 					}
 
 					// if good base
 					if(unloadTarget != null){
-						moveTo(unloadTarget, 5f);
+						moveTo(unloadTarget, moveRange, moveSmoothing);
 						//Log.info("No units, moving to base");
 					} else {
 						//Log.info("No units or bases found, idling");
@@ -133,13 +133,13 @@ public class ScavengeAI extends AIController{
 				if(unloadTarget == null || !unloadTarget.isValid()){
 					// find new base
 					//Building build = Units.closestBuilding(unit.team, unit.x, unit.y, 160f, b -> b instanceof PayloadDeconstructorBuild);
-					unloadTarget = bestScrapper(unit.team, unit.x, unit.y, unit.speed); //(PayloadDeconstructorBuild)build;
+					unloadTarget = bestScrapper(unit.team, unit.x, unit.y, unit.speed()); //(PayloadDeconstructorBuild)build;
 				}
 
 				// if good base
 				if(unloadTarget != null){
 					// move to base and unload unit
-					moveTo(unloadTarget, 5f);
+					moveTo(unloadTarget, moveRange, moveSmoothing);
 					//Log.info("Transporting unit to base");
 					
 					if(unit.within(unloadTarget, 8f)){
@@ -197,7 +197,7 @@ public class ScavengeAI extends AIController{
 		for(Building b : Groups.build){
 			if(b.team != team || !(b instanceof PayloadDeconstructorBuild build)) continue;
 
-			float expectedTime = max(/* Time to reach*/ Mathf.dst(x, y, build.x, build.y) / speed, /* Time until empty*/ (1f - build.progress) * (build.deconstructing.buildTime() / build.deconstructSpeed));
+			float expectedTime = max(/* Time to reach*/ Mathf.dst(x, y, build.x, build.y) / speed, /* Time until empty*/ (1f - build.progress) * (build.deconstructing.buildTime() / b.deconstructSpeed));
 			if(result == null || bestTime < expectedTime){
 				resultScrapper = build;
 				bestTime = expectedTime;
