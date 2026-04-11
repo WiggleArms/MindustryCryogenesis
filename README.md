@@ -93,6 +93,7 @@ A: Yep.
 	- Sprite
 - Scrapper AI
 	- Don't target same unit
+	- Prioritize largest scrap
 	- Filter and select best scrapper
 	- ~~Scavenge command~~
 - ~~Fix ScrapAI team swap logic~~
