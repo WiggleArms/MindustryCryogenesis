@@ -197,7 +197,12 @@ public class ScavengeAI extends AIController{
 		for(Building b : Groups.build){
 			if(b.team != team || !(b instanceof PayloadDeconstructorBuild build)) continue;
 
-			float expectedTime = Math.max(/* Time to reach*/ Mathf.dst(x, y, build.x, build.y) / speed, /* Time until empty*/ (1f - build.progress) * (build.deconstructing.buildTime() / ((PayloadDeconstructor)build.block).deconstructSpeed));
+			try {
+				float expectedTime = Math.max(/* Time to reach*/ Mathf.dst(x, y, build.x, build.y) / speed, /* Time until empty*/ (1f - build.progress) * (build.deconstructing.buildTime() / ((PayloadDeconstructor)build.block).deconstructSpeed));
+			} catch (NullPointerException e){
+				float expectedTime = Mathf.dst(x, y, build.x, build.y) / speed;
+			}
+			
 			if(result == null || bestTime < expectedTime){
 				resultScrapper = build;
 				bestTime = expectedTime;
