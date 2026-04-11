@@ -50,7 +50,7 @@ public class ScavengeAI extends AIController{
 		if(!net.client() && unit instanceof Payloadc pay){
 
 			// occasional enemy check
-			if(timer.get(timerTarget4, 40)){
+			if(timer.get(timerTarget, 40)){
 				avoid = target(unit.x, unit.y, fleeRange, true, true);
 				Log.info("Enemy check: @", avoid);
 			}
@@ -129,11 +129,10 @@ public class ScavengeAI extends AIController{
 					}
 				}
 			} else {
-				// if current base does not exist
-				if(unloadTarget == null || !unloadTarget.isValid()){
-					// find new base
-					//Building build = Units.closestBuilding(unit.team, unit.x, unit.y, 160f, b -> b instanceof PayloadDeconstructorBuild);
-					unloadTarget = bestScrapper(unit.team, unit.x, unit.y, unit.speed()); //(PayloadDeconstructorBuild)build;
+
+				// occasional best scrapper recalculation
+				if(timer.get(timerTarget2, 40)){
+						unloadTarget = bestScrapper(unit.team, unit.x, unit.y, unit.speed());
 				}
 
 				// if good base
