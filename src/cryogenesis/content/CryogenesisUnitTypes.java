@@ -151,7 +151,7 @@ public class CryogenesisUnitTypes{
             accel = 0.08f;
             itemCapacity = 20;
             health = 150f;
-            engineSize = 1.5;
+            engineSize = 1.5f;
             engineOffset = 3f;
             wreckSoundVolume = deathSoundVolume = 0.6f;
             payloadCapacity = 0.25f * 0.25f * tilesize * tilesize;
