@@ -204,6 +204,7 @@ public class CryogenesisBlocks{
 		payloadScrapper = new PayloadDeconstructor("scrapper"){{
 			requirements(Category.units, with(Items.scrap, 30));
 
+			squareSprite = false;
 			regionSuffix = "-dark";
 			itemCapacity = 25;
 			size = 3;
