@@ -44,7 +44,7 @@ public class CryogenesisUnitTypes{
     meso,
 
     //hovering
-    vice, //lathe,
+    vice, lathe;
 
     public static TankUnitType
 
@@ -143,7 +143,6 @@ public class CryogenesisUnitTypes{
             defaultCommand = CryogenesisUnitCommand.scavengeCommand;
             isEnemy = false;
 
-            targetBuildingsMobile = false;
             lowAltitude = true;
             flying = true;
             drag = 0.04f;
@@ -152,11 +151,10 @@ public class CryogenesisUnitTypes{
             accel = 0.08f;
             itemCapacity = 20;
             health = 150f;
-            engineOffset = 6f;
+            engineSize = 1.5;
+            engineOffset = 3f;
             wreckSoundVolume = deathSoundVolume = 0.6f;
             payloadCapacity = 0.25f * 0.25f * tilesize * tilesize;
-
-            faceTarget = false;
             outlineColor = CryogenesisPalette.ironOutline;
 
             /*
@@ -165,6 +163,35 @@ public class CryogenesisUnitTypes{
             loopSoundVolume = 0.1;
             loopSoundPitch = 2;
             */
+        }};
+
+		lathe = new UnitType("lathe"){
+        
+            @Override
+            public void init(){
+                super.init();
+
+                commands.add(CryogenesisUnitCommand.scavengeCommand);
+            }
+
+            {
+            constructor = PayloadUnit::create;
+            defaultCommand = CryogenesisUnitCommand.scavengeCommand;
+            isEnemy = false;
+
+            lowAltitude = true;
+            flying = true;
+            drag = 0.06f;
+            speed = 2.5f;
+            rotateSpeed = 12f;
+            accel = 0.12f;
+            itemCapacity = 40;
+            health = 500f;
+            engineOffset = 6f;
+            wreckSoundVolume = deathSoundVolume = 0.9f;
+            payloadCapacity = 0.5f * 0.5f * tilesize * tilesize;
+            outlineColor = CryogenesisPalette.ironOutline;
+        }};
 
         eluma = new TankUnitType("eluma"){{
             constructor = TankUnit::create;
