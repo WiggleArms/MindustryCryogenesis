@@ -91,15 +91,15 @@ A: Yep.
 - Auger buildings
 - ~~Scrapper block~~
 	- Sprite
-- Scrapper AI
+- ~~Scrapper AI~~
 	- Don't target same unit
 	- Prioritize largest scrap
-	- Filter and select best scrapper
+	- ~~Filter and select best scrapper~~
 	- ~~Scavenge command~~
 - ~~Fix ScrapAI team swap logic~~
 - Wind turbine buildings [FUTURE]
 - Scrap spawner weapon position
-	- Slight location randomization
+	- Slight location randomization?
 
 ### Wishlist:
 
