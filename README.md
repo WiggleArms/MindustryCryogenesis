@@ -90,7 +90,8 @@ A: Yep.
 - Fix missing in-text icons
 - Auger buildings
 - ~~Scrapper block~~
-	- Sprite
+	- ~~Sprite~~
+	- Don't attach to power lines
 - ~~Scrapper AI~~
 	- Don't target same unit
 	- Prioritize largest scrap
@@ -134,4 +135,16 @@ Parallax counterpart, pushes air targets away
 "Barrage" upgrade to Pelt (Possibly rename, term is used frequently in description text)
 "Avenge" upgrade to Barrage (GAU-8 Avenger reference)
 
-Insulation used for water-related blocks and insulated walls
+Unit lines:
+Light ground "Rollers": Eluma -> Estena -> Paxo -> Glomeris -> Eleon
+Heavy ground "Walkers": ??? -> ??? -> ??? -> ??? -> ??? -> ???
+Air assault "Flyers(?)": Fluctus -> Cavum -> Murus -> Asperitas -> Arcus
+Air support "Hoverers": Vise -> Lathe -> Gimbal -> Gyro -> Derrick
+Naval "Floaters": ??? -> ??? -> ??? -> ??? -> ???
+Core units: Meso -> Iono -> Exo
+
+Insulation used for water-related blocks and insulated walls (possibly power blocks and wires too?)
+
+## Trvia
+- The Lathe's sprite is a rework of the Meso's original sprite
+- Scrap resources on Innelis were originally deposited directly into the core before the introduction of the scrap system

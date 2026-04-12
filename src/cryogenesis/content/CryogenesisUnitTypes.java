@@ -43,12 +43,12 @@ public class CryogenesisUnitTypes{
     //core
     meso,
 
-    //scrap units
-    scrapTest;
+    //hovering
+    vice, //lathe,
 
     public static TankUnitType
 
-    //roller
+    //rolling
     eluma, schizi;
 
 	public static void load(){
@@ -128,6 +128,43 @@ public class CryogenesisUnitTypes{
                 }};
             }});
 		}};
+
+		vice = new UnitType("vice"){
+        
+            @Override
+            public void init(){
+                super.init();
+
+                commands.add(CryogenesisUnitCommand.scavengeCommand);
+            }
+
+            {
+            constructor = PayloadUnit::create;
+            defaultCommand = CryogenesisUnitCommand.scavengeCommand;
+            isEnemy = false;
+
+            targetBuildingsMobile = false;
+            lowAltitude = true;
+            flying = true;
+            drag = 0.04f;
+            speed = 2f;
+            rotateSpeed = 8f;
+            accel = 0.08f;
+            itemCapacity = 20;
+            health = 150f;
+            engineOffset = 6f;
+            wreckSoundVolume = deathSoundVolume = 0.6f;
+            payloadCapacity = 0.25f * 0.25f * tilesize * tilesize;
+
+            faceTarget = false;
+            outlineColor = CryogenesisPalette.ironOutline;
+
+            /*
+            This might be annoying
+            loopSound = loopThoriumReactor;
+            loopSoundVolume = 0.1;
+            loopSoundPitch = 2;
+            */
 
         eluma = new TankUnitType("eluma"){{
             constructor = TankUnit::create;
