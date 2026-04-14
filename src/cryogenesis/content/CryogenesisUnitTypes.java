@@ -111,7 +111,7 @@ public class CryogenesisUnitTypes{
                 shootSound = Sounds.shootAlpha;
                 outlineColor = CryogenesisPalette.ironOutline;
 
-                bullet = new LaserBulletType(2.5f, 30){{
+                bullet = new LaserBulletType(30f){{
                     length = 80f;
                     width = 1.0f;
                     hitEffect = Fx.hitLaserBlast;
