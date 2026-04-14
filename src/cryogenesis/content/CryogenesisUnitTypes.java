@@ -140,7 +140,12 @@ public class CryogenesisUnitTypes{
                 outlineColor = CryogenesisPalette.ironOutline;
                 mirror = false;
 
+                rotate = true;
+                noAttack = true;
+                predictTarget = false;
                 display = false;
+                bullet = new BulletType();
+                useAttackRange = false;
             }});
 
             weapons.add(new BuildWeapon("cryogenesis-meso-build-weapon"){{
@@ -149,7 +154,12 @@ public class CryogenesisUnitTypes{
                 outlineColor = CryogenesisPalette.ironOutline;
                 mirror = false;
 
+                rotate = true;
+                noAttack = true;
+                predictTarget = false;
                 display = false;
+                bullet = new BulletType();
+                useAttackRange = false;
             }});
 		}};
 
