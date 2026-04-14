@@ -95,7 +95,7 @@ public class CryogenesisUnitTypes{
             drawMineBeam = false;
             outlineColor = CryogenesisPalette.ironOutline;
             //buildBeamOffset = 5.25f;
-            //mineBeamOffset = 5.25f;
+            mineBeamOffset = 6f;
 
             /*
             This might be annoying
@@ -104,7 +104,7 @@ public class CryogenesisUnitTypes{
             loopSoundPitch = 2;
             */
 
-            weapons.add(new Weapon("cryogenesis-meso-weapon"){{
+            weapons.add(new BuildWeapon("cryogenesis-meso-weapon"){{
                 reload = 15f;
                 x = 0f;
                 y = -1f;
@@ -112,11 +112,12 @@ public class CryogenesisUnitTypes{
                 shootSound = Sounds.shootAlpha;
                 outlineColor = CryogenesisPalette.ironOutline;
                 mirror = false;
-                inaccuracy = 5f;
+                inaccuracy = 1f;
 
                 bullet = new LaserBulletType(30f){{
                     length = 160f;
                     width = 15f;
+                    pierce = false;
                     hitEffect = Fx.hitLaserBlast;
                     colors = new Color[]{Pal.yellowBoltFront.cpy().mul(1f, 1f, 1f, 0.4f), Pal.yellowBoltFront, Color.white};
                     //trailWidth = 0.8f;
@@ -132,34 +133,6 @@ public class CryogenesisUnitTypes{
                     buildingDamageMultiplier = 0.01f;
                     //homingPower = 0.02f;
                 }};
-            }});
-
-            weapons.add(new MineWeapon("cryogenesis-meso-mine-weapon"){{
-                x = 0f;
-                y = -1f;
-                outlineColor = CryogenesisPalette.ironOutline;
-                mirror = false;
-
-                rotate = true;
-                noAttack = true;
-                predictTarget = false;
-                display = false;
-                bullet = new BulletType();
-                useAttackRange = false;
-            }});
-
-            weapons.add(new BuildWeapon("cryogenesis-meso-build-weapon"){{
-                x = 0f;
-                y = -1f;
-                outlineColor = CryogenesisPalette.ironOutline;
-                mirror = false;
-
-                rotate = true;
-                noAttack = true;
-                predictTarget = false;
-                display = false;
-                bullet = new BulletType();
-                useAttackRange = false;
             }});
 		}};
 
