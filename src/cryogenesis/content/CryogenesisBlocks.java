@@ -88,7 +88,7 @@ public class CryogenesisBlocks{
 		*/
 
 		oreNickel = new OreBlock("ore-nickel", CryogenesisItems.nickel){{
-			variants = 4;
+			variants = 5;
 		}};
 
 		nickelCompactor = new GenericCrafter("nickel-compactor"){{
