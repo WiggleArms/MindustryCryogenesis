@@ -89,6 +89,9 @@ public class CryogenesisUnitTypes{
             payloadCapacity = 0.25f * 0.25f * tilesize * tilesize;
 
             faceTarget = false;
+            rotateToBuilding = false;
+            drawBuildBeam = false;
+            drawMineBeam = false;
             outlineColor = CryogenesisPalette.ironOutline;
             //buildBeamOffset = 5.25f;
             //mineBeamOffset = 5.25f;
@@ -108,11 +111,11 @@ public class CryogenesisUnitTypes{
                 shootSound = Sounds.shootAlpha;
                 outlineColor = CryogenesisPalette.ironOutline;
 
-                bullet = new LaserBulletType(2.5f, 10){{
+                bullet = new LaserBulletType(2.5f, 30){{
                     length = 80f;
                     width = 1.0f;
                     hitEffect = Fx.hitLaserBlast;
-                    colors = {Pal.yellowBoltFront.cpy().mul(1f, 1f, 1f, 0.4f), Pal.yellowBoltFront, Color.white};
+                    colors = new Color[]{Pal.yellowBoltFront.cpy().mul(1f, 1f, 1f, 0.4f), Pal.yellowBoltFront, Color.white};
                     //trailWidth = 0.8f;
                     //trailLength = 2;
                     shootEffect = Fx.shootSmallColor;
