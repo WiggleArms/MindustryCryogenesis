@@ -87,6 +87,7 @@ public class CryogenesisUnitTypes{
             wreckSoundVolume = 0.8f;
             deathSoundVolume = 0.7f;
             payloadCapacity = 0.25f * 0.25f * tilesize * tilesize;
+            range = 20f;
 
             faceTarget = false;
             rotateToBuilding = false;
@@ -139,6 +140,7 @@ public class CryogenesisUnitTypes{
                 outlineColor = CryogenesisPalette.ironOutline;
                 mirror = false;
 
+                display = false;
                 bullet = null;
             }});
 
@@ -148,6 +150,7 @@ public class CryogenesisUnitTypes{
                 outlineColor = CryogenesisPalette.ironOutline;
                 mirror = false;
 
+                display = false;
                 bullet = null;
             }});
 		}};
