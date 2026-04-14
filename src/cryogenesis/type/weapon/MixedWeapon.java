@@ -30,8 +30,6 @@ public class MixedWeapon extends Weapon{
 
             mount.aimX = unit.buildPlan().drawx();
             mount.aimY = unit.buildPlan().drawy();
-        }else{
-            super(unit, mount);
         }
 
         super.update(unit, mount);
@@ -53,8 +51,6 @@ public class MixedWeapon extends Weapon{
 
             unit.drawBuildingBeam(px, py);
             Draw.z(z);
-        } else {
-            super(unit, mount);
         }
     }
 }
