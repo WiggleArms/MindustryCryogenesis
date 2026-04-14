@@ -87,9 +87,7 @@ public class CryogenesisBlocks{
 		}};
 		*/
 
-		oreNickel = new OreBlock("ore-nickel", CryogenesisItems.nickel){{
-			variants = 5;
-		}};
+		oreNickel = new OreBlock("ore-nickel", CryogenesisItems.nickel);
 
 		nickelCompactor = new GenericCrafter("nickel-compactor"){{
 			requirements(Category.crafting, with(Items.scrap, 30));
