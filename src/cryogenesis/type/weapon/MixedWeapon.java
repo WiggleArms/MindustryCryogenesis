@@ -8,7 +8,7 @@ import mindustry.gen.*;
 import mindustry.type.*;
 
 /** Turret that can both shoot and build. */
-public class BuildWeapon extends Weapon{
+public class MixedWeapon extends Weapon{
 
     public BuildWeapon(){
         super();
