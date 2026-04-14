@@ -91,8 +91,8 @@ public class CryogenesisUnitTypes{
 
             faceTarget = false;
             rotateToBuilding = false;
-            //drawBuildBeam = false;
-            //drawMineBeam = false;
+            drawBuildBeam = false;
+            drawMineBeam = false;
             outlineColor = CryogenesisPalette.ironOutline;
             //buildBeamOffset = 5.25f;
             //mineBeamOffset = 5.25f;
@@ -134,24 +134,22 @@ public class CryogenesisUnitTypes{
                 }};
             }});
 
-            weapons.add(new Weapon("cryogenesis-meso-mine-weapon"){{
+            weapons.add(new MineWeapon("cryogenesis-meso-mine-weapon"){{
                 x = 0f;
                 y = -1f;
                 outlineColor = CryogenesisPalette.ironOutline;
                 mirror = false;
 
                 display = false;
-                bullet = null;
             }});
 
-            weapons.add(new Weapon("cryogenesis-meso-build-weapon"){{
+            weapons.add(new BuildWeapon("cryogenesis-meso-build-weapon"){{
                 x = 0f;
                 y = -1f;
                 outlineColor = CryogenesisPalette.ironOutline;
                 mirror = false;
 
                 display = false;
-                bullet = null;
             }});
 		}};
 
