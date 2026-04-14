@@ -3,6 +3,7 @@ package cryogenesis.content;
 import cryogenesis.world.graphics.CryogenesisPalette;
 import cryogenesis.content.CryogenesisItems;
 import cryogenesis.type.unit.*;
+import cryogenesis.type.weapons.*;
 import cryogenesis.ai.*;
 
 import arc.*;
@@ -104,7 +105,7 @@ public class CryogenesisUnitTypes{
             loopSoundPitch = 2;
             */
 
-            weapons.add(new BuildWeapon("cryogenesis-meso-weapon"){{
+            weapons.add(new MixedWeapon("cryogenesis-meso-weapon"){{
                 reload = 15f;
                 x = 0f;
                 y = -1f;
