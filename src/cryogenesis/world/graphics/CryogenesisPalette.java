@@ -9,7 +9,7 @@ public class CryogenesisPalette {
 	ironLight = Color.valueOf("565666ff"),
 	ironMid = Color.valueOf("4a4b53ff"),
 	ironDark = Color.valueOf("2c2d38ff"),
-	ironOutline = Color.valueOf("10121cff"),
+	ironOutline = Color.valueOf("1e1f26ff"),
 
 	// Cryofluid theme colors
 	cryoBase = Color.valueOf("6ccbebff"),
