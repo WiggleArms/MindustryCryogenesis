@@ -10,11 +10,11 @@ import mindustry.type.*;
 /** Turret that can both shoot and build. */
 public class MixedWeapon extends Weapon{
 
-    public BuildWeapon(){
+    public MixedWeapon(){
         super();
     }
 
-    public BuildWeapon(String name){
+    public MixedWeapon(String name){
         super(name);
 
         rotate = true;
