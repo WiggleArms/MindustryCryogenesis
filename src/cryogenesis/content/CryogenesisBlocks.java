@@ -56,7 +56,7 @@ public class CryogenesisBlocks{
 
 	//environment
 	//ores
-	coreNickel,
+	oreNickel,
 
 	//crafting
 	nickelCompactor,
