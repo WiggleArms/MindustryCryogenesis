@@ -88,7 +88,6 @@ public class CryogenesisUnitTypes{
             wreckSoundVolume = 0.8f;
             deathSoundVolume = 0.7f;
             payloadCapacity = 0.25f * 0.25f * tilesize * tilesize;
-            range = 20f;
 
             faceTarget = false;
             rotateToBuilding = false;
@@ -105,6 +104,8 @@ public class CryogenesisUnitTypes{
             loopSoundPitch = 2;
             */
 
+            /*
+            // laser weapon
             weapons.add(new MixedWeapon("cryogenesis-meso-weapon"){{
                 reload = 15f;
                 x = 0f;
@@ -115,10 +116,10 @@ public class CryogenesisUnitTypes{
                 mirror = false;
                 inaccuracy = 1f;
 
-                bullet = new LaserBulletType(30f){{
+                bullet = new LaserBulletType(16f){{
                     length = 160f;
-                    width = 15f;
-                    pierce = false;
+                    width = 10f;
+                    pierceCap = 1;
                     hitEffect = Fx.hitLaserBlast;
                     colors = new Color[]{Pal.yellowBoltFront.cpy().mul(1f, 1f, 1f, 0.4f), Pal.yellowBoltFront, Color.white};
                     //trailWidth = 0.8f;
@@ -133,6 +134,37 @@ public class CryogenesisUnitTypes{
                     lifetime = 10f;
                     buildingDamageMultiplier = 0.01f;
                     //homingPower = 0.02f;
+                }};
+            }});
+            */
+            
+            // lightning weapon
+            weapons.add(new MixedWeapon("cryogenesis-meso-weapon"){{
+                reload = 24f;
+                x = 0f;
+                y = -1f;
+                rotate = true;
+                shootSound = Sounds.shootAlpha;
+                outlineColor = CryogenesisPalette.ironOutline;
+                mirror = false;
+                inaccuracy = 25f;
+
+                shoot.shots = 2;
+
+                bullet = new LightningBulletType(){{
+                    lightningColor = hitColor = Pal.yellowBoltFront;
+                    damage = 16f;
+
+                    lightningLength = 15;
+                    lightningLengthRand = 5;
+                    shootEffect = Fx.smallShootColor;
+
+                    lightningType = new BulletType(0.0001f, 0f){{
+                        lifetime = Fx.lightning.lifetime;
+                        hitEffect = Fx.hitLancer;
+                        despawnEffect = Fx.none;
+                        hittable = false;
+                    }};
                 }};
             }});
 		}};

@@ -209,6 +209,7 @@ public class CryogenesisBlocks{
 			itemCapacity = 25;
 			size = 3;
 			deconstructSpeed = 1f;
+			hasPower = false;
 			//flags = EnumSet.of(CryogenesisBlockFlag.unitScrapper);
 		}};
 	}

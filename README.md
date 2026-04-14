@@ -92,6 +92,7 @@ A: Yep.
 - ~~Scrapper block~~
 	- ~~Sprite~~
 	- Don't attach to power lines
+	- Decals
 - ~~Scrapper AI~~
 	- Don't target same unit
 	- Prioritize largest scrap
