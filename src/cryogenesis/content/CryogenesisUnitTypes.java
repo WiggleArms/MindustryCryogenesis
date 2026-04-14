@@ -77,7 +77,7 @@ public class CryogenesisUnitTypes{
             itemCapacity = 20;
             health = 150f;
             engineSize = 1.5f;
-            engineOffset = 5f;
+            engineOffset = 4f;
             wreckSoundVolume = deathSoundVolume = 0.6f;
             payloadCapacity = 0.25f * 0.25f * tilesize * tilesize;
             outlineColor = CryogenesisPalette.ironOutline;
@@ -155,6 +155,8 @@ public class CryogenesisUnitTypes{
             }});
 
             weapons.add(new Weapon("cryogenesis-spawn-scrap"){{
+                x = 0f;
+                shootY = 0f;
                 shootOnDeath = true;
                 reload = 60f;
                 shootCone = 180f;
@@ -214,6 +216,8 @@ public class CryogenesisUnitTypes{
             }});
 
             weapons.add(new Weapon("cryogenesis-spawn-scrap"){{
+                x = 0f;
+                shootY = 0f;
                 shootOnDeath = true;
                 reload = 60f;
                 shootCone = 180f;
@@ -295,7 +299,7 @@ public class CryogenesisUnitTypes{
                 inaccuracy = 1f;
 
                 bullet = new LaserBulletType(16f){{
-                    length = 140f;
+                    length = 150f;
                     width = 10f;
                     pierceCap = 1;
                     hitEffect = Fx.hitLaserBlast;

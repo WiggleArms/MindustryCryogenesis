@@ -33,7 +33,7 @@ FUTURE - Further content revamps and additions
 
 #### Q: More additions after T5? Does this mean we get T6?
 A: Not unless vanilla gets them first! Those revamps and additions are to polish the mod and bring it up to the other two campaigns in terms of quality.
-<sub><sup>Or maybe for if I come up with a really cool idea that I *have* to add<sup><sub>
+<sub><sup>Or maybe for if I come up with a really cool idea that I have to add<sup><sub>
 
 #### Q: Did you make this FAQ just so you could answer the previous question?
 A: Yep.
@@ -91,17 +91,17 @@ A: Yep.
 - Auger buildings
 - ~~Scrapper block~~
 	- ~~Sprite~~
-	- Don't attach to power lines
+	- ~~Don't attach to power lines~~
 	- Decals
 - ~~Scrapper AI~~
-	- Don't target same unit
+	- Don't target same unit [TBD]
 	- Prioritize largest scrap
 	- ~~Filter and select best scrapper~~
 	- ~~Scavenge command~~
 - ~~Fix ScrapAI team swap logic~~
 - Wind turbine buildings [FUTURE]
 - Scrap spawner weapon position
-	- Slight location randomization?
+	- Slight location randomization [TBD]
 
 ### Wishlist:
 
@@ -154,4 +154,5 @@ Insulation used for water-related blocks and insulated walls (possibly power blo
 
 ## Trvia
 - The Lathe's sprite is a rework of the Meso's original sprite
-- Scrap resources on Innelis were originally deposited directly into the core before the introduction of the scrap system
+- Scrap resources on Innelis were originally deposited directly into the core before the introduction of the scrapping system
+- The first sector added to Innelis was Zero, which will be replaced with Cryogenesis before the v1.0.0 release
