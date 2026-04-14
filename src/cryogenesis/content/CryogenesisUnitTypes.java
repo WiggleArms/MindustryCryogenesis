@@ -90,8 +90,8 @@ public class CryogenesisUnitTypes{
 
             faceTarget = false;
             outlineColor = CryogenesisPalette.ironOutline;
-            buildBeamOffset = 5.25f;
-            mineBeamOffset = 5.25f;
+            //buildBeamOffset = 5.25f;
+            //mineBeamOffset = 5.25f;
 
             /*
             This might be annoying
@@ -101,31 +101,43 @@ public class CryogenesisUnitTypes{
             */
 
             weapons.add(new Weapon("cryogenesis-meso-weapon"){{
-                reload = 10f;
-                x = 4.5f;
-                y = -0.375f;
+                reload = 45f;
+                x = 0f;
+                y = -1f;
                 rotate = true;
                 shootSound = Sounds.shootAlpha;
                 outlineColor = CryogenesisPalette.ironOutline;
 
-                bullet = new LaserBoltBulletType(2.5f, 10){{
-                    keepVelocity = false;
+                bullet = new LaserBulletType(2.5f, 10){{
+                    length = 80f;
                     width = 1.0f;
-                    height = 3.0f;
-                    hitEffect = despawnEffect = Fx.hitBulletColor;
-                    trailWidth = 0.8f;
-                    trailLength = 2;
+                    hitEffect = Fx.hitLaserBlast;
+                    colors = {Pal.yellowBoltFront.cpy().mul(1f, 1f, 1f, 0.4f), Pal.yellowBoltFront, Color.white};
+                    //trailWidth = 0.8f;
+                    //trailLength = 2;
                     shootEffect = Fx.shootSmallColor;
-                    smokeEffect = Fx.hitLaserColor;
-                    backColor = trailColor = Pal.yellowBoltFront;
-                    hitColor = Pal.yellowBoltFront;
-                    frontColor = Color.white;
-                    lightColor = Pal.yellowBoltFront;
+                    //smokeEffect = Fx.hitLaserColor;
+                    //backColor = trailColor = Pal.yellowBoltFront;
+                    //hitColor = Pal.yellowBoltFront;
+                    //frontColor = Color.white;
+                    //lightColor = Pal.yellowBoltFront;
 
-                    lifetime = 60f;
+                    lifetime = 10f;
                     buildingDamageMultiplier = 0.01f;
-                    homingPower = 0.02f;
+                    //homingPower = 0.02f;
                 }};
+            }});
+
+            weapons.add(new Weapon("cryogenesis-meso-mine-weapon"){{
+                x = 0f;
+                y = -1f;
+                outlineColor = CryogenesisPalette.ironOutline;
+            }});
+
+            weapons.add(new Weapon("cryogenesis-meso-build-weapon"){{
+                x = 0f;
+                y = -1f;
+                outlineColor = CryogenesisPalette.ironOutline;
             }});
 		}};
 
@@ -152,7 +164,7 @@ public class CryogenesisUnitTypes{
             itemCapacity = 20;
             health = 150f;
             engineSize = 1.5f;
-            engineOffset = 3f;
+            engineOffset = 5f;
             wreckSoundVolume = deathSoundVolume = 0.6f;
             payloadCapacity = 0.25f * 0.25f * tilesize * tilesize;
             outlineColor = CryogenesisPalette.ironOutline;

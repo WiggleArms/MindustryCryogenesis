@@ -126,22 +126,28 @@ Sand + Scrap -> Silicon (Scrap is assumed to be some combination of all Innelis 
 
 Sand -> Insulation (Aerogel, factory built with Ti/Elastanium?)
 
+#### Sector progression
+
+Zero (Cryogenesis) - Mine nickel -> Build 
+
 #### Other
 
-"Puncture" early anti-air turret
-"Bore" midgame single target laser turret, inflicts melting
-Parallax counterpart, pushes air targets away
-"Pelt" basic turret NAME WIP
-"Barrage" upgrade to Pelt (Possibly rename, term is used frequently in description text)
-"Avenge" upgrade to Barrage (GAU-8 Avenger reference)
+- "Puncture" early anti-air turret
+- "Bore" midgame single target laser turret, inflicts melting
+- Parallax counterpart, pushes air targets away
+- "Pelt" basic turret NAME WIP
+- "Barrage" upgrade to Pelt (Possibly rename, term is used frequently in description text)
+- "Avenge" upgrade to Barrage
+
+Cores: Terminal, Hub, Nexus
 
 Unit lines:
-Light ground "Rollers": Eluma -> Estena -> Paxo -> Glomeris -> Eleon
-Heavy ground "Walkers": ??? -> ??? -> ??? -> ??? -> ??? -> ???
-Air assault "Flyers(?)": Fluctus -> Cavum -> Murus -> Asperitas -> Arcus
-Air support "Hoverers": Vise -> Lathe -> Gimbal -> Gyro -> Derrick
-Naval "Floaters": ??? -> ??? -> ??? -> ??? -> ???
-Core units: Meso -> Iono -> Exo
+- Light ground "Rollers": Eluma -> Estena -> Paxo -> Glomeris -> Eleon
+- Heavy ground "Walkers": ??? -> ??? -> ??? -> ??? -> ??? -> ???
+- Air assault "Flyers(?)": Fluctus -> Cavum -> Murus -> Asperitas -> Arcus
+- Air support "Hoverers": Vise -> Lathe -> Gimbal -> Gyro -> Derrick
+- Naval "Floaters": ??? -> ??? -> ??? -> ??? -> ???
+- Core units: Meso -> Iono -> Exo
 
 Insulation used for water-related blocks and insulated walls (possibly power blocks and wires too?)
 
