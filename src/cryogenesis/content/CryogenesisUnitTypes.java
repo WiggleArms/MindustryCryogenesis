@@ -54,121 +54,6 @@ public class CryogenesisUnitTypes{
 
 	public static void load(){
 
-		meso = new UnitType("meso"){
-        
-            @Override
-            public void init(){
-                super.init();
-
-                commands.add(CryogenesisUnitCommand.scavengeCommand);
-            }
-
-            {
-            constructor = PayloadUnit::create;
-			controller = u -> u.team.isAI() ? new BuilderAI(true, 400f) : new CommandAI();
-            defaultCommand = CryogenesisUnitCommand.scavengeCommand;
-            isEnemy = false;
-
-            targetBuildingsMobile = false;
-            lowAltitude = true;
-            flying = true;
-            mineSpeed = 6.5f;
-            mineTier = 1;
-            buildSpeed = 0.5f;
-            drag = 0.05f;
-            speed = 3f;
-            rotateSpeed = 15f;
-            accel = 0.1f;
-            fogRadius = 0f;
-            itemCapacity = 30;
-            health = 150f;
-            engineOffset = 6f;
-            hitSize = 8f;
-            alwaysUnlocked = true;
-            wreckSoundVolume = 0.8f;
-            deathSoundVolume = 0.7f;
-            payloadCapacity = 0.25f * 0.25f * tilesize * tilesize;
-
-            faceTarget = false;
-            rotateToBuilding = false;
-            drawBuildBeam = false;
-            drawMineBeam = false;
-            outlineColor = CryogenesisPalette.ironOutline;
-            //buildBeamOffset = 5.25f;
-            mineBeamOffset = 6f;
-
-            /*
-            This might be annoying
-            loopSound = loopThoriumReactor;
-            loopSoundVolume = 0.1;
-            loopSoundPitch = 2;
-            */
-
-            /*
-            // laser weapon
-            weapons.add(new MixedWeapon("cryogenesis-meso-weapon"){{
-                reload = 15f;
-                x = 0f;
-                y = -1f;
-                rotate = true;
-                shootSound = Sounds.shootAlpha;
-                outlineColor = CryogenesisPalette.ironOutline;
-                mirror = false;
-                inaccuracy = 1f;
-
-                bullet = new LaserBulletType(16f){{
-                    length = 140f;
-                    width = 10f;
-                    pierceCap = 1;
-                    hitEffect = Fx.hitLaserBlast;
-                    colors = new Color[]{Pal.yellowBoltFront.cpy().mul(1f, 1f, 1f, 0.4f), Pal.yellowBoltFront, Color.white};
-                    //trailWidth = 0.8f;
-                    //trailLength = 2;
-                    shootEffect = Fx.shootSmallColor;
-                    //smokeEffect = Fx.hitLaserColor;
-                    //backColor = trailColor = Pal.yellowBoltFront;
-                    //hitColor = Pal.yellowBoltFront;
-                    //frontColor = Color.white;
-                    //lightColor = Pal.yellowBoltFront;
-
-                    lifetime = 10f;
-                    buildingDamageMultiplier = 0.01f;
-                    //homingPower = 0.02f;
-                }};
-            }});
-            */
-            
-            // lightning weapon
-            weapons.add(new MixedWeapon("cryogenesis-meso-weapon"){{
-                reload = 24f;
-                x = 0f;
-                y = -1f;
-                rotate = true;
-                shootSound = Sounds.shootAlpha;
-                outlineColor = CryogenesisPalette.ironOutline;
-                mirror = false;
-                inaccuracy = 25f;
-
-                shoot.shots = 2;
-
-                bullet = new LightningBulletType(){{
-                    lightningColor = hitColor = Pal.yellowBoltFront;
-                    damage = 16f;
-
-                    lightningLength = 15;
-                    lightningLengthRand = 5;
-                    shootEffect = Fx.shootSmallColor;
-
-                    lightningType = new BulletType(0.0001f, 0f){{
-                        lifetime = Fx.lightning.lifetime;
-                        hitEffect = Fx.hitLancer;
-                        despawnEffect = Fx.none;
-                        hittable = false;
-                    }};
-                }};
-            }});
-		}};
-
 		vice = new UnitType("vice"){
         
             @Override
@@ -347,5 +232,120 @@ public class CryogenesisUnitTypes{
                 }};
             }});
         }};
+        
+		meso = new UnitType("meso"){
+        
+            @Override
+            public void init(){
+                super.init();
+
+                commands.add(CryogenesisUnitCommand.scavengeCommand);
+            }
+
+            {
+            constructor = PayloadUnit::create;
+			controller = u -> u.team.isAI() ? new BuilderAI(true, 400f) : new CommandAI();
+            defaultCommand = CryogenesisUnitCommand.scavengeCommand;
+            isEnemy = false;
+
+            targetBuildingsMobile = false;
+            lowAltitude = true;
+            flying = true;
+            mineSpeed = 6.5f;
+            mineTier = 1;
+            buildSpeed = 0.5f;
+            drag = 0.05f;
+            speed = 3f;
+            rotateSpeed = 15f;
+            accel = 0.1f;
+            fogRadius = 0f;
+            itemCapacity = 30;
+            health = 150f;
+            engineOffset = 6f;
+            hitSize = 8f;
+            alwaysUnlocked = true;
+            wreckSoundVolume = 0.8f;
+            deathSoundVolume = 0.7f;
+            payloadCapacity = 0.25f * 0.25f * tilesize * tilesize;
+
+            faceTarget = false;
+            rotateToBuilding = false;
+            drawBuildBeam = false;
+            drawMineBeam = false;
+            outlineColor = CryogenesisPalette.ironOutline;
+            //buildBeamOffset = 5.25f;
+            mineBeamOffset = 6f;
+
+            /*
+            This might be annoying
+            loopSound = loopThoriumReactor;
+            loopSoundVolume = 0.1;
+            loopSoundPitch = 2;
+            */
+
+            // laser weapon, better thematically but more difficult to use
+            weapons.add(new MixedWeapon("cryogenesis-meso-weapon"){{
+                reload = 15f;
+                x = 0f;
+                y = -1f;
+                rotate = true;
+                shootSound = Sounds.shootAlpha;
+                outlineColor = CryogenesisPalette.ironOutline;
+                mirror = false;
+                inaccuracy = 1f;
+
+                bullet = new LaserBulletType(16f){{
+                    length = 140f;
+                    width = 10f;
+                    pierceCap = 1;
+                    hitEffect = Fx.hitLaserBlast;
+                    colors = new Color[]{Pal.yellowBoltFront.cpy().mul(1f, 1f, 1f, 0.4f), Pal.yellowBoltFront, Color.white};
+                    //trailWidth = 0.8f;
+                    //trailLength = 2;
+                    shootEffect = Fx.shootSmallColor;
+                    //smokeEffect = Fx.hitLaserColor;
+                    //backColor = trailColor = Pal.yellowBoltFront;
+                    //hitColor = Pal.yellowBoltFront;
+                    //frontColor = Color.white;
+                    //lightColor = Pal.yellowBoltFront;
+
+                    lifetime = 10f;
+                    buildingDamageMultiplier = 0.01f;
+                    //homingPower = 0.02f;
+                }};
+            }});
+            
+            /*
+            // lightning weapon, use this for a noob handicap
+            weapons.add(new MixedWeapon("cryogenesis-meso-weapon"){{
+                reload = 24f;
+                x = 0f;
+                y = -1f;
+                rotate = true;
+                shootSound = Sounds.shootAlpha;
+                outlineColor = CryogenesisPalette.ironOutline;
+                mirror = false;
+                inaccuracy = 25f;
+
+                shoot.shots = 2;
+
+                bullet = new LightningBulletType(){{
+                    lightningColor = hitColor = Pal.yellowBoltFront;
+                    damage = 16f;
+
+                    lightningLength = 15;
+                    lightningLengthRand = 5;
+                    shootEffect = Fx.shootSmallColor;
+
+                    lightningType = new BulletType(0.0001f, 0f){{
+                        lifetime = Fx.lightning.lifetime;
+                        hitEffect = Fx.hitLancer;
+                        despawnEffect = Fx.none;
+                        hittable = false;
+                    }};
+                }};
+            }});
+            */
+		}};
 	}
 }
