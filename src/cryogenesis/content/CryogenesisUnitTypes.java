@@ -117,7 +117,7 @@ public class CryogenesisUnitTypes{
                 inaccuracy = 1f;
 
                 bullet = new LaserBulletType(16f){{
-                    length = 160f;
+                    length = 140f;
                     width = 10f;
                     pierceCap = 1;
                     hitEffect = Fx.hitLaserBlast;
@@ -157,7 +157,7 @@ public class CryogenesisUnitTypes{
 
                     lightningLength = 15;
                     lightningLengthRand = 5;
-                    shootEffect = Fx.smallShootColor;
+                    shootEffect = Fx.shootSmallColor;
 
                     lightningType = new BulletType(0.0001f, 0f){{
                         lifetime = Fx.lightning.lifetime;
