@@ -275,7 +275,7 @@ public class CryogenesisUnitTypes{
             faceTarget = false;
             rotateToBuilding = false;
             drawBuildBeam = false;
-            drawMineBeam = false;
+            //drawMineBeam = false;
             outlineColor = CryogenesisPalette.ironOutline;
             //buildBeamOffset = 5.25f;
             mineBeamOffset = 6f;

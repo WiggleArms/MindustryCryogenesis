@@ -52,7 +52,11 @@ public class CryogenesisBlocks{
 	public static Block 
 	
 	//test
-	testWall, 	
+	//testWall, 	
+
+	//environment
+	//ores
+	coreNickel,
 
 	//crafting
 	nickelCompactor,
@@ -82,6 +86,8 @@ public class CryogenesisBlocks{
 			health = 80 * wallHealthMultiplier;
 		}};
 		*/
+
+		oreNickel = new OreBlock(CryogenesisItems.nickel);
 
 		nickelCompactor = new GenericCrafter("nickel-compactor"){{
 			requirements(Category.crafting, with(Items.scrap, 30));

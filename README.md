@@ -55,7 +55,7 @@ A: Yep.
 	- ~~Pipe Unloader~~
 		- ~~Pipe Unloader speed to highest boosted Pipe speed~~
 		- Resprite Pipe Unloader [FUTURE]
-		- Ground unit
+		- ~~Ground unit~~
 			- ~~Possibly upgrade T1 Eluma to T2 Schizi and create new unit for T1~~
 			- Replace Schizi with new T2 armed with turrets
 			- ~~Fix Schizi treads~~
@@ -70,6 +70,8 @@ A: Yep.
 	- Other liquid boost values (for mixtech)
 	- Liquid booster tooltips
 - Environment Blocks
+	- Nickel Ore
+		- Revamp Zero progression/tutorial
 	- First campaign map
 - Better mod icon and description
 	- Polish README
@@ -78,14 +80,14 @@ A: Yep.
 - ~~Fix UI icons~~
 	- Fix Core: Thread UI icon
 	- ~~Redo UI icons with 6px stroke~~
-- Build Turrets on core units, may require resprite [FUTURE]
+- ~~Build Turrets on core units, may require resprite [FUTURE]~~
 - Core: Hub [FAR FUTURE]
-	- Iono unit
+	- Iono unit [FAR FUTURE]
 	- Core: Nexus [FAR FUTURE]
-		- Exo unit
+		- Exo unit [FAR FUTURE]
 - Resprite Nickel Compactor to look less like camouflage [FUTURE]
-- Giant Nickel Wall [FUTURE]
-- Remove/hide depricated content
+- Giant Nickel Wall [FUTURE, TBD]
+- ~~Remove/hide depricated content~~
 - Recolor Innelis meshes
 - Fix missing in-text icons
 - Auger buildings
@@ -95,12 +97,12 @@ A: Yep.
 	- Decals
 - ~~Scrapper AI~~
 	- Don't target same unit [TBD]
-	- Prioritize largest scrap
+	- Prioritize largest scrap [FUTURE]
 	- ~~Filter and select best scrapper~~
 	- ~~Scavenge command~~
 - ~~Fix ScrapAI team swap logic~~
 - Wind turbine buildings [FUTURE]
-- Scrap spawner weapon position
+- ~~Scrap spawner weapon position~~
 	- Slight location randomization [TBD]
 
 ### Wishlist:
