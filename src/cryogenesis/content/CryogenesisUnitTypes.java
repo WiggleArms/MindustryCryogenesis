@@ -90,8 +90,8 @@ public class CryogenesisUnitTypes{
 
             faceTarget = false;
             rotateToBuilding = false;
-            drawBuildBeam = false;
-            drawMineBeam = false;
+            //drawBuildBeam = false;
+            //drawMineBeam = false;
             outlineColor = CryogenesisPalette.ironOutline;
             //buildBeamOffset = 5.25f;
             //mineBeamOffset = 5.25f;
@@ -104,16 +104,18 @@ public class CryogenesisUnitTypes{
             */
 
             weapons.add(new Weapon("cryogenesis-meso-weapon"){{
-                reload = 45f;
+                reload = 15f;
                 x = 0f;
                 y = -1f;
                 rotate = true;
                 shootSound = Sounds.shootAlpha;
                 outlineColor = CryogenesisPalette.ironOutline;
+                mirror = false;
+                inaccuracy = 5f;
 
                 bullet = new LaserBulletType(30f){{
-                    length = 80f;
-                    width = 1.0f;
+                    length = 160f;
+                    width = 15f;
                     hitEffect = Fx.hitLaserBlast;
                     colors = new Color[]{Pal.yellowBoltFront.cpy().mul(1f, 1f, 1f, 0.4f), Pal.yellowBoltFront, Color.white};
                     //trailWidth = 0.8f;
@@ -135,12 +137,18 @@ public class CryogenesisUnitTypes{
                 x = 0f;
                 y = -1f;
                 outlineColor = CryogenesisPalette.ironOutline;
+                mirror = false;
+
+                bullet = null;
             }});
 
             weapons.add(new Weapon("cryogenesis-meso-build-weapon"){{
                 x = 0f;
                 y = -1f;
                 outlineColor = CryogenesisPalette.ironOutline;
+                mirror = false;
+
+                bullet = null;
             }});
 		}};
 
