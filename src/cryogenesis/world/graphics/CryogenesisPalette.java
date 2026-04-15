@@ -13,5 +13,6 @@ public class CryogenesisPalette {
 
 	// Cryofluid theme colors
 	cryoBase = Color.valueOf("6ecdecff"),
+	cryoCloud = Color.valueOf("5fb0ccff")
 	cryoFog = Color.valueOf("6ecdec7f");
 }
