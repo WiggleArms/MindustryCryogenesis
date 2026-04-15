@@ -24,7 +24,7 @@ public class CryogenesisPlanets{
 
 	public static void load(){
 		innelis = new Planet("innelis", Planets.sun, 1f, 1){{
-			generator = new ErekirPlanetGenerator();
+			generator = new SerpuloPlanetGenerator();
 			meshLoader = () -> new HexMesh(this, 4);
 			cloudMeshLoader = () -> new MultiMesh(
 				//TODO replace with custom cloud parameters, possibly vary colors

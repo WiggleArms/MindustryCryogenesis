@@ -104,6 +104,8 @@ A: Yep.
 - Wind turbine buildings [FUTURE]
 - ~~Scrap spawner weapon position~~
 	- Slight location randomization [TBD]
+- Prevent Demise scrap units from despawning on sector capture
+- Campaign difficulty settings [FAR FUTURE]
 
 ### Wishlist:
 
@@ -132,6 +134,10 @@ Sand -> Insulation (Aerogel, factory built with Ti/Elastanium?)
 #### Sector progression
 
 Zero (Cryogenesis) - Mine nickel -> Build 
+
+#### PlanetGenerator
+
+Should only need to define isEmissive (for cool bases), getHeight, getColor, and getEmissiveColor (for cool bases)
 
 #### Other
 
