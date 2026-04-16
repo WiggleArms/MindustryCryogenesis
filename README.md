@@ -107,6 +107,7 @@ A: Yep.
 - Prevent Demise scrap units from despawning on sector capture
 - Campaign difficulty settings [FAR FUTURE]
 - Fix cloud alpha zoom weirdness
+- Add attributes for environment blocks (for mixtech)
 
 ### Wishlist:
 
