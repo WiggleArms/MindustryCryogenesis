@@ -55,6 +55,13 @@ public class CryogenesisBlocks{
 	//testWall, 	
 
 	//environment
+
+	//walls
+	cryoIceWall,
+
+	//floors
+	cryoIce,
+
 	//ores
 	oreNickel,
 
@@ -86,6 +93,17 @@ public class CryogenesisBlocks{
 			health = 80 * wallHealthMultiplier;
 		}};
 		*/
+
+		cryoIce = new Floor("cryo-ice"){{
+			dragMultiplier = 0.2f;
+			speedMultiplier = 0.9f;
+			albedo = 0.65f;
+		}};
+
+		cryoiceWall = new StaticWall("cryo-ice-wall"){{
+			cryoIce.asFloor().wall = this;
+			albedo = 0.6f;
+		}};
 
 		oreNickel = new OreBlock("ore-nickel", CryogenesisItems.nickel);
 
