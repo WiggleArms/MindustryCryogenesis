@@ -1,5 +1,7 @@
 package cryogenesis.content;
 
+import cryogenesis.maps.planet.*;
+
 import arc.func.*;
 import arc.graphics.*;
 import arc.math.*;
@@ -24,12 +26,12 @@ public class CryogenesisPlanets{
 
 	public static void load(){
 		innelis = new Planet("innelis", Planets.sun, 1f, 1){{
-			generator = new SerpuloPlanetGenerator();
+			generator = new InnelisPlanetGenerator();
 			meshLoader = () -> new HexMesh(this, 4);
 			cloudMeshLoader = () -> new MultiMesh(
 				//TODO replace with custom cloud parameters, possibly vary colors
-                new HexSkyMesh(this, 11, 0.15f, 0.13f, 4, Color.valueOf("3d5957").a(0.75f), 2, 0.45f, 0.9f, 0.38f),
-                new HexSkyMesh(this, 1, 0.6f, 0.16f, 4, Color.valueOf("446560").a(0.75f), 2, 0.45f, 1f, 0.41f)
+                new HexSkyMesh(this, 5, 0.15f, 0.21f, 4, Color.valueOf("3d5957").a(0.75f), 2, 0.49f, 0.7f, 0.30f),
+                new HexSkyMesh(this, 10, 0.6f, 0.25f, 4, Color.valueOf("446560").a(0.75f), 2, 0.49f, 0.8f, 0.32f)
 			);
 
 			launchCapacityMultiplier = 0.1f;
