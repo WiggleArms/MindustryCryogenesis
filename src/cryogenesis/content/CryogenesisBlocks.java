@@ -57,10 +57,10 @@ public class CryogenesisBlocks{
 	//environment
 
 	//walls
-	cryoIceWall,
+	cryoIceWall, magmaticStoneWall,
 
 	//floors
-	cryoIce,
+	cryoIce, magmaticStone,
 
 	//ores
 	oreNickel,
