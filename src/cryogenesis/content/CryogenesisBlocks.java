@@ -107,7 +107,9 @@ public class CryogenesisBlocks{
 
 		magmaticStone = new Floor("magmatic-stone");
 
-		magmaticStoneWall = new StaticWall("magmatic-stone-wall");
+		magmaticStoneWall = new StaticWall("magmatic-stone-wall"){{
+			variants = 4;
+		}};
 
 		oreNickel = new OreBlock("ore-nickel", CryogenesisItems.nickel);
 
