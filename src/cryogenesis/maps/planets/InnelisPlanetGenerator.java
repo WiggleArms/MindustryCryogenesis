@@ -14,7 +14,7 @@ import mindustry.world.*;
 import static mindustry.Vars.*;
 
 public class InnelisPlanetGenerator extends PlanetGenerator{
-	Color c1 = Color.valueOf(""), c2 = Color.valueOf("");
+	Color c1 = Color.valueOf("3f5a54ff"), c2 = Color.valueOf("6ecdecff");
 
 	@Override
 	public float getHeight(Vec3 position){
