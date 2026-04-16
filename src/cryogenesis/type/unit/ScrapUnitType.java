@@ -26,6 +26,7 @@ public class ScrapUnitType extends UnitType{
         speed = 0f;
         rotateSpeed = 0f;
         fogRadius = 0f;
+        lightRadius = 0f;
         hittable = false;
         targetable = false;
         //physics = false;

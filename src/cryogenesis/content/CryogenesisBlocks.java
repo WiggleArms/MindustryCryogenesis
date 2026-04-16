@@ -105,6 +105,10 @@ public class CryogenesisBlocks{
 			albedo = 0.6f;
 		}};
 
+		magmaticStone = new Floor("magmatic-stone");
+
+		magmaticStoneWall = new StaticWall("magmatic-stone-wall");
+
 		oreNickel = new OreBlock("ore-nickel", CryogenesisItems.nickel);
 
 		nickelCompactor = new GenericCrafter("nickel-compactor"){{
