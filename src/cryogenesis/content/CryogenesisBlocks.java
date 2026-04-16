@@ -100,7 +100,7 @@ public class CryogenesisBlocks{
 			albedo = 0.65f;
 		}};
 
-		cryoiceWall = new StaticWall("cryo-ice-wall"){{
+		cryoIceWall = new StaticWall("cryo-ice-wall"){{
 			cryoIce.asFloor().wall = this;
 			albedo = 0.6f;
 		}};
