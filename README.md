@@ -141,6 +141,20 @@ Zero (Cryogenesis) - Mine nickel -> Build
 
 Should only need to define isEmissive (for cool bases), getHeight, getColor, and getEmissiveColor (for cool bases)
 
+#### Biomes
+
+- Cryo Ice 
+- Cryo Snow
+- Geothermal
+- Cliffs
+- Lowlands/Wastes
+- Shores
+
+#### Tiles
+
+- Cryo Ice bubbles instead of partial streaks, greenish tint?
+- Magamatic Stone tint changes, flow-style formation
+
 #### Other
 
 - "Puncture" early anti-air turret
@@ -149,6 +163,18 @@ Should only need to define isEmissive (for cool bases), getHeight, getColor, and
 - "Pelt" basic turret NAME WIP
 - "Barrage" upgrade to Pelt (Possibly rename, term is used frequently in description text)
 - "Avenge" upgrade to Barrage
+
+- Induction Heater (Electric Heater equivalent)
+
+- Wind Generator (1x1), Large Wind Generator (3x3), Advanced Wind Generator (2x2, better space efficiency, can be placed offshore), Vortex Reactor? (4x4, May require advanced inputs to run)
+- Some sort of extremely powerful generator that requires a [TBD] synthetic gaseous lifeform as [TBD]. Explodes extremely violently if [TBD].
+
+Since infrastructure on Innelis does not mostly depend on ore locations, maybe attribute tiles could play a similar role to drive building locations, such as
+- Upgraded scrappers (liquefier?) gain speed bonuses when on hot tiles
+- Geothermal Generator
+- Other heat-buffed buildings
+- Geothermal Heater (produces heat when placed on hot tiles)
+- Certain tiles with a higher "wind" attribute for wind turbine buildings
 
 Cores: Terminal, Hub, Nexus
 
