@@ -147,13 +147,18 @@ Should only need to define isEmissive (for cool bases), getHeight, getColor, and
 - Cryo Snow
 - Geothermal
 - Cliffs
-- Lowlands/Wastes
+- Lowlands/Wastes/Dunes
 - Shores
+
+Mini-biomes:
+- Laterite deposits
+- Magma Stone hotspots
 
 #### Tiles
 
 - Cryo Ice bubbles instead of partial streaks, greenish tint?
 - Magamatic Stone tint changes, flow-style formation
+- Laterite used in shores biome? Found IRL with "high temperatures and heavy rainfall/dry periods" (https://en.wikipedia.org/wiki/Laterite)
 
 #### Other
 
