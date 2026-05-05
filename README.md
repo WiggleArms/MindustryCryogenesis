@@ -113,6 +113,7 @@ A: Yep.
 - Eluma turret too thin?
 - Greeble Meso, change cell
 - Resprite Nickel Compactor
+- Re-export all sprites with antialias of 1
 
 ### Wishlist:
 
