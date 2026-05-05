@@ -109,6 +109,11 @@ A: Yep.
 - Fix cloud alpha zoom weirdness
 - Add attributes for environment blocks (for mixtech)
 
+#### Sprites
+- Eluma turret too thin?
+- Greeble Meso, change cell
+- Resprite Nickel Compactor
+
 ### Wishlist:
 
 Tunnel Pipe doesn't need end - push/pull from anything connected<br>
