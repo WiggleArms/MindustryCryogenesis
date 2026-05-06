@@ -4,6 +4,7 @@ import arc.struct.*;
 import mindustry.game.Objectives.*;
 import mindustry.type.*;
 import mindustry.content.Items;
+import mindustry.content.Liquids;
 
 import static mindustry.content.TechTree.*;
 
