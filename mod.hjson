@@ -2,7 +2,7 @@ name: "cryogenesis"
 displayName: "Cryogenesis"
 author: Wigglearms
 description: "A mod for Mindustry adding a third, frozen planet. WIP - Currently in Alpha development"
-version: "0.8.5"
+version: "0.8.6"
 minGameVersion: "156"
 dependencies: [
 ]

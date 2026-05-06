@@ -42,6 +42,10 @@ public class CryogenesisInnelisTechTree{
 				nodeProduce(CryogenesisItems.nickel, () -> {
 
 				});
+
+				nodeProduce(Liquids.cryofluid, () -> {
+
+				});
 			});
 		});
 	}

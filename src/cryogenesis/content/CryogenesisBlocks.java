@@ -55,6 +55,9 @@ public class CryogenesisBlocks{
 	//testWall, 	
 
 	//environment
+
+	//liquids
+	shallowCryofluid,
 	
 	//floors
 	cryoIce, magmaticStone, laterite, cryoSnow, duneSand, duneStone,
@@ -93,6 +96,25 @@ public class CryogenesisBlocks{
 			health = 80 * wallHealthMultiplier;
 		}};
 		*/
+
+		shallowCryofluid = new Floor("shallow-cryofluid"){{
+            supportsOverlay = true;
+            overlayAlpha = 0.35f;
+            status = StatusEffects.freezing;
+            statusDuration = 240f;
+            speedMultiplier = 0.7f;
+            variants = 0;
+            liquidDrop = Liquids.cryofluid;
+            liquidMultiplier = 0.4f;
+            isLiquid = true;
+            cacheLayer = CacheLayer.cryofluid;
+
+            emitLight = true;
+            lightRadius = 25f;
+            lightColor = Color.cyan.cpy().a(0.19f);
+            obstructsLight = true;
+            forceDrawLight = true;
+		}};
 
 		cryoIce = new Floor("cryo-ice"){{
 			dragMultiplier = 0.2f;
