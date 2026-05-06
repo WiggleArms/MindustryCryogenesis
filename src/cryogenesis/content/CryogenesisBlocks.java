@@ -57,10 +57,10 @@ public class CryogenesisBlocks{
 	//environment
 	
 	//floors
-	cryoIce, magmaticStone, laterite,
+	cryoIce, magmaticStone, laterite, cryoSnow,
 
 	//walls
-	cryoIceWall, magmaticStoneWall, magmaStoneWall, lateriteWall,
+	cryoIceWall, magmaticStoneWall, magmaStoneWall, lateriteWall, cryoSnowWall,
 
 	//ores
 	oreNickel,
@@ -100,10 +100,18 @@ public class CryogenesisBlocks{
 			albedo = 0.65f;
 		}};
 
+		cryoSnow = new Floor("cryo-snow"){{
+			dragMultiplier = 0.2f;
+			speedMultiplier = 0.9f;
+			albedo = 0.7f;
+		}};
+
 		cryoIceWall = new StaticWall("cryo-ice-wall"){{
 			cryoIce.asFloor().wall = this;
 			albedo = 0.6f;
 		}};
+
+		cryoSnowWall = new StaticWall("cryo-snow-wall");
 
 		magmaticStone = new Floor("magmatic-stone");
 
