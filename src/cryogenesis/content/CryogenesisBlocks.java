@@ -151,7 +151,7 @@ public class CryogenesisBlocks{
 
 		darkIceWall = new StaticWall("dark-ice-wall"){{
 			variants = 3;
-		}}
+		}};
 
 		oreNickel = new OreBlock("ore-nickel", CryogenesisItems.nickel);
 
