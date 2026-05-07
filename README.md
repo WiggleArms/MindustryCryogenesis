@@ -186,6 +186,7 @@ Since infrastructure on Innelis does not mostly depend on ore locations, maybe a
 - Other heat-buffed buildings
 - Geothermal Heater (produces heat when placed on hot tiles)
 - Certain tiles with a higher "wind" attribute for wind turbine buildings
+	- Dune Sand high wind
 
 Cores: Terminal, Hub, Nexus
 

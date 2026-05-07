@@ -60,10 +60,10 @@ public class CryogenesisBlocks{
 	shallowCryofluid,
 	
 	//floors
-	cryoIce, magmaticStone, laterite, cryoSnow, duneSand, duneStone,
+	cryoIce, packIce, darkIce, cryoSnow, duneSand, duneStone,
 
 	//walls
-	cryoIceWall, magmaticStoneWall, magmaStoneWall, lateriteWall, cryoSnowWall, duneSandWall, duneStoneWall,
+	cryoIceWall, packIceWall, darkIceWall, cryoSnowWall, duneSandWall, duneStoneWall,
 
 	//ores
 	oreNickel,
@@ -132,6 +132,9 @@ public class CryogenesisBlocks{
 
 		duneStone = new Floor("dune-stone");
 
+		packIce = new Floor("pack-ice");
+
+		darkIce = new Floor("dark-ice");
 
 		cryoIceWall = new StaticWall("cryo-ice-wall"){{
 			cryoIce.asFloor().wall = this;
@@ -144,17 +147,11 @@ public class CryogenesisBlocks{
 
 		duneStoneWall = new StaticWall("dune-stone-wall");
 
-		magmaticStone = new Floor("magmatic-stone");
+		packIceWall = new StaticWall("pack-ice-wall");
 
-		magmaticStoneWall = new StaticWall("magmatic-stone-wall"){{
+		darkIceWall = new StaticWall("dark-ice-wall"){{
 			variants = 3;
-		}};
-
-		magmaStoneWall = new StaticWall("magma-stone-wall");
-
-		laterite = new Floor("laterite");
-
-		lateriteWall = new StaticWall("laterite-wall");
+		}}
 
 		oreNickel = new OreBlock("ore-nickel", CryogenesisItems.nickel);
 
