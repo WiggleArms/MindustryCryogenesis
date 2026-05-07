@@ -157,14 +157,19 @@ Should only need to define isEmissive (for cool bases), getHeight, getColor, and
 - Shores
 
 Mini-biomes:
-- Laterite deposits
-- Magma Stone hotspots
+- ~~Laterite deposits~~
+- ~~Magma Stone hotspots~~
+- Stellarite
+- Hot Springs
 
 #### Tiles
 
-- Cryo Ice bubbles instead of partial streaks, greenish tint?
-- Magamatic Stone tint changes, flow-style formation
-- Laterite used in shores biome? Found IRL with "high temperatures and heavy rainfall/dry periods" (https://en.wikipedia.org/wiki/Laterite)
+- ~~Cryo Ice bubbles instead of partial streaks, greenish tint?~~
+- ~~Magamatic Stone tint changes, flow-style formation~~
+- ~~Laterite used in shores biome? Found IRL with "high temperatures and heavy rainfall/dry periods" (https://en.wikipedia.org/wiki/Laterite)~~
+- Sulfur and Travertine in Hot Springs
+- [TBD] liquid in hot springs, inflicts Boiling
+- Stellarite, with Stellarite Shard props
 
 #### Other
 
@@ -175,10 +180,13 @@ Mini-biomes:
 - "Barrage" upgrade to Pelt (Possibly rename, term is used frequently in description text)
 - "Avenge" upgrade to Barrage
 
+- Boiling status effect inflicted by the liquid in hot springs, effects TBD. Probably just damage over time.
+
 - Induction Heater (Electric Heater equivalent)
+- Hydrothermal Heater (Produces heat from hot spring liquid)
 
 - Wind Generator (1x1), Large Wind Generator (3x3), Advanced Wind Generator (2x2, better space efficiency, can be placed offshore), Vortex Reactor? (4x4, May require advanced inputs to run)
-- Some sort of extremely powerful generator that requires a [TBD] synthetic gaseous lifeform as [TBD]. Explodes extremely violently if [TBD].
+- Some sort of extremely powerful generator/factory that requires a synthetic gaseous lifeform (Stellarite) as [TBD]. Explodes extremely violently if [TBD].
 
 Since infrastructure on Innelis does not mostly depend on ore locations, maybe attribute tiles could play a similar role to drive building locations, such as
 - Upgraded scrappers (liquefier?) gain speed bonuses when on hot tiles
@@ -186,7 +194,9 @@ Since infrastructure on Innelis does not mostly depend on ore locations, maybe a
 - Other heat-buffed buildings
 - Geothermal Heater (produces heat when placed on hot tiles)
 - Certain tiles with a higher "wind" attribute for wind turbine buildings
-	- Dune Sand high wind
+	- [REALISTIC] Dune Sand high wind
+	- [GAMEPLAY] Dune Stone high wind
+	- [BEST?] Special Dune Sand tile instead
 
 Cores: Terminal, Hub, Nexus
 
