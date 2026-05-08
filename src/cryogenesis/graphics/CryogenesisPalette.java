@@ -1,4 +1,4 @@
-package cryogenesis.world.graphics;
+package cryogenesis.graphics;
 
 import arc.graphics.Color;
 

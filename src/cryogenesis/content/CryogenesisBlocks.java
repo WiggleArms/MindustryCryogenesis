@@ -2,7 +2,7 @@ package cryogenesis.content;
 
 import cryogenesis.content.*;
 import cryogenesis.world.blocks.pipes.*;
-import cryogenesis.world.graphics.*;
+import cryogenesis.graphics.*;
 //import cryogenesis.world.meta.*;
 
 import arc.*;
@@ -57,7 +57,7 @@ public class CryogenesisBlocks{
 	//environment
 
 	//liquids
-	shallowCryofluid, deepSoda, soda, shallowSoda,
+	shallowCryofluid, deepSoda, shallowSoda,
 	
 	//floors
 	cryoIce, rock, darkIce, cryoSnow, duneSand, duneStone, sulfur, travertine,
@@ -118,9 +118,10 @@ public class CryogenesisBlocks{
 
 		deepSoda = new Floor("deep-soda"){{
             supportsOverlay = true;
+			drownTime = 240f;
             status = CryogenesisStatusEffects.boiling;
             statusDuration = 240f;
-            speedMultiplier = 0.6f;
+            speedMultiplier = 0.3f;
             variants = 0;
             liquidDrop = CryogenesisLiquids.soda;
             liquidMultiplier = 1.5f;
@@ -134,28 +135,11 @@ public class CryogenesisBlocks{
             forceDrawLight = true;
 		}};
 
-		soda = new Floor("soda"){{
-            supportsOverlay = true;
-            status = CryogenesisStatusEffects.boiling;
-            statusDuration = 200f;
-            speedMultiplier = 0.75f;
-            variants = 0;
-            liquidDrop = CryogenesisLiquids.soda;
-            isLiquid = true;
-            cacheLayer = CacheLayer.water;
-
-            emitLight = true;
-            lightRadius = 25f;
-            lightColor = Color.blue.cpy().a(0.19f);
-            obstructsLight = true;
-            forceDrawLight = true;
-		}};
-
 		shallowSoda = new Floor("shallow-soda"){{
             supportsOverlay = true;
             status = CryogenesisStatusEffects.boiling;
-            statusDuration = 160f;
-            speedMultiplier = 0.9f;
+            statusDuration = 200f;
+            speedMultiplier = 0.7f;
             variants = 0;
             liquidDrop = CryogenesisLiquids.soda;
             isLiquid = true;
