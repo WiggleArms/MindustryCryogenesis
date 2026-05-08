@@ -168,14 +168,14 @@ Mini-biomes:
 - ~~Magamatic Stone tint changes, flow-style formation~~
 - ~~Laterite used in shores biome? Found IRL with "high temperatures and heavy rainfall/dry periods" (https://en.wikipedia.org/wiki/Laterite)~~
 - Sulfur and Travertine in Hot Springs
-- [TBD] liquid in hot springs, inflicts Boiling
+- [TBD] liquid (Thermane?) in hot springs, inflicts Boiling. Very low viscosity, even less than water.
 - Stellarite, with Stellarite Shard props
 
 #### Other
 
 - "Puncture" early anti-air turret
 - "Bore" midgame single target laser turret, inflicts melting
-- Parallax counterpart, pushes air targets away
+- Parallax counterpart, pushes air targets away (Vertex?)
 - "Pelt" basic turret NAME WIP
 - "Barrage" upgrade to Pelt (Possibly rename, term is used frequently in description text)
 - "Avenge" upgrade to Barrage
