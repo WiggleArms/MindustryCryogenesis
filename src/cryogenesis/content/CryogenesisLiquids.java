@@ -22,6 +22,6 @@ public class CryogenesisLiquids{
 		steam = new Liquid("steam", Color.valueOf("b5dcfb")){{
 			gas = true;
 			explosiveness = 0.2f;
-		}});
+		}};
 	}
 }
