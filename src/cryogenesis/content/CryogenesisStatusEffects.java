@@ -23,10 +23,12 @@ public class CryogenesisStatusEffects{
 				opposite(StatusEffects.freezing, StatusEffects.melting);
 			});
 
+			/*
 			@Override
 			public boolean isHidden(){
 				return false;
 			}
+			*/
 		}};
 	}
 }
