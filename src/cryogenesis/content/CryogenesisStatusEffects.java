@@ -8,6 +8,7 @@ import mindustry.game.*;
 import mindustry.graphics.*;
 import mindustry.type.*;
 import mindustry.content.StatusEffects;
+import mindustry.content.Fx;
 
 public class CryogenesisStatusEffects{
 	public static StatusEffect boiling;
