@@ -19,9 +19,9 @@ import mindustry.graphics.Shaders;
 import static mindustry.Vars.*;
 
 public class CryogenesisShaders{
-	public static SurfaceShader soda;
+	public static Shaders.SurfaceShader soda;
 
 	public static void init(){
-        soda = new SurfaceShader("soda");
+        soda = new Shaders.SurfaceShader("soda");
 	}
 }
