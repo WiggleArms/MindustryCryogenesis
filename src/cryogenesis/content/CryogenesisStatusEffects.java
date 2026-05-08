@@ -7,6 +7,7 @@ import mindustry.game.EventType.*;
 import mindustry.game.*;
 import mindustry.graphics.*;
 import mindustry.type.*;
+import mindustry.content.StatusEffects;
 
 public class CryogenesisStatusEffects{
 	public static StatusEffect boiling;
@@ -15,7 +16,7 @@ public class CryogenesisStatusEffects{
 
 		boiling = new StatusEffect("boiling"){{
 			color.valueOf("bbe3ff");
-			damage = 0.083;
+			damage = 0.083;;
 			//effect = Fx.boiling;
 
 			init(() -> {
