@@ -57,7 +57,7 @@ public class CryogenesisBlocks{
 	//environment
 
 	//liquids
-	shallowCryofluid,
+	shallowCryofluid, deepSoda, soda, shallowSoda
 	
 	//floors
 	cryoIce, rock, darkIce, cryoSnow, duneSand, duneStone, sulfur, travertine,
@@ -112,6 +112,58 @@ public class CryogenesisBlocks{
             emitLight = true;
             lightRadius = 25f;
             lightColor = Color.cyan.cpy().a(0.19f);
+            obstructsLight = true;
+            forceDrawLight = true;
+		}};
+
+		deepSoda = new Floor("deep-soda"){{
+            supportsOverlay = true;
+            status = CryogenesisStatusEffects.boiling;
+            statusDuration = 240f;
+            speedMultiplier = 0.6f;
+            variants = 0;
+            liquidDrop = CryogenesisLiquids.soda;
+            liquidMultiplier = 1.5f;
+            isLiquid = true;
+            cacheLayer = CacheLayer.water;
+
+            emitLight = true;
+            lightRadius = 25f;
+            lightColor = Color.blue.cpy().a(0.19f);
+            obstructsLight = true;
+            forceDrawLight = true;
+		}};
+
+		soda = new Floor("soda"){{
+            supportsOverlay = true;
+            status = CryogenesisStatusEffects.boiling;
+            statusDuration = 200f;
+            speedMultiplier = 0.75f;
+            variants = 0;
+            liquidDrop = CryogenesisLiquids.soda;
+            isLiquid = true;
+            cacheLayer = CacheLayer.water;
+
+            emitLight = true;
+            lightRadius = 25f;
+            lightColor = Color.blue.cpy().a(0.19f);
+            obstructsLight = true;
+            forceDrawLight = true;
+		}};
+
+		shallowSoda = new Floor("shallow-soda"){{
+            supportsOverlay = true;
+            status = CryogenesisStatusEffects.boiling;
+            statusDuration = 160f;
+            speedMultiplier = 0.9f;
+            variants = 0;
+            liquidDrop = CryogenesisLiquids.soda;
+            isLiquid = true;
+            cacheLayer = CacheLayer.water;
+
+            emitLight = true;
+            lightRadius = 25f;
+            lightColor = Color.blue.cpy().a(0.19f);
             obstructsLight = true;
             forceDrawLight = true;
 		}};

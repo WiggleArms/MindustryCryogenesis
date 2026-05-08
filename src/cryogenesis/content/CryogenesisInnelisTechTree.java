@@ -45,7 +45,9 @@ public class CryogenesisInnelisTechTree{
 				});
 
 				nodeProduce(Liquids.cryofluid, () -> {
-
+					nodeProduce(Liquids.water, () -> {
+					
+					});
 				});
 			});
 		});
