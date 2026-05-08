@@ -18,6 +18,8 @@ public class Cryogenesis extends Mod {
         CryogenesisItems.load();
         CryogenesisUnitTypes.load();
         CryogenesisBlocks.load();
+        CryogenesisLiquids.load();
+        CryogenesisStatusEffects.load();
         CryogenesisPlanets.load();
         CryogenesisSectorPresets.load();
         CryogenesisInnelisTechTree.load();
