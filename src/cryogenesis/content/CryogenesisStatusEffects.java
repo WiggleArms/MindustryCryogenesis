@@ -15,7 +15,7 @@ public class CryogenesisStatusEffects{
 	public static void load(){
 
 		boiling = new StatusEffect("boiling"){{
-			color.valueOf("bbe3ff");
+			color = Color.valueOf("bbe3ff");
 			damage = 0.083f;
 			//effect = Fx.boiling;
 
