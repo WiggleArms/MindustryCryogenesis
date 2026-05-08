@@ -1,6 +1,6 @@
 package cryogenesis.content;
 
-import cryogenesis.world.graphics.CryogenesisPalette;
+import cryogenesis.graphics.CryogenesisPalette;
 import cryogenesis.content.CryogenesisItems;
 import cryogenesis.type.unit.*;
 import cryogenesis.type.weapons.*;

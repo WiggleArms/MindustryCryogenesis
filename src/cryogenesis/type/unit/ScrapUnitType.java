@@ -1,6 +1,6 @@
 package cryogenesis.type.unit;
 
-import cryogenesis.world.graphics.*;
+import cryogenesis.graphics.*;
 import cryogenesis.ai.types.*;
 
 import mindustry.ai.types.*;

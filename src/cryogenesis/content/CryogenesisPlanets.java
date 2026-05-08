@@ -19,7 +19,7 @@ import mindustry.world.meta.*;
 import mindustry.content.Planets;
 
 import cryogenesis.content.CryogenesisBlocks;
-import cryogenesis.world.graphics.CryogenesisPalette;
+import cryogenesis.graphics.CryogenesisPalette;
 
 public class CryogenesisPlanets{
 	public static Planet innelis;
