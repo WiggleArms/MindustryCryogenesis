@@ -16,11 +16,11 @@ public class CryogenesisStatusEffects{
 
 		boiling = new StatusEffect("boiling"){{
 			color.valueOf("bbe3ff");
-			damage = 0.083;;
+			damage = 0.083f;
 			//effect = Fx.boiling;
 
 			init(() -> {
-				opposite(freezing, melting);
+				opposite(StatusEffects.freezing, StatusEffects.melting);
 			});
 		}};
 	}
