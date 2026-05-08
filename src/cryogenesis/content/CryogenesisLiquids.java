@@ -1,4 +1,4 @@
-package cryogenesis.content
+package cryogenesis.content;
 
 import cryogenesis.content.CryogenesisStatusEffects;
 
