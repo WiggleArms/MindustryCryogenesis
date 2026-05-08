@@ -9,7 +9,8 @@ public class CryogenesisLiquids{
 	public static Liquid soda, steam;
 
 	public static void load(){
-		soda = new Liquid("soda", Color.valueOf("1b74b5"){{
+
+		soda = new Liquid("soda", Color.valueOf("1b74b5")){{
 			heatCapacity = 0.3f;
 			viscosity = 0.4f;
 			temperature = 0.4f;
@@ -18,7 +19,7 @@ public class CryogenesisLiquids{
 			gasColor = Color.valueOf("59a8dd");
 		}};
 
-		steam = new Liquid("steam", Color.valueOf("b5dcfb"){{
+		steam = new Liquid("steam", Color.valueOf("b5dcfb")){{
 			gas = true;
 			explosiveness = 0.2f;
 		}});

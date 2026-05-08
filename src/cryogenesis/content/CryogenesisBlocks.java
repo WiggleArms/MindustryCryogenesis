@@ -57,7 +57,7 @@ public class CryogenesisBlocks{
 	//environment
 
 	//liquids
-	shallowCryofluid, deepSoda, soda, shallowSoda
+	shallowCryofluid, deepSoda, soda, shallowSoda,
 	
 	//floors
 	cryoIce, rock, darkIce, cryoSnow, duneSand, duneStone, sulfur, travertine,
