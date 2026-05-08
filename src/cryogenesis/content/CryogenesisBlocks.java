@@ -60,10 +60,10 @@ public class CryogenesisBlocks{
 	shallowCryofluid,
 	
 	//floors
-	cryoIce, packIce, darkIce, cryoSnow, duneSand, duneStone,
+	cryoIce, rock, darkIce, cryoSnow, duneSand, duneStone,
 
 	//walls
-	cryoIceWall, packIceWall, darkIceWall, cryoSnowWall, duneSandWall, duneStoneWall,
+	cryoIceWall, rockWall, darkIceWall, cryoSnowWall, duneSandWall, duneStoneWall,
 
 	//ores
 	oreNickel,
@@ -132,7 +132,7 @@ public class CryogenesisBlocks{
 
 		duneStone = new Floor("dune-stone");
 
-		packIce = new Floor("pack-ice");
+		rock = new Floor("rock");
 
 		darkIce = new Floor("dark-ice");
 
@@ -147,7 +147,7 @@ public class CryogenesisBlocks{
 
 		duneStoneWall = new StaticWall("dune-stone-wall");
 
-		packIceWall = new StaticWall("pack-ice-wall");
+		rockWall = new StaticWall("rock-wall");
 
 		darkIceWall = new StaticWall("dark-ice-wall"){{
 			variants = 3;
