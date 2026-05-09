@@ -152,6 +152,16 @@ public class CryogenesisBlocks{
             forceDrawLight = true;
 		}};
 
+		sulfurSoda = new ShallowLiquid("sulfur-soda"){{
+			statusDuration = 160f;
+			speedMultiplier = 0.85f;
+			emitLight = true;
+			lightRadius = 25f;
+			lightColor = Color.blue.cpy().a(0.19f);
+			obstructsLight = true;
+			forceDrawLight = true;
+		}};
+
 		cryoIce = new Floor("cryo-ice"){{
 			dragMultiplier = 0.2f;
 			speedMultiplier = 0.9f;
@@ -173,17 +183,6 @@ public class CryogenesisBlocks{
 		darkIce = new Floor("dark-ice");
 
 		sulfur = new Floor("sulfur");
-
-		sulfurSoda = new ShallowLiquid("sulfur-soda"){{
-			set("shallow-soda", "sulfur");
-			statusDuration = 160f;
-			speedMultiplier = 0.85f;
-			emitLight = true;
-			lightRadius = 25f;
-			lightColor = Color.blue.cpy().a(0.19f);
-			obstructsLight = true;
-			forceDrawLight = true;
-		}};
 
 		travertine = new Floor("travertine");
 
@@ -339,5 +338,7 @@ public class CryogenesisBlocks{
 			hasPower = false;
 			//flags = EnumSet.of(CryogenesisBlockFlag.unitScrapper);
 		}};
+
+		sulfurSoda.set(shallowSoda, sulfur);
 	}
 }
