@@ -8,6 +8,8 @@ import cryogenesis.content.*;
 import cryogenesis.ai.*;
 import cryogenesis.graphics.CryogenesisCacheLayer;
 
+import mindustry.mod.*;
+
 public class Cryogenesis extends Mod {
     public static Mods.LoadedMod MOD;
 
