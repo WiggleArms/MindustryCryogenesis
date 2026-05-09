@@ -14,7 +14,7 @@ import static mindustry.Vars.*;
 public class EffectFloor extends Floor{
 	public Effect effect = Fx.vapor;
 	public Color effectColor = Color.valueOf("b5dcfb");
-	public float effectSpacing = 1800f;
+	public float effectSpacing = 3600f;
 
 	public EffectFloor(String name){
 		super(name);
