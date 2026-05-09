@@ -30,7 +30,6 @@ public class CryogenesisShaders{
 	public static class CryogenesisSurfaceShader extends Shaders.SurfaceShader{
 		public CryogenesisSurfaceShader(String frag){
 			super(
-				tree.get("shaders/screenspace.vert"),
 				mods.getMod("cryogenesis").root.child("shaders").child(frag + ".frag")
 			);
 		}
