@@ -136,6 +136,7 @@ public class CryogenesisBlocks{
 		}};
 
 		shallowSoda = new Floor("shallow-soda"){{
+
             supportsOverlay = true;
             status = CryogenesisStatusEffects.boiling;
             statusDuration = 200f;
@@ -153,6 +154,15 @@ public class CryogenesisBlocks{
 		}};
 
 		sulfurSoda = new ShallowLiquid("sulfur-soda"){{
+			liquidBase = shallowSoda.asFloor();
+			floorBase = sulfur.asFloor();
+			isLiquid = true;
+			variants = floorBase.variants;
+			status = liquidBase.status;
+			liquidDrop = liquidBase.liquidDrop;
+			cacheLayer = liquidBase.cacheLayer;
+			shallow = true;
+
 			statusDuration = 160f;
 			speedMultiplier = 0.85f;
 			emitLight = true;
@@ -338,7 +348,5 @@ public class CryogenesisBlocks{
 			hasPower = false;
 			//flags = EnumSet.of(CryogenesisBlockFlag.unitScrapper);
 		}};
-
-		sulfurSoda.set(shallowSoda, sulfur);
 	}
 }
