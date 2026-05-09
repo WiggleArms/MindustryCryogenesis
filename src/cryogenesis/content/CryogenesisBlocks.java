@@ -161,7 +161,7 @@ public class CryogenesisBlocks{
 			lightColor = Color.blue.cpy().a(0.19f);
 			obstructsLight = true;
 			forceDrawLight = true;
-		}}
+		}};
 
 		cryoIce = new Floor("cryo-ice"){{
 			dragMultiplier = 0.2f;
