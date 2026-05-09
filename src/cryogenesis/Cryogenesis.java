@@ -20,6 +20,7 @@ public class Cryogenesis extends Mod {
         CryogenesisShaders.init();
 
         CryogenesisCacheLayer.load();
+
         CryogenesisUnitCommand.load();
         CryogenesisItems.load();
         CryogenesisUnitTypes.load();

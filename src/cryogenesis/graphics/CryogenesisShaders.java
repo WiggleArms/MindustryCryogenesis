@@ -27,7 +27,7 @@ public class CryogenesisShaders{
         soda = new CryogenesisSurfaceShader("soda");
 	}
 
-	public static class CryogenesisSurfaceShader extends Shader{
+	public static class CryogenesisSurfaceShader extends Shaders.SurfaceShader{
 		public CryogenesisSurfaceShader(String frag){
 			super(
 				tree.get("shaders/screenspace.vert"),
