@@ -1,22 +1,42 @@
+#define HIGHP
+
+//shades of slag
+#define S2 vec3(100.0, 93.0, 49.0) / 100.0
+#define S1 vec3(100.0, 60.0, 25.0) / 100.0
+#define NSCALE 200.0 / 2.0
+
 uniform sampler2D u_texture;
+uniform sampler2D u_noise;
+
+uniform vec2 u_campos;
+uniform vec2 u_resolution;
 uniform float u_time;
 
 varying vec2 v_texCoords;
 
 void main(){
-	vec2 uv = v_texCoords;
+    vec2 coords = v_texCoords * u_resolution + u_campos;
 
-	// gentle flow
-	uv.x += sin(uv.y * 8.0 + u_time) * 0.01;
+    float btime = u_time / 5000.0;
+    vec4 orig = texture2D(u_texture, v_texCoords);
+    float noise = (texture2D(u_noise, (coords) / NSCALE + vec2(btime) * vec2(-0.9, 0.8)).r + texture2D(u_noise, (coords) / NSCALE + vec2(btime * 1.1) * vec2(0.8, -1.0)).r) / 2.0;
 
-	// bubbling distortion
-	uv.y += cos(uv.x * 12.0 + u_time * 1.5) * 0.01;
+    //TODO: pack noise texture
+    vec2 c = v_texCoords + (vec2(
+    texture2D(u_noise, (coords) / 170.0 + vec2(btime) * vec2(-0.9, 0.8)).r,
+    texture2D(u_noise, (coords) / 170.0 + vec2(btime * 1.1) * vec2(0.8, -1.0)).r
+    ) - vec2(0.5)) * 8.0 / u_resolution;
 
-	vec4 color = texture2D(u_texture, uv);
+    vec4 color = texture2D(u_texture, c);
+    if(color.a < 0.95){
+        color = orig;
+    }
 
-	// brighten highlights
-	float shimmer = sin((uv.x + uv.y + u_time) * 20.0) * 0.05;
-	color.rgb += shimmer;
+    if(noise > 0.6){
+        color.rgb = S2;
+    }else if(noise > 0.54){
+        color.rgb = S1;
+    }
 
-	gl_FragColor = color;
+    gl_FragColor = color;
 }
