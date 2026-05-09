@@ -57,7 +57,7 @@ public class CryogenesisBlocks{
 	//environment
 
 	//liquids
-	shallowCryofluid, deepSoda, shallowSoda,
+	shallowCryofluid, deepSoda, shallowSoda, sulfurSoda,
 	
 	//floors
 	cryoIce, rock, darkIce, cryoSnow, duneSand, duneStone, sulfur, travertine,
@@ -151,6 +151,17 @@ public class CryogenesisBlocks{
             obstructsLight = true;
             forceDrawLight = true;
 		}};
+
+		sulfurSoda = new ShallowLiquid("sulfur-soda"){{
+			set(shallowSoda, sulfur);
+			statusDuration = 160f;
+			speedMultiplier = 0.85f;
+			emitLight = true;
+			lightRadius = 25f;
+			lightColor = Color.blue.cpy().a(0.19f);
+			obstructsLight = true;
+			forceDrawLight = true;
+		}}
 
 		cryoIce = new Floor("cryo-ice"){{
 			dragMultiplier = 0.2f;
