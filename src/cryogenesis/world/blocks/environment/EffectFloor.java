@@ -4,7 +4,7 @@ import arc.graphics.*;
 import arc.util.*;
 import arc.math.*;
 import mindustry.graphics.*;
-import mindustry.world.blocks.environment;
+import mindustry.world.blocks.environment.*;
 
 public class EffectFloor extends Floor{
 	public Effect effect = Fx.ventSteam;
