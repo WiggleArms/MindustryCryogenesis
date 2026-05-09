@@ -13,7 +13,7 @@ import static mindustry.Vars.*;
 public class CryogenesisCacheLayer{
 	public static CacheLayer soda;
 
-	public static void init(){
+	public static void load(){
 		CacheLayer.add(soda = new CacheLayer.ShaderLayer(CryogenesisShaders.soda));
 	}
 }

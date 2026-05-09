@@ -13,7 +13,8 @@ public class Cryogenesis extends Mod {
     public void loadContent() {
 
         overrideTeam();
-        
+
+        CryogenesisCacheLayer.load();
         CryogenesisUnitCommand.load();
         CryogenesisItems.load();
         CryogenesisUnitTypes.load();
