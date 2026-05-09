@@ -35,7 +35,7 @@ public class CryogenesisShaders{
 		public CryogenesisSurfaceShader(String frag){
 			super(
 				tree.get("shaders/screenspace.vert"),
-				mods.getMod("cryogenesis").root.child("shaders/" + frag + ".frag")
+				mods.getMod("cryogenesis").root.child("assets/shaders/" + frag + ".frag")
 			);
 		}
 	}
