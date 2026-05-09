@@ -38,6 +38,10 @@ public class CryogenesisShaders{
 			loadNoise();
 		}
 
+        public String textureName(){
+            return "noise";
+        }
+
         public void loadNoise(){
             Core.assets.load("sprites/" + textureName() + ".png", Texture.class).loaded = t -> {
                 t.setFilter(TextureFilter.linear);
