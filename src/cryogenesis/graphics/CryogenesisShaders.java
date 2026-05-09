@@ -29,7 +29,7 @@ public class CryogenesisShaders{
 		public CryogenesisSurfaceShader(String frag){
 			super(
 				getShaderFi("screenspace.vert"),
-				Vars.mods.getMod("cryogenesis").root.child("shaders").child(frag + ".frag"))
+				Vars.mods.getMod("cryogenesis").root.child("shaders").child(frag + ".frag"));
 			);
 		}
 	}
