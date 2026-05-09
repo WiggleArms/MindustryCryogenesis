@@ -1,5 +1,7 @@
 package cryogenesis.graphics;
 
+import cryogenesis.Cryogenesis;
+
 import arc.*;
 import arc.assets.loaders.TextureLoader.*;
 import arc.files.*;
@@ -25,9 +27,13 @@ public class CryogenesisShaders{
         soda = new Shaders.SurfaceShader("soda");
 	}
 
+	public static Fi getShaderFi(String file){
+		return tree.get("shaders/" + file);
+	}
+
 	public static class CryogenesisSurfaceShader extends Shader{
 		public CryogenesisSurfaceShader(String frag){
-			super(super.getShaderFi("screenspace.vert"), Cryogenesis.MOD.root.child("shaders").child(frag + ".frag"));
+			super(getShaderFi("screenspace.vert"), Cryogenesis.MOD.root.child("shaders").child(frag + ".frag"));
 		}
 	}
 }

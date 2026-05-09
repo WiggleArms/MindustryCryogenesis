@@ -9,9 +9,12 @@ import cryogenesis.ai.*;
 import cryogenesis.graphics.CryogenesisCacheLayer;
 
 public class Cryogenesis extends Mod {
+    public static Mods.LoadedMod MOD;
 
     @Override
     public void loadContent() {
+
+        MOD = mods.getMod(getClass());
 
         overrideTeam();
 
