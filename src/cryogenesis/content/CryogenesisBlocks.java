@@ -2,6 +2,7 @@ package cryogenesis.content;
 
 import cryogenesis.content.*;
 import cryogenesis.world.blocks.pipes.*;
+import cryogenesis.world.blocks.environment.*;
 import cryogenesis.graphics.*;
 //import cryogenesis.world.meta.*;
 
@@ -116,7 +117,7 @@ public class CryogenesisBlocks{
             forceDrawLight = true;
 		}};
 
-		deepSoda = new Floor("deep-soda"){{
+		deepSoda = new EffectFloor("deep-soda"){{
             supportsOverlay = true;
 			drownTime = 240f;
             status = CryogenesisStatusEffects.boiling;
@@ -135,7 +136,7 @@ public class CryogenesisBlocks{
             forceDrawLight = true;
 		}};
 
-		shallowSoda = new Floor("shallow-soda"){{
+		shallowSoda = new EffectFloor("shallow-soda"){{
 
             supportsOverlay = true;
             status = CryogenesisStatusEffects.boiling;
@@ -175,7 +176,7 @@ public class CryogenesisBlocks{
 
 		sulfur = new Floor("sulfur");
 
-		sulfurSoda = new ShallowLiquid("sulfur-soda"){{
+		sulfurSoda = new ShallowEffectLiquid("sulfur-soda"){{
 			liquidBase = shallowSoda.asFloor();
 			floorBase = sulfur.asFloor();
 			isLiquid = true;
