@@ -3,6 +3,7 @@ package cryogenesis.world.blocks.environment;
 import arc.graphics.*;
 import arc.util.*;
 import arc.math.*;
+import mindustry.content.*;
 import mindustry.graphics.*;
 import mindustry.world.blocks.environment.*;
 
