@@ -26,6 +26,8 @@ void main(){
     texture2D(u_noise, (coords) / 170.0 + vec2(btime) * vec2(-0.9, 0.8)).r,
     texture2D(u_noise, (coords) / 170.0 + vec2(btime * 1.1) * vec2(0.8, -1.0)).r
     ) - vec2(0.5)) * 8.0 / u_resolution;
+    
+    c = clamp(c, vec2(0.001), vec2(0.999));
 
     vec4 color = texture2D(u_texture, c);
     if(color.a < 0.95){
