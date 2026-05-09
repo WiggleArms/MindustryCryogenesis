@@ -14,7 +14,7 @@ import static mindustry.Vars.*;
 public class ShallowEffectLiquid extends ShallowLiquid{
 	public Effect effect = Fx.bubble;
 	public Color effectColor = Color.valueOf("b5dcfb");
-	public float effectSpacing = 600f;
+	public float effectSpacing = 1800f;
 
 	public ShallowEffectLiquid(String name){
 		super(name);
@@ -32,7 +32,7 @@ public class ShallowEffectLiquid extends ShallowLiquid{
 		}
 
 		if ((state.data += Time.delta) >= effectSpacing){
-			effect.at(state.tile.x * tilesize, state.tile.y * tilesize, effectColor);
+			effect.at(state.tile.x * tilesize - (tilesize/2 + Mathf.random(tilesize)), state.tile.y * tilesize - (tilesize/2 + Mathf.random(tilesize), effectColor);
 			state.data = 0f;
 		}
 	}
