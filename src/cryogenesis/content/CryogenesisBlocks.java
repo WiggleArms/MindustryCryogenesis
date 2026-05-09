@@ -176,6 +176,7 @@ public class CryogenesisBlocks{
 		sulfur = new Floor("sulfur");
 
 		sulfurSoda = new ShallowEffectLiquid("sulfur-soda"){{
+			/*
 			liquidBase = shallowSoda.asFloor();
 			floorBase = sulfur.asFloor();
 			isLiquid = true;
@@ -184,6 +185,7 @@ public class CryogenesisBlocks{
 			liquidDrop = liquidBase.liquidDrop;
 			cacheLayer = liquidBase.cacheLayer;
 			shallow = true;
+			*/
 
 			statusDuration = 160f;
 			speedMultiplier = 0.85f;
@@ -216,6 +218,8 @@ public class CryogenesisBlocks{
 		sulfurWall = new StaticWall("sulfur-wall");
 
 		travertineWall = new StaticWall("travertine-wall");
+
+		((ShallowLiquid)sulfurSoda).set(CryogenesisBlocks.shallowSoda, CryogenesisBlocks.sulfur);
 
 		oreNickel = new OreBlock("ore-nickel", CryogenesisItems.nickel);
 
