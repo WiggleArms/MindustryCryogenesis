@@ -114,6 +114,7 @@ A: Yep.
 - Greeble Meso, change cell
 - Resprite Nickel Compactor
 - Re-export all sprites with antialias of 1
+- Boiling status effect sprite
 
 ### Wishlist:
 
@@ -168,7 +169,7 @@ Mini-biomes:
 - ~~Magamatic Stone tint changes, flow-style formation~~
 - ~~Laterite used in shores biome? Found IRL with "high temperatures and heavy rainfall/dry periods" (https://en.wikipedia.org/wiki/Laterite)~~
 - Sulfur and Travertine in Hot Springs
-- [TBD] liquid (Thermane?) in hot springs, inflicts Boiling. Very low viscosity, even less than water.
+- [TBD] liquid (Soda/Sluice) in hot springs, inflicts Boiling. Very low viscosity, even less than water.
 - Stellarite, with Stellarite Shard props
 
 #### Other

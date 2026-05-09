@@ -126,7 +126,7 @@ public class CryogenesisBlocks{
             liquidDrop = CryogenesisLiquids.soda;
             liquidMultiplier = 1.5f;
             isLiquid = true;
-            cacheLayer = CacheLayer.water;
+            cacheLayer = CryogenesisCacheLayer.soda;
 
             emitLight = true;
             lightRadius = 25f;
@@ -143,7 +143,7 @@ public class CryogenesisBlocks{
             variants = 0;
             liquidDrop = CryogenesisLiquids.soda;
             isLiquid = true;
-            cacheLayer = CacheLayer.water;
+            cacheLayer = CryogenesisCacheLayer.soda;
 
             emitLight = true;
             lightRadius = 25f;
