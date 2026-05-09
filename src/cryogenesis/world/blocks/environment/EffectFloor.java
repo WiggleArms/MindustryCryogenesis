@@ -32,7 +32,7 @@ public class EffectFloor extends Floor{
 		}
 
 		if ((state.data += Time.delta) >= effectSpacing){
-			effect.at(state.tile.x * tilesiz), state.tile.y * tilesize, effectColor);
+			effect.at(state.tile.x * tilesize, state.tile.y * tilesize, effectColor);
 			state.data = 0f;
 		}
 	}
