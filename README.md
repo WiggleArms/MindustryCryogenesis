@@ -108,6 +108,7 @@ A: Yep.
 - Campaign difficulty settings [FAR FUTURE]
 - Fix cloud alpha zoom weirdness
 - Add attributes for environment blocks (for mixtech)
+- Improve hot springs liquid shader
 
 #### Sprites
 - Eluma turret too thin?

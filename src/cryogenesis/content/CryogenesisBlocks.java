@@ -137,7 +137,6 @@ public class CryogenesisBlocks{
 		}};
 
 		shallowSoda = new EffectFloor("shallow-soda"){{
-
             supportsOverlay = true;
             status = CryogenesisStatusEffects.boiling;
             statusDuration = 200f;

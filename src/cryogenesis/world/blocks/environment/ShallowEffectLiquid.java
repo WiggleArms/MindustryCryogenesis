@@ -20,9 +20,14 @@ public class ShallowEffectLiquid extends ShallowLiquid{
 	}
 
 	@Override
+	public boolean updateRender(Tile tile){
+        return true;
+    }
+
+	@Override
 	public void renderUpdate(UpdateRenderState state){
 		if ((state.data += Time.delta) >= effectSpacing){
-			effect.at(state.tile.x * tilesize - tilesize, state.tile.y * tilesize - tilesize, effectColor);
+			effect.at(state.tile.x * tilesize, state.tile.y * tilesize, effectColor);
 			state.data = 0f;
 		}
 	}
