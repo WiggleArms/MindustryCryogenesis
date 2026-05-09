@@ -24,4 +24,13 @@ public class CryogenesisShaders{
 	public static void init(){
         soda = new Shaders.SurfaceShader("soda");
 	}
+
+	public static class CryogenesisSurfaceShader extends Shader{
+		public CryogenesisSurfaceShader(String frag){
+			super(
+				getShaderFi("screenspace.vert"),
+				Vars.mods.getMod("cryogenesis").root.child("shaders").child(frag + ".frag"))
+			);
+		}
+	}
 }
