@@ -6,6 +6,7 @@ import arc.math.*;
 import mindustry.content.*;
 import mindustry.entities.*;
 import mindustry.graphics.*;
+import mindustry.world.*;
 import mindustry.world.blocks.environment.*;
 
 import static mindustry.Vars.*;
