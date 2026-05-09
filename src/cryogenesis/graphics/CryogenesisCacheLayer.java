@@ -14,6 +14,6 @@ public class CryogenesisCacheLayer{
 	public static CacheLayer soda;
 
 	public static void init(){
-		add(soda = new ShaderLayer(CryogenesisShaders.soda));
+		CacheLayer.add(soda = new CacheLayer.ShaderLayer(CryogenesisShaders.soda));
 	}
 }
