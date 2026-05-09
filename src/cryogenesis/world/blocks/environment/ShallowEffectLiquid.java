@@ -12,7 +12,7 @@ import mindustry.world.blocks.environment.*;
 import static mindustry.Vars.*;
 
 public class ShallowEffectLiquid extends ShallowLiquid{
-	public Effect effect = Fx.vapor;
+	public Effect effect = Fx.bubble;
 	public Color effectColor = Color.valueOf("b5dcfb");
 	public float effectSpacing = 600f;
 
