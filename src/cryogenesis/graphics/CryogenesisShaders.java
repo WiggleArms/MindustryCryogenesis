@@ -21,14 +21,10 @@ import mindustry.graphics.Shaders;
 import static mindustry.Vars.*;
 
 public class CryogenesisShaders{
-	public static Shaders.SurfaceShader soda;
+	public static CryogenesisSurfaceShader soda;
 
 	public static void init(){
-        soda = new Shaders.SurfaceShader("soda");
-	}
-
-	public static Fi getShaderFi(String file){
-		return tree.get("shaders/" + file);
+        soda = new CryogenesisSurfaceShader("soda");
 	}
 
 	public static class CryogenesisSurfaceShader extends Shader{
