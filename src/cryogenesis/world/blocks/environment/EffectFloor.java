@@ -8,6 +8,8 @@ import mindustry.entities.*;
 import mindustry.graphics.*;
 import mindustry.world.blocks.environment.*;
 
+import static mindustry.Vars.*;
+
 public class EffectFloor extends Floor{
 	public Effect effect = Fx.ventSteam;
 	public Color effectColor = Color.valueOf("b5dcfb");
