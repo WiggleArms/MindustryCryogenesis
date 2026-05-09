@@ -6,6 +6,7 @@ import arc.graphics.Color;
 
 import cryogenesis.content.*;
 import cryogenesis.ai.*;
+import cryogenesis.content.CryogenesisCacheLayer;
 
 public class Cryogenesis extends Mod {
 
