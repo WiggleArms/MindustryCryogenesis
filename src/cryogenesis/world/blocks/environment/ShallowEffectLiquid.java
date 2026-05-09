@@ -32,7 +32,7 @@ public class ShallowEffectLiquid extends ShallowLiquid{
 		}
 
 		if ((state.data += Time.delta) >= effectSpacing){
-			effect.at(state.tile.x * tilesize - (tilesize/2 + Mathf.random(tilesize)), state.tile.y * tilesize - (tilesize/2 + Mathf.random(tilesize), effectColor);
+			effect.at(state.tile.x * tilesize - (tilesize / 2 + Mathf.random(tilesize)), state.tile.y * tilesize - (tilesize / 2 + Mathf.random(tilesize)), effectColor);
 			state.data = 0f;
 		}
 	}
