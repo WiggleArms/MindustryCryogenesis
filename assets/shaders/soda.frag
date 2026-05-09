@@ -28,7 +28,15 @@ void main(){
     ) - vec2(0.5)) * 8.0 / u_resolution;
 
     vec4 color = texture2D(u_texture, c);
-    color = orig;
+    if(color.a < 0.95){
+        color = orig;
+    }
+
+    if(noise > 0.6){
+        color.rgb = orig;
+    }else if(noise > 0.54){
+        color.rgb = orig;
+    }
 
     gl_FragColor = color;
 }
