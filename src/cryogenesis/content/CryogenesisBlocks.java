@@ -175,7 +175,7 @@ public class CryogenesisBlocks{
 		sulfur = new Floor("sulfur");
 
 		sulfurSoda = new ShallowLiquid("sulfur-soda"){{
-			set(shallow-soda, sulfur);
+			set("shallow-soda", "sulfur");
 			statusDuration = 160f;
 			speedMultiplier = 0.85f;
 			emitLight = true;
