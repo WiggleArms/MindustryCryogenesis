@@ -199,7 +199,7 @@ public class Pipe extends Duct{
                 Draw.rect(current.fullIcon, x + Tmp.v1.x, y + Tmp.v1.y, itemSize, itemSize);
             }
 
-            Draw.z(Layer.blockUnder + 0.05f);
+            Draw.z(Layer.blockUnder);
 
             Draw.scl(xscl, yscl);
             drawAt(x, y, blendbits, r, SliceMode.none);
@@ -232,6 +232,8 @@ public class Pipe extends Duct{
             Draw.scl(1f, 1f);
             Drawf.liquid(sliced(liquidr, slice), x + ox, y + oy, smoothLiquid, liquids.current().color.write(Tmp.c1).a(1f));
             Draw.scl(xscl, yscl);
+
+            Draw.z(Layer.blockUnder + 0.2f);
 
             Draw.rect(sliced(topRegions[bits], slice), x, y, angle);
         }
