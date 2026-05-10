@@ -172,7 +172,7 @@ public class Pipe extends Duct{
 
     public class PipeBuild extends DuctBuild{
         public float smoothLiquid;
-        public int blendbits, xscl = 1, yscl = 1, blending;
+        //public int blendbits, xscl = 1, yscl = 1, blending;
         public boolean capped, backCapped = false;
         
         @Override
