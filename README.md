@@ -17,9 +17,9 @@ Phase denotes the phase of development the version is in:
 
 v0.0.0 - Initial commits and .hjson tests
 
-v0.1.0 - Preliminary .java testing.
+v0.1.0 - Preliminary .java testing
 
-v0.?.0 - Planet addition
+v0.6.0 - Planet addition
 
 v0.?.0 - Start adding Campaign maps
 
@@ -28,6 +28,19 @@ v1.0.0 - Initial release of Cryogenesis. Mod will be playable, but probably won'
 v?.?.? - Expansion of the campaign up to T5.
 
 FUTURE - Further content revamps and additions
+
+## Version History
+
+v0.0.0 - Initial commits and .hjson tests
+v0.1.0 - Preliminary .java testing
+v0.2.0 - Pipe dual transport functionality
+v0.3.0 - Pipe liquid effects
+v0.4.0 - Non-core unit tests
+v0.5.0 - Nickel item and blocks
+v0.6.0 - Planet, tech tree, and placeholder sector
+v0.7.0 - Scrapping mechanic
+v0.8.0 - Environment blocks
+v0.9.0 - Sprite overhauls
 
 ## FAQ
 
