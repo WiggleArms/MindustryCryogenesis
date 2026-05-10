@@ -62,7 +62,7 @@ A: Yep.
 
 - ~~Pipe functions as a conduit too~~
 	- ~~Replace Pipe and variant costs with Iron instead of scrap [FUTURE]~~
-	- Fix Pipe liquid randomness
+	- ~~Fix Pipe liquid randomness~~
 	- Pipe variants
 		- Armored Pipe accent color
 	- ~~Pipe Unloader~~

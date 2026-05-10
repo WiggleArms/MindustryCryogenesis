@@ -3,76 +3,64 @@
   "WorkspaceRootPath": "C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\content\\CryogenesisBlocks.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\cryogenesis\\content\\CryogenesisBlocks.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\assets\\bundles\\bundle.properties||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\bundles\\bundle.properties||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\Cryogenesis.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\cryogenesis\\Cryogenesis.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\content\\CryogenesisInnelisTechTree.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\cryogenesis\\content\\CryogenesisInnelisTechTree.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\mod.hjson||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:mod.hjson||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\world\\graphics\\CryogenesisPalette.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\cryogenesis\\world\\graphics\\CryogenesisPalette.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\content\\CryogenesisPlanets.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\cryogenesis\\content\\CryogenesisPlanets.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\content\\CryogenesisUnitTypes.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\cryogenesis\\content\\CryogenesisUnitTypes.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\type\\unit\\ScrapUnitType.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\cryogenesis\\type\\unit\\ScrapUnitType.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\maps\\planets\\InnelisPlanetGenerator.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\cryogenesis\\maps\\planets\\InnelisPlanetGenerator.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\content\\CryogenesisItems.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\cryogenesis\\content\\CryogenesisItems.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\ai\\types\\ScavengeAI.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\cryogenesis\\ai\\types\\ScavengeAI.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\assets\\shaders\\soda.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\shaders\\soda.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\world\\blocks\\pipes\\Pipe.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\cryogenesis\\world\\blocks\\pipes\\Pipe.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\type\\weapon\\MixedWeapon.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\cryogenesis\\type\\weapon\\MixedWeapon.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\mod.hjson||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:mod.hjson||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\ai\\CryogenesisUnitCommand.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\cryogenesis\\ai\\CryogenesisUnitCommand.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\Cryogenesis.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\cryogenesis\\Cryogenesis.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\ai\\types\\ScrapAI.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\cryogenesis\\ai\\types\\ScrapAI.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\content\\CryogenesisBlocks.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\cryogenesis\\content\\CryogenesisBlocks.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\input\\CryogenesisBinding.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\cryogenesis\\input\\CryogenesisBinding.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\content\\CryogenesisUnitTypes.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\cryogenesis\\content\\CryogenesisUnitTypes.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\content\\CryogenesisLiquids.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\cryogenesis\\content\\CryogenesisLiquids.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\content\\CryogenesisPlanets.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\cryogenesis\\content\\CryogenesisPlanets.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\content\\CryogenesisInnelisTechTree.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\cryogenesis\\content\\CryogenesisInnelisTechTree.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\world\\graphics\\CryogenesisPalette.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\cryogenesis\\world\\graphics\\CryogenesisPalette.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\content\\CryogenesisItems.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\cryogenesis\\content\\CryogenesisItems.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\assets\\bundles\\bundle.properties||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\bundles\\bundle.properties||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\content\\CryogenesisStatusEffects.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\cryogenesis\\content\\CryogenesisStatusEffects.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\maps\\planets\\InnelisPlanetGenerator.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\cryogenesis\\maps\\planets\\InnelisPlanetGenerator.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -82,7 +70,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 16,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -94,7 +82,72 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 2,
+              "Title": "Pipe.java",
+              "DocumentMoniker": "C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\world\\blocks\\pipes\\Pipe.java",
+              "RelativeDocumentMoniker": "src\\cryogenesis\\world\\blocks\\pipes\\Pipe.java",
+              "ToolTip": "C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\world\\blocks\\pipes\\Pipe.java",
+              "RelativeToolTip": "src\\cryogenesis\\world\\blocks\\pipes\\Pipe.java",
+              "ViewState": "AgIAAOAAAAAAAAAAAAAAAPEAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-05-10T16:33:07.157Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "soda.frag",
+              "DocumentMoniker": "C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\assets\\shaders\\soda.frag",
+              "RelativeDocumentMoniker": "assets\\shaders\\soda.frag",
+              "ToolTip": "C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\assets\\shaders\\soda.frag",
+              "RelativeToolTip": "assets\\shaders\\soda.frag",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABsAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-05-09T16:03:34.238Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CryogenesisUnitTypes.java",
+              "DocumentMoniker": "C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\content\\CryogenesisUnitTypes.java",
+              "RelativeDocumentMoniker": "src\\cryogenesis\\content\\CryogenesisUnitTypes.java",
+              "ToolTip": "C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\content\\CryogenesisUnitTypes.java",
+              "RelativeToolTip": "src\\cryogenesis\\content\\CryogenesisUnitTypes.java",
+              "ViewState": "AgIAAI0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-05-08T19:44:32.127Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CryogenesisLiquids.java",
+              "DocumentMoniker": "C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\content\\CryogenesisLiquids.java",
+              "RelativeDocumentMoniker": "src\\cryogenesis\\content\\CryogenesisLiquids.java",
+              "ToolTip": "C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\content\\CryogenesisLiquids.java",
+              "RelativeToolTip": "src\\cryogenesis\\content\\CryogenesisLiquids.java",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-05-08T17:53:45.863Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CryogenesisStatusEffects.java",
+              "DocumentMoniker": "C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\content\\CryogenesisStatusEffects.java",
+              "RelativeDocumentMoniker": "src\\cryogenesis\\content\\CryogenesisStatusEffects.java",
+              "ToolTip": "C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\content\\CryogenesisStatusEffects.java",
+              "RelativeToolTip": "src\\cryogenesis\\content\\CryogenesisStatusEffects.java",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-05-08T17:53:42.022Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "InnelisPlanetGenerator.java",
               "DocumentMoniker": "C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\maps\\planets\\InnelisPlanetGenerator.java",
               "RelativeDocumentMoniker": "src\\cryogenesis\\maps\\planets\\InnelisPlanetGenerator.java",
@@ -102,7 +155,8 @@
               "RelativeToolTip": "src\\cryogenesis\\maps\\planets\\InnelisPlanetGenerator.java",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-04-16T02:12:10.223Z"
+              "WhenOpened": "2026-04-16T02:12:10.223Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -114,198 +168,103 @@
               "RelativeToolTip": "src\\cryogenesis\\content\\CryogenesisItems.java",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-04-14T17:56:58.305Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "MixedWeapon.java",
-              "DocumentMoniker": "C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\type\\weapon\\MixedWeapon.java",
-              "RelativeDocumentMoniker": "src\\cryogenesis\\type\\weapon\\MixedWeapon.java",
-              "ToolTip": "C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\type\\weapon\\MixedWeapon.java",
-              "RelativeToolTip": "src\\cryogenesis\\type\\weapon\\MixedWeapon.java",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACAAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-04-14T02:39:21.5Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Pipe.java",
-              "DocumentMoniker": "C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\world\\blocks\\pipes\\Pipe.java",
-              "RelativeDocumentMoniker": "src\\cryogenesis\\world\\blocks\\pipes\\Pipe.java",
-              "ToolTip": "C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\world\\blocks\\pipes\\Pipe.java",
-              "RelativeToolTip": "src\\cryogenesis\\world\\blocks\\pipes\\Pipe.java",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-04-12T03:12:45.077Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "CryogenesisBinding.java",
-              "DocumentMoniker": "C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\input\\CryogenesisBinding.java",
-              "RelativeDocumentMoniker": "src\\cryogenesis\\input\\CryogenesisBinding.java",
-              "ToolTip": "C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\input\\CryogenesisBinding.java",
-              "RelativeToolTip": "src\\cryogenesis\\input\\CryogenesisBinding.java",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-04-08T16:32:13.93Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ScavengeAI.java",
-              "DocumentMoniker": "C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\ai\\types\\ScavengeAI.java",
-              "RelativeDocumentMoniker": "src\\cryogenesis\\ai\\types\\ScavengeAI.java",
-              "ToolTip": "C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\ai\\types\\ScavengeAI.java",
-              "RelativeToolTip": "src\\cryogenesis\\ai\\types\\ScavengeAI.java",
-              "ViewState": "AgIAAMMAAAAAAAAAAAAAAMwAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-04-08T16:18:50.693Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "CryogenesisUnitCommand.java",
-              "DocumentMoniker": "C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\ai\\CryogenesisUnitCommand.java",
-              "RelativeDocumentMoniker": "src\\cryogenesis\\ai\\CryogenesisUnitCommand.java",
-              "ToolTip": "C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\ai\\CryogenesisUnitCommand.java",
-              "RelativeToolTip": "src\\cryogenesis\\ai\\CryogenesisUnitCommand.java",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-04-08T15:45:43.476Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "ScrapAI.java",
-              "DocumentMoniker": "C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\ai\\types\\ScrapAI.java",
-              "RelativeDocumentMoniker": "src\\cryogenesis\\ai\\types\\ScrapAI.java",
-              "ToolTip": "C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\ai\\types\\ScrapAI.java",
-              "RelativeToolTip": "src\\cryogenesis\\ai\\types\\ScrapAI.java",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-04-08T05:01:51.519Z"
+              "WhenOpened": "2026-04-14T17:56:58.305Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "ScrapUnitType.java",
-              "DocumentMoniker": "C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\type\\unit\\ScrapUnitType.java",
-              "RelativeDocumentMoniker": "src\\cryogenesis\\type\\unit\\ScrapUnitType.java",
-              "ToolTip": "C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\type\\unit\\ScrapUnitType.java",
-              "RelativeToolTip": "src\\cryogenesis\\type\\unit\\ScrapUnitType.java",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-04-07T18:20:54.548Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "CryogenesisInnelisTechTree.java",
               "DocumentMoniker": "C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\content\\CryogenesisInnelisTechTree.java",
               "RelativeDocumentMoniker": "src\\cryogenesis\\content\\CryogenesisInnelisTechTree.java",
               "ToolTip": "C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\content\\CryogenesisInnelisTechTree.java",
               "RelativeToolTip": "src\\cryogenesis\\content\\CryogenesisInnelisTechTree.java",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAADYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2026-04-05T15:12:39.016Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "CryogenesisPlanets.java",
               "DocumentMoniker": "C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\content\\CryogenesisPlanets.java",
               "RelativeDocumentMoniker": "src\\cryogenesis\\content\\CryogenesisPlanets.java",
               "ToolTip": "C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\content\\CryogenesisPlanets.java",
               "RelativeToolTip": "src\\cryogenesis\\content\\CryogenesisPlanets.java",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAIAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABUAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2026-04-05T13:25:53.575Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "README.md",
               "DocumentMoniker": "C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\README.md",
               "RelativeDocumentMoniker": "README.md",
               "ToolTip": "C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\README.md",
               "RelativeToolTip": "README.md",
-              "ViewState": "AgIAAKAAAAAAAAAAAAAAALoAAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAAEAAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
               "WhenOpened": "2026-04-01T04:47:33.534Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CryogenesisUnitTypes.java",
-              "DocumentMoniker": "C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\content\\CryogenesisUnitTypes.java",
-              "RelativeDocumentMoniker": "src\\cryogenesis\\content\\CryogenesisUnitTypes.java",
-              "ToolTip": "C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\content\\CryogenesisUnitTypes.java",
-              "RelativeToolTip": "src\\cryogenesis\\content\\CryogenesisUnitTypes.java",
-              "ViewState": "AgIAAAEBAAAAAAAAAAAAwBUBAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-03-29T12:19:23.677Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "CryogenesisPalette.java",
               "DocumentMoniker": "C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\world\\graphics\\CryogenesisPalette.java",
               "RelativeDocumentMoniker": "src\\cryogenesis\\world\\graphics\\CryogenesisPalette.java",
               "ToolTip": "C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\world\\graphics\\CryogenesisPalette.java",
               "RelativeToolTip": "src\\cryogenesis\\world\\graphics\\CryogenesisPalette.java",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2026-03-29T10:44:41.223Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "CryogenesisBlocks.java",
               "DocumentMoniker": "C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\content\\CryogenesisBlocks.java",
               "RelativeDocumentMoniker": "src\\cryogenesis\\content\\CryogenesisBlocks.java",
               "ToolTip": "C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\content\\CryogenesisBlocks.java",
               "RelativeToolTip": "src\\cryogenesis\\content\\CryogenesisBlocks.java",
-              "ViewState": "AgIAAH4AAAAAAAAAAAAAAJkAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAL0AAAAAAAAAAAAkwN4AAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2026-03-28T05:29:24.774Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 12,
               "Title": "bundle.properties",
               "DocumentMoniker": "C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\assets\\bundles\\bundle.properties",
               "RelativeDocumentMoniker": "assets\\bundles\\bundle.properties",
               "ToolTip": "C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\assets\\bundles\\bundle.properties",
               "RelativeToolTip": "assets\\bundles\\bundle.properties",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACkAAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB0AAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2026-03-27T08:45:30.948Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Cryogenesis.java",
               "DocumentMoniker": "C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\Cryogenesis.java",
               "RelativeDocumentMoniker": "src\\cryogenesis\\Cryogenesis.java",
               "ToolTip": "C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\src\\cryogenesis\\Cryogenesis.java",
               "RelativeToolTip": "src\\cryogenesis\\Cryogenesis.java",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2026-03-26T12:01:52.898Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "mod.hjson",
               "DocumentMoniker": "C:\\Users\\TNTan\\source\\repos\\WiggleArms\\MindustryCryogenesis\\mod.hjson",
               "RelativeDocumentMoniker": "mod.hjson",
