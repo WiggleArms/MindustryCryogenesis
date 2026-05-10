@@ -175,7 +175,7 @@ public class CryogenesisBlocks{
 
 		sulfur = new Floor("sulfur");
 
-		sulfurSoda = new ShallowEffectLiquid("sulfur-soda"){{
+		sulfurSoda = new ShallowLiquid("sulfur-soda"){{
 			/*
 			liquidBase = shallowSoda.asFloor();
 			floorBase = sulfur.asFloor();
@@ -194,6 +194,27 @@ public class CryogenesisBlocks{
 			lightColor = Color.blue.cpy().a(0.19f);
 			obstructsLight = true;
 			forceDrawLight = true;
+			
+			public Effect effect = Fx.vapor;
+			public Color effectColor = Color.valueOf("b5dcfb");
+			public float effectSpacing = 3600f;
+
+			@Override
+			public boolean updateRender(Tile tile){
+				return true;
+			}
+
+			@Override
+			public void renderUpdate(UpdateRenderState state){
+				if(state.data <= 0f){
+					state.data = Mathf.random(effectSpacing);
+				}
+
+				if ((state.data += Time.delta) >= effectSpacing){
+					effect.at(state.tile.x * tilesize, state.tile.y * tilesize, effectColor);
+					state.data = 0f;
+				}
+			}
 		}};
 
 		travertine = new Floor("travertine");
