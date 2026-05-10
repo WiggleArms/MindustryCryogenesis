@@ -237,9 +237,9 @@ public class Pipe extends Duct{
             
             Draw.z(Layer.blockUnder + 0.2f);
             Draw.color(transparentColor);
-            Draw.rect(sliced(botRegions[bits], slice), x, y, rotation);
+            Draw.rect(sliced(botRegions[bits], slice), x, y, angle);
             Draw.color();
-            Draw.rect(sliced(topRegions[bits], slice), x, y, rotation);
+            Draw.rect(sliced(topRegions[bits], slice), x, y, angle);
         }
 
         @Override
