@@ -27,18 +27,25 @@ import mindustry.world.meta.*;
 import static mindustry.Vars.*;
 
 public class Pipe extends Duct{
+    static final float rotatePad = 6, hpad = rotatePad / 2f / 4f;
+    static final float[][] rotateOffsets = {{hpad, hpad}, {-hpad, hpad}, {-hpad, -hpad}, {hpad, -hpad}};
 
     public final int timerFlow = timers++;
+    
+    public Color botColor = Color.valueOf("565656");
+
+    public TextureRegion liquidRegion;
+    public TextureRegion capRegion;
+    
+    public TextureRegion[][][] rotateRegions;
+
     public boolean padCorners = true;
     public boolean leaks = true;
 
     public float waterBoost =  5.0f;
     public float cryoBoost = 3.0f;
     
-    public float liquidPadding = 1f;
-
-    public TextureRegion liquidRegion;
-    public TextureRegion capRegion;
+    //public float liquidPadding = 1f;
 
     public Pipe(String name){
         super(name);
@@ -119,6 +126,47 @@ public class Pipe extends Duct{
         return new TextureRegion[]{Core.atlas.find("-bottom", "duct-bottom"), topRegions[0]};
     }
 
+    public static void drawTiledFrames(int size, float x, float y, float padding, Liquid liquid, float alpha){
+        drawTiledFrames(size, x, y, padding, padding, padding, padding, liquid, alpha);
+    }
+
+    public static void drawTiledFrames(int size, float x, float y, float padLeft, float padRight, float padTop, float padBottom, Liquid liquid, float alpha){
+        TextureRegion region = renderer.fluidFrames[liquid.gas ? 1 : 0][liquid.getAnimationFrame()];
+        TextureRegion toDraw = Tmp.tr1;
+
+        float leftBounds = size/2f * tilesize - padRight;
+        float bottomBounds = size/2f * tilesize - padTop;
+        Color color = Tmp.c1.set(liquid.color).a(1f);
+
+        for(int sx = 0; sx < size; sx++){
+            for(int sy = 0; sy < size; sy++){
+                float relx = sx - (size-1)/2f, rely = sy - (size-1)/2f;
+
+                toDraw.set(region);
+
+                //truncate region if at border
+                float rightBorder = relx*tilesize + padLeft, topBorder = rely*tilesize + padBottom;
+                float squishX = rightBorder + tilesize/2f - leftBounds, squishY = topBorder + tilesize/2f - bottomBounds;
+                float ox = 0f, oy = 0f;
+
+                if(squishX >= 8 || squishY >= 8) continue;
+
+                //cut out the parts that don't fit inside the padding
+                if(squishX > 0){
+                    toDraw.setWidth(toDraw.width - squishX * 4f);
+                    ox = -squishX/2f;
+                }
+
+                if(squishY > 0){
+                    toDraw.setY(toDraw.getY() + squishY * 4f);
+                    oy = -squishY/2f;
+                }
+
+                Drawf.liquid(toDraw, x + rightBorder + ox, y + topBorder + oy, alpha, color);
+            }
+        }
+    }
+
     public class PipeBuild extends DuctBuild implements ChainedBuilding{
         public float smoothLiquid;
         public int blendbits, xscl = 1, yscl = 1, blending;
@@ -128,16 +176,12 @@ public class Pipe extends Duct{
         public void draw(){
             super.draw();
             
+            /*
             if(liquids.currentAmount() > 0.001f){
                 Draw.z(Layer.blockUnder + 0.05f);
                 drawTiledFrames(size, x, y, liquidPadding, liquids.current(), liquids.currentAmount() / liquidCapacity);
             }
-
-            Draw.z(Layer.block);
-
-            Draw.scl(xscl, yscl);
-            drawAt(x, y, blendbits, r, SliceMode.none);
-            Draw.reset();
+            */
 
             if(capped && capRegion.found()) Draw.rect(capRegion, x, y, rotdeg());
             if(backCapped && capRegion.found()) Draw.rect(capRegion, x, y, rotdeg() + 180);
@@ -218,7 +262,7 @@ public class Pipe extends Duct{
 
             nextc = next instanceof PipeBuild d ? d : null;
 
-            Building prev = back();
+            Building next= front(), prev = back();
             capped = next == null || next.team != team || !next.block.hasLiquids;
             backCapped = blendbits == 0 && (prev == null || prev.team != team || !prev.block.hasLiquids);
         }
