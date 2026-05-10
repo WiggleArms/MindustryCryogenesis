@@ -121,7 +121,8 @@ public class Pipe extends Duct{
 
     public class PipeBuild extends DuctBuild{
 
-        //public float smoothLiquid;
+        //might cause issues?
+        public float smoothLiquid;
         
         @Override
         public void draw(){
@@ -166,7 +167,8 @@ public class Pipe extends Duct{
                 current = items.first();
             }
 
-            //smoothLiquid = Mathf.lerpDelta(smoothLiquid, liquids.currentAmount() / liquidCapacity, 0.05f);
+            //might cause issues?
+            smoothLiquid = Mathf.lerpDelta(smoothLiquid, liquids.currentAmount() / liquidCapacity, 0.05f);
 
             if(liquids.currentAmount() > 0.0001f && timer(timerFlow, 1)){
                 moveLiquidForward(leaks, liquids.current());
