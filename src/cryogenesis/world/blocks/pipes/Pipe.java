@@ -35,7 +35,7 @@ public class Pipe extends Duct{
 
     public final int timerFlow = timers++;
     
-    public Color botColor = Color.valueOf("2c2d38");
+    //public Color botColor = Color.valueOf("2c2d38");
 
     public TextureRegion liquidRegion;
     public TextureRegion capRegion;
@@ -47,6 +47,8 @@ public class Pipe extends Duct{
 
     public float waterBoost =  5.0f;
     public float cryoBoost = 3.0f;
+
+    public Color transparentColor = new Color(0.44f, 0.45f, 0.56f, 0.1f);
     
     //public float liquidPadding = 1f;
 
@@ -232,10 +234,12 @@ public class Pipe extends Duct{
             Draw.scl(1f, 1f);
             Drawf.liquid(sliced(liquidr, slice), x + ox, y + oy, smoothLiquid, liquids.current().color.write(Tmp.c1).a(1f));
             Draw.scl(xscl, yscl);
-
+            
             Draw.z(Layer.blockUnder + 0.2f);
-
-            Draw.rect(sliced(topRegions[bits], slice), x, y, angle);
+            Draw.color(transparentColor);
+            Draw.rect(sliced(botRegions[bits], slice), x, y, rotation);
+            Draw.color();
+            Draw.rect(sliced(topRegions[bits], slice), x, y, rotation);
         }
 
         @Override
