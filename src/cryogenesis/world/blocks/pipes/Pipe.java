@@ -27,12 +27,15 @@ import mindustry.world.meta.*;
 import static mindustry.Vars.*;
 
 public class Pipe extends Duct{
+    //not sure why it doesn't find this
+    public static final int animationFrames = 50;
+
     static final float rotatePad = 6, hpad = rotatePad / 2f / 4f;
     static final float[][] rotateOffsets = {{hpad, hpad}, {-hpad, hpad}, {-hpad, -hpad}, {hpad, -hpad}};
 
     public final int timerFlow = timers++;
     
-    public Color botColor = Color.valueOf("565656");
+    public Color botColor = Color.valueOf("2c2d38");
 
     public TextureRegion liquidRegion;
     public TextureRegion capRegion;
@@ -167,7 +170,7 @@ public class Pipe extends Duct{
         }
     }
 
-    public class PipeBuild extends DuctBuild implements ChainedBuilding{
+    public class PipeBuild extends DuctBuild{
         public float smoothLiquid;
         public int blendbits, xscl = 1, yscl = 1, blending;
         public boolean capped, backCapped = false;
@@ -187,7 +190,6 @@ public class Pipe extends Duct{
             if(backCapped && capRegion.found()) Draw.rect(capRegion, x, y, rotdeg() + 180);
         }
 
-        @Override
         protected void drawAt(float x, float y, int bits, int rotation, SliceMode slice){
             float angle = rotation * 90f;
             Draw.color(botColor);
