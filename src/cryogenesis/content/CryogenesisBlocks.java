@@ -220,7 +220,7 @@ public class CryogenesisBlocks{
 
 		travertineWall = new StaticWall("travertine-wall");
 
-		((ShallowEffectLiquid)sulfurSoda).set(CryogenesisBlocks.deepSoda, CryogenesisBlocks.sulfur);
+		((ShallowEffectLiquid)sulfurSoda).set(CryogenesisBlocks.shallowSoda, CryogenesisBlocks.sulfur);
 
 		oreNickel = new OreBlock("ore-nickel", CryogenesisItems.nickel);
 
