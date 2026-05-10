@@ -211,7 +211,7 @@ public class Pipe extends Duct{
 
         protected void drawAt(float x, float y, int bits, int rotation, SliceMode slice){
             float angle = rotation * 90f;
-            Draw.color(botColor);
+            //Draw.color(botColor);
             Draw.rect(sliced(botRegions[bits], slice), x, y, angle);
 
             int offset = yscl == -1 ? 3 : 0;
