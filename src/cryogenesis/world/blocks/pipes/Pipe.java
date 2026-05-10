@@ -27,7 +27,7 @@ import mindustry.world.meta.*;
 import static mindustry.Vars.*;
 
 public class Pipe extends Duct{
-    //not sure why it doesn't find this
+    //not sure why it doesn't find this, hopefully that's not a bad sign
     public static final int animationFrames = 50;
 
     static final float rotatePad = 6, hpad = rotatePad / 2f / 4f;
@@ -177,14 +177,33 @@ public class Pipe extends Duct{
         
         @Override
         public void draw(){
-            super.draw();
-            
-            /*
-            if(liquids.currentAmount() > 0.001f){
-                Draw.z(Layer.blockUnder + 0.05f);
-                drawTiledFrames(size, x, y, liquidPadding, liquids.current(), liquids.currentAmount() / liquidCapacity);
+            float rotation = rotdeg();
+            int r = this.rotation;
+
+            //draw extra pipes facing this one for tiling purposes
+            Draw.z(Layer.blockUnder);
+            for(int i = 0; i < 4; i++){
+                if((blending & (1 << i)) != 0){
+                    int dir = r - i;
+                    drawAt(x + Geometry.d4x(dir) * tilesize*0.75f, y + Geometry.d4y(dir) * tilesize*0.75f, 0, i == 0 ? r : dir, i != 0 ? SliceMode.bottom : SliceMode.top);
+                }
             }
-            */
+
+            //draw item
+            if(current != null){
+                Draw.z(Layer.blockUnder + 0.1f);
+                Tmp.v1.set(Geometry.d4x(recDir) * tilesize / 2f, Geometry.d4y(recDir) * tilesize / 2f)
+                .lerp(Geometry.d4x(r) * tilesize / 2f, Geometry.d4y(r) * tilesize / 2f,
+                Mathf.clamp((progress + 1f) / (2f - 1f/speed)));
+
+                Draw.rect(current.fullIcon, x + Tmp.v1.x, y + Tmp.v1.y, itemSize, itemSize);
+            }
+
+            Draw.z(Layer.block);
+
+            Draw.scl(xscl, yscl);
+            drawAt(x, y, blendbits, r, SliceMode.none);
+            Draw.reset();
 
             if(capped && capRegion.found()) Draw.rect(capRegion, x, y, rotdeg());
             if(backCapped && capRegion.found()) Draw.rect(capRegion, x, y, rotdeg() + 180);
