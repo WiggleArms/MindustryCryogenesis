@@ -209,6 +209,8 @@ public class Pipe extends Duct{
             drawAt(x, y, blendbits, r, SliceMode.none);
             Draw.reset();
 
+            Draw.z(Layer.blockUnder + 0.25f);
+
             if(capped && capRegion.found()) Draw.rect(capRegion, x, y, rotdeg());
             if(backCapped && capRegion.found()) Draw.rect(capRegion, x, y, rotdeg() + 180);
         }
