@@ -10,7 +10,7 @@ public class CryogenesisLiquids{
 
 	public static void load(){
 
-		sluice = new Liquid("sluice", Color.valueOf("1b74b5")){{
+		sluice = new Liquid("sluice", Color.valueOf("86bbac")){{
 			heatCapacity = 0.3f;
 			viscosity = 0.4f;
 			temperature = 0.4f;
