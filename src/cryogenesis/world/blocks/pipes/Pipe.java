@@ -289,7 +289,7 @@ public class Pipe extends Duct{
 
         boolean blockRequiresCap(Building b){
             boolean curvedPipe = b instanceof PipeBuild d && (d.rotation != this.rotation || d.blendbits != 0);
-            boolean nonPipe = b != null && !(b instanceof PipeBuild);
+            boolean nonPipe = b != null && !(b instanceof PipeBuild) && b.squareSprite;
             return curvedPipe || nonPipe;
         }
 
