@@ -129,6 +129,8 @@ A: Yep.
 - Resprite Nickel Compactor
 - Re-export all sprites with antialias of 1
 - Boiling status effect sprite
+- Sluice liquid sprite
+- Steam sprite
 
 ### Wishlist:
 
@@ -138,6 +140,8 @@ Tunnel Pipe directional sprites, looks similar to Pipe
 
 - Slag-filled Pipes and variants incinerate items
 - Buff Pipe item capacity
+
+- Demise team in addition to vanilla teams; don't replace green
 
 ### Wiggle's Accomplishments List
 
@@ -229,3 +233,5 @@ Insulation used for water-related blocks and insulated walls (possibly power blo
 - The Lathe's sprite is a rework of the Meso's original sprite
 - Scrap resources on Innelis were originally deposited directly into the core before the introduction of the scrapping system
 - The first sector added to Innelis was Zero, which will be replaced with Cryogenesis before the v1.0.0 release
+- Sluice was originally named "Soda" and is a mineral-rich hydrocarbon liquid rather than water
+- Similarly, Steam is not water vapor, despite its name

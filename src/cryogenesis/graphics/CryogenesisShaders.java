@@ -21,10 +21,10 @@ import mindustry.graphics.Shaders;
 import static mindustry.Vars.*;
 
 public class CryogenesisShaders{
-	public static CryogenesisSurfaceShader soda;
+	public static CryogenesisSurfaceShader sluice;
 
 	public static void init(){
-        soda = new CryogenesisSurfaceShader("soda");
+        sluice = new CryogenesisSurfaceShader("sluice");
 	}
 
 	public static class CryogenesisSurfaceShader extends Shader{

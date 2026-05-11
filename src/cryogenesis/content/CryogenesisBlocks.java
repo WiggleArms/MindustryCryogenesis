@@ -58,7 +58,7 @@ public class CryogenesisBlocks{
 	//environment
 
 	//liquids
-	shallowCryofluid, deepSoda, shallowSoda, sulfurSoda,
+	shallowCryofluid, deepSluice, shallowSluice, sulfurSluice,
 	
 	//floors
 	cryoIce, rock, darkIce, cryoSnow, duneSand, duneStone, sulfur, travertine,
@@ -117,17 +117,17 @@ public class CryogenesisBlocks{
             forceDrawLight = true;
 		}};
 
-		deepSoda = new EffectFloor("deep-soda"){{
+		deepSluice = new EffectFloor("deep-sluice"){{
             supportsOverlay = true;
 			drownTime = 240f;
             status = CryogenesisStatusEffects.boiling;
             statusDuration = 240f;
             speedMultiplier = 0.3f;
             variants = 0;
-            liquidDrop = CryogenesisLiquids.soda;
+            liquidDrop = CryogenesisLiquids.sluice;
             liquidMultiplier = 1.5f;
             isLiquid = true;
-            cacheLayer = CryogenesisCacheLayer.soda;
+            cacheLayer = CryogenesisCacheLayer.sluice;
 
             emitLight = true;
             lightRadius = 25f;
@@ -136,20 +136,43 @@ public class CryogenesisBlocks{
             forceDrawLight = true;
 		}};
 
-		shallowSoda = new EffectFloor("shallow-soda"){{
+		shallowSluice = new EffectFloor("shallow-sluice"){{
             supportsOverlay = true;
             status = CryogenesisStatusEffects.boiling;
             statusDuration = 200f;
             speedMultiplier = 0.7f;
-            liquidDrop = CryogenesisLiquids.soda;
+            liquidDrop = CryogenesisLiquids.sluice;
             isLiquid = true;
-            cacheLayer = CryogenesisCacheLayer.soda;
+            cacheLayer = CryogenesisCacheLayer.sluice;
 
             emitLight = true;
             lightRadius = 25f;
             lightColor = Color.blue.cpy().a(0.19f);
             obstructsLight = true;
             forceDrawLight = true;
+		}};
+
+		sulfurSluice = new ShallowEffectLiquid("sulfur-sluice"){{
+			/*
+			liquidBase = shallowsluice.asFloor();
+			floorBase = sulfur.asFloor();
+			isLiquid = true;
+			variants = floorBase.variants;
+			status = liquidBase.status;
+			liquidDrop = liquidBase.liquidDrop;
+			cacheLayer = liquidBase.cacheLayer;
+			shallow = true;
+			*/
+
+			mapColor = Color.valueOf("86bbac");
+
+			statusDuration = 160f;
+			speedMultiplier = 0.85f;
+			emitLight = true;
+			lightRadius = 25f;
+			lightColor = Color.blue.cpy().a(0.19f);
+			obstructsLight = true;
+			forceDrawLight = true;
 		}};
 
 		cryoIce = new Floor("cryo-ice"){{
@@ -174,29 +197,6 @@ public class CryogenesisBlocks{
 
 		sulfur = new Floor("sulfur");
 
-		sulfurSoda = new ShallowEffectLiquid("sulfur-soda"){{
-			/*
-			liquidBase = shallowSoda.asFloor();
-			floorBase = sulfur.asFloor();
-			isLiquid = true;
-			variants = floorBase.variants;
-			status = liquidBase.status;
-			liquidDrop = liquidBase.liquidDrop;
-			cacheLayer = liquidBase.cacheLayer;
-			shallow = true;
-			*/
-
-			mapColor = Color.valueOf("86bbac");
-
-			statusDuration = 160f;
-			speedMultiplier = 0.85f;
-			emitLight = true;
-			lightRadius = 25f;
-			lightColor = Color.blue.cpy().a(0.19f);
-			obstructsLight = true;
-			forceDrawLight = true;
-		}};
-
 		travertine = new Floor("travertine");
 
 		cryoIceWall = new StaticWall("cryo-ice-wall"){{
@@ -220,7 +220,7 @@ public class CryogenesisBlocks{
 
 		travertineWall = new StaticWall("travertine-wall");
 
-		((ShallowEffectLiquid)sulfurSoda).set(CryogenesisBlocks.shallowSoda, CryogenesisBlocks.sulfur);
+		((ShallowEffectLiquid)sulfurSluice).set(CryogenesisBlocks.shallowSluice, CryogenesisBlocks.sulfur);
 
 		oreNickel = new OreBlock("ore-nickel", CryogenesisItems.nickel);
 

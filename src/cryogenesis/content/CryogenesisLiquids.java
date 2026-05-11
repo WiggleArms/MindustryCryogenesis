@@ -6,11 +6,11 @@ import arc.graphics.*;
 import mindustry.type.*;
 
 public class CryogenesisLiquids{
-	public static Liquid soda, steam;
+	public static Liquid sluice, steam;
 
 	public static void load(){
 
-		soda = new Liquid("soda", Color.valueOf("1b74b5")){{
+		sluice = new Liquid("sluice", Color.valueOf("1b74b5")){{
 			heatCapacity = 0.3f;
 			viscosity = 0.4f;
 			temperature = 0.4f;

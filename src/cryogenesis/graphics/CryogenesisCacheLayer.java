@@ -11,9 +11,9 @@ import mindustry.graphics.CacheLayer;
 import static mindustry.Vars.*;
 
 public class CryogenesisCacheLayer{
-	public static CacheLayer soda;
+	public static CacheLayer sluice;
 
 	public static void load(){
-		CacheLayer.add(soda = new CacheLayer.ShaderLayer(CryogenesisShaders.soda));
+		CacheLayer.add(sluice = new CacheLayer.ShaderLayer(CryogenesisShaders.sluice));
 	}
 }
