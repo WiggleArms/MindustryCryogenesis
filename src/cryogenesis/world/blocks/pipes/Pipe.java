@@ -294,7 +294,7 @@ public class Pipe extends Duct{
             nextPipe = next instanceof PipeBuild d ? d : null;
             prevPipe = prev instanceof PipeBuild d ? d : null;
 
-            capped = (blendbits != 0 && next != null) || (nextPipe != null && nextPipe.team == team && nextPipe.blendbits != 0) || (next.block != null && not(next instanceof Pipe));
+            capped = (blendbits != 0 && next != null) || (nextPipe != null && nextPipe.team == team && nextPipe.blendbits != 0) || (next.block != null && !(next instanceof Pipe));
             backCapped = false;
 
             /* 
