@@ -127,7 +127,7 @@ A: Yep.
 - Eluma turret too thin?
 - Greeble Meso, change cell
 - Resprite Nickel Compactor
-- Re-export all sprites with antialias of 1
+- Re-export all sprites with antialias of 1 (DONE: blocks, environment)
 - Fix Boiling status effect sprite
 - ~~Sluice liquid sprite~~
 - ~~Steam sprite~~ (Might need fixing)
