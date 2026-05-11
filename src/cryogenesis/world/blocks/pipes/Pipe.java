@@ -298,16 +298,20 @@ public class Pipe extends Duct{
 
             boolean curvedEnteringBlock = blendbits != 0 && next != null;
             boolean enteringCurvedPipe = nextPipe != null && nextPipe.team == team && nextPipe.blendbits != 0;
-            boolean enteringNonPipe = next != null && !(next instanceof PipeBuild);
+            boolean enteringNonPipe = next != null && !(next instanceof PipeBuild) && next.team == team;
+            boolean exitingNonPipe = prev != null && !(prev instanceof PipeBuild) && prev.team == team;
 
             capped = curvedEnteringBlock || enteringCurvedPipe || enteringNonPipe;
-            backCapped = false;
+            backCapped = exitingNonPipe;
 
             /* 
             cap if:
             non-straight pipe and entering block
             entering team non-straight pipe
             entering team non-pipe Block
+
+            cap back if:
+            exiting team non-pipe block
             */
         }
     }
