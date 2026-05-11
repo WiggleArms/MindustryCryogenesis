@@ -287,6 +287,12 @@ public class Pipe extends Duct{
             }
         }
 
+        boolean blockRequiresCap(Building b){
+            boolean curvedPipe = b instanceof PipeBuild d && (d.rot != this.rot || d.blendbits != 0);
+            boolean nonPipe = b != null && !(b instanceof PipeBuild);
+            return curvedPipe || nonPipe;
+        }
+
         @Override
         public void onProximityUpdate(){
             super.onProximityUpdate();
@@ -295,12 +301,6 @@ public class Pipe extends Duct{
 
             nextPipe = next instanceof PipeBuild d ? d : null;
             prevPipe = prev instanceof PipeBuild d ? d : null;
-
-            boolean blockRequiresCap(Building b){
-                boolean curvedPipe = b instanceof PipeBuild d && (d.rot != this.rot || d.blendbits != 0);
-                boolean nonPipe = b != null && !(b instanceof PipeBuild);
-                return curvedPipe || nonPipe;
-            }
 
             capped = blockRequiresCap(next);
             backCapped = blockRequiresCap(prev);
