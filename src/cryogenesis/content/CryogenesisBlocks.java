@@ -152,6 +152,28 @@ public class CryogenesisBlocks{
             forceDrawLight = true;
 		}};
 
+		cryoIce = new Floor("cryo-ice"){{
+			dragMultiplier = 0.2f;
+			speedMultiplier = 0.9f;
+			albedo = 0.65f;
+		}};
+
+		cryoSnow = new Floor("cryo-snow"){{
+			dragMultiplier = 0.2f;
+			speedMultiplier = 0.9f;
+			albedo = 0.7f;
+		}};
+
+		duneSand = new Floor("dune-sand");
+
+		duneStone = new Floor("dune-stone");
+
+		rock = new Floor("rock");
+
+		darkIce = new Floor("dark-ice");
+
+		sulfur = new Floor("sulfur");
+
 		sulfurSluice = new ShallowEffectLiquid("sulfur-sluice"){{
 			/*
 			liquidBase = shallowsluice.asFloor();
@@ -174,28 +196,6 @@ public class CryogenesisBlocks{
 			obstructsLight = true;
 			forceDrawLight = true;
 		}};
-
-		cryoIce = new Floor("cryo-ice"){{
-			dragMultiplier = 0.2f;
-			speedMultiplier = 0.9f;
-			albedo = 0.65f;
-		}};
-
-		cryoSnow = new Floor("cryo-snow"){{
-			dragMultiplier = 0.2f;
-			speedMultiplier = 0.9f;
-			albedo = 0.7f;
-		}};
-
-		duneSand = new Floor("dune-sand");
-
-		duneStone = new Floor("dune-stone");
-
-		rock = new Floor("rock");
-
-		darkIce = new Floor("dark-ice");
-
-		sulfur = new Floor("sulfur");
 
 		travertine = new Floor("travertine");
 
