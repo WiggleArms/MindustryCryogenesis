@@ -289,15 +289,13 @@ public class Pipe extends Duct{
         public void onProximityUpdate(){
             super.onProximityUpdate();
 
-            Building prev = back();
+            Building next = front(), prev = back();
 
             nextPipe = next instanceof PipeBuild d ? d : null;
             prevPipe = prev instanceof PipeBuild d ? d : null;
 
-            Building next = front();
-            prev = back();
-            capped = blendbits != 0 || (blendbits == 0 && next.team == team && nextPipe.blendbits != 0 && next.block instanceof Pipe);
-            backCapped = blendbits != 0 || (blendbits == 0 && prev.team == team && prevPipe.blendbits != 0 && prev.block instanceof Pipe);
+            capped = blendbits != 0 || (blendbits == 0 && nextPipe != null && nextPipe.team == team && nextPipe.blendbits != 0);
+            backCapped = blendbits != 0 || (blendbits == 0 && nextPipe != null && prevPipe.team == team && prevPipe.blendbits != 0);
         }
     }
 }
