@@ -56,10 +56,10 @@ public class CryogenesisPlanets{
 			alwaysUnlocked = true;
 			landCloudColor = CryogenesisPalette.cryoBase; //TODO same
 			defaultEnv = Env.terrestrial;
-			defaultCore = CryogenesisBlocks.coreThread;
+			defaultCore = CryogenesisBlocks.coreTerminal;
 			allowLaunchToNumbered = false; //Re-enable once map is added
 
-			unlockedOnLand.add(CryogenesisBlocks.coreThread);
+			unlockedOnLand.add(CryogenesisBlocks.coreTerminal);
 		}};
 	}
 }

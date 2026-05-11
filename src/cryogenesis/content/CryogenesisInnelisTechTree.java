@@ -15,7 +15,7 @@ import static cryogenesis.content.CryogenesisUnitTypes.*;
 public class CryogenesisInnelisTechTree{
 
 	public static void load(){
-		CryogenesisPlanets.innelis.techTree = nodeRoot("innelis", coreThread, () -> {
+		CryogenesisPlanets.innelis.techTree = nodeRoot("innelis", coreTerminal, () -> {
 
 			node(pipeUnloader, () -> {
 				node(pipe, () -> {
