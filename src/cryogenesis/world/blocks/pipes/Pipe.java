@@ -294,7 +294,11 @@ public class Pipe extends Duct{
             nextPipe = next instanceof PipeBuild d ? d : null;
             prevPipe = prev instanceof PipeBuild d ? d : null;
 
-            capped = (blendbits != 0 && next != null) || (nextPipe != null && nextPipe.team == team && nextPipe.blendbits != 0) || (next != null && !(next instanceof PipeBuild));
+            boolean curvedEnteringBlock = blendbits != 0 && next != null;
+            boolean enteringCurvedPipe = nextPipe != null && nextPipe.team == team && nextPipe.blendbits != 0;
+            boolean enteringNonPipe = next != null && !(next instanceof PipeBuild);
+
+            capped = curvedEnteringBlock || enteringCurvedPipe || enteringNonPipe;
             backCapped = false;
 
             /* 
