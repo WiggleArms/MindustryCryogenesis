@@ -302,8 +302,8 @@ public class Pipe extends Duct{
             nextPipe = next instanceof PipeBuild d ? d : null;
             prevPipe = prev instanceof PipeBuild d ? d : null;
 
-            capped = blockRequiresCap(next);
-            backCapped = blockRequiresCap(prev);
+            capped = blendbits == 0 && blockRequiresCap(next);
+            backCapped = blendbits == 0 && blockRequiresCap(prev);
 
             /* 
             cap if straight pipe and:
