@@ -49,6 +49,12 @@ public class CryogenesisInnelisTechTree{
 					
 					});
 				});
+
+				nodeProduce(CryogenesisLiquids.sluice, () -> {
+					nodeProduce(CryogenesisLiquids.steam, () -> {
+
+					});
+				});
 			});
 		});
 	}
