@@ -79,7 +79,7 @@ public class CryogenesisBlocks{
 	pipe, /*armored-pipe,*/ tunnelPipe, pipeUnloader,
 	
 	//storage
-	coreThread,
+	coreTerminal,
 	
 	//turrets
 	pelt,
@@ -286,7 +286,7 @@ public class CryogenesisBlocks{
 			researchCost = with(CryogenesisItems.nickel, 10);
 		}};
 
-		coreThread = new CoreBlock("core-thread"){{
+		coreTerminal = new CoreBlock("core-terminal"){{
 			requirements(Category.effect, with(CryogenesisItems.nickel, 1000, Items.silicon, 500));
 			alwaysUnlocked = true;
 

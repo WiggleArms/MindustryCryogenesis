@@ -128,9 +128,9 @@ A: Yep.
 - Greeble Meso, change cell
 - Resprite Nickel Compactor
 - Re-export all sprites with antialias of 1
-- Boiling status effect sprite
-- Sluice liquid sprite
-- Steam sprite
+- Fix Boiling status effect sprite
+- ~~Sluice liquid sprite~~
+- ~~Steam sprite~~ (Might need fixing)
 
 ### Wishlist:
 
@@ -140,6 +140,7 @@ Tunnel Pipe directional sprites, looks similar to Pipe
 
 - Slag-filled Pipes and variants incinerate items
 - Buff Pipe item capacity
+- Fix missing nearby pipe caps when connecting to blendbits == 0
 
 - Demise team in addition to vanilla teams; don't replace green
 
@@ -160,7 +161,8 @@ Sand -> Insulation (Aerogel, factory built with Ti/Elastanium?)
 
 #### Sector progression
 
-Zero (Cryogenesis) - Mine nickel -> Build 
+Zero (Cryogenesis) - Mine Nickel -> Research/build Scrapper -> Destroy derelict units -> Scrap units -> Research/build Nickel Compactor -> Research/build Pipes -> Scrap more units -> Research/build Pelt and Nickel Wall -> Enemy attacks -> Defeat all waves -> [TBD: Power?] Research/build Powderizer and Silicon Furnace -> Research/build Auger -> Unlocks next sector
+[TBD] - Set up Silicon production -> Research/build T1 air factory -> Research/produce Vice -> Enemy attacks -> ???
 
 #### PlanetGenerator
 
@@ -191,6 +193,12 @@ Mini-biomes:
 - Stellarite, with Stellarite Shard props
 
 #### Other
+
+- "last Stand"-style sectors where no resources can be deposited into the core
+	- Long time before first wave, but do NOT wait until player is ready (this would allow pseudo-infinite container stockpiling exploits)
+	- Core spawns in walls to prevent blocks depositing
+		- Disable core schematics to prevent overriding walls/importing items that way somehow? (allowLaunchSchematics flag may do this)
+		- Disable units depositing items into the core somehow OR remove core unit item cap on these levels ONLY WORKS if Innelis has no logic (overriding allowDeposit may do this, ensure it ONLY affects last stand maps)
 
 - "Puncture" early anti-air turret
 - "Bore" midgame single target laser turret, inflicts melting
