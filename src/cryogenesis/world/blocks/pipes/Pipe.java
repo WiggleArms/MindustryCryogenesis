@@ -296,23 +296,24 @@ public class Pipe extends Duct{
             nextPipe = next instanceof PipeBuild d ? d : null;
             prevPipe = prev instanceof PipeBuild d ? d : null;
 
-            boolean curvedEnteringBlock = blendbits != 0 && next != null;
-            boolean enteringCurvedPipe = nextPipe != null && nextPipe.team == team && nextPipe.blendbits != 0;
-            boolean enteringNonPipe = next != null && !(next instanceof PipeBuild) && next.team == team;
-            boolean exitingNonPipe = prev != null && !(prev instanceof PipeBuild) && prev.team == team;
+            boolean blockRequiresCap(Building b){
+                boolean curvedPipe = b instanceof PipeBuild d && (d.rot != this.rot || d.blendbits != 0);
+                boolean nonPipe = b != null && !(b instanceof PipeBuild);
+                return curvedPipe || nonPipe;
+            }
 
-            capped = curvedEnteringBlock || enteringCurvedPipe || enteringNonPipe;
-            backCapped = exitingNonPipe;
+            capped = blockRequiresCap(next);
+            backCapped = blockRequiresCap(prev);
 
             /* 
-            cap if:
-            non-straight pipe and entering block
-            entering team non-straight pipe
-            entering team non-pipe Block
-
-            cap back if:
-            exiting team non-pipe block
+            cap if straight pipe and:
+            exiting non-pipe team Block
+            entering non-pipe team Block
+            entering curved pipe of same team
+            exiting curved pipe of same team
             */
+
+            //rework logic to only apply dynamic caps to straight pipes, non-straight ALWAYS have caps, and are built into the sprite
         }
     }
 }
