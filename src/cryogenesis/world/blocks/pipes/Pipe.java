@@ -52,6 +52,8 @@ public class Pipe extends Duct{
     
     //public float liquidPadding = 1f;
 
+    public PipeBuild nextPipe, prevPipe;
+
     public Pipe(String name){
         super(name);
         hasLiquids = true;
