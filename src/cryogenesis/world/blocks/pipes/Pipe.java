@@ -45,8 +45,11 @@ public class Pipe extends Duct{
     public boolean padCorners = true;
     public boolean leaks = true;
 
-    public float waterBoost =  5.0f;
-    public float cryoBoost = 3.0f;
+    public Map boostValues = new Map<Liquid, Float>(){{
+        put(Liquids.water, 3.0f);
+        put(Liquids.cryofluid, 3.0f);
+        put(CryogenesisLiquids.sluice, 1.2f);
+    }};
 
     public Color transparentColor = new Color(0.44f, 0.45f, 0.56f, 0.1f);
     
@@ -111,10 +114,6 @@ public class Pipe extends Duct{
     @Override
     public void setStats(){
         super.setStats();
-
-        if(findConsumer(f -> f instanceof ConsumeLiquidBase && f.booster) instanceof ConsumeLiquidBase consBase){
-            stats.add(Stat.booster, StatValues.speedBoosters("{0}" + StatUnit.timesSpeed.localized(), 0f, waterBoost, false, consBase::consumes));
-        }
     }
     */
 
@@ -256,11 +255,9 @@ public class Pipe extends Duct{
         public void updateTile(){
             
             float actualSpeed = speed;
-            
-            if (liquids.current() == Liquids.water && liquids.currentAmount() > 0.0001f) {
-                actualSpeed = speed / waterBoost;
-            } else if (liquids.current() == Liquids.cryofluid && liquids.currentAmount() > 0.0001f) {
-                actualSpeed = speed / cryoBoost;
+
+            if liquids.currentAmount() > 0.0001f) && boostValues.containsKey(liquids.current()){
+                actualSpeed = speed / boostValues.get(liquids.current());
             }
             
             progress += edelta() / actualSpeed * 2f;

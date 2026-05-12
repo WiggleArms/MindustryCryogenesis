@@ -41,6 +41,7 @@ v0.6.0 - Planet, tech tree, and placeholder sector
 v0.7.0 - Scrapping mechanic
 v0.8.0 - Environment blocks
 v0.9.0 - Sprite overhauls
+v0.10.0 - Early campaign development
 
 ## FAQ
 
@@ -131,6 +132,7 @@ A: Yep.
 - Fix Boiling status effect sprite
 - ~~Sluice liquid sprite~~
 - ~~Steam sprite~~ (Might need fixing)
+- Change Sluice color, currently too close to cryofluid
 
 ### Wishlist:
 
@@ -150,6 +152,7 @@ Tunnel Pipe directional sprites, looks similar to Pipe
 
 - Animate Pipe liquid draw area
 - Pipe connects to liquid outputs
+- Sluice tile hover tooltip
 
 ### Brainstorming
 
