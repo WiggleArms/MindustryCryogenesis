@@ -277,7 +277,7 @@ public class CryogenesisBlocks{
 			solid = false;
 		}};
 
-		pipeRouter = new LiquidRouter("pipe-router"){{
+		pipeRouter = new pipeRouter("pipe-router"){{
 			requirements(Category.distribution, with(CryogenesisItems.nickel, 3));
 			health = 80;
 			liquidCapacity = 60f;
