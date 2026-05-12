@@ -178,21 +178,23 @@ Should only need to define isEmissive (for cool bases), getHeight, getColor, and
 - Shores
 
 Mini-biomes:
-- ~~Laterite deposits~~
-- ~~Magma Stone hotspots~~
+- ~~Laterite deposits~~ (Deprecated)
+- ~~Magma Stone hotspots~~ (Deprecated)
 - Stellarite
 - Hot Springs
 
 #### Tiles
 
-- ~~Cryo Ice bubbles instead of partial streaks, greenish tint?~~
-- ~~Magamatic Stone tint changes, flow-style formation~~
-- ~~Laterite used in shores biome? Found IRL with "high temperatures and heavy rainfall/dry periods" (https://en.wikipedia.org/wiki/Laterite)~~
+- ~~Cryo Ice bubbles instead of partial streaks, greenish tint?~~ (Not added)
+- ~~Magamatic Stone tint changes, flow-style formation~~ (Deprecated)
+- ~~Laterite used in shores biome? Found IRL with "high temperatures and heavy rainfall/dry periods" (https://en.wikipedia.org/wiki/Laterite)~~ (Deprecated)
 - Sulfur and Travertine in Hot Springs
 - [TBD] liquid (Soda/Sluice) in hot springs, inflicts Boiling. Very low viscosity, even less than water.
 - Stellarite, with Stellarite Shard props
 
 #### Other
+
+- Basic scrapper only produces scrap, higher tier scrappers can reclaim other resources? (Replace reqs[i].item with items.scrap on line 169 of PayloadDeconstructor? Would require override or new class)
 
 - "last Stand"-style sectors where no resources can be deposited into the core
 	- Long time before first wave, but do NOT wait until player is ready (this would allow pseudo-infinite container stockpiling exploits)
@@ -208,6 +210,8 @@ Mini-biomes:
 - "Avenge" upgrade to Barrage
 
 - Boiling status effect inflicted by the liquid in hot springs, effects TBD. Probably just damage over time.
+
+- Power Tower with multiple connections like a Serpulo power node. Expensive, later-game, but convenient. Heat transfer TBD.
 
 - Induction Heater (Electric Heater equivalent)
 - Hydrothermal Heater (Produces heat from hot spring liquid)
