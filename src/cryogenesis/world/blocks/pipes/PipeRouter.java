@@ -25,9 +25,12 @@ public class PipeRouter extends Router{
 		super(name);
         hasLiquids = true;
         outputsLiquid = true;
-
-        bottomRegion = Core.atlas.find(name + "-bottom");
 	}
+
+    public void load(){
+        super.load();
+        bottomRegion = Core.atlas.find(name + "-bottom");
+    }
 
     @Override
     public TextureRegion[] icons(){
