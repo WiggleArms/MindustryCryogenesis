@@ -256,7 +256,7 @@ public class Pipe extends Duct{
             
             float actualSpeed = speed;
 
-            if liquids.currentAmount() > 0.0001f) && boostValues.containsKey(liquids.current()){
+            if (liquids.currentAmount() > 0.0001f && boostValues.containsKey(liquids.current())){
                 actualSpeed = speed / boostValues.get(liquids.current());
             }
             
