@@ -76,7 +76,7 @@ public class CryogenesisBlocks{
 	nickelWall, nickelWallLarge,
 	
 	//transport
-	pipe, /*armored-pipe,*/ tunnelPipe, pipeUnloader,
+	pipe, /*armored-pipe,*/ tunnelPipe, pipeRouter, pipeUnloader,
 	
 	//storage
 	coreTerminal,
@@ -253,7 +253,7 @@ public class CryogenesisBlocks{
 
 		pipe = new Pipe("pipe"){{
 			requirements(Category.distribution, with(CryogenesisItems.nickel, 1));
-			health = 75;
+			health = 100;
 			speed = 20f;
 
 			researchCost = with(CryogenesisItems.nickel, 5);
@@ -269,17 +269,26 @@ public class CryogenesisBlocks{
 		*/
 
 		tunnelPipe = new TunnelPipe("tunnel-pipe"){{
-			requirements(Category.distribution, with(CryogenesisItems.nickel, 8));
+			requirements(Category.distribution, with(CryogenesisItems.nickel, 12));
 			range = 4;
-			health = 100;
+			health = 80;
 			speed = 74f;
 			bufferCapacity = 14;
 			solid = false;
 		}};
 
+		pipeRouter = new LiquidRouter("pipe-router"){{
+			requirements(Category.distribution, with(CryogenesisItems.nickel, 3));
+			health = 80;
+			liquidCapacity = 60f;
+			underBullets = true;
+			solid = false;
+			researchCost = with(CryogenesisItems.nickel, 10);
+		}};
+
 		pipeUnloader = new Unloader("pipe-unloader"){{
 			requirements(Category.distribution, with(CryogenesisItems.nickel, 5));
-			health = 100;
+			health = 160;
 			speed = 60f / 15f; //Second value should always be equal to max liquid-boosted Pipe throughput
 			group = BlockGroup.transportation;
 
