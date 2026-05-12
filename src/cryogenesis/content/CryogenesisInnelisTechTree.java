@@ -19,7 +19,7 @@ public class CryogenesisInnelisTechTree{
 
 			node(pipeUnloader, () -> {
 				node(pipe, () -> {
-					node(pipeRouter, () ->{}
+					node(pipeRouter, () -> {
 						node(tunnelPipe, () -> {
 
 						});
