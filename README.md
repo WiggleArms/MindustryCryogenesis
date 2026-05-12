@@ -138,6 +138,8 @@ Tunnel Pipe doesn't need end - push/pull from anything connected<br>
 OR<br>
 Tunnel Pipe directional sprites, looks similar to Pipe
 
+- Pixel-perfect Steam icon, better Sluice icon antialiasing
+
 - Slag-filled Pipes and variants incinerate items
 - Buff Pipe item capacity
 - Fix missing nearby pipe caps when connecting to blendbits == 0
