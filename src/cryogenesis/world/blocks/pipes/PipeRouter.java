@@ -87,12 +87,19 @@ public class PipeRouter extends Router{
 
         @Override
         public void draw(){
+            if(lastItem != null){
+                Draw.z(Layer.blockUnder + 0.1f);
+                Draw.rect(lastItem.fullIcon, x, y, itemSize, itemSize);
+            }
+
+            Draw.z(Layer.blockUnder);
             Draw.rect(bottomRegion, x, y);
 
             if(liquids.currentAmount() > 0.001f){
                 drawTiledFrames(size, x, y, liquidPadding, liquids.current(), liquids.currentAmount() / liquidCapacity);
             }
-
+            
+            Draw.z(Layer.blockUnder + 0.2f);
             Draw.rect(region, x, y);
         }
 
