@@ -321,7 +321,7 @@ public class CryogenesisBlocks{
 			liquidBoostIntensity = 0.5f;
 			researchCost = with(CryogenesisItems.nickel, 10);
 
-			ConsumeLiquid(CryogenesisLiquids.steam, 0.05f).boost();
+			consumeLiquid(CryogenesisLiquids.steam, 0.05f).boost();
 		}};
 
 		coreTerminal = new CoreBlock("core-terminal"){{
