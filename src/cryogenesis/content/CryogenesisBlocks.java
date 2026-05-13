@@ -318,13 +318,13 @@ public class CryogenesisBlocks{
 			requirements(Category.production, with(CryogenesisItems.nickel, 15));
 			health = 360;
 			tier = 2;
-			drillTime = 300f;
+			drillTime = 600f;
 			size = 2;
 			rotateSpeed = -1.5f;
 			liquidBoostIntensity = 1.5f;
 			researchCost = with(CryogenesisItems.nickel, 10);
 
-			consumeLiquid(CryogenesisLiquids.steam, 0.05f).boost();
+			consumeLiquid(CryogenesisLiquids.steam, 2f / 60f).boost();
 		}};
 
 		coreTerminal = new CoreBlock("core-terminal"){{
