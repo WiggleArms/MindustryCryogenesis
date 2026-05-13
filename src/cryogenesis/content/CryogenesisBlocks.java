@@ -3,6 +3,7 @@ package cryogenesis.content;
 import cryogenesis.content.*;
 import cryogenesis.world.blocks.pipes.*;
 import cryogenesis.world.blocks.environment.*;
+import cryogenesis.world.blocks.production.*;
 import cryogenesis.graphics.*;
 //import cryogenesis.world.meta.*;
 
@@ -313,12 +314,14 @@ public class CryogenesisBlocks{
 			researchCost = with(CryogenesisItems.nickel, 10);
 		}};
 
-		mechanicalAuger = new Drill("mechanical-auger"){{
+		mechanicalAuger = new Auger("mechanical-auger"){{
 			requirements(Category.production, with(CryogenesisItems.nickel, 15));
 			health = 360;
-			size = 2;
+			tier = 2;
 			drillTime = 300f;
-			liquidBoostIntensity = 0.5f;
+			size = 2;
+			rotateSpeed = -1.5f;
+			liquidBoostIntensity = 1.5f;
 			researchCost = with(CryogenesisItems.nickel, 10);
 
 			consumeLiquid(CryogenesisLiquids.steam, 0.05f).boost();
