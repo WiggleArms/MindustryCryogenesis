@@ -99,7 +99,7 @@ public class CryogenesisBlocks{
 	//units
 
 	//payloads
-	payloadScrapper
+	scrapper
 
 	//logic
 

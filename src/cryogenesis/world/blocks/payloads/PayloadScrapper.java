@@ -10,6 +10,7 @@ import mindustry.entities.*;
 import mindustry.gen.*;
 import mindustry.graphics.*;
 import mindustry.logic.*;
+import mindustry.types.*;
 import mindustry.ui.*;
 import mindustry.world.blocks.payloads.*;
 
