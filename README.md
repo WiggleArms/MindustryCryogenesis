@@ -84,7 +84,7 @@ A: Yep.
 	- Other liquid boost values (for mixtech)
 	- Liquid booster tooltips
 - Environment Blocks
-	- Nickel Ore
+	- ~~Nickel Ore~~
 		- Revamp Zero progression/tutorial
 	- First campaign map
 - Better mod icon and description
@@ -92,7 +92,7 @@ A: Yep.
 - Handle team icon internally
 - Devastate turret [FAR FUTURE]
 - ~~Fix UI icons~~
-	- Fix Core: Thread UI icon
+	- ~~Fix Core: Thread UI icon~~
 	- ~~Redo UI icons with 6px stroke~~
 - ~~Build Turrets on core units, may require resprite [FUTURE]~~
 - Core: Hub [FAR FUTURE]
@@ -104,7 +104,7 @@ A: Yep.
 - ~~Remove/hide depricated content~~
 - Recolor Innelis meshes
 - Fix missing in-text icons
-- Auger buildings
+- ~~Auger buildings~~
 - ~~Scrapper block~~
 	- ~~Sprite~~
 	- ~~Don't attach to power lines~~
@@ -120,7 +120,7 @@ A: Yep.
 	- Slight location randomization [TBD]
 - Prevent Demise scrap units from despawning on sector capture
 - Campaign difficulty settings [FAR FUTURE]
-- Fix cloud alpha zoom weirdness
+- Fix map view cloud alpha zoom weirdness
 - Add attributes for environment blocks (for mixtech)
 - Improve hot springs liquid shader
 
@@ -186,15 +186,15 @@ Mini-biomes:
 - ~~Laterite deposits~~ (Deprecated)
 - ~~Magma Stone hotspots~~ (Deprecated)
 - Stellarite
-- Hot Springs
+- ~~Hot Springs~~
 
 #### Tiles
 
 - ~~Cryo Ice bubbles instead of partial streaks, greenish tint?~~ (Not added)
 - ~~Magamatic Stone tint changes, flow-style formation~~ (Deprecated)
 - ~~Laterite used in shores biome? Found IRL with "high temperatures and heavy rainfall/dry periods" (https://en.wikipedia.org/wiki/Laterite)~~ (Deprecated)
-- Sulfur and Travertine in Hot Springs
-- [TBD] liquid (Soda/Sluice) in hot springs, inflicts Boiling. Very low viscosity, even less than water.
+- ~~Sulfur and Travertine in Hot Springs~~
+- ~~[TBD] liquid (Soda/Sluice) in hot springs, inflicts Boiling. Very low viscosity, even less than water.~~
 - Stellarite, with Stellarite Shard props
 
 #### Other

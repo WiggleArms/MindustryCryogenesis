@@ -17,10 +17,10 @@ public class CryogenesisInnelisTechTree{
 	public static void load(){
 		CryogenesisPlanets.innelis.techTree = nodeRoot("innelis", coreTerminal, () -> {
 
-			node(pipeUnloader, () -> {
-				node(pipe, () -> {
-					node(pipeRouter, () -> {
-						node(tunnelPipe, () -> {
+			node(pipe, () -> {
+				node(pipeRouter, () -> {
+					node(tunnelPipe, () -> {
+						node(pipeUnloader, () -> {
 
 						});
 					});

@@ -260,14 +260,14 @@ public class CryogenesisBlocks{
 
 		nickelWall = new Wall("nickel-wall"){{
 			requirements(Category.defense, with(CryogenesisItems.nickel, 6));
-			health = 80 * wallHealthMultiplier;
+			health = 160 * wallHealthMultiplier;
 
 			researchCostMultiplier = 0.1f;
 		}};
 
 		nickelWallLarge = new Wall("nickel-wall-large"){{
 			requirements(Category.defense, ItemStack.mult(nickelWall.requirements, 4));
-			health = 80 * 4 * wallHealthMultiplier;
+			health = 160 * 4 * wallHealthMultiplier;
 			size = 2;
 		}};
 
@@ -334,7 +334,7 @@ public class CryogenesisBlocks{
 
 			isFirstTier = true;
 			unitType = CryogenesisUnitTypes.meso;
-			health = 500;
+			health = 1000;
 			itemCapacity = 1000;
 			size = 2;
 
@@ -342,14 +342,14 @@ public class CryogenesisBlocks{
 		}};
 
 		pelt = new ItemTurret("pelt"){{
-			requirements(Category.turret, with(CryogenesisItems.nickel, 50));
+			requirements(Category.turret, with(CryogenesisItems.nickel, 40));
 			
 			ammo(
-				 CryogenesisItems.nickel,  new BasicBulletType(2.5f, 12){{
+				 CryogenesisItems.nickel,  new BasicBulletType(2.5f, 24){{
 					width = 7f;
                     height = 9f;
                     lifetime = 60f;
-                    ammoMultiplier = 3;
+                    ammoMultiplier = 6;
 
                     hitEffect = despawnEffect = Fx.hitBulletColor;
                     hitColor = backColor = trailColor = Pal.copperAmmoBack;
@@ -376,10 +376,11 @@ public class CryogenesisBlocks{
             range = 160;
             shootCone = 15f;
             ammoUseEffect = Fx.casing1;
-            health = 1100;
+            health = 2200;
             inaccuracy = 3f;
             rotateSpeed = 10f;
-            researchCostMultiplier = 0.05f;
+			researchCost = with(CryogenesisItems.nickel, 10);
+            //researchCostMultiplier = 0.05f;
             //coolant = consume(new ConsumeLiquid(Liquids.cryofluid, 15f / 60f));
             depositCooldown = 2.0f;
 		}};

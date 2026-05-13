@@ -14,6 +14,7 @@ public class CryogenesisItems {
 		nickel = new Item("nickel", Color.valueOf("ac8675")){{
 			hardness = 1;
 			cost = 1.2f;
+			healthScaling = 1f;
 		}};
 	}
 }

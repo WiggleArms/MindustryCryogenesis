@@ -30,8 +30,8 @@ public class CryogenesisPlanets{
 			meshLoader = () -> new HexMesh(this, 4);
 			cloudMeshLoader = () -> new MultiMesh(
 				//TODO replace with custom cloud parameters, possibly vary colors
-                new HexSkyMesh(this, 11, 0.15f, 0.13f, 4, CryogenesisPalette.cryoBase.a(0.75f), 2, 0.45f, 0.9f, 0.38f),
-                new HexSkyMesh(this, 1, 0.6f, 0.16f, 4, CryogenesisPalette.cryoBase.a(0.75f), 2, 0.45f, 1f, 0.41f)
+                new HexSkyMesh(this, 11, 0.15f, 0.13f, 4, Color.valueOf("3d5957").a(0.75f), 2, 0.45f, 0.9f, 0.38f),
+                new HexSkyMesh(this, 1, 0.6f, 0.16f, 4, Color.valueOf("446560f").a(0.75f), 2, 0.45f, 1f, 0.41f)
 			);
 
 			launchCapacityMultiplier = 0.1f;
@@ -49,7 +49,7 @@ public class CryogenesisPlanets{
 			};
 			showRtsAIRule = true;
 			iconColor = CryogenesisPalette.cryoBase; //TODO maybe vary these slightly
-			atmosphereColor = CryogenesisPalette.cryoBase; //TODO same
+			atmosphereColor = Color.valueOf("37524e"); //TODO same
 			atmosphereRadIn = -0.01f;
 			atmosphereRadOut = 0.3f;
 			startSector = 6;

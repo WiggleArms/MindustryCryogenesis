@@ -75,7 +75,8 @@ public class CryogenesisUnitTypes{
             rotateSpeed = 8f;
             accel = 0.08f;
             itemCapacity = 20;
-            health = 150f;
+            health = 300f;
+            armor = 3f;
             engineSize = 1.5f;
             engineOffset = 4f;
             wreckSoundVolume = deathSoundVolume = 0.6f;
@@ -111,7 +112,8 @@ public class CryogenesisUnitTypes{
             rotateSpeed = 12f;
             accel = 0.12f;
             itemCapacity = 40;
-            health = 500f;
+            health = 1000f;
+            armor = 6f;
             engineOffset = 6f;
             wreckSoundVolume = deathSoundVolume = 0.9f;
             payloadCapacity = 0.5f * 0.5f * tilesize * tilesize;
@@ -124,8 +126,8 @@ public class CryogenesisUnitTypes{
             treadPullOffset = 6;
             speed = 1f;
             rotateSpeed = 6f;
-            health = 125;
-            armor = 1f;
+            health = 200;
+            armor = 2f;
             itemCapacity = 0;
             floorMultiplier = 0.95f;
             treadRects = new Rect[]{new Rect(-7, -16, 7, 32)};
@@ -147,7 +149,7 @@ public class CryogenesisUnitTypes{
                 //heatColor = Color.valueOf("f9350f");
                 //cooldownTime = 30f;
 
-                bullet = new BasicBulletType(2.5f, 16){{
+                bullet = new BasicBulletType(2.5f, 32){{
                     width = 7f;
                     height = 9f;
                     lifetime = 60f;
@@ -168,7 +170,7 @@ public class CryogenesisUnitTypes{
 
                 bullet = new BulletType(){{
                     spawnUnit = new ScrapUnitType("eluma-scrap"){{
-                        scrapValue = with(Items.scrap, 15, CryogenesisItems.nickel, 1);
+                        scrapValue = with(Items.scrap, 17, CryogenesisItems.nickel, 1);
                         scrapTime = 180f;
                         hitSize = 1f;
                     }};
@@ -264,7 +266,7 @@ public class CryogenesisUnitTypes{
             accel = 0.1f;
             fogRadius = 0f;
             itemCapacity = 30;
-            health = 150f;
+            health = 300f;
             engineOffset = 6f;
             hitSize = 8f;
             alwaysUnlocked = true;
@@ -298,7 +300,7 @@ public class CryogenesisUnitTypes{
                 mirror = false;
                 inaccuracy = 1f;
 
-                bullet = new LaserBulletType(16f){{
+                bullet = new LaserBulletType(32f){{
                     length = 150f;
                     width = 10f;
                     pierceCap = 1;
