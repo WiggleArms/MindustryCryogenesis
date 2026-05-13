@@ -45,7 +45,7 @@ public class Pipe extends Duct{
     public boolean padCorners = true;
     public boolean leaks = true;
 
-    public ObjectMap boostValues = new ObjectMap<Liquid, Float>(){{
+    public ObjectMap<Liquid, Float> boostValues = new ObjectMap<>(){{
         put(Liquids.water, 3.0f);
         put(Liquids.cryofluid, 3.0f);
         put(CryogenesisLiquids.sluice, 1.2f);
