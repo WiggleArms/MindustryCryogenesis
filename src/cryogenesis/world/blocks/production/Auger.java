@@ -5,6 +5,8 @@ import arc.graphics.*;
 import arc.graphics.g2d.*;
 import arc.math.*;
 import arc.math.geom.*;
+import arc.struct.*;
+import arc.util.*;
 import mindustry.graphics.*;
 import mindustry.world.blocks.production.*;
 
@@ -38,7 +40,7 @@ public class Auger extends Drill{
 
             if(drawSpinSprite){
                 float a = Draw.getColorAlpha();
-                r = Mathf.mod(r, 180f);
+                float r = Mathf.mod(r, 180f);
                 Draw.rect(region, x, y, r);
                 Draw.alpha(r / 180f*a);
                 Draw.rect(region, x, y, r - 180f);
