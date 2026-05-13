@@ -1,6 +1,7 @@
 package cryogenesis.world.blocks.pipes;
 
 import cryogenesis.content.CryogenesisBlocks;
+import cryogenesis.content.CryogenesisLiquids;
 
 import arc.*;
 import arc.func.*;
