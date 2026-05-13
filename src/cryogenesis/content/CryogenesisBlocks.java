@@ -4,6 +4,7 @@ import cryogenesis.content.*;
 import cryogenesis.world.blocks.pipes.*;
 import cryogenesis.world.blocks.environment.*;
 import cryogenesis.world.blocks.production.*;
+import cryogenesis.world.blocks.payloads.*;
 import cryogenesis.graphics.*;
 //import cryogenesis.world.meta.*;
 
@@ -383,8 +384,10 @@ public class CryogenesisBlocks{
             depositCooldown = 2.0f;
 		}};
 
-		payloadScrapper = new PayloadDeconstructor("scrapper"){{
+		scrapper = new PayloadScrapper("scrapper"){{
 			requirements(Category.units, with(CryogenesisItems.nickel, 18));
+
+			onlyOutputDefault = true;
 
 			squareSprite = false;
 			regionSuffix = "-dark";
