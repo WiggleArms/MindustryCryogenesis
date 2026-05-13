@@ -43,7 +43,6 @@ public class Auger extends Drill{
                 Draw.alpha(r / 180f*a);
                 Draw.rect(region, x, y, r - 180f);
                 Draw.alpha(a);
-            }
             }else{
                 Draw.rect(rotatorRegion, x, y, timeDrilled * rotateSpeed);
             }
