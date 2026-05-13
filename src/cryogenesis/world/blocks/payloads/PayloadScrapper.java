@@ -3,6 +3,7 @@ package cryogenesis.world.blocks.payloads;
 import arc.*;
 import arc.graphics.g2d.*;
 import arc.math.*;
+import arc.struct.*;
 import arc.util.*;
 import arc.util.io.*;
 import mindustry.content.*;
@@ -13,6 +14,7 @@ import mindustry.graphics.*;
 import mindustry.logic.*;
 import mindustry.types.*;
 import mindustry.ui.*;
+import mindustry.world.*;
 import mindustry.world.blocks.payloads.*;
 
 import static mindustry.Vars.*;
