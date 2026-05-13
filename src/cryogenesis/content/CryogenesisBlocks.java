@@ -52,8 +52,6 @@ public class CryogenesisBlocks{
 
 	public static Block 
 	
-	//test
-	//testWall, 	
 
 	//environment
 
@@ -69,14 +67,26 @@ public class CryogenesisBlocks{
 	//ores
 	oreNickel,
 
+
+	//artificial
+
 	//crafting
 	nickelCompactor,
 
 	//walls
 	nickelWall, nickelWallLarge,
+
+	//defense
 	
 	//transport
 	pipe, /*armored-pipe,*/ tunnelPipe, pipeRouter, pipeUnloader,
+
+	//liquid
+
+	//power
+
+	//production
+	mechanicalAuger,
 	
 	//storage
 	coreTerminal,
@@ -84,8 +94,16 @@ public class CryogenesisBlocks{
 	//turrets
 	pelt,
 
+	//units
+
 	//payloads
-	payloadScrapper;
+	payloadScrapper
+
+	//logic
+
+	//campaign
+
+	;
 
 	public static void load(){
 
@@ -293,6 +311,17 @@ public class CryogenesisBlocks{
 			group = BlockGroup.transportation;
 
 			researchCost = with(CryogenesisItems.nickel, 10);
+		}};
+
+		mechanicalAuger = new Drill("mechanical-auger"){{
+			requirements(Category.production, with(CryogenesisItems.nickel, 15));
+			health = 360;
+			size = 2;
+			drillTime = 300f;
+			liquidBoostIntensity = 0.5f;
+			researchCost = with(CryogenesisItems.nickel, 10);
+
+			ConsumeLiquid(CryogenesisLiquids.steam, 0.05f).boost();
 		}};
 
 		coreTerminal = new CoreBlock("core-terminal"){{
