@@ -31,7 +31,10 @@ public class PayloadScrapper extends PayloadDeconstructor{
 
         @Override
         public void updateTile(){
-            super.super.updateTile();
+            if(payload != null){
+                payload.update(null, this);
+            }
+
             if(items.total() > 0){
                 for(int i = 0; i < dumpRate; i++){
                     dumpAccumulate();
