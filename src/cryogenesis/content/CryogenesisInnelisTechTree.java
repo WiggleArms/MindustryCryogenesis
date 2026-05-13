@@ -27,7 +27,13 @@ public class CryogenesisInnelisTechTree{
 				});
 			});
 
-			node(nickelCompactor);
+			node(scrapper, () -> {
+				node(nickelCompactor, () -> {
+					node(mechanicalAuger, () -> {
+
+					});
+				});
+			});
 
 			node(pelt, () ->{
 				node(nickelWall, () -> {

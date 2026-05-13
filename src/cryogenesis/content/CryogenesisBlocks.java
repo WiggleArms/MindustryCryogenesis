@@ -244,7 +244,7 @@ public class CryogenesisBlocks{
 		oreNickel = new OreBlock("ore-nickel", CryogenesisItems.nickel);
 
 		nickelCompactor = new GenericCrafter("nickel-compactor"){{
-			requirements(Category.crafting, with(Items.scrap, 30));
+			requirements(Category.crafting, with(CryogenesisItems.nickel, 15));
 
 			craftEffect = Fx.pulverizeMedium;
 			outputItem = new ItemStack(CryogenesisItems.nickel, 1);
@@ -254,7 +254,7 @@ public class CryogenesisBlocks{
 
 			consumeItem(Items.scrap, 2);
 
-			researchCost = with(Items.scrap, 50);
+			researchCost = with(CryogenesisItems.nickel, 8);
 		}};
 
 		nickelWall = new Wall("nickel-wall"){{
@@ -315,7 +315,7 @@ public class CryogenesisBlocks{
 		}};
 
 		mechanicalAuger = new Auger("mechanical-auger"){{
-			requirements(Category.production, with(CryogenesisItems.nickel, 15));
+			requirements(Category.production, with(CryogenesisItems.nickel, 24));
 			health = 360;
 			tier = 2;
 			drillTime = 600f;
@@ -384,7 +384,7 @@ public class CryogenesisBlocks{
 		}};
 
 		payloadScrapper = new PayloadDeconstructor("scrapper"){{
-			requirements(Category.units, with(Items.scrap, 30));
+			requirements(Category.units, with(CryogenesisItems.nickel, 18));
 
 			squareSprite = false;
 			regionSuffix = "-dark";
@@ -393,6 +393,8 @@ public class CryogenesisBlocks{
 			deconstructSpeed = 1f;
 			hasPower = false;
 			//flags = EnumSet.of(CryogenesisBlockFlag.unitScrapper);
+
+			researchCost = with(CryogenesisItems.nickel, 10);
 		}};
 	}
 }

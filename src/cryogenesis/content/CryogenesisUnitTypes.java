@@ -255,7 +255,7 @@ public class CryogenesisUnitTypes{
             targetBuildingsMobile = false;
             lowAltitude = true;
             flying = true;
-            mineSpeed = 2f;
+            mineSpeed = 2.5f;
             mineTier = 1;
             buildSpeed = 0.5f;
             drag = 0.05f;
