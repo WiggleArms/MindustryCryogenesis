@@ -29,7 +29,7 @@ public class PayloadScrapper extends PayloadDeconstructor{
 
 	public class PayloadScrapperBuild extends PayloadDeconstructorBuild{
         public Item filteredItem(Item item){
-            if(blockedItems.contains(item) || onlyOutputDefault) return defaultItem;
+            if((blockedItems != null && blockedItems.contains(item)) || onlyOutputDefault) return defaultItem;
             return item;
         }
 
