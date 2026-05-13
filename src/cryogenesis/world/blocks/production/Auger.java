@@ -39,11 +39,12 @@ public class Auger extends Drill{
             }
 
             if(drawSpinSprite){
+                float r = timeDrilled * rotateSpeed;
                 float a = Draw.getColorAlpha();
-                float r = Mathf.mod(r, 180f);
-                Draw.rect(region, x, y, r);
+                r = Mathf.mod(r, 180f);
+                Draw.rect(rotatorRegion, x, y, r);
                 Draw.alpha(r / 180f*a);
-                Draw.rect(region, x, y, r - 180f);
+                Draw.rect(rotatorRegion, x, y, r - 180f);
                 Draw.alpha(a);
             }else{
                 Draw.rect(rotatorRegion, x, y, timeDrilled * rotateSpeed);
