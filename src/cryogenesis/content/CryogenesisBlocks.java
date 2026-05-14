@@ -257,7 +257,15 @@ public class CryogenesisBlocks{
 
 		oreNickel = new OreBlock("ore-nickel", CryogenesisItems.nickel);
 
-		nickelCompactor = new GenericCrafter("nickel-compactor"){{
+		nickelCompactor = new GenericCrafter("nickel-compactor"){
+		
+		@Override
+		public void getDependencies(Cons<UnlockableContent> cons){
+			for(ItemStack stack : requirements) cons.get(stack.item);
+		}
+		
+		
+		{
 			requirements(Category.crafting, with(CryogenesisItems.nickel, 10));
 
 			craftEffect = Fx.pulverizeMedium;
