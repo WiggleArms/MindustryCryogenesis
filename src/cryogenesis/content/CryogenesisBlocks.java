@@ -9,10 +9,10 @@ import cryogenesis.graphics.*;
 //import cryogenesis.world.meta.*;
 
 import arc.*;
+import arc.func.*;
 import arc.graphics.*;
 import arc.math.*;
 import arc.struct.*;
-import arc.util.*;
 //import mindustry.*;
 import mindustry.content.*;
 import mindustry.ctype.UnlockableContent;
