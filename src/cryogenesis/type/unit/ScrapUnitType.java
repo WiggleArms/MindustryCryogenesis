@@ -4,6 +4,7 @@ import cryogenesis.graphics.*;
 import cryogenesis.ai.types.*;
 
 import mindustry.ai.types.*;
+import mindustry.game.*;
 import mindustry.gen.*;
 import mindustry.graphics.*;
 import mindustry.type.*;
