@@ -29,7 +29,7 @@ public class CryogenesisInnelisTechTree{
 
 			node(scrapper, () -> {
 				node(nickelCompactor, () -> {
-					node(mechanicalAuger, () -> {
+					node(mechanicalAuger, Seq.with(new SectorComplete(cryogenesis)), () -> {
 
 					});
 				});
@@ -37,7 +37,7 @@ public class CryogenesisInnelisTechTree{
 
 			node(pelt, () ->{
 				node(nickelWall, () -> {
-					node(nickelWallLarge, () ->{
+					node(nickelWallLarge, () -> {
 
 					});
 				});

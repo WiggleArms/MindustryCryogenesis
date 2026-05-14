@@ -258,7 +258,7 @@ public class CryogenesisBlocks{
 		oreNickel = new OreBlock("ore-nickel", CryogenesisItems.nickel);
 
 		nickelCompactor = new GenericCrafter("nickel-compactor"){{
-			requirements(Category.crafting, with(CryogenesisItems.nickel, 15));
+			requirements(Category.crafting, with(CryogenesisItems.nickel, 10));
 
 			craftEffect = Fx.pulverizeMedium;
 			outputItem = new ItemStack(CryogenesisItems.nickel, 1);
@@ -268,20 +268,22 @@ public class CryogenesisBlocks{
 
 			consumeItem(Items.scrap, 2);
 
-			researchCost = with(CryogenesisItems.nickel, 8);
+			researchCost = with(CryogenesisItems.nickel, 4);
 		}};
 
 		nickelWall = new Wall("nickel-wall"){{
 			requirements(Category.defense, with(CryogenesisItems.nickel, 6));
 			health = 160 * wallHealthMultiplier;
 
-			researchCostMultiplier = 0.1f;
+			researchCost = with(CryogenesisItems.nickel, 3);
 		}};
 
 		nickelWallLarge = new Wall("nickel-wall-large"){{
 			requirements(Category.defense, ItemStack.mult(nickelWall.requirements, 4));
 			health = 160 * 4 * wallHealthMultiplier;
 			size = 2;
+
+			researchCost = with(CryogenesisItems.nickel, 12);
 		}};
 
 		pipe = new Pipe("pipe"){{
@@ -308,6 +310,8 @@ public class CryogenesisBlocks{
 			speed = 74f;
 			bufferCapacity = 14;
 			solid = false;
+
+			researchCost = with(CryogenesisItems.nickel, 20);
 		}};
 
 		pipeRouter = new PipeRouter("pipe-router"){{
@@ -336,7 +340,7 @@ public class CryogenesisBlocks{
 			size = 2;
 			rotateSpeed = -1.5f;
 			liquidBoostIntensity = 1.5f;
-			researchCost = with(CryogenesisItems.nickel, 10);
+			researchCost = with(CryogenesisItems.nickel, 12);
 
 			consumeLiquid(CryogenesisLiquids.steam, 2f / 60f).boost();
 		}};
@@ -399,7 +403,7 @@ public class CryogenesisBlocks{
 		}};
 
 		scrapper = new PayloadScrapper("scrapper"){{
-			requirements(Category.units, with(CryogenesisItems.nickel, 18));
+			requirements(Category.units, with(CryogenesisItems.nickel, 15));
 
 			onlyOutputDefault = true;
 
@@ -411,7 +415,7 @@ public class CryogenesisBlocks{
 			hasPower = false;
 			//flags = EnumSet.of(CryogenesisBlockFlag.unitScrapper);
 
-			researchCost = with(CryogenesisItems.nickel, 10);
+			researchCost = with(CryogenesisItems.nickel, 3);
 		}};
 	}
 }

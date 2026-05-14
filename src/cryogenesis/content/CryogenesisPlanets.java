@@ -60,6 +60,7 @@ public class CryogenesisPlanets{
 			allowLaunchToNumbered = false; //Re-enable once map is added
 
 			unlockedOnLand.add(CryogenesisBlocks.coreTerminal);
+			unlockedOnLand.add(Items.scrap);
 		}};
 	}
 }
