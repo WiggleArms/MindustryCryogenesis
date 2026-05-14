@@ -6,12 +6,12 @@ import mindustry.type.*;
 import cryogenesis.content.CryogenesisPlanets;
 
 public class CryogenesisSectorPresets{
-	public static SectorPreset zero;
+	public static SectorPreset cryogenesis;
 
 	public static void load(){
-		zero = new SectorPreset("zero", CryogenesisPlanets.innelis, 6){{
+		cryogenesis = new SectorPreset("cryogenesis", CryogenesisPlanets.innelis, 6){{
 			alwaysUnlocked = true;
-			captureWave = 10;
+			captureWave = 5;
 			difficulty = 1;
 			overrideLaunchDefaults = true;
 			noLighting = true;
