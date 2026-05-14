@@ -66,6 +66,9 @@ public class CryogenesisBlocks{
 	//walls
 	cryoIceWall, rockWall, darkIceWall, cryoSnowWall, duneSandWall, duneStoneWall, sulfurWall, travertineWall,
 
+	//props
+	cryoSnowBoulder, rockBoulder,
+
 	//ores
 	oreNickel,
 
@@ -241,6 +244,16 @@ public class CryogenesisBlocks{
 		travertineWall = new StaticWall("travertine-wall");
 
 		((ShallowEffectLiquid)sulfurSluice).set(CryogenesisBlocks.shallowSluice, CryogenesisBlocks.sulfur);
+
+		cryoSnowBoulder = new Prop("cryo-snow-boulder"){{
+			variants = 2;
+			cryoSnow.asFloor().decoration = this;
+		}};
+
+		rockBoulder = new Prop("rock-boulder"){{
+			variants = 2;
+			rock.asFloor().decoration = this;
+		}};
 
 		oreNickel = new OreBlock("ore-nickel", CryogenesisItems.nickel);
 
