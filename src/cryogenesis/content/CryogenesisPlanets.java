@@ -17,6 +17,7 @@ import mindustry.type.*;
 import mindustry.world.*;
 import mindustry.world.meta.*;
 import mindustry.content.Planets;
+import mindustry.content.Items;
 
 import cryogenesis.content.CryogenesisBlocks;
 import cryogenesis.graphics.CryogenesisPalette;
