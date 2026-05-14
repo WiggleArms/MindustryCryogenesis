@@ -10,6 +10,7 @@ import mindustry.type.*;
 import mindustry.world.meta.*;
 
 import static mindustry.type.ItemStack.*;
+import static mindustry.Vars.*;
 
 public class ScrapUnitType extends UnitType{
 
@@ -48,4 +49,13 @@ public class ScrapUnitType extends UnitType{
 		buildTime = scrapTime;
 		return scrapValue;
 	}
+
+    @Override
+    public void update(Unit unit){
+        //change to player team if sector is captured
+        if(unit.team.isOnlyAI() && state.isCampaign() && state.getSector().isCaptured()){
+            //hopefully its fine to hardcode this
+            unit.team = Team.sharded;
+        }
+    }
 }

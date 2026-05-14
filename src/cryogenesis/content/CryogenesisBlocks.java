@@ -356,7 +356,7 @@ public class CryogenesisBlocks{
 		}};
 
 		coreTerminal = new CoreBlock("core-terminal"){{
-			requirements(Category.effect, with(CryogenesisItems.nickel, 1000, Items.silicon, 500));
+			requirements(Category.effect, with(CryogenesisItems.nickel, 100));
 			alwaysUnlocked = true;
 
 			isFirstTier = true;
@@ -395,7 +395,7 @@ public class CryogenesisBlocks{
 			outlineColor = CryogenesisPalette.ironOutline;
 			squareSprite = false;
 			size = 2;
-
+			maxAmmo = 40;
             shootSound = Sounds.shootStell;
             recoil = 2f;
             shootY = 7f;
@@ -413,7 +413,7 @@ public class CryogenesisBlocks{
 		}};
 
 		scrapper = new PayloadScrapper("scrapper"){{
-			requirements(Category.units, with(CryogenesisItems.nickel, 15));
+			requirements(Category.units, with(CryogenesisItems.nickel, 18));
 
 			onlyOutputDefault = true;
 
@@ -425,7 +425,7 @@ public class CryogenesisBlocks{
 			hasPower = false;
 			//flags = EnumSet.of(CryogenesisBlockFlag.unitScrapper);
 
-			researchCost = with(CryogenesisItems.nickel, 3);
+			researchCost = with(CryogenesisItems.nickel, 7);
 		}};
 	}
 }
