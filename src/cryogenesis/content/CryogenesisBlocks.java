@@ -304,7 +304,7 @@ public class CryogenesisBlocks{
 		*/
 
 		tunnelPipe = new TunnelPipe("tunnel-pipe"){{
-			requirements(Category.distribution, with(CryogenesisItems.nickel, 12));
+			requirements(Category.distribution, with(CryogenesisItems.nickel, 8));
 			range = 4;
 			health = 80;
 			speed = 74f;
@@ -333,7 +333,7 @@ public class CryogenesisBlocks{
 		}};
 
 		mechanicalAuger = new Auger("mechanical-auger"){{
-			requirements(Category.production, with(CryogenesisItems.nickel, 24));
+			requirements(Category.production, with(CryogenesisItems.nickel, 14));
 			health = 360;
 			tier = 2;
 			drillTime = 600f;
