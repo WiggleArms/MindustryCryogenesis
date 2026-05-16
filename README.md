@@ -123,6 +123,7 @@ A: Yep.
 - Fix map view cloud alpha zoom weirdness
 - Add attributes for environment blocks (for mixtech)
 - Improve hot springs liquid shader
+- Auger background uses floor color
 
 #### Sprites
 - Eluma turret too thin?

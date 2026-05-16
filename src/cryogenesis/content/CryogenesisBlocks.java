@@ -5,6 +5,7 @@ import cryogenesis.world.blocks.pipes.*;
 import cryogenesis.world.blocks.environment.*;
 import cryogenesis.world.blocks.production.*;
 import cryogenesis.world.blocks.payloads.*;
+import cryogenesis.world.blocks.storage.*;
 import cryogenesis.graphics.*;
 //import cryogenesis.world.meta.*;
 
@@ -301,7 +302,7 @@ public class CryogenesisBlocks{
 			health = 100;
 			speed = 20f;
 
-			researchCost = with(CryogenesisItems.nickel, 5);
+			researchCost = with(CryogenesisItems.nickel, 3);
 		}};
 
 		/*
@@ -355,7 +356,7 @@ public class CryogenesisBlocks{
 			consumeLiquid(CryogenesisLiquids.steam, 2f / 60f).boost();
 		}};
 
-		coreTerminal = new CoreBlock("core-terminal"){{
+		coreTerminal = new SmallCoreBlock("core-terminal"){{
 			requirements(Category.effect, with(CryogenesisItems.nickel, 100));
 			alwaysUnlocked = true;
 
@@ -364,6 +365,8 @@ public class CryogenesisBlocks{
 			health = 1000;
 			itemCapacity = 1000;
 			size = 2;
+
+			thrusterLength = 10f/4f;
 
 			unitCapModifier = 4;
 		}};

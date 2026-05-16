@@ -1,5 +1,7 @@
 package cryogenesis.maps.planet;
 
+import cryogenesis.graphics.CryogenesisPalette;
+
 import arc.graphics.*;
 import arc.math.*;
 import arc.math.geom.*;
@@ -14,7 +16,7 @@ import mindustry.world.*;
 import static mindustry.Vars.*;
 
 public class InnelisPlanetGenerator extends PlanetGenerator{
-	Color c1 = Color.valueOf("3f5a54ff"), c2 = Color.valueOf("6ecdecff");
+	Color c1 = new Color().set(CryogenesisPalette.cryoBase).lerp(Color.black, 0.5f), c2 = new Color().set(CryogenesisPalette.cryoBase).lerp(Color.black, 0.75f);
 
 	@Override
 	public float getHeight(Vec3 position){

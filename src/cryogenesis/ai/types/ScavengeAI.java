@@ -52,7 +52,7 @@ public class ScavengeAI extends AIController{
 			// occasional enemy check
 			if(timer.get(timerTarget4, 40)){
 				avoid = target(unit.x, unit.y, fleeRange, true, true);
-				Log.info("Enemy check: @", avoid);
+				//Log.info("Enemy check: @", avoid);
 			}
 
 			//fly away if enemy
