@@ -365,3 +365,4 @@ FodyWeavers.xsd
 # Gradle
 .gradle/
 build/
+/.vs/slnx.sqlite
