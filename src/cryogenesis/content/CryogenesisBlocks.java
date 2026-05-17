@@ -421,7 +421,6 @@ public class CryogenesisBlocks{
 			onlyOutputDefault = true;
 
 			squareSprite = false;
-			regionSuffix = "-dark";
 			itemCapacity = 25;
 			size = 3;
 			deconstructSpeed = 1f;

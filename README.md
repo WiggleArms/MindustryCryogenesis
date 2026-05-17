@@ -135,6 +135,7 @@ A: Yep.
 - ~~Sluice liquid sprite~~
 - ~~Steam sprite~~ (Might need fixing)
 - Change Sluice color, currently too close to cryofluid
+- Fix crispy pelt ui icon
 
 ### Wishlist:
 
