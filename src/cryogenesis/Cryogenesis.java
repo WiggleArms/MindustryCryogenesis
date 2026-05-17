@@ -51,7 +51,7 @@ public class Cryogenesis extends Mod {
 
     public Cryogenesis(){
         Events.on(EventType.ClientLoadEvent.class, event -> {
-            Log.info("Beginning Cryogenesis emoji registration");
+            //Log.info("Beginning Cryogenesis emoji registration");
             ContentType[] types = {ContentType.liquid, ContentType.item, ContentType.block, ContentType.status, ContentType.unit};
             int startChar = 0xE000 + 1;
 
@@ -63,7 +63,7 @@ public class Cryogenesis extends Mod {
                         Fonts.registerIcon(u.name, u.uiIcon instanceof AtlasRegion atlas ? atlas.name : u.name, id, u.uiIcon);
 
                         startChar ++;
-                        Log.info("Registered emoji for @: @", u.name, Integer.toHexString(id));
+                        //Log.info("Registered emoji for @: @", u.name, Integer.toHexString(id));
                     }
                 }
             }

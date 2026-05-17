@@ -11,7 +11,7 @@ public class CryogenesisLiquids{
 	public static void load(){
 
 		sluice = new Liquid("sluice", Color.valueOf("7fa7c8")){{
-			heatCapacity = 0.3f;
+			heatCapacity = 0.2f;
 			viscosity = 0.4f;
 			temperature = 0.4f;
 			effect = CryogenesisStatusEffects.boiling;

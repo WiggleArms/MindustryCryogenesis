@@ -44,7 +44,11 @@ public class CryogenesisInnelisTechTree{
 			});
 
 			node(cryogenesis, () -> {
+				/*prep for upcoming sectors
+				node(zero, Seq.with(new SectorComplete(cryogenesis)), () -> {
 
+				});
+				*/
 			});
 
 			nodeProduce(CryogenesisItems.nickel, () -> {

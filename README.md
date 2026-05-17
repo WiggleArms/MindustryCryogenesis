@@ -21,7 +21,7 @@ v0.1.0 - Preliminary .java testing
 
 v0.6.0 - Planet addition
 
-v0.?.0 - Start adding Campaign maps
+v0.10.0 - Start adding Campaign maps
 
 v1.0.0 - Initial release of Cryogenesis. Mod will be playable, but probably won't include higher tier content.
 
@@ -83,13 +83,14 @@ A: Yep.
 	- Same for variants
 	- Other liquid boost values (for mixtech)
 	- Liquid booster tooltips
-- Environment Blocks
+- ~~Environment Blocks~~
 	- ~~Nickel Ore~~
-		- Revamp Zero progression/tutorial
+		- ~~Revamp Zero progression/tutorial~~
 	- First campaign map
 - Better mod icon and description
 	- Polish README
 - Handle team icon internally
+	- Team icon outline
 - Devastate turret [FAR FUTURE]
 - ~~Fix UI icons~~
 	- ~~Fix Core: Thread UI icon~~
@@ -103,7 +104,7 @@ A: Yep.
 - Giant Nickel Wall [FUTURE, TBD]
 - ~~Remove/hide depricated content~~
 - Recolor Innelis meshes
-- Fix missing in-text icons
+- ~~Fix missing in-text icons~~
 - ~~Auger buildings~~
 - ~~Scrapper block~~
 	- ~~Sprite~~
@@ -118,12 +119,12 @@ A: Yep.
 - Wind turbine buildings [FUTURE]
 - ~~Scrap spawner weapon position~~
 	- Slight location randomization [TBD]
-- Prevent Demise scrap units from despawning on sector capture
+- ~~Prevent Demise scrap units from despawning on sector capture~~
 - Campaign difficulty settings [FAR FUTURE]
-- Fix map view cloud alpha zoom weirdness
+- ~~Fix map view cloud alpha zoom weirdness~~
 - Add attributes for environment blocks (for mixtech)
 - Improve hot springs liquid shader
-- Auger background uses floor color
+- Auger background uses floor color?
 
 #### Sprites
 - Eluma turret too thin?
@@ -250,6 +251,7 @@ Insulation used for water-related blocks and insulated walls (possibly power blo
 ## Trvia
 - The Lathe's sprite is a rework of the Meso's original sprite
 - Scrap resources on Innelis were originally deposited directly into the core before the introduction of the scrapping system
-- The first sector added to Innelis was Zero, which will be replaced with Cryogenesis before the v1.0.0 release
+- Cryogenesis (sector) replaced a placeholder sector named "Zero" that was used for early development
+	- Attempting to play Zero will crash the game, since the map references the now-renamed Core: Thread
 - Sluice was originally named "Soda" and is a mineral-rich hydrocarbon liquid rather than water
-- Similarly, Steam is not water vapor, despite its name
+	- Similarly, Steam is not water vapor, despite its name
