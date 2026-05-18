@@ -6,6 +6,7 @@ import cryogenesis.world.blocks.environment.*;
 import cryogenesis.world.blocks.production.*;
 import cryogenesis.world.blocks.payloads.*;
 import cryogenesis.world.blocks.storage.*;
+import cryogenesis.world.blocks.power.*;
 import cryogenesis.graphics.*;
 //import cryogenesis.world.meta.*;
 
@@ -92,6 +93,7 @@ public class CryogenesisBlocks{
 	//liquid
 
 	//power
+	wire,
 
 	//production
 	mechanicalAuger,
@@ -341,6 +343,11 @@ public class CryogenesisBlocks{
 			group = BlockGroup.transportation;
 
 			researchCost = with(CryogenesisItems.nickel, 10);
+		}};
+
+		wire = new Wire("wire"){{
+			requirements(Category.power, with(CryogenesisItems.nickel, 2));
+			researchCost = with(CryogenesisItems.nickel, 5);
 		}};
 
 		mechanicalAuger = new Auger("mechanical-auger"){{

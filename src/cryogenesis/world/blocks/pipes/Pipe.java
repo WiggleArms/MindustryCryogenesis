@@ -130,7 +130,7 @@ public class Pipe extends Duct{
 
     @Override
     public TextureRegion[] icons(){
-        return new TextureRegion[]{Core.atlas.find("-bottom", "duct-bottom"), topRegions[0]};
+        return new TextureRegion[]{Core.atlas.find(name + "-bottom", "duct-bottom"), topRegions[0]};
     }
 
     public static void drawTiledFrames(int size, float x, float y, float padding, Liquid liquid, float alpha){
