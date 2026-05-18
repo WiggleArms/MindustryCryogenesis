@@ -79,7 +79,7 @@ public class CryogenesisBlocks{
 	//artificial
 
 	//crafting
-	nickelCompactor,
+	nickelCompactor, //siliconReducer, powderizer,
 
 	//walls
 	nickelWall, nickelWallLarge,
@@ -105,7 +105,7 @@ public class CryogenesisBlocks{
 	//units
 
 	//payloads
-	scrapper
+	scrapper, roverErector, droneErector, vesselErector
 
 	//logic
 
@@ -428,6 +428,38 @@ public class CryogenesisBlocks{
 			//flags = EnumSet.of(CryogenesisBlockFlag.unitScrapper);
 
 			researchCost = with(CryogenesisItems.nickel, 7);
+		}};
+
+		roverErector = new UnitFactory("rover-erector"){{
+			requirements(Category.units, with(CryogenesisItems.nickel, 10, Items.silicon, 10));
+			plans = Seq.with(
+				new UnitPlan(CryogenesisUnitTypes.eluma, 60f * 15f, with(Items.silicon, 10, CryogenesisItems.nickel, 10))
+				//new UnitPlan(CryogenesisUnitTypes.t1walker, 60f * 20f, with(Items.silicon, 10, CryogenesisItems.nickel, 10))
+			);
+			size = 3;
+			consumePower(45f / 60f);
+			researchCost = with(CryogenesisItems.nickel, 7, Items.silicon, 7);
+		}};
+
+		droneErector = new UnitFactory("drone-erector"){{
+			requirements(Category.units, with(CryogenesisItems.nickel, 10, Items.silicon, 10));
+			plans = Seq.with(
+				new UnitPlan(CryogenesisUnitTypes.vice, 60f * 20f, with(Items.silicon, 10, CryogenesisItems.nickel, 10))
+				//new UnitPlan(CryogenesisUnitTypes.fluctus, 60f * 25f, with(Items.silicon, 10, CryogenesisItems.nickel, 10))
+			);
+			size = 3;
+			consumePower(45f / 60f);
+			researchCost = with(CryogenesisItems.nickel, 7, Items.silicon, 7);
+		}};
+
+		vesselErector = new UnitFactory("vessel-erector"){{
+			requirements(Category.units, with(CryogenesisItems.nickel, 10, Items.silicon, 10));
+			//plans = Seq.with(
+				//new UnitPlan(CryogenesisUnitTypes.t1cruiser, 60f * 25f, with(Items.silicon, 10, CryogenesisItems.nickel, 10))
+			//);
+			size = 3;
+			consumePower(45f / 60f);
+			researchCost = with(CryogenesisItems.nickel, 7, Items.silicon, 7);
 		}};
 	}
 }

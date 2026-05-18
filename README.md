@@ -242,10 +242,15 @@ Cores: Terminal, Hub, Nexus
 Unit lines:
 - Light ground "Rollers": Eluma -> Estena -> Paxo -> Glomeris -> Eleon
 - Heavy ground "Walkers": ??? -> ??? -> ??? -> ??? -> ??? -> ???
-- Air assault "Flyers(?)": Fluctus -> Cavum -> Murus -> Asperitas -> Arcus
+- Air assault "Floater": Fluctus -> Cavum -> Murus -> Asperitas -> Arcus
 - Air support "Hoverers": Vise -> Lathe -> Gimbal -> Gyro -> Derrick
-- Naval "Floaters": ??? -> ??? -> ??? -> ??? -> ???
+- Naval "Cruisers": ??? -> ??? -> ??? -> ??? -> ???
 - Core units: Meso -> Iono -> Exo
+
+- Assault units (everything but air support and core units) do NOT emit light. Support units emit large amounts of light, core units emit small amounts of light.
+	- This way enemy 'sneak attacks' are possible, but the player can use support units to see what they're doing on attack.
+	- Spotlight turret-like block and area light block?
+	- Weapons fire will still emit light, so combat is visible. Plus, it looks cool.
 
 Insulation used for water-related blocks and insulated walls (possibly power blocks and wires too?)
 
