@@ -6,7 +6,6 @@ import cryogenesis.world.blocks.environment.*;
 import cryogenesis.world.blocks.production.*;
 import cryogenesis.world.blocks.payloads.*;
 import cryogenesis.world.blocks.storage.*;
-import cryogenesis.world.blocks.power.*;
 import cryogenesis.graphics.*;
 //import cryogenesis.world.meta.*;
 
@@ -16,6 +15,7 @@ import arc.graphics.*;
 import arc.math.*;
 import arc.struct.*;
 //import mindustry.*;
+import mindustry.core.*;
 import mindustry.content.*;
 import mindustry.ctype.UnlockableContent;
 import mindustry.entities.*;
@@ -30,6 +30,7 @@ import mindustry.gen.*;
 import mindustry.graphics.*;
 import mindustry.type.*;
 import mindustry.type.unit.*;
+import mindustry.ui.*;
 import mindustry.world.*;
 import mindustry.world.blocks.*;
 import mindustry.world.blocks.campaign.*;
@@ -80,7 +81,7 @@ public class CryogenesisBlocks{
 	//artificial
 
 	//crafting
-	nickelCompactor, //siliconReducer, powderizer,
+	nickelCompactor, powderizer,
 
 	//walls
 	nickelWall, nickelWallLarge,
@@ -93,7 +94,6 @@ public class CryogenesisBlocks{
 	//liquid
 
 	//power
-	wire,
 
 	//production
 	mechanicalAuger,
@@ -284,6 +284,22 @@ public class CryogenesisBlocks{
 			researchCost = with(CryogenesisItems.nickel, 4);
 		}};
 
+		powderizer = new GenericCrafter("powderizer"){{
+			requirements(Category.crafting, with(CryogenesisItems.nickel, 8));
+			craftEffect = Fx.pulverizeMedium;
+			outputItem = new ItemStack(Items.sand, 1);
+			craftTime = 15f;
+			size = 2;
+			hasItems = hasPower = true;
+			researchCost = with(CryogenesisItems.nickel, 4); //TODO: Change
+			drawer = new DrawMulti(new DrawDefault(), new DrawRegion("-rotator"){{
+				spinSprite = true;
+				rotateSpeed = -3f;
+			}});
+			consumeItem(Items.scrap, 1);
+			consumePower(90f / 60f);
+		}};
+
 		nickelWall = new Wall("nickel-wall"){{
 			requirements(Category.defense, with(CryogenesisItems.nickel, 6));
 			health = 160 * wallHealthMultiplier;
@@ -343,11 +359,6 @@ public class CryogenesisBlocks{
 			group = BlockGroup.transportation;
 
 			researchCost = with(CryogenesisItems.nickel, 10);
-		}};
-
-		wire = new Wire("wire"){{
-			requirements(Category.power, with(CryogenesisItems.nickel, 2));
-			researchCost = with(CryogenesisItems.nickel, 5);
 		}};
 
 		mechanicalAuger = new Auger("mechanical-auger"){{
@@ -444,7 +455,7 @@ public class CryogenesisBlocks{
 				//new UnitPlan(CryogenesisUnitTypes.t1walker, 60f * 20f, with(Items.silicon, 10, CryogenesisItems.nickel, 10))
 			);
 			size = 3;
-			consumePower(45f / 60f);
+			consumePower(120f / 60f);
 			researchCost = with(CryogenesisItems.nickel, 7, Items.silicon, 7);
 		}};
 
@@ -455,7 +466,7 @@ public class CryogenesisBlocks{
 				//new UnitPlan(CryogenesisUnitTypes.fluctus, 60f * 25f, with(Items.silicon, 10, CryogenesisItems.nickel, 10))
 			);
 			size = 3;
-			consumePower(45f / 60f);
+			consumePower(120f / 60f);
 			researchCost = with(CryogenesisItems.nickel, 7, Items.silicon, 7);
 		}};
 
@@ -465,7 +476,7 @@ public class CryogenesisBlocks{
 				//new UnitPlan(CryogenesisUnitTypes.t1cruiser, 60f * 25f, with(Items.silicon, 10, CryogenesisItems.nickel, 10))
 			//);
 			size = 3;
-			consumePower(45f / 60f);
+			consumePower(120f / 60f);
 			researchCost = with(CryogenesisItems.nickel, 7, Items.silicon, 7);
 		}};
 	}

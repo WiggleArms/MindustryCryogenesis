@@ -125,6 +125,7 @@ A: Yep.
 - Add attributes for environment blocks (for mixtech)
 - Improve hot springs liquid shader
 - Auger background uses floor color?
+- Rework Wire (new sprite, new tiling if needed, maybe new concept entirely)
 
 #### Sprites
 - Eluma turret too thin?
