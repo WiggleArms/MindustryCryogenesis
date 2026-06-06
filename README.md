@@ -144,6 +144,8 @@ Tunnel Pipe doesn't need end - push/pull from anything connected<br>
 OR<br>
 Tunnel Pipe directional sprites, looks similar to Pipe
 
+Pipes allow backflow as well, liquid-filled pipe network setup/changes are a nightmare
+
 - Pixel-perfect Steam icon, better Sluice icon antialiasing
 
 - Slag-filled Pipes and variants incinerate items

@@ -45,7 +45,7 @@ public class CryogenesisPlanets{
 			ruleSetter = r -> {
 				r.waveTeam = Team.green;
 				r.placeRangeCheck = false;
-				r.showSpawns = false;
+				r.hideSpawns = true;
 				r.coreDestroyClear = true;
 			};
 			showRtsAIRule = true;

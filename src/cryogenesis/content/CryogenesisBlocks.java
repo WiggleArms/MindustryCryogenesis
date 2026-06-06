@@ -81,7 +81,7 @@ public class CryogenesisBlocks{
 	//artificial
 
 	//crafting
-	nickelCompactor, powderizer,
+	nickelCompactor, siliconReducer, powderizer,
 
 	//walls
 	nickelWall, nickelWallLarge,
@@ -282,6 +282,18 @@ public class CryogenesisBlocks{
 			consumeItem(Items.scrap, 2);
 
 			researchCost = with(CryogenesisItems.nickel, 4);
+		}};
+
+		siliconReducer = new InternalHeatCrafter("silicon-reducer"){{
+			requirements(Category.crafting, with(CryogenesisItems.nickel, 12));
+			craftEffect = Fx.pulverizeMedium;
+			outputItem = new ItemStack(Items.silicon, 1);
+			craftTime = 50f;
+			size = 2;
+			hasItems = true;
+			researchCost = with(CryogenesisItems.nickel, 5); //TODO: Change
+			consumeItems(with(Items.scrap, 2, Items.sand, 1));
+			consumePower(15f / 60f);
 		}};
 
 		powderizer = new GenericCrafter("powderizer"){{
