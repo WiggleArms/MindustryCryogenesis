@@ -7,6 +7,7 @@ import cryogenesis.world.blocks.production.*;
 import cryogenesis.world.blocks.payloads.*;
 import cryogenesis.world.blocks.storage.*;
 import cryogenesis.world.blocks.power.*;
+import cryogenesis.world.draw.*;
 import cryogenesis.graphics.*;
 //import cryogenesis.world.meta.*;
 
@@ -286,7 +287,7 @@ public class CryogenesisBlocks{
 			researchCost = with(CryogenesisItems.nickel, 4);
 		}};
 
-		siliconReducer = new InternalHeatCrafter("silicon-reducer"){{
+		siliconReducer = new GenericCrafter("silicon-reducer"){{
 			requirements(Category.crafting, with(CryogenesisItems.nickel, 12));
 			craftEffect = Fx.pulverizeMedium;
 			outputItem = new ItemStack(Items.silicon, 1);
@@ -294,6 +295,7 @@ public class CryogenesisBlocks{
 			size = 2;
 			hasItems = true;
 			researchCost = with(CryogenesisItems.nickel, 5); //TODO: Change
+			drawer = new DrawMulti(new DrawDefault(), new DrawInternalHeat());
 			consumeItems(with(Items.scrap, 2, Items.sand, 1));
 			consumePower(15f / 60f);
 		}};
