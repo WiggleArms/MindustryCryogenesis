@@ -49,6 +49,7 @@ public class CryogenesisPlanets{
 				r.coreDestroyClear = true;
 			};
 			showRtsAIRule = true;
+			allowCampaignRules = true;
 			iconColor = CryogenesisPalette.cryoBase; //TODO maybe vary these slightly
 			atmosphereColor = new Color().set(CryogenesisPalette.cryoBase).lerp(Color.black, 0.5f); //TODO same
 			atmosphereRadIn = -0.01f;

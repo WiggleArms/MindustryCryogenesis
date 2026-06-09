@@ -38,8 +38,7 @@ public class Pipe extends Duct{
     
     //public Color botColor = Color.valueOf("2c2d38");
 
-    public TextureRegion liquidRegion;
-    public TextureRegion capRegion;
+    public TextureRegion liquidRegion, capRegion, oppositeCapRegion;
     
     public TextureRegion[][][] rotateRegions;
 
@@ -67,7 +66,8 @@ public class Pipe extends Duct{
     public void load(){
         super.load();
         liquidRegion = Core.atlas.find(name + "-liquid", "conduit-liquid");
-        capRegion = Core.atlas.find(name + "-cap", "conduit-cap");
+        capRegion = Core.atlas.find(name + "-cap");
+        oppositeCapRegion = Core.atlas.find(name + "-cap-opposite");
 
         rotateRegions = new TextureRegion[4][2][animationFrames];
 
@@ -178,6 +178,9 @@ public class Pipe extends Duct{
         public float smoothLiquid;
         //public int blendbits, xscl, yscl, blending;
         public boolean capped, backCapped = false;
+        public int capping;
+
+        public Building prev;
         
         @Override
         public void draw(){
@@ -211,8 +214,19 @@ public class Pipe extends Duct{
 
             Draw.z(Layer.blockUnder + 0.25f);
 
-            if(capped && capRegion.found()) Draw.rect(capRegion, x, y, rotdeg());
-            if(backCapped && capRegion.found()) Draw.rect(capRegion, x, y, rotdeg() + 180);
+            if(blendbits == 0){
+                if(capped && capRegion.found()) Draw.rect(capRegion, x, y, rotdeg());
+                if(backCapped && capRegion.found()) Draw.rect(capRegion, x, y, rotdeg() + 180);
+            } else {
+                Log.info("Gonna attempt this thing with @", capping);
+                for(int i = 0; i < 4; i++){
+                    if((capping & (1 << i)) != 0){
+                        int dir = r - i;
+                        Draw.rect(oppositeCapRegion, x, y, i == 0 ? r * 90f : dir * 90f);
+                        Log.info("Look, I'm rendering!");
+                    }
+                }
+            }
         }
 
         protected void drawAt(float x, float y, int bits, int rotation, SliceMode slice){
@@ -286,16 +300,25 @@ public class Pipe extends Duct{
         }
 
         boolean blockRequiresCap(Building b){
+            /*
             boolean curvedPipe = b instanceof PipeBuild d && (d.rotation != this.rotation || d.blendbits != 0);
             boolean nonPipe = b != null && !(b instanceof PipeBuild) && b.block.squareSprite;
             return curvedPipe || nonPipe;
+            */
+            return b != null && !(b instanceof PipeBuild) && b.block.squareSprite;
         }
 
         @Override
         public void onProximityUpdate(){
-            super.onProximityUpdate();
+            int[] bits = buildBlending(tile, rotation, null, true);
+            blendbits = bits[0];
+            xscl = bits[1];
+            yscl = bits[2];
+            capping = bits[3];
+            blending = bits[4];
 
-            Building next = front(), prev = back();
+            next = front();
+            prev = back();
 
             nextPipe = next instanceof PipeBuild d ? d : null;
             prevPipe = prev instanceof PipeBuild d ? d : null;
