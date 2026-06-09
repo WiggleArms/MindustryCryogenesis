@@ -174,6 +174,38 @@ public class Pipe extends Duct{
         }
     }
 
+    //custom pseudoblending for opposite caps
+
+    public boolean caps(Tile tile, int rotation, int otherx, int othery, int otherrot, Block otherblock){
+        return blends(tile, rotation, otherx, othery, otherrot, otherblock) && (otherblock instanceof Pipe || !otherblock.squareSprite);
+    }
+
+    public boolean caps(Tile tile, int rotation, int direction){
+        Building other = tile.nearbyBuild(Mathf.mod(rotation - direction, 4));
+        return other != null && other.team == tile.team() && caps(tile, rotation, other.tileX(), other.tileY(), other.rotation, other.block);
+    }
+
+    public boolean caps(Tile tile, int rotation, BuildPlan[] directional, int direction, boolean checkWorld){
+        int realDir = Mathf.mod(rotation - direction, 4);
+        if(directional != null && directional[realDir] != null){
+            BuildPlan req = directional[realDir];
+            if(caps(tile, rotation, req.x, req.y, req.rotation, req.block)){
+                return true;
+            }
+        }
+        return checkWorld && caps(tile, rotation, direction);
+    }
+
+    public int buildCapping(Tile tile, int rotation, BuildPlan[] directional, boolean world){
+        int capresult = 0;
+        for(int i = 0; i < 4; i++){
+            if(caps(tile, rotation, directional, i, world)){
+                capresult |= (1 << i);
+            }
+        }
+        return capresult;
+    }
+
     public class PipeBuild extends DuctBuild{
         public float smoothLiquid;
         //public int blendbits, xscl, yscl, blending;
@@ -218,12 +250,10 @@ public class Pipe extends Duct{
                 if(capped && capRegion.found()) Draw.rect(capRegion, x, y, rotdeg());
                 if(backCapped && capRegion.found()) Draw.rect(capRegion, x, y, rotdeg() + 180);
             } else {
-                Log.info("Gonna attempt this thing with @", capping);
                 for(int i = 0; i < 4; i++){
                     if((capping & (1 << i)) != 0){
                         int dir = r - i;
                         Draw.rect(oppositeCapRegion, x, y, i == 0 ? r * 90f : dir * 90f);
-                        Log.info("Look, I'm rendering!");
                     }
                 }
             }
@@ -310,14 +340,10 @@ public class Pipe extends Duct{
 
         @Override
         public void onProximityUpdate(){
-            int[] bits = buildBlending(tile, rotation, null, true);
-            blendbits = bits[0];
-            xscl = bits[1];
-            yscl = bits[2];
-            capping = bits[3];
-            blending = bits[4];
+            super.onProximityUpdate();
 
-            next = front();
+            capping = buildCapping(tile, rotation, null, true);
+
             prev = back();
 
             nextPipe = next instanceof PipeBuild d ? d : null;
